@@ -36,8 +36,58 @@ function broadcast(payload) {
   }
 }
 
-// Stub replaced in Task 3
-function connectAIS() {}
+const BOUNDING_BOX = [[39.24, -81.60], [39.35, -81.50]]; // SW, NE corners of Ohio River stretch
+const RECONNECT_DELAY_MS = 5000;
+
+function connectAIS() {
+  if (!process.env.AISSTREAM_API_KEY) {
+    console.warn('AISSTREAM_API_KEY not set — running without live data');
+    return;
+  }
+
+  const ws = new WebSocket('wss://stream.aisstream.io/v0/stream');
+
+  ws.on('open', () => {
+    console.log('AISStream connected');
+    ws.send(JSON.stringify({
+      APIKey: process.env.AISSTREAM_API_KEY,
+      BoundingBoxes: [BOUNDING_BOX],
+      FilterMessageTypes: ['PositionReport'],
+    }));
+  });
+
+  ws.on('message', (raw) => {
+    try {
+      const msg = JSON.parse(raw);
+      if (msg.MessageType !== 'PositionReport') return;
+
+      const pos = msg.Message.PositionReport;
+      const meta = msg.MetaData || {};
+
+      const vessel = {
+        mmsi: String(pos.UserID),
+        name: (meta.ShipName || '').trim() || `MMSI ${pos.UserID}`,
+        lat: pos.Latitude,
+        lon: pos.Longitude,
+        sog: pos.Sog,   // speed over ground, knots
+        cog: pos.Cog,   // course over ground, degrees true
+        updatedAt: Date.now(),
+      };
+
+      vessels.set(vessel.mmsi, vessel);
+      broadcast({ type: 'update', vessel });
+    } catch (err) {
+      console.error('AIS parse error:', err.message);
+    }
+  });
+
+  ws.on('error', (err) => console.error('AISStream error:', err.message));
+
+  ws.on('close', () => {
+    console.log(`AISStream disconnected — reconnecting in ${RECONNECT_DELAY_MS / 1000}s`);
+    setTimeout(connectAIS, RECONNECT_DELAY_MS);
+  });
+}
 
 app.listen(PORT, () => {
   console.log(`Barge Tracker running on http://localhost:${PORT}`);
