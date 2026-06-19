@@ -89,6 +89,18 @@ function connectAIS() {
   });
 }
 
+const STALE_THRESHOLD_MS = 10 * 60 * 1000; // 10 minutes
+
+setInterval(() => {
+  const now = Date.now();
+  for (const [mmsi, vessel] of vessels) {
+    if (now - vessel.updatedAt > STALE_THRESHOLD_MS) {
+      vessels.delete(mmsi);
+      broadcast({ type: 'remove', mmsi });
+    }
+  }
+}, 60 * 1000); // check every minute
+
 app.listen(PORT, () => {
   console.log(`Barge Tracker running on http://localhost:${PORT}`);
   connectAIS();
