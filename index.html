@@ -47,16 +47,30 @@ html, body { height: 100%; overflow: hidden; background: #0f1923; }
 
 #map { position: fixed; top: 57px; bottom: 120px; left: 0; right: 0; transition: top 0.2s; }
 #map.with-alert { top: 113px; }
+#map.sheet-expanded { bottom: 50vh; }
 
 #sheet {
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000;
   background: rgba(10,18,28,0.97); border-top: 1px solid #1e3a5f;
   border-radius: 18px 18px 0 0; backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px); height: 120px; font-family: -apple-system, sans-serif;
+  transition: height 0.3s ease;
 }
-.sheet-handle { width: 36px; height: 4px; background: #334155; border-radius: 2px; margin: 10px auto 8px; }
+#sheet.expanded { height: 50vh; }
+.sheet-handle {
+  width: 36px; height: 4px; background: #334155; border-radius: 2px; margin: 10px auto 8px;
+  cursor: pointer;
+}
 .sheet-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #475569; padding: 0 16px; margin-bottom: 8px; }
-.vessel-scroll { display: flex; gap: 10px; overflow-x: auto; padding: 0 16px 12px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.vessel-scroll {
+  display: flex; gap: 10px; overflow-x: auto; overflow-y: hidden;
+  padding: 0 16px 12px; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  flex-wrap: nowrap;
+}
+#sheet.expanded .vessel-scroll {
+  flex-wrap: wrap; overflow-x: hidden; overflow-y: auto;
+  max-height: calc(50vh - 60px);
+}
 .vessel-scroll::-webkit-scrollbar { display: none; }
 .vessel-chip { background: #131f2e; border: 1.5px solid #2d4057; border-radius: 12px; padding: 10px 14px; min-width: 155px; flex-shrink: 0; cursor: pointer; }
 .vessel-chip:active { opacity: 0.7; }
@@ -104,7 +118,7 @@ html, body { height: 100%; overflow: hidden; background: #0f1923; }
 <div id="map"></div>
 
 <div id="sheet">
-  <div class="sheet-handle"></div>
+  <div class="sheet-handle" onclick="toggleSheet()"></div>
   <div class="sheet-label">Nearby vessels</div>
   <div class="vessel-scroll" id="vessel-list">
     <div class="empty-state">Connecting to AIS…</div>
@@ -291,6 +305,13 @@ function dismissAlert() {
   }
   document.getElementById('alert-banner').classList.add('hidden');
   document.getElementById('map').classList.remove('with-alert');
+}
+
+function toggleSheet() {
+  const sheet = document.getElementById('sheet');
+  const map   = document.getElementById('map');
+  sheet.classList.toggle('expanded');
+  map.classList.toggle('sheet-expanded');
 }
 
 window.focusVessel  = focusVessel;
