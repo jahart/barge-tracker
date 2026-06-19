@@ -113,7 +113,7 @@ html, body { height: 100%; overflow: hidden; background: #0f1923; }
 
 <script>
 // ── Config — replace with your AISStream.io key ───────────────────────────────
-const AISSTREAM_API_KEY = 'YOUR_KEY_HERE';
+const AISSTREAM_API_KEY = 'd67370ad46a84b5ed46847aaf1dde2a59df2eb9d';
 
 // ── Constants ────────────────────────────────────────────────────────────────
 const OVRC            = [39.2833, -81.5631];  // Memorial Bridge, Parkersburg WV
@@ -312,9 +312,10 @@ function connectAIS() {
     }));
   });
 
-  ws.addEventListener('message', (e) => {
+  ws.addEventListener('message', async (e) => {
     try {
-      const msg = JSON.parse(e.data);
+      const text = e.data instanceof Blob ? await e.data.text() : e.data;
+      const msg = JSON.parse(text);
       if (msg.MessageType !== 'PositionReport') return;
       const pos  = msg.Message.PositionReport;
       const meta = msg.MetaData || {};
