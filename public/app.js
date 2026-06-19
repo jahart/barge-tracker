@@ -1,7 +1,7 @@
 // ── Constants ────────────────────────────────────────────────────────────────
-const OVRC = [39.2718, -81.5555];          // OVRC Launch, Parkersburg WV
+const OVRC = [39.2833, -81.5631];          // OVRC Launch at Memorial Bridge, Parkersburg WV
 const DANGER_RADIUS_M = 3218;              // 2 miles in metres
-const MAP_CENTER = [39.2860, -81.5570];    // midpoint between launch and Neal Island
+const MAP_CENTER = [39.2900, -81.5631];    // midpoint between launch and Neal Island
 const MAP_ZOOM = 13;
 
 // Direction from COG (course over ground, degrees true)
