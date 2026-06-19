@@ -1,6 +1,7 @@
 // ── Constants ────────────────────────────────────────────────────────────────
 const OVRC = [39.2833, -81.5631];          // OVRC Launch at Memorial Bridge, Parkersburg WV
-const DANGER_RADIUS_M = 3218;              // 2 miles in metres
+const ZONE_CENTER = [39.2851, -81.5631];   // Danger zone center — 1/8 mi north of launch
+const DANGER_RADIUS_M = 4828;              // 3 miles in metres
 const MAP_CENTER = [39.2900, -81.5631];    // midpoint between launch and Neal Island
 const MAP_ZOOM = 13;
 
@@ -47,7 +48,7 @@ L.marker(OVRC, { icon: putinIcon }).addTo(map)
   .bindTooltip('OVRC Launch', { permanent: true, direction: 'right', className: 'putin-tip', offset: [10, 0] });
 
 // Danger zone ring
-L.circle(OVRC, {
+L.circle(ZONE_CENTER, {
   radius: DANGER_RADIUS_M, color: '#dc2626', fillColor: '#dc2626',
   fillOpacity: 0.06, weight: 1.5, dashArray: '7,5',
 }).addTo(map);
@@ -59,7 +60,7 @@ const vesselData    = new Map();
 let alertDismissedFor = null;
 
 function bargeIcon(vessel) {
-  const dist = distanceM(OVRC, [vessel.lat, vessel.lon]);
+  const dist = distanceM(ZONE_CENTER, [vessel.lat, vessel.lon]);
   const inZone = dist <= DANGER_RADIUS_M;
   // Red only when in danger zone; amber for upriver outside zone; blue for downriver
   const color = inZone ? '#dc2626' : (cogToDirection(vessel.cog) === 'Upriver' ? '#f59e0b' : '#2563eb');
@@ -71,7 +72,7 @@ function bargeIcon(vessel) {
 }
 
 function popupHtml(vessel) {
-  const dist = distanceM(OVRC, [vessel.lat, vessel.lon]);
+  const dist = distanceM(ZONE_CENTER, [vessel.lat, vessel.lon]);
   const inZone = dist <= DANGER_RADIUS_M;
   const dir = cogToDirection(vessel.cog);
   const eta = etaMinutes(dist, vessel.sog);
@@ -86,7 +87,7 @@ function popupHtml(vessel) {
 }
 
 function chipHtml(vessel) {
-  const dist = distanceM(OVRC, [vessel.lat, vessel.lon]);
+  const dist = distanceM(ZONE_CENTER, [vessel.lat, vessel.lon]);
   const inZone = dist <= DANGER_RADIUS_M;
   const dir = cogToDirection(vessel.cog);
   const eta = etaMinutes(dist, vessel.sog);
@@ -151,8 +152,8 @@ function renderList() {
   }
 
   const sorted = [...vesselData.values()].sort((a, b) => {
-    const da = distanceM(OVRC, [a.lat, a.lon]);
-    const db = distanceM(OVRC, [b.lat, b.lon]);
+    const da = distanceM(ZONE_CENTER, [a.lat, a.lon]);
+    const db = distanceM(ZONE_CENTER, [b.lat, b.lon]);
     const aIn = da <= DANGER_RADIUS_M;
     const bIn = db <= DANGER_RADIUS_M;
     if (aIn !== bIn) return aIn ? -1 : 1;
@@ -160,7 +161,7 @@ function renderList() {
   });
 
   list.innerHTML = sorted.map(v => {
-    const dist = distanceM(OVRC, [v.lat, v.lon]);
+    const dist = distanceM(ZONE_CENTER, [v.lat, v.lon]);
     const inZone = dist <= DANGER_RADIUS_M;
     return `<div class="vessel-chip ${inZone ? 'danger' : ''}" onclick="focusVessel('${v.mmsi}')">${chipHtml(v)}</div>`;
   }).join('');
@@ -169,7 +170,7 @@ function renderList() {
 // ── Alert banner ─────────────────────────────────────────────────────────────
 function checkDangerZone() {
   for (const vessel of vesselData.values()) {
-    const dist = distanceM(OVRC, [vessel.lat, vessel.lon]);
+    const dist = distanceM(ZONE_CENTER, [vessel.lat, vessel.lon]);
     if (dist <= DANGER_RADIUS_M && vessel.mmsi !== alertDismissedFor) {
       showAlert(vessel, dist);
       return;
@@ -192,7 +193,7 @@ function showAlert(vessel, distM) {
 
 function dismissAlert() {
   for (const vessel of vesselData.values()) {
-    const dist = distanceM(OVRC, [vessel.lat, vessel.lon]);
+    const dist = distanceM(ZONE_CENTER, [vessel.lat, vessel.lon]);
     if (dist <= DANGER_RADIUS_M) { alertDismissedFor = vessel.mmsi; break; }
   }
   document.getElementById('alert-banner').classList.add('hidden');
