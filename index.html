@@ -136,6 +136,7 @@ const DANGER_RADIUS_M = 4828;                 // 3 miles
 const MAP_CENTER      = [39.2900, -81.5631];
 const MAP_ZOOM        = 13;
 const BOUNDING_BOX    = [[39.24, -81.60], [39.35, -81.50]];
+// const BOUNDING_BOX    = [[36.0, -89.0], [42.0, -80.0]];  // TEST: wide Ohio River corridor                                                                                           
 const STALE_MS        = 10 * 60 * 1000;
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
@@ -319,12 +320,15 @@ window.dismissAlert = dismissAlert;
 
 // ── AISStream.io — direct browser WebSocket ──────────────────────────────────
 const RECONNECT_MS = 5000;
+const MAX_RECONNECT_MS = 5 * 60 * 1000;
+let reconnectDelay = RECONNECT_MS;
 
 function connectAIS() {
   const ws = new WebSocket('wss://stream.aisstream.io/v0/stream');
   const seenThisSession = new Set();
 
   ws.addEventListener('open', () => {
+    reconnectDelay = RECONNECT_MS;
     console.log('AISStream connected');
     document.getElementById('vessel-count').textContent = '0 vessels';
     ws.send(JSON.stringify({
@@ -363,9 +367,10 @@ function connectAIS() {
   ws.addEventListener('error', (e) => console.error('AISStream error', e));
 
   ws.addEventListener('close', () => {
-    console.log('AISStream disconnected — reconnecting…');
+    console.log(`AISStream disconnected — reconnecting in ${reconnectDelay / 1000}s`);
     document.getElementById('vessel-count').textContent = 'Reconnecting…';
-    setTimeout(connectAIS, RECONNECT_MS);
+    setTimeout(connectAIS, reconnectDelay);
+    reconnectDelay = Math.min(reconnectDelay * 2, MAX_RECONNECT_MS);
   });
 }
 
