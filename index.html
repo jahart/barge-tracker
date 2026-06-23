@@ -322,6 +322,7 @@ const RECONNECT_MS = 5000;
 
 function connectAIS() {
   const ws = new WebSocket('wss://stream.aisstream.io/v0/stream');
+  const seenThisSession = new Set();
 
   ws.addEventListener('open', () => {
     console.log('AISStream connected');
@@ -340,7 +341,7 @@ function connectAIS() {
       if (msg.MessageType !== 'PositionReport') return;
       const pos  = msg.Message.PositionReport;
       const meta = msg.MetaData || {};
-      applyVessel({
+      const vessel = {
         mmsi:      String(pos.UserID),
         name:      (meta.ShipName || '').trim() || `MMSI ${pos.UserID}`,
         lat:       pos.Latitude,
@@ -348,7 +349,12 @@ function connectAIS() {
         sog:       pos.Sog,
         cog:       pos.Cog,
         updatedAt: Date.now(),
-      });
+      };
+      if (!seenThisSession.has(vessel.mmsi)) {
+        seenThisSession.add(vessel.mmsi);
+        console.log(`Boats tracked this session: ${seenThisSession.size} (new: ${vessel.name})`);
+      }
+      applyVessel(vessel);
     } catch (err) {
       console.error('AIS parse error:', err);
     }
