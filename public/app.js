@@ -4,6 +4,9 @@ const ZONE_CENTER = [39.2851, -81.5631];   // Danger zone center — 1/8 mi nort
 const DANGER_RADIUS_M = 4828;              // 3 miles in metres
 const MAP_CENTER = [39.2900, -81.5631];    // midpoint between launch and Neal Island
 const MAP_ZOOM = 13;
+const BELLEVILLE      = [39.1193, -81.7425]; // Belleville Locks and Dam — river mile 203.9, south of OVRC
+const WILLOW_ISLAND   = [39.3592, -81.3192]; // Willow Island Locks and Dam — river mile 161.7, north of OVRC
+const NEARBY_RADIUS_M = 12875;               // ~8 miles — matches the old bounding box's rough coverage
 
 // Direction from COG (course over ground, degrees true)
 function cogToDirection(cog) {
@@ -29,6 +32,16 @@ function etaMinutes(distM, sog) {
   if (!sog || sog < 0.5) return null;
   const speedMs = sog * 0.514444;
   return Math.round(distM / speedMs / 60);
+}
+
+// Classifies a vessel outside the Nearby radius as approaching from a lock, or null
+function approachSource(vessel) {
+  const dist = distanceM(ZONE_CENTER, [vessel.lat, vessel.lon]);
+  if (dist <= NEARBY_RADIUS_M) return null;
+  const dir = cogToDirection(vessel.cog);
+  if (vessel.lat < OVRC[0] && dir === 'Upriver') return 'belleville';
+  if (vessel.lat > OVRC[0] && dir === 'Downriver') return 'willow-island';
+  return null;
 }
 
 // ── Map setup ────────────────────────────────────────────────────────────────
@@ -141,30 +154,82 @@ function focusVessel(mmsi) {
 // ── UI rendering ─────────────────────────────────────────────────────────────
 function renderList() {
   const list = document.getElementById('vessel-list');
-  const count = vesselData.size;
+  const nearby = [...vesselData.values()].filter(
+    v => distanceM(ZONE_CENTER, [v.lat, v.lon]) <= NEARBY_RADIUS_M
+  );
 
   document.getElementById('vessel-count').textContent =
-    count === 1 ? '1 vessel' : `${count} vessels`;
+    nearby.length === 1 ? '1 vessel' : `${nearby.length} vessels`;
 
-  if (count === 0) {
+  if (nearby.length === 0) {
     list.innerHTML = '<div class="empty-state">No vessels in range</div>';
-    return;
+  } else {
+    const sorted = nearby.sort((a, b) => {
+      const da = distanceM(ZONE_CENTER, [a.lat, a.lon]);
+      const db = distanceM(ZONE_CENTER, [b.lat, b.lon]);
+      const aIn = da <= DANGER_RADIUS_M;
+      const bIn = db <= DANGER_RADIUS_M;
+      if (aIn !== bIn) return aIn ? -1 : 1;
+      return da - db;
+    });
+
+    list.innerHTML = sorted.map(v => {
+      const inZone = distanceM(ZONE_CENTER, [v.lat, v.lon]) <= DANGER_RADIUS_M;
+      return `<div class="vessel-chip ${inZone ? 'danger' : ''}" onclick="focusVessel('${v.mmsi}')">${chipHtml(v)}</div>`;
+    }).join('');
   }
 
-  const sorted = [...vesselData.values()].sort((a, b) => {
-    const da = distanceM(ZONE_CENTER, [a.lat, a.lon]);
-    const db = distanceM(ZONE_CENTER, [b.lat, b.lon]);
-    const aIn = da <= DANGER_RADIUS_M;
-    const bIn = db <= DANGER_RADIUS_M;
-    if (aIn !== bIn) return aIn ? -1 : 1;
-    return da - db;
-  });
+  renderApproachPanel();
+}
 
-  list.innerHTML = sorted.map(v => {
-    const dist = distanceM(ZONE_CENTER, [v.lat, v.lon]);
-    const inZone = dist <= DANGER_RADIUS_M;
-    return `<div class="vessel-chip ${inZone ? 'danger' : ''}" onclick="focusVessel('${v.mmsi}')">${chipHtml(v)}</div>`;
-  }).join('');
+function renderApproachPanel() {
+  const belleville = [];
+  const willow = [];
+  for (const v of vesselData.values()) {
+    const src = approachSource(v);
+    if (src === 'belleville') belleville.push(v);
+    else if (src === 'willow-island') willow.push(v);
+  }
+
+  const byEta = (a, b) => {
+    const ea = etaMinutes(distanceM(ZONE_CENTER, [a.lat, a.lon]), a.sog);
+    const eb = etaMinutes(distanceM(ZONE_CENTER, [b.lat, b.lon]), b.sog);
+    return (ea ?? Infinity) - (eb ?? Infinity);
+  };
+  belleville.sort(byEta);
+  willow.sort(byEta);
+
+  const badge = document.getElementById('approach-badge');
+  const total = belleville.length + willow.length;
+  badge.textContent = total;
+  badge.classList.toggle('hidden', total === 0);
+
+  renderApproachGroup('approach-list-belleville', belleville);
+  renderApproachGroup('approach-list-willow', willow);
+
+  syncMapOffset();
+}
+
+function renderApproachGroup(elementId, vessels) {
+  const el = document.getElementById(elementId);
+  if (vessels.length === 0) {
+    el.innerHTML = '<div class="empty-state">None</div>';
+    return;
+  }
+  el.innerHTML = vessels.map(v =>
+    `<div class="vessel-chip" onclick="focusVessel('${v.mmsi}')">${chipHtml(v)}</div>`
+  ).join('');
+}
+
+function toggleApproachPanel() {
+  document.getElementById('approach-body').classList.toggle('expanded');
+  document.querySelector('.approach-chevron').classList.toggle('expanded');
+  syncMapOffset();
+}
+
+function syncMapOffset() {
+  const sheet = document.getElementById('sheet');
+  document.getElementById('map').style.bottom = sheet.getBoundingClientRect().height + 'px';
 }
 
 // ── Alert banner ─────────────────────────────────────────────────────────────
@@ -202,6 +267,7 @@ function dismissAlert() {
 
 window.focusVessel = focusVessel;
 window.dismissAlert = dismissAlert;
+window.toggleApproachPanel = toggleApproachPanel;
 
 // ── Reconnect countdown ───────────────────────────────────────────────────────
 let reconnectCountdown = null;
@@ -252,3 +318,4 @@ function connectSSE() {
 }
 
 connectSSE();
+syncMapOffset();
