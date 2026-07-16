@@ -53,7 +53,7 @@ html, body { height: 100%; overflow: hidden; background: #0f1923; }
 
 #map {
   position: fixed; top: 57px; bottom: 120px; left: 0; right: 0;
-  transition: top 0.2s;
+  transition: top 0.2s, bottom 0.2s;
 }
 #map.with-alert { top: 113px; }
 
@@ -61,11 +61,35 @@ html, body { height: 100%; overflow: hidden; background: #0f1923; }
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000;
   background: rgba(10,18,28,0.97); border-top: 1px solid #1e3a5f;
   border-radius: 18px 18px 0 0; backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px); height: 120px;
+  -webkit-backdrop-filter: blur(8px);
   font-family: -apple-system, sans-serif;
 }
 .sheet-handle { width: 36px; height: 4px; background: #334155; border-radius: 2px; margin: 10px auto 8px; }
 .sheet-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #475569; padding: 0 16px; margin-bottom: 8px; }
+
+#approach-header {
+  display: flex; align-items: center; gap: 8px;
+  padding: 0 16px 8px; cursor: pointer;
+}
+#approach-header .sheet-label { margin-bottom: 0; }
+.approach-badge {
+  background: #1e3a5f; color: #93c5fd; font-size: 0.68rem; font-weight: 700;
+  border-radius: 10px; padding: 1px 7px;
+}
+.approach-badge.hidden { display: none; }
+.approach-chevron {
+  margin-left: auto; color: #475569; font-size: 0.8rem;
+  transition: transform 0.2s;
+}
+.approach-chevron.expanded { transform: rotate(180deg); }
+#approach-body {
+  max-height: 0; overflow: hidden; transition: max-height 0.2s ease;
+}
+#approach-body.expanded { max-height: 220px; }
+.approach-group-label {
+  font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: #64748b; padding: 6px 16px 4px;
+}
 .vessel-scroll { display: flex; gap: 10px; overflow-x: auto; padding: 0 16px 12px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .vessel-scroll::-webkit-scrollbar { display: none; }
 
@@ -128,6 +152,23 @@ html, body { height: 100%; overflow: hidden; background: #0f1923; }
 
 <div id="sheet">
   <div class="sheet-handle"></div>
+
+  <div id="approach-header" onclick="toggleApproachPanel()">
+    <span class="sheet-label">Approaching</span>
+    <span id="approach-badge" class="approach-badge hidden">0</span>
+    <span class="approach-chevron">▾</span>
+  </div>
+  <div id="approach-body">
+    <div class="approach-group-label">↑ From Belleville</div>
+    <div class="vessel-scroll" id="approach-list-belleville">
+      <div class="empty-state">None</div>
+    </div>
+    <div class="approach-group-label">↓ From Willow Island</div>
+    <div class="vessel-scroll" id="approach-list-willow">
+      <div class="empty-state">None</div>
+    </div>
+  </div>
+
   <div class="sheet-label">Nearby vessels</div>
   <div class="vessel-scroll" id="vessel-list">
     <div class="empty-state">Waiting for AIS data…</div>
