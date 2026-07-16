@@ -27,6 +27,7 @@ html, body { height: 100%; overflow: hidden; background: #0f1923; }
 }
 .live-dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; animation: pulse 1.8s ease-in-out infinite; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
+.live-dot.disconnected { background: #f59e0b; }
 
 #alert-banner {
   position: fixed; top: 57px; left: 0; right: 0; z-index: 1000;
@@ -45,32 +46,42 @@ html, body { height: 100%; overflow: hidden; background: #0f1923; }
   cursor: pointer; border-radius: 8px;
 }
 
-#map { position: fixed; top: 57px; bottom: 120px; left: 0; right: 0; transition: top 0.2s; }
+#map { position: fixed; top: 57px; bottom: 120px; left: 0; right: 0; transition: top 0.2s, bottom 0.2s; }
 #map.with-alert { top: 113px; }
-#map.sheet-expanded { bottom: 50vh; }
 
 #sheet {
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000;
   background: rgba(10,18,28,0.97); border-top: 1px solid #1e3a5f;
   border-radius: 18px 18px 0 0; backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px); height: 120px; font-family: -apple-system, sans-serif;
-  transition: height 0.3s ease;
+  -webkit-backdrop-filter: blur(8px); font-family: -apple-system, sans-serif;
 }
-#sheet.expanded { height: 50vh; }
-.sheet-handle {
-  width: 36px; height: 4px; background: #334155; border-radius: 2px; margin: 10px auto 8px;
-  cursor: pointer;
-}
+.sheet-handle { width: 36px; height: 4px; background: #334155; border-radius: 2px; margin: 10px auto 8px; }
 .sheet-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #475569; padding: 0 16px; margin-bottom: 8px; }
-.vessel-scroll {
-  display: flex; gap: 10px; overflow-x: auto; overflow-y: hidden;
-  padding: 0 16px 12px; -webkit-overflow-scrolling: touch; scrollbar-width: none;
-  flex-wrap: nowrap;
+
+#approach-header {
+  display: flex; align-items: center; gap: 8px;
+  padding: 0 16px 8px; cursor: pointer;
 }
-#sheet.expanded .vessel-scroll {
-  flex-wrap: wrap; overflow-x: hidden; overflow-y: auto;
-  max-height: calc(50vh - 60px);
+#approach-header .sheet-label { margin-bottom: 0; }
+.approach-badge {
+  background: #1e3a5f; color: #93c5fd; font-size: 0.68rem; font-weight: 700;
+  border-radius: 10px; padding: 1px 7px;
 }
+.approach-badge.hidden { display: none; }
+.approach-chevron {
+  margin-left: auto; color: #475569; font-size: 0.8rem;
+  transition: transform 0.2s;
+}
+.approach-chevron.expanded { transform: rotate(180deg); }
+#approach-body {
+  max-height: 0; overflow: hidden; transition: max-height 0.2s ease;
+}
+#approach-body.expanded { max-height: 220px; }
+.approach-group-label {
+  font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: #64748b; padding: 6px 16px 4px;
+}
+.vessel-scroll { display: flex; gap: 10px; overflow-x: auto; padding: 0 16px 12px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .vessel-scroll::-webkit-scrollbar { display: none; }
 .vessel-chip { background: #131f2e; border: 1.5px solid #2d4057; border-radius: 12px; padding: 10px 14px; min-width: 155px; flex-shrink: 0; cursor: pointer; }
 .vessel-chip:active { opacity: 0.7; }
@@ -118,7 +129,24 @@ html, body { height: 100%; overflow: hidden; background: #0f1923; }
 <div id="map"></div>
 
 <div id="sheet">
-  <div class="sheet-handle" onclick="toggleSheet()"></div>
+  <div class="sheet-handle"></div>
+
+  <div id="approach-header" onclick="toggleApproachPanel()">
+    <span class="sheet-label">Approaching</span>
+    <span id="approach-badge" class="approach-badge hidden">0</span>
+    <span class="approach-chevron">▾</span>
+  </div>
+  <div id="approach-body">
+    <div class="approach-group-label">↑ From Belleville</div>
+    <div class="vessel-scroll" id="approach-list-belleville">
+      <div class="empty-state">None</div>
+    </div>
+    <div class="approach-group-label">↓ From Willow Island</div>
+    <div class="vessel-scroll" id="approach-list-willow">
+      <div class="empty-state">None</div>
+    </div>
+  </div>
+
   <div class="sheet-label">Nearby vessels</div>
   <div class="vessel-scroll" id="vessel-list">
     <div class="empty-state">Connecting to AIS…</div>
@@ -135,9 +163,11 @@ const ZONE_CENTER     = [39.2851, -81.5631];  // Danger zone center — 1/8 mi n
 const DANGER_RADIUS_M = 4828;                 // 3 miles
 const MAP_CENTER      = [39.2900, -81.5631];
 const MAP_ZOOM        = 13;
-const BOUNDING_BOX    = [[39.24, -81.60], [39.35, -81.50]];
-// const BOUNDING_BOX    = [[36.0, -89.0], [42.0, -80.0]];  // TEST: wide Ohio River corridor                                                                                           
+const BOUNDING_BOX    = [[39.05, -81.80], [39.42, -81.25]]; // widened to cover Belleville + Willow Island
 const STALE_MS        = 10 * 60 * 1000;
+const BELLEVILLE      = [39.1193, -81.7425]; // Belleville Locks and Dam — river mile 203.9, south of OVRC
+const WILLOW_ISLAND   = [39.3592, -81.3192]; // Willow Island Locks and Dam — river mile 161.7, north of OVRC
+const NEARBY_RADIUS_M = 12875;               // ~8 miles — matches the old bounding box's rough coverage
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 function cogToDirection(cog) {
@@ -160,6 +190,16 @@ function distanceM(a, b) {
 function etaMinutes(distM, sog) {
   if (!sog || sog < 0.5) return null;
   return Math.round(distM / (sog * 0.514444) / 60);
+}
+
+// Classifies a vessel outside the Nearby radius as approaching from a lock, or null
+function approachSource(vessel) {
+  const dist = distanceM(ZONE_CENTER, [vessel.lat, vessel.lon]);
+  if (dist <= NEARBY_RADIUS_M) return null;
+  const dir = cogToDirection(vessel.cog);
+  if (vessel.lat < OVRC[0] && dir === 'Upriver') return 'belleville';
+  if (vessel.lat > OVRC[0] && dir === 'Downriver') return 'willow-island';
+  return null;
 }
 
 // ── Map ──────────────────────────────────────────────────────────────────────
@@ -262,21 +302,81 @@ function focusVessel(mmsi) {
 }
 
 function renderList() {
-  const list  = document.getElementById('vessel-list');
-  const count = vesselData.size;
-  document.getElementById('vessel-count').textContent = count === 1 ? '1 vessel' : `${count} vessels`;
-  if (count === 0) { list.innerHTML = '<div class="empty-state">No vessels in range</div>'; return; }
-  const sorted = [...vesselData.values()].sort((a, b) => {
-    const da = distanceM(ZONE_CENTER, [a.lat, a.lon]);
-    const db = distanceM(ZONE_CENTER, [b.lat, b.lon]);
-    const aIn = da <= DANGER_RADIUS_M, bIn = db <= DANGER_RADIUS_M;
-    if (aIn !== bIn) return aIn ? -1 : 1;
-    return da - db;
-  });
-  list.innerHTML = sorted.map(v => {
-    const inZone = distanceM(ZONE_CENTER, [v.lat, v.lon]) <= DANGER_RADIUS_M;
-    return `<div class="vessel-chip ${inZone ? 'danger' : ''}" onclick="focusVessel('${v.mmsi}')">${chipHtml(v)}</div>`;
-  }).join('');
+  const list = document.getElementById('vessel-list');
+  const nearby = [...vesselData.values()].filter(
+    v => distanceM(ZONE_CENTER, [v.lat, v.lon]) <= NEARBY_RADIUS_M
+  );
+
+  document.getElementById('vessel-count').textContent =
+    nearby.length === 1 ? '1 vessel' : `${nearby.length} vessels`;
+
+  if (nearby.length === 0) {
+    list.innerHTML = '<div class="empty-state">No vessels in range</div>';
+  } else {
+    const sorted = nearby.sort((a, b) => {
+      const da = distanceM(ZONE_CENTER, [a.lat, a.lon]);
+      const db = distanceM(ZONE_CENTER, [b.lat, b.lon]);
+      const aIn = da <= DANGER_RADIUS_M, bIn = db <= DANGER_RADIUS_M;
+      if (aIn !== bIn) return aIn ? -1 : 1;
+      return da - db;
+    });
+    list.innerHTML = sorted.map(v => {
+      const inZone = distanceM(ZONE_CENTER, [v.lat, v.lon]) <= DANGER_RADIUS_M;
+      return `<div class="vessel-chip ${inZone ? 'danger' : ''}" onclick="focusVessel('${v.mmsi}')">${chipHtml(v)}</div>`;
+    }).join('');
+  }
+
+  renderApproachPanel();
+}
+
+function renderApproachPanel() {
+  const belleville = [];
+  const willow = [];
+  for (const v of vesselData.values()) {
+    const src = approachSource(v);
+    if (src === 'belleville') belleville.push(v);
+    else if (src === 'willow-island') willow.push(v);
+  }
+
+  const byEta = (a, b) => {
+    const ea = etaMinutes(distanceM(ZONE_CENTER, [a.lat, a.lon]), a.sog);
+    const eb = etaMinutes(distanceM(ZONE_CENTER, [b.lat, b.lon]), b.sog);
+    return (ea ?? Infinity) - (eb ?? Infinity);
+  };
+  belleville.sort(byEta);
+  willow.sort(byEta);
+
+  const badge = document.getElementById('approach-badge');
+  const total = belleville.length + willow.length;
+  badge.textContent = total;
+  badge.classList.toggle('hidden', total === 0);
+
+  renderApproachGroup('approach-list-belleville', belleville);
+  renderApproachGroup('approach-list-willow', willow);
+
+  syncMapOffset();
+}
+
+function renderApproachGroup(elementId, vessels) {
+  const el = document.getElementById(elementId);
+  if (vessels.length === 0) {
+    el.innerHTML = '<div class="empty-state">None</div>';
+    return;
+  }
+  el.innerHTML = vessels.map(v =>
+    `<div class="vessel-chip" onclick="focusVessel('${v.mmsi}')">${chipHtml(v)}</div>`
+  ).join('');
+}
+
+function toggleApproachPanel() {
+  document.getElementById('approach-body').classList.toggle('expanded');
+  document.querySelector('.approach-chevron').classList.toggle('expanded');
+  syncMapOffset();
+}
+
+function syncMapOffset() {
+  const sheet = document.getElementById('sheet');
+  document.getElementById('map').style.bottom = sheet.getBoundingClientRect().height + 'px';
 }
 
 function checkDangerZone() {
@@ -308,29 +408,46 @@ function dismissAlert() {
   document.getElementById('map').classList.remove('with-alert');
 }
 
-function toggleSheet() {
-  const sheet = document.getElementById('sheet');
-  const map   = document.getElementById('map');
-  sheet.classList.toggle('expanded');
-  map.classList.toggle('sheet-expanded');
-}
-
 window.focusVessel  = focusVessel;
 window.dismissAlert = dismissAlert;
+window.toggleApproachPanel = toggleApproachPanel;
+
+// ── Reconnect countdown ───────────────────────────────────────────────────────
+let reconnectCountdown = null;
+
+function showReconnecting(reconnectAt) {
+  if (reconnectCountdown) clearInterval(reconnectCountdown);
+  document.querySelector('.live-dot').classList.add('disconnected');
+  const countEl = document.getElementById('vessel-count');
+  const tick = () => {
+    const rem = Math.max(0, reconnectAt - Date.now());
+    const m = Math.floor(rem / 60000);
+    const s = Math.floor((rem % 60000) / 1000);
+    countEl.textContent = `Reconnecting ${m}:${String(s).padStart(2, '0')}`;
+    if (rem === 0) clearInterval(reconnectCountdown);
+  };
+  tick();
+  reconnectCountdown = setInterval(tick, 1000);
+}
+
+function clearReconnecting() {
+  if (reconnectCountdown) { clearInterval(reconnectCountdown); reconnectCountdown = null; }
+  document.querySelector('.live-dot').classList.remove('disconnected');
+  renderList();
+}
 
 // ── AISStream.io — direct browser WebSocket ──────────────────────────────────
-const RECONNECT_MS = 5000;
+const RECONNECT_MS     = 5000;
 const MAX_RECONNECT_MS = 5 * 60 * 1000;
 let reconnectDelay = RECONNECT_MS;
 
 function connectAIS() {
   const ws = new WebSocket('wss://stream.aisstream.io/v0/stream');
-  const seenThisSession = new Set();
 
   ws.addEventListener('open', () => {
     reconnectDelay = RECONNECT_MS;
     console.log('AISStream connected');
-    document.getElementById('vessel-count').textContent = '0 vessels';
+    clearReconnecting();
     ws.send(JSON.stringify({
       APIKey: AISSTREAM_API_KEY,
       BoundingBoxes: [BOUNDING_BOX],
@@ -345,7 +462,7 @@ function connectAIS() {
       if (msg.MessageType !== 'PositionReport') return;
       const pos  = msg.Message.PositionReport;
       const meta = msg.MetaData || {};
-      const vessel = {
+      applyVessel({
         mmsi:      String(pos.UserID),
         name:      (meta.ShipName || '').trim() || `MMSI ${pos.UserID}`,
         lat:       pos.Latitude,
@@ -353,12 +470,7 @@ function connectAIS() {
         sog:       pos.Sog,
         cog:       pos.Cog,
         updatedAt: Date.now(),
-      };
-      if (!seenThisSession.has(vessel.mmsi)) {
-        seenThisSession.add(vessel.mmsi);
-        console.log(`Boats tracked this session: ${seenThisSession.size} (new: ${vessel.name})`);
-      }
-      applyVessel(vessel);
+      });
     } catch (err) {
       console.error('AIS parse error:', err);
     }
@@ -367,8 +479,9 @@ function connectAIS() {
   ws.addEventListener('error', (e) => console.error('AISStream error', e));
 
   ws.addEventListener('close', () => {
+    const reconnectAt = Date.now() + reconnectDelay;
     console.log(`AISStream disconnected — reconnecting in ${reconnectDelay / 1000}s`);
-    document.getElementById('vessel-count').textContent = 'Reconnecting…';
+    showReconnecting(reconnectAt);
     setTimeout(connectAIS, reconnectDelay);
     reconnectDelay = Math.min(reconnectDelay * 2, MAX_RECONNECT_MS);
   });
@@ -383,6 +496,7 @@ setInterval(() => {
 }, 60_000);
 
 connectAIS();
+syncMapOffset();
 </script>
 </body>
 </html>
