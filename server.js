@@ -40,7 +40,7 @@ function broadcast(payload) {
   }
 }
 
-const BOUNDING_BOX         = [[39.24, -81.60], [39.35, -81.50]];
+const BOUNDING_BOX         = [[39.05, -81.80], [39.42, -81.25]];
 const RECONNECT_DELAY_MS   = 5000;
 const MAX_RECONNECT_DELAY_MS = 5 * 60 * 1000; // 5 minutes max
 let reconnectDelay = RECONNECT_DELAY_MS;
