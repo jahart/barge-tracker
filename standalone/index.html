@@ -27,6 +27,7 @@ html, body { height: 100%; overflow: hidden; background: #0f1923; }
 }
 .live-dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; animation: pulse 1.8s ease-in-out infinite; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
+.live-dot.disconnected { background: #f59e0b; }
 
 #alert-banner {
   position: fixed; top: 57px; left: 0; right: 0; z-index: 1000;
@@ -296,15 +297,42 @@ function dismissAlert() {
 window.focusVessel  = focusVessel;
 window.dismissAlert = dismissAlert;
 
+// ── Reconnect countdown ───────────────────────────────────────────────────────
+let reconnectCountdown = null;
+
+function showReconnecting(reconnectAt) {
+  if (reconnectCountdown) clearInterval(reconnectCountdown);
+  document.querySelector('.live-dot').classList.add('disconnected');
+  const countEl = document.getElementById('vessel-count');
+  const tick = () => {
+    const rem = Math.max(0, reconnectAt - Date.now());
+    const m = Math.floor(rem / 60000);
+    const s = Math.floor((rem % 60000) / 1000);
+    countEl.textContent = `Reconnecting ${m}:${String(s).padStart(2, '0')}`;
+    if (rem === 0) clearInterval(reconnectCountdown);
+  };
+  tick();
+  reconnectCountdown = setInterval(tick, 1000);
+}
+
+function clearReconnecting() {
+  if (reconnectCountdown) { clearInterval(reconnectCountdown); reconnectCountdown = null; }
+  document.querySelector('.live-dot').classList.remove('disconnected');
+  renderList();
+}
+
 // ── AISStream.io — direct browser WebSocket ──────────────────────────────────
-const RECONNECT_MS = 5000;
+const RECONNECT_MS     = 5000;
+const MAX_RECONNECT_MS = 5 * 60 * 1000;
+let reconnectDelay = RECONNECT_MS;
 
 function connectAIS() {
   const ws = new WebSocket('wss://stream.aisstream.io/v0/stream');
 
   ws.addEventListener('open', () => {
+    reconnectDelay = RECONNECT_MS;
     console.log('AISStream connected');
-    document.getElementById('vessel-count').textContent = '0 vessels';
+    clearReconnecting();
     ws.send(JSON.stringify({
       APIKey: AISSTREAM_API_KEY,
       BoundingBoxes: [BOUNDING_BOX],
@@ -336,9 +364,11 @@ function connectAIS() {
   ws.addEventListener('error', (e) => console.error('AISStream error', e));
 
   ws.addEventListener('close', () => {
-    console.log('AISStream disconnected — reconnecting…');
-    document.getElementById('vessel-count').textContent = 'Reconnecting…';
-    setTimeout(connectAIS, RECONNECT_MS);
+    const reconnectAt = Date.now() + reconnectDelay;
+    console.log(`AISStream disconnected — reconnecting in ${reconnectDelay / 1000}s`);
+    showReconnecting(reconnectAt);
+    setTimeout(connectAIS, reconnectDelay);
+    reconnectDelay = Math.min(reconnectDelay * 2, MAX_RECONNECT_MS);
   });
 }
 

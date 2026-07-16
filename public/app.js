@@ -203,6 +203,30 @@ function dismissAlert() {
 window.focusVessel = focusVessel;
 window.dismissAlert = dismissAlert;
 
+// ── Reconnect countdown ───────────────────────────────────────────────────────
+let reconnectCountdown = null;
+
+function showReconnecting(reconnectAt) {
+  if (reconnectCountdown) clearInterval(reconnectCountdown);
+  document.querySelector('.live-dot').classList.add('disconnected');
+  const countEl = document.getElementById('vessel-count');
+  const tick = () => {
+    const rem = Math.max(0, reconnectAt - Date.now());
+    const m = Math.floor(rem / 60000);
+    const s = Math.floor((rem % 60000) / 1000);
+    countEl.textContent = `Reconnecting ${m}:${String(s).padStart(2, '0')}`;
+    if (rem === 0) clearInterval(reconnectCountdown);
+  };
+  tick();
+  reconnectCountdown = setInterval(tick, 1000);
+}
+
+function clearReconnecting() {
+  if (reconnectCountdown) { clearInterval(reconnectCountdown); reconnectCountdown = null; }
+  document.querySelector('.live-dot').classList.remove('disconnected');
+  renderList();
+}
+
 // ── SSE connection ────────────────────────────────────────────────────────────
 function connectSSE() {
   const es = new EventSource('/events');
@@ -215,6 +239,10 @@ function connectSSE() {
       applyVessel(msg.vessel);
     } else if (msg.type === 'remove') {
       removeVessel(msg.mmsi);
+    } else if (msg.type === 'ais-reconnecting') {
+      showReconnecting(msg.reconnectAt);
+    } else if (msg.type === 'ais-connected') {
+      clearReconnecting();
     }
   };
 
