@@ -7,7 +7,11 @@ export default {
     const url = new URL(request.url);
 
     if (url.pathname === '/events' && request.method === 'GET') {
-      const id = env.AIS_RELAY.idFromName('ohio-river');
+      // Renamed from 'ohio-river' to force a fresh Durable Object instance
+      // after a key rotation -- a running instance keeps using the env/secret
+      // it captured at construction time, so rotating the secret alone
+      // doesn't make an already-running instance pick up the new key.
+      const id = env.AIS_RELAY.idFromName('ohio-river-v2');
       const stub = env.AIS_RELAY.get(id);
       return stub.fetch(request);
     }
