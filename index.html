@@ -5,112 +5,278 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#0f1923">
-<title>Barge Tracker</title>
+<title>Barge & River Tracker</title>
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-html, body { height: 100%; overflow: hidden; background: #0f1923; }
+* { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+html,body { height:100%; overflow:hidden; background:#0f1923; }
 
 #topbar {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  background: rgba(10,18,28,0.96); border-bottom: 1px solid #1e3a5f;
-  padding: 14px 16px 12px; display: flex; align-items: center; justify-content: space-between;
-  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  position:fixed; top:0; left:0; right:0; z-index:1000;
+  background:rgba(10,18,28,.96); border-bottom:1px solid #1e3a5f;
+  padding:14px 16px 12px; display:flex; align-items:center;
+  justify-content:space-between; backdrop-filter:blur(8px);
 }
-#topbar h1 { font-size: 1.1rem; font-weight: 700; color: #f8fafc; font-family: -apple-system, sans-serif; }
+#topbar h1 { font-size:1.1rem; font-weight:700; color:#f8fafc; font-family:-apple-system,sans-serif; }
+
 .status-pill {
-  display: flex; align-items: center; gap: 6px;
-  background: #0d2d1a; border: 1px solid #166534;
-  border-radius: 20px; padding: 4px 10px;
-  font-size: 0.72rem; color: #4ade80; font-family: -apple-system, sans-serif;
+  display:flex; align-items:center; gap:6px; background:#0d2d1a;
+  border:1px solid #166534; border-radius:20px; padding:4px 10px;
+  font-size:.72rem; color:#4ade80; font-family:-apple-system,sans-serif;
 }
-.live-dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; animation: pulse 1.8s ease-in-out infinite; }
-@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
-.live-dot.disconnected { background: #f59e0b; }
+.live-dot { width:8px; height:8px; border-radius:50%; background:#4ade80; animation:pulse 1.8s ease-in-out infinite; }
+.live-dot.disconnected { background:#f59e0b; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.8)} }
 
 #alert-banner {
-  position: fixed; top: 57px; left: 0; right: 0; z-index: 1000;
-  background: #450a0a; border-bottom: 2px solid #dc2626;
-  padding: 12px 16px; display: flex; align-items: center; gap: 12px;
-  font-family: -apple-system, sans-serif; animation: slideDown 0.25s ease;
+  position:fixed; top:57px; left:0; right:0; z-index:1000;
+  background:#450a0a; border-bottom:2px solid #dc2626;
+  padding:12px 16px; display:flex; align-items:center; gap:12px;
+  font-family:-apple-system,sans-serif; animation:slideDown .25s ease;
 }
 @keyframes slideDown { from{transform:translateY(-100%)} to{transform:translateY(0)} }
-#alert-banner.hidden { display: none; }
-#alert-banner .icon { font-size: 1.8rem; flex-shrink: 0; }
-#alert-banner strong { display: block; color: #fca5a5; font-size: 0.95rem; line-height: 1.3; }
-#alert-banner small { color: #f87171; font-size: 0.78rem; }
+#alert-banner.hidden { display:none; }
+#alert-banner .icon { font-size:1.8rem; flex-shrink:0; }
+#alert-banner strong { display:block; color:#fca5a5; font-size:.95rem; line-height:1.3; }
+#alert-banner small { color:#f87171; font-size:.78rem; }
 #alert-banner .close {
-  margin-left: auto; flex-shrink: 0; color: #f87171; font-size: 1.4rem;
-  width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
-  cursor: pointer; border-radius: 8px;
+  margin-left:auto; flex-shrink:0; color:#f87171; font-size:1.4rem;
+  width:44px; height:44px; display:flex; align-items:center;
+  justify-content:center; cursor:pointer; border-radius:8px;
 }
 
-#map { position: fixed; top: 57px; bottom: 120px; left: 0; right: 0; transition: top 0.2s, bottom 0.2s; }
-#map.with-alert { top: 113px; }
+#map {
+  position:fixed; top:57px; bottom:120px; left:0; right:0;
+  transition:top .2s,bottom .2s;
+}
+#map.with-alert { top:113px; }
 
 #sheet {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000;
-  background: rgba(10,18,28,0.97); border-top: 1px solid #1e3a5f;
-  border-radius: 18px 18px 0 0; backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px); font-family: -apple-system, sans-serif;
+  position:fixed; bottom:0; left:0; right:0; z-index:1000;
+  background:rgba(10,18,28,.97); border-top:1px solid #1e3a5f;
+  border-radius:18px 18px 0 0; backdrop-filter:blur(8px);
+  font-family:-apple-system,sans-serif;
 }
-.sheet-handle { width: 36px; height: 4px; background: #334155; border-radius: 2px; margin: 10px auto 8px; }
-.sheet-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #475569; padding: 0 16px; margin-bottom: 8px; }
+.sheet-handle { width:36px; height:4px; background:#334155; border-radius:2px; margin:10px auto 8px; }
+.sheet-label {
+  font-size:.65rem; font-weight:700; letter-spacing:.08em;
+  text-transform:uppercase; color:#475569; padding:0 16px; margin-bottom:8px;
+}
+
+/* ── River conditions ───────────────────────────────────────────────────── */
+
+#river-panel {
+  padding:0 16px 11px;
+  border-bottom:1px solid #1e3a5f;
+}
+
+.river-header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:8px;
+}
+
+.river-header .sheet-label {
+  padding:0;
+  margin:0;
+}
+
+#river-updated {
+  font-size:.61rem;
+  color:#475569;
+}
+
+.river-stats {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:7px;
+}
+
+.river-stat {
+  background:#131f2e;
+  border:1px solid #26384d;
+  border-radius:9px;
+  padding:7px 8px;
+}
+
+.river-stat-label {
+  font-size:.56rem;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:#64748b;
+}
+
+.river-stat-value {
+  font-size:1.02rem;
+  font-weight:700;
+  color:#f1f5f9;
+  margin-top:2px;
+}
+
+.river-stat-unit {
+  font-size:.56rem;
+  color:#64748b;
+}
+
+.river-condition {
+  grid-column:1/-1;
+  display:flex;
+  align-items:center;
+  gap:7px;
+  padding:6px 9px;
+  border-radius:8px;
+  background:#0f2418;
+  border:1px solid #166534;
+  color:#4ade80;
+  font-size:.69rem;
+  font-weight:700;
+}
+
+#river-condition-dot {
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#22c55e;
+  flex-shrink:0;
+}
+
+#river-condition.elevated {
+  background:#2a200b;
+  border-color:#92400e;
+  color:#fbbf24;
+}
+#river-condition.elevated #river-condition-dot { background:#f59e0b; }
+
+#river-condition.strong {
+  background:#2a1308;
+  border-color:#c2410c;
+  color:#fb923c;
+}
+#river-condition.strong #river-condition-dot { background:#f97316; }
+
+#river-condition.very-strong {
+  background:#300909;
+  border-color:#991b1b;
+  color:#f87171;
+}
+#river-condition.very-strong #river-condition-dot { background:#ef4444; }
+
+#river-condition.error {
+  background:#1e293b;
+  border-color:#475569;
+  color:#94a3b8;
+}
+#river-condition.error #river-condition-dot { background:#64748b; }
+
+/* ── Approach panel ─────────────────────────────────────────────────────── */
 
 #approach-header {
-  display: flex; align-items: center; gap: 8px;
-  padding: 0 16px 8px; cursor: pointer;
+  display:flex; align-items:center; gap:8px;
+  padding:8px 16px 8px; cursor:pointer;
 }
-#approach-header .sheet-label { margin-bottom: 0; }
-.approach-badge {
-  background: #1e3a5f; color: #93c5fd; font-size: 0.68rem; font-weight: 700;
-  border-radius: 10px; padding: 1px 7px;
-}
-.approach-badge.hidden { display: none; }
-.approach-chevron {
-  margin-left: auto; color: #475569; font-size: 0.8rem;
-  transition: transform 0.2s;
-}
-.approach-chevron.expanded { transform: rotate(180deg); }
-#approach-body {
-  max-height: 0; overflow: hidden; transition: max-height 0.2s ease;
-}
-#approach-body.expanded { max-height: 220px; }
-.approach-group-label {
-  font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em;
-  text-transform: uppercase; color: #64748b; padding: 6px 16px 4px;
-}
-.vessel-scroll { display: flex; gap: 10px; overflow-x: auto; padding: 0 16px 12px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-.vessel-scroll::-webkit-scrollbar { display: none; }
-.vessel-chip { background: #131f2e; border: 1.5px solid #2d4057; border-radius: 12px; padding: 10px 14px; min-width: 155px; flex-shrink: 0; cursor: pointer; }
-.vessel-chip:active { opacity: 0.7; }
-.vessel-chip.danger { border-color: #dc2626; background: #1f0909; }
-.vessel-chip .vname { font-size: 0.85rem; font-weight: 700; color: #f1f5f9; }
-.vessel-chip .vdetail { font-size: 0.72rem; color: #64748b; margin-top: 3px; }
-.vessel-chip .veta { font-size: 0.72rem; color: #fbbf24; margin-top: 3px; font-weight: 600; }
-.empty-state { padding: 0 16px; font-size: 0.75rem; color: #334155; display: flex; align-items: center; height: 56px; }
+#approach-header .sheet-label { margin-bottom:0; }
 
-.leaflet-popup-content-wrapper { background: #131f2e !important; border: 1.5px solid #3b82f6 !important; border-radius: 12px !important; box-shadow: 0 8px 32px rgba(0,0,0,0.6) !important; color: #e2e8f0 !important; }
-.leaflet-popup-tip { background: #131f2e !important; }
-.leaflet-popup-content { margin: 12px 16px !important; font-family: -apple-system, sans-serif !important; min-width: 180px; }
-.popup-name { font-size: 1rem; font-weight: 700; color: #f8fafc; margin-bottom: 8px; }
-.popup-row { font-size: 0.8rem; color: #64748b; margin: 4px 0; }
-.popup-row span { color: #e2e8f0; font-weight: 500; }
-.popup-eta { margin-top: 10px; background: #450a0a; border: 1px solid #dc2626; border-radius: 7px; padding: 7px 10px; font-size: 0.78rem; color: #fca5a5; font-weight: 600; }
-.leaflet-control-zoom { border: 1px solid #2d4057 !important; border-radius: 10px !important; overflow: hidden; }
-.leaflet-control-zoom a { background: #131f2e !important; color: #94a3b8 !important; border-color: #2d4057 !important; width: 40px !important; height: 40px !important; line-height: 40px !important; font-size: 1.2rem !important; }
-.leaflet-control-zoom a:hover { background: #1e2d3d !important; }
-.leaflet-control-attribution { font-size: 9px !important; background: rgba(10,18,28,0.7) !important; color: #475569 !important; }
-.leaflet-control-attribution a { color: #475569 !important; }
-.leaflet-tooltip.putin-tip { background: rgba(15,40,25,0.92) !important; border: 1.5px solid #22c55e !important; border-radius: 6px !important; color: #4ade80 !important; font-size: 11px !important; font-weight: 700 !important; padding: 4px 8px !important; box-shadow: none !important; }
-.leaflet-tooltip.putin-tip::before { border-right-color: #22c55e !important; }
+.approach-badge {
+  background:#1e3a5f; color:#93c5fd; font-size:.68rem; font-weight:700;
+  border-radius:10px; padding:1px 7px;
+}
+.approach-badge.hidden { display:none; }
+
+.approach-chevron {
+  margin-left:auto; color:#475569; font-size:.8rem;
+  transition:transform .2s;
+}
+.approach-chevron.expanded { transform:rotate(180deg); }
+
+#approach-body {
+  max-height:0; overflow:hidden; transition:max-height .2s ease;
+}
+#approach-body.expanded { max-height:220px; }
+
+.approach-group-label {
+  font-size:.62rem; font-weight:700; letter-spacing:.06em;
+  text-transform:uppercase; color:#64748b; padding:6px 16px 4px;
+}
+
+.vessel-scroll {
+  display:flex; gap:10px; overflow-x:auto; padding:0 16px 12px;
+  -webkit-overflow-scrolling:touch; scrollbar-width:none;
+}
+.vessel-scroll::-webkit-scrollbar { display:none; }
+
+.vessel-chip {
+  background:#131f2e; border:1.5px solid #2d4057;
+  border-radius:12px; padding:10px 14px; min-width:155px;
+  flex-shrink:0; cursor:pointer;
+}
+.vessel-chip:active { opacity:.7; }
+.vessel-chip.danger { border-color:#dc2626; background:#1f0909; }
+.vessel-chip .vname { font-size:.85rem; font-weight:700; color:#f1f5f9; }
+.vessel-chip .vdetail { font-size:.72rem; color:#64748b; margin-top:3px; }
+.vessel-chip .veta { font-size:.72rem; color:#fbbf24; margin-top:3px; font-weight:600; }
+
+.empty-state {
+  padding:0 16px; font-size:.75rem; color:#334155;
+  display:flex; align-items:center; height:56px;
+}
+
+/* ── Leaflet ────────────────────────────────────────────────────────────── */
+
+.leaflet-popup-content-wrapper {
+  background:#131f2e !important; border:1.5px solid #3b82f6 !important;
+  border-radius:12px !important; box-shadow:0 8px 32px rgba(0,0,0,.6) !important;
+  color:#e2e8f0 !important;
+}
+.leaflet-popup-tip { background:#131f2e !important; }
+.leaflet-popup-content {
+  margin:12px 16px !important; font-family:-apple-system,sans-serif !important;
+  min-width:180px;
+}
+.popup-name { font-size:1rem; font-weight:700; color:#f8fafc; margin-bottom:8px; }
+.popup-row { font-size:.8rem; color:#64748b; margin:4px 0; }
+.popup-row span { color:#e2e8f0; font-weight:500; }
+.popup-eta {
+  margin-top:10px; background:#450a0a; border:1px solid #dc2626;
+  border-radius:7px; padding:7px 10px; font-size:.78rem;
+  color:#fca5a5; font-weight:600;
+}
+
+.leaflet-control-zoom {
+  border:1px solid #2d4057 !important;
+  border-radius:10px !important; overflow:hidden;
+}
+.leaflet-control-zoom a {
+  background:#131f2e !important; color:#94a3b8 !important;
+  border-color:#2d4057 !important; width:40px !important;
+  height:40px !important; line-height:40px !important; font-size:1.2rem !important;
+}
+.leaflet-control-zoom a:hover { background:#1e2d3d !important; }
+
+.leaflet-control-attribution {
+  font-size:9px !important;
+  background:rgba(10,18,28,.7) !important; color:#475569 !important;
+}
+.leaflet-control-attribution a { color:#475569 !important; }
+
+.leaflet-tooltip.putin-tip {
+  background:rgba(15,40,25,.92) !important;
+  border:1.5px solid #22c55e !important; border-radius:6px !important;
+  color:#4ade80 !important; font-size:11px !important;
+  font-weight:700 !important; padding:4px 8px !important;
+  box-shadow:none !important;
+}
+.leaflet-tooltip.putin-tip::before { border-right-color:#22c55e !important; }
 </style>
 </head>
+
 <body>
 
 <div id="topbar">
-  <h1>Barge Tracker</h1>
+  <h1>Barge & River Tracker</h1>
   <div class="status-pill">
     <div class="live-dot"></div>
     <span id="vessel-count">Connecting…</span>
@@ -131,16 +297,52 @@ html, body { height: 100%; overflow: hidden; background: #0f1923; }
 <div id="sheet">
   <div class="sheet-handle"></div>
 
+  <!-- River conditions -->
+  <div id="river-panel">
+    <div class="river-header">
+      <span class="sheet-label">River conditions</span>
+      <span id="river-updated">Loading…</span>
+    </div>
+
+    <div class="river-stats">
+      <div class="river-stat">
+        <div class="river-stat-label">Stage</div>
+        <div class="river-stat-value" id="river-stage">—</div>
+        <div class="river-stat-unit">ft · Parkersburg</div>
+      </div>
+
+      <div class="river-stat">
+        <div class="river-stat-label">Flow</div>
+        <div class="river-stat-value" id="river-flow">—</div>
+        <div class="river-stat-unit">kcfs · Willow Island</div>
+      </div>
+
+      <div class="river-stat">
+        <div class="river-stat-label">Current</div>
+        <div class="river-stat-value" id="river-velocity">—</div>
+        <div class="river-stat-unit">mph ↓</div>
+      </div>
+
+      <div class="river-condition" id="river-condition">
+        <span id="river-condition-dot"></span>
+        <span id="river-condition-text">Loading river data…</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Approach -->
   <div id="approach-header" onclick="toggleApproachPanel()">
     <span class="sheet-label">Approaching</span>
     <span id="approach-badge" class="approach-badge hidden">0</span>
     <span class="approach-chevron">▾</span>
   </div>
+
   <div id="approach-body">
     <div class="approach-group-label">↑ From Belleville</div>
     <div class="vessel-scroll" id="approach-list-belleville">
       <div class="empty-state">None</div>
     </div>
+
     <div class="approach-group-label">↓ From Willow Island</div>
     <div class="vessel-scroll" id="approach-list-willow">
       <div class="empty-state">None</div>
@@ -159,22 +361,114 @@ html, body { height: 100%; overflow: hidden; background: #0f1923; }
 // never ships to the browser. See worker/README.md.
 const RELAY_EVENTS_URL = 'https://barge-tracker-relay.jerry-ahart.workers.dev/events';
 
-// ── Constants ────────────────────────────────────────────────────────────────
-const OVRC            = [39.2833, -81.5631];  // Memorial Bridge, Parkersburg WV
-const ZONE_CENTER     = [39.2851, -81.5631];  // Danger zone center — 1/8 mi north of launch
-const DANGER_RADIUS_M = 4828;                 // 3 miles
+const OVRC            = [39.2833, -81.5631];
+const ZONE_CENTER     = [39.2851, -81.5631];
+const DANGER_RADIUS_M = 4828;
 const MAP_CENTER      = [39.2900, -81.5631];
 const MAP_ZOOM        = 13;
 const STALE_MS        = 10 * 60 * 1000;
-const BELLEVILLE      = [39.1193, -81.7425]; // Belleville Locks and Dam — river mile 203.9, south of OVRC
-const WILLOW_ISLAND   = [39.3592, -81.3192]; // Willow Island Locks and Dam — river mile 161.7, north of OVRC
-const NEARBY_RADIUS_M = 12875;               // ~8 miles — matches the old bounding box's rough coverage
+const BELLEVILLE      = [39.1193, -81.7425];
+const WILLOW_ISLAND   = [39.3592, -81.3192];
+const NEARBY_RADIUS_M = 12875;
 
-// ── Helpers ──────────────────────────────────────────────────────────────────
+/* River JSON generated by GitHub Actions */
+const RIVER_DATA_URL = './river.json';
+
+/* ==========================================================================
+   RIVER CONDITIONS
+   ========================================================================== */
+
+async function updateRiverConditions() {
+  try {
+    const response = await fetch(
+      RIVER_DATA_URL + '?t=' + Date.now(),
+      { cache: 'no-store' }
+    );
+
+    if (!response.ok) {
+      throw new Error(`river.json HTTP ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    if (Number.isFinite(data.usgs?.stageFt)) {
+      document.getElementById('river-stage').textContent =
+        data.usgs.stageFt.toFixed(2);
+    }
+
+    if (Number.isFinite(data.nws?.flowKcfs)) {
+      document.getElementById('river-flow').textContent =
+        data.nws.flowKcfs.toFixed(1);
+    }
+
+    if (Number.isFinite(data.nws?.velocityMph)) {
+      document.getElementById('river-velocity').textContent =
+        data.nws.velocityMph.toFixed(1);
+
+      setRiverCondition(data.nws.velocityMph);
+    }
+
+    const updated = data.updated
+      ? new Date(data.updated)
+      : null;
+
+    document.getElementById('river-updated').textContent =
+      updated && !isNaN(updated)
+        ? 'Updated ' + updated.toLocaleTimeString([], {
+            hour: 'numeric',
+            minute: '2-digit'
+          })
+        : 'No timestamp';
+
+    console.log('River data:', data);
+
+  } catch (err) {
+    console.error('River data error:', err);
+
+    const condition = document.getElementById('river-condition');
+    condition.className = 'river-condition error';
+    document.getElementById('river-condition-text').textContent =
+      'River data unavailable';
+    document.getElementById('river-updated').textContent = 'Fetch failed';
+  }
+}
+
+/*
+ * These are dashboard categories, NOT official safety thresholds.
+ * They are intentionally oriented toward your rowing use.
+ */
+function setRiverCondition(mph) {
+  const condition = document.getElementById('river-condition');
+  const text = document.getElementById('river-condition-text');
+
+  condition.className = 'river-condition';
+
+  if (mph < 1.2) {
+    text.textContent = 'NORMAL CURRENT';
+  } else if (mph < 1.7) {
+    condition.classList.add('elevated');
+    text.textContent = 'ELEVATED CURRENT';
+  } else if (mph < 2.2) {
+    condition.classList.add('strong');
+    text.textContent = 'STRONG CURRENT · NEAL ISLAND CAUTION';
+  } else {
+    condition.classList.add('very-strong');
+    text.textContent = 'VERY STRONG CURRENT · NEAL ISLAND CAUTION';
+  }
+}
+
+/* Initial river load + refresh every 10 minutes */
+updateRiverConditions();
+setInterval(updateRiverConditions, 10 * 60 * 1000);
+
+/* ==========================================================================
+   HELPERS
+   ========================================================================== */
+
 function cogToDirection(cog) {
   const c = ((cog % 360) + 360) % 360;
-  if (c >= 315 || c < 45)   return 'Upriver';
-  if (c >= 135 && c < 225)  return 'Downriver';
+  if (c >= 315 || c < 45) return 'Upriver';
+  if (c >= 135 && c < 225) return 'Downriver';
   return 'Crossing';
 }
 
@@ -184,8 +478,13 @@ function distanceM(a, b) {
   const dLon = (b[1] - a[1]) * Math.PI / 180;
   const lat1 = a[0] * Math.PI / 180;
   const lat2 = b[0] * Math.PI / 180;
-  const x = Math.sin(dLat/2)**2 + Math.cos(lat1)*Math.cos(lat2)*Math.sin(dLon/2)**2;
-  return R * 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1-x));
+
+  const x =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(lat1) * Math.cos(lat2) *
+    Math.sin(dLon / 2) ** 2;
+
+  return R * 2 * Math.atan2(Math.sqrt(x), Math.sqrt(1 - x));
 }
 
 function etaMinutes(distM, sog) {
@@ -193,77 +492,178 @@ function etaMinutes(distM, sog) {
   return Math.round(distM / (sog * 0.514444) / 60);
 }
 
-// Classifies a vessel outside the Nearby radius as approaching from a lock, or null
 function approachSource(vessel) {
-  const dist = distanceM(ZONE_CENTER, [vessel.lat, vessel.lon]);
+  const dist = distanceM(
+    ZONE_CENTER,
+    [vessel.lat, vessel.lon]
+  );
+
   if (dist <= NEARBY_RADIUS_M) return null;
+
   const dir = cogToDirection(vessel.cog);
-  if (vessel.lat < OVRC[0] && dir === 'Upriver') return 'belleville';
-  if (vessel.lat > OVRC[0] && dir === 'Downriver') return 'willow-island';
+
+  if (vessel.lat < OVRC[0] && dir === 'Upriver') {
+    return 'belleville';
+  }
+
+  if (vessel.lat > OVRC[0] && dir === 'Downriver') {
+    return 'willow-island';
+  }
+
   return null;
 }
 
-// ── Map ──────────────────────────────────────────────────────────────────────
-const map = L.map('map', { center: MAP_CENTER, zoom: MAP_ZOOM });
+/* ==========================================================================
+   MAP
+   ========================================================================== */
+
+const map = L.map('map', {
+  center: MAP_CENTER,
+  zoom: MAP_ZOOM
+});
+
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© OSM contributors', maxZoom: 18,
+  attribution: '© OSM contributors',
+  maxZoom: 18
 }).addTo(map);
 
 const putinIcon = L.divIcon({
-  html: `<div style="width:18px;height:18px;border-radius:50%;background:#22c55e;border:3px solid white;box-shadow:0 0 0 4px rgba(34,197,94,0.25),0 3px 8px rgba(0,0,0,0.5);"></div>`,
-  className: '', iconSize: [18,18], iconAnchor: [9,9],
+  html: `<div style="
+    width:18px;height:18px;border-radius:50%;
+    background:#22c55e;border:3px solid white;
+    box-shadow:0 0 0 4px rgba(34,197,94,.25),
+               0 3px 8px rgba(0,0,0,.5);
+  "></div>`,
+  className: '',
+  iconSize: [18,18],
+  iconAnchor: [9,9]
 });
-L.marker(OVRC, { icon: putinIcon }).addTo(map)
-  .bindTooltip('OVRC Launch', { permanent: true, direction: 'right', className: 'putin-tip', offset: [10,0] });
+
+L.marker(OVRC, { icon: putinIcon })
+  .addTo(map)
+  .bindTooltip('OVRC Launch', {
+    permanent: true,
+    direction: 'right',
+    className: 'putin-tip',
+    offset: [10,0]
+  });
 
 L.circle(ZONE_CENTER, {
-  radius: DANGER_RADIUS_M, color: '#dc2626', fillColor: '#dc2626',
-  fillOpacity: 0.06, weight: 1.5, dashArray: '7,5',
+  radius: DANGER_RADIUS_M,
+  color: '#dc2626',
+  fillColor: '#dc2626',
+  fillOpacity: .06,
+  weight: 1.5,
+  dashArray: '7,5'
 }).addTo(map);
 
-// ── Vessel state ─────────────────────────────────────────────────────────────
+/* ==========================================================================
+   VESSEL STATE
+   ========================================================================== */
+
 const vesselMarkers = new Map();
-const vesselData    = new Map();
+const vesselData = new Map();
 let alertDismissedFor = null;
 
 function bargeIcon(vessel) {
-  const dist   = distanceM(ZONE_CENTER, [vessel.lat, vessel.lon]);
+  const dist = distanceM(
+    ZONE_CENTER,
+    [vessel.lat, vessel.lon]
+  );
+
   const inZone = dist <= DANGER_RADIUS_M;
-  // Red only when in danger zone; amber for upriver outside zone; blue for downriver
-  const color  = inZone ? '#dc2626' : (cogToDirection(vessel.cog) === 'Upriver' ? '#f59e0b' : '#2563eb');
-  const pulse  = inZone
-    ? `<style>@keyframes rng{0%{transform:scale(1);opacity:.9}100%{transform:scale(2.4);opacity:0}}.rng{position:absolute;inset:-6px;border-radius:4px;border:2px solid #dc2626;animation:rng 1.3s ease-out infinite;}</style><div class="rng"></div>`
+
+  const color = inZone
+    ? '#dc2626'
+    : cogToDirection(vessel.cog) === 'Upriver'
+      ? '#f59e0b'
+      : '#2563eb';
+
+  const pulse = inZone
+    ? `<style>
+        @keyframes rng {
+          0% { transform:scale(1); opacity:.9; }
+          100% { transform:scale(2.4); opacity:0; }
+        }
+        .rng {
+          position:absolute; inset:-6px;
+          border-radius:4px;
+          border:2px solid #dc2626;
+          animation:rng 1.3s ease-out infinite;
+        }
+      </style>
+      <div class="rng"></div>`
     : '';
+
   return L.divIcon({
-    html: `<div style="position:relative;width:32px;height:12px">${pulse}<div style="width:32px;height:12px;background:${color};border-radius:3px;border:2px solid rgba(255,255,255,0.4);box-shadow:0 2px 10px rgba(0,0,0,0.6);transform:rotate(${vessel.cog}deg);transform-origin:center;"></div></div>`,
-    className: '', iconSize: [32,12], iconAnchor: [16,6],
+    html: `
+      <div style="
+        position:relative;width:32px;height:12px
+      ">
+        ${pulse}
+        <div style="
+          width:32px;height:12px;
+          background:${color};
+          border-radius:3px;
+          border:2px solid rgba(255,255,255,.4);
+          box-shadow:0 2px 10px rgba(0,0,0,.6);
+          transform:rotate(${vessel.cog}deg);
+          transform-origin:center;
+        "></div>
+      </div>`,
+    className: '',
+    iconSize: [32,12],
+    iconAnchor: [16,6]
   });
 }
 
 function popupHtml(vessel) {
-  const dist   = distanceM(ZONE_CENTER, [vessel.lat, vessel.lon]);
+  const dist = distanceM(
+    ZONE_CENTER,
+    [vessel.lat, vessel.lon]
+  );
+
   const inZone = dist <= DANGER_RADIUS_M;
-  const dir    = cogToDirection(vessel.cog);
-  const eta    = etaMinutes(dist, vessel.sog);
-  const etaStr = eta !== null ? `~${eta} min to OVRC Launch` : 'Anchored / not moving';
+  const dir = cogToDirection(vessel.cog);
+  const eta = etaMinutes(dist, vessel.sog);
+
+  const etaStr = eta !== null
+    ? `~${eta} min to OVRC Launch`
+    : 'Anchored / not moving';
+
   return `
     <div class="popup-name">${vessel.name}</div>
     <div class="popup-row">Direction: <span>${dir}</span></div>
     <div class="popup-row">Speed: <span>${vessel.sog.toFixed(1)} kts</span></div>
     <div class="popup-row">MMSI: <span>${vessel.mmsi}</span></div>
-    ${inZone ? `<div class="popup-eta">⚠ ${etaStr}</div>` : `<div class="popup-row">ETA: <span>${etaStr}</span></div>`}
+    ${
+      inZone
+        ? `<div class="popup-eta">⚠ ${etaStr}</div>`
+        : `<div class="popup-row">ETA: <span>${etaStr}</span></div>`
+    }
   `;
 }
 
 function chipHtml(vessel) {
-  const dist   = distanceM(ZONE_CENTER, [vessel.lat, vessel.lon]);
+  const dist = distanceM(
+    ZONE_CENTER,
+    [vessel.lat, vessel.lon]
+  );
+
   const inZone = dist <= DANGER_RADIUS_M;
-  const dir    = cogToDirection(vessel.cog);
-  const eta    = etaMinutes(dist, vessel.sog);
-  const icon   = dir === 'Upriver' ? '🔴' : dir === 'Downriver' ? '🔵' : '🟡';
+  const dir = cogToDirection(vessel.cog);
+  const eta = etaMinutes(dist, vessel.sog);
+
+  const icon =
+    dir === 'Upriver' ? '🔴' :
+    dir === 'Downriver' ? '🔵' : '🟡';
+
   const etaLine = inZone && eta !== null
     ? `<div class="veta">⚠ ~${eta} min to launch</div>`
-    : `<div class="vdetail">${eta !== null ? `~${eta} min away` : 'Anchored'}</div>`;
+    : `<div class="vdetail">${
+        eta !== null ? `~${eta} min away` : 'Anchored'
+      }</div>`;
+
   return `
     <div class="vname">${icon} ${vessel.name}</div>
     <div class="vdetail">${dir} · ${vessel.sog.toFixed(1)} kts</div>
@@ -273,24 +673,41 @@ function chipHtml(vessel) {
 
 function applyVessel(vessel) {
   vesselData.set(vessel.mmsi, vessel);
+
   if (vesselMarkers.has(vessel.mmsi)) {
     const m = vesselMarkers.get(vessel.mmsi);
+
     m.setLatLng([vessel.lat, vessel.lon]);
     m.setIcon(bargeIcon(vessel));
-    if (m.isPopupOpen()) m.setPopupContent(popupHtml(vessel));
+
+    if (m.isPopupOpen()) {
+      m.setPopupContent(popupHtml(vessel));
+    }
   } else {
-    const m = L.marker([vessel.lat, vessel.lon], { icon: bargeIcon(vessel) })
+    const m = L.marker(
+      [vessel.lat, vessel.lon],
+      { icon: bargeIcon(vessel) }
+    )
       .addTo(map)
-      .bindPopup(popupHtml(vessel), { maxWidth: 240, offset: [0,-6] });
+      .bindPopup(popupHtml(vessel), {
+        maxWidth: 240,
+        offset: [0,-6]
+      });
+
     m.on('click', () => focusVessel(vessel.mmsi));
     vesselMarkers.set(vessel.mmsi, m);
   }
+
   renderList();
   checkDangerZone();
 }
 
 function removeVessel(mmsi) {
-  if (vesselMarkers.has(mmsi)) { map.removeLayer(vesselMarkers.get(mmsi)); vesselMarkers.delete(mmsi); }
+  if (vesselMarkers.has(mmsi)) {
+    map.removeLayer(vesselMarkers.get(mmsi));
+    vesselMarkers.delete(mmsi);
+  }
+
   vesselData.delete(mmsi);
   renderList();
 }
@@ -298,32 +715,66 @@ function removeVessel(mmsi) {
 function focusVessel(mmsi) {
   const v = vesselData.get(mmsi);
   if (!v) return;
-  map.setView([v.lat, v.lon], 15, { animate: true, duration: 0.5 });
+
+  map.setView(
+    [v.lat, v.lon],
+    15,
+    { animate:true, duration:.5 }
+  );
+
   vesselMarkers.get(mmsi)?.openPopup();
 }
 
 function renderList() {
   const list = document.getElementById('vessel-list');
+
   const nearby = [...vesselData.values()].filter(
-    v => distanceM(ZONE_CENTER, [v.lat, v.lon]) <= NEARBY_RADIUS_M
+    v => distanceM(
+      ZONE_CENTER,
+      [v.lat, v.lon]
+    ) <= NEARBY_RADIUS_M
   );
 
   document.getElementById('vessel-count').textContent =
-    nearby.length === 1 ? '1 vessel' : `${nearby.length} vessels`;
+    nearby.length === 1
+      ? '1 vessel'
+      : `${nearby.length} vessels`;
 
   if (nearby.length === 0) {
-    list.innerHTML = '<div class="empty-state">No vessels in range</div>';
+    list.innerHTML =
+      '<div class="empty-state">No vessels in range</div>';
   } else {
-    const sorted = nearby.sort((a, b) => {
-      const da = distanceM(ZONE_CENTER, [a.lat, a.lon]);
-      const db = distanceM(ZONE_CENTER, [b.lat, b.lon]);
-      const aIn = da <= DANGER_RADIUS_M, bIn = db <= DANGER_RADIUS_M;
+    const sorted = nearby.sort((a,b) => {
+      const da = distanceM(
+        ZONE_CENTER,
+        [a.lat,a.lon]
+      );
+
+      const db = distanceM(
+        ZONE_CENTER,
+        [b.lat,b.lon]
+      );
+
+      const aIn = da <= DANGER_RADIUS_M;
+      const bIn = db <= DANGER_RADIUS_M;
+
       if (aIn !== bIn) return aIn ? -1 : 1;
+
       return da - db;
     });
+
     list.innerHTML = sorted.map(v => {
-      const inZone = distanceM(ZONE_CENTER, [v.lat, v.lon]) <= DANGER_RADIUS_M;
-      return `<div class="vessel-chip ${inZone ? 'danger' : ''}" onclick="focusVessel('${v.mmsi}')">${chipHtml(v)}</div>`;
+      const inZone =
+        distanceM(
+          ZONE_CENTER,
+          [v.lat,v.lon]
+        ) <= DANGER_RADIUS_M;
+
+      return `
+        <div class="vessel-chip ${inZone ? 'danger' : ''}"
+             onclick="focusVessel('${v.mmsi}')">
+          ${chipHtml(v)}
+        </div>`;
     }).join('');
   }
 
@@ -333,107 +784,197 @@ function renderList() {
 function renderApproachPanel() {
   const belleville = [];
   const willow = [];
+
   for (const v of vesselData.values()) {
     const src = approachSource(v);
+
     if (src === 'belleville') belleville.push(v);
     else if (src === 'willow-island') willow.push(v);
   }
 
-  const byEta = (a, b) => {
-    const ea = etaMinutes(distanceM(ZONE_CENTER, [a.lat, a.lon]), a.sog);
-    const eb = etaMinutes(distanceM(ZONE_CENTER, [b.lat, b.lon]), b.sog);
+  const byEta = (a,b) => {
+    const ea = etaMinutes(
+      distanceM(ZONE_CENTER,[a.lat,a.lon]),
+      a.sog
+    );
+
+    const eb = etaMinutes(
+      distanceM(ZONE_CENTER,[b.lat,b.lon]),
+      b.sog
+    );
+
     return (ea ?? Infinity) - (eb ?? Infinity);
   };
+
   belleville.sort(byEta);
   willow.sort(byEta);
 
   const badge = document.getElementById('approach-badge');
   const total = belleville.length + willow.length;
+
   badge.textContent = total;
   badge.classList.toggle('hidden', total === 0);
 
-  renderApproachGroup('approach-list-belleville', belleville);
-  renderApproachGroup('approach-list-willow', willow);
+  renderApproachGroup(
+    'approach-list-belleville',
+    belleville
+  );
+
+  renderApproachGroup(
+    'approach-list-willow',
+    willow
+  );
 
   syncMapOffset();
 }
 
 function renderApproachGroup(elementId, vessels) {
   const el = document.getElementById(elementId);
+
   if (vessels.length === 0) {
-    el.innerHTML = '<div class="empty-state">None</div>';
+    el.innerHTML =
+      '<div class="empty-state">None</div>';
     return;
   }
+
   el.innerHTML = vessels.map(v =>
-    `<div class="vessel-chip" onclick="focusVessel('${v.mmsi}')">${chipHtml(v)}</div>`
+    `<div class="vessel-chip"
+          onclick="focusVessel('${v.mmsi}')">
+      ${chipHtml(v)}
+    </div>`
   ).join('');
 }
 
 function toggleApproachPanel() {
-  document.getElementById('approach-body').classList.toggle('expanded');
-  document.querySelector('.approach-chevron').classList.toggle('expanded');
+  document.getElementById('approach-body')
+    .classList.toggle('expanded');
+
+  document.querySelector('.approach-chevron')
+    .classList.toggle('expanded');
+
   syncMapOffset();
 }
 
 function syncMapOffset() {
   const sheet = document.getElementById('sheet');
-  document.getElementById('map').style.bottom = sheet.getBoundingClientRect().height + 'px';
+
+  document.getElementById('map').style.bottom =
+    sheet.getBoundingClientRect().height + 'px';
 }
 
 function checkDangerZone() {
   for (const vessel of vesselData.values()) {
-    const dist = distanceM(ZONE_CENTER, [vessel.lat, vessel.lon]);
-    if (dist <= DANGER_RADIUS_M && vessel.mmsi !== alertDismissedFor) {
+    const dist = distanceM(
+      ZONE_CENTER,
+      [vessel.lat,vessel.lon]
+    );
+
+    if (
+      dist <= DANGER_RADIUS_M &&
+      vessel.mmsi !== alertDismissedFor
+    ) {
       const dir = cogToDirection(vessel.cog);
-      const eta = etaMinutes(dist, vessel.sog);
-      document.getElementById('alert-name').textContent = `${vessel.name} approaching OVRC Launch`;
+      const eta = etaMinutes(dist,vessel.sog);
+
+      document.getElementById('alert-name').textContent =
+        `${vessel.name} approaching OVRC Launch`;
+
       document.getElementById('alert-detail').textContent =
-        `${dir} · ${vessel.sog.toFixed(1)} kts${eta !== null ? ` · ~${eta} min away` : ''}`;
-      document.getElementById('alert-banner').classList.remove('hidden');
-      document.getElementById('map').classList.add('with-alert');
+        `${dir} · ${vessel.sog.toFixed(1)} kts${
+          eta !== null ? ` · ~${eta} min away` : ''
+        }`;
+
+      document.getElementById('alert-banner')
+        .classList.remove('hidden');
+
+      document.getElementById('map')
+        .classList.add('with-alert');
+
       return;
     }
   }
-  document.getElementById('alert-banner').classList.add('hidden');
-  document.getElementById('map').classList.remove('with-alert');
+
+  document.getElementById('alert-banner')
+    .classList.add('hidden');
+
+  document.getElementById('map')
+    .classList.remove('with-alert');
+
   alertDismissedFor = null;
 }
 
 function dismissAlert() {
   for (const vessel of vesselData.values()) {
-    if (distanceM(ZONE_CENTER, [vessel.lat, vessel.lon]) <= DANGER_RADIUS_M) {
-      alertDismissedFor = vessel.mmsi; break;
+    if (
+      distanceM(
+        ZONE_CENTER,
+        [vessel.lat,vessel.lon]
+      ) <= DANGER_RADIUS_M
+    ) {
+      alertDismissedFor = vessel.mmsi;
+      break;
     }
   }
-  document.getElementById('alert-banner').classList.add('hidden');
-  document.getElementById('map').classList.remove('with-alert');
+
+  document.getElementById('alert-banner')
+    .classList.add('hidden');
+
+  document.getElementById('map')
+    .classList.remove('with-alert');
 }
 
-window.focusVessel  = focusVessel;
+window.focusVessel = focusVessel;
 window.dismissAlert = dismissAlert;
 window.toggleApproachPanel = toggleApproachPanel;
 
-// ── Reconnect countdown ───────────────────────────────────────────────────────
+/* ==========================================================================
+   AIS RECONNECT
+   ========================================================================== */
+
 let reconnectCountdown = null;
 
 function showReconnecting(reconnectAt) {
-  if (reconnectCountdown) clearInterval(reconnectCountdown);
-  document.querySelector('.live-dot').classList.add('disconnected');
-  const countEl = document.getElementById('vessel-count');
+  if (reconnectCountdown) {
+    clearInterval(reconnectCountdown);
+  }
+
+  document.querySelector('.live-dot')
+    .classList.add('disconnected');
+
+  const countEl =
+    document.getElementById('vessel-count');
+
   const tick = () => {
-    const rem = Math.max(0, reconnectAt - Date.now());
+    const rem =
+      Math.max(0,reconnectAt - Date.now());
+
     const m = Math.floor(rem / 60000);
-    const s = Math.floor((rem % 60000) / 1000);
-    countEl.textContent = `Reconnecting ${m}:${String(s).padStart(2, '0')}`;
-    if (rem === 0) clearInterval(reconnectCountdown);
+    const s = Math.floor(
+      (rem % 60000) / 1000
+    );
+
+    countEl.textContent =
+      `Reconnecting ${m}:${String(s).padStart(2,'0')}`;
+
+    if (rem === 0) {
+      clearInterval(reconnectCountdown);
+    }
   };
+
   tick();
-  reconnectCountdown = setInterval(tick, 1000);
+  reconnectCountdown =
+    setInterval(tick,1000);
 }
 
 function clearReconnecting() {
-  if (reconnectCountdown) { clearInterval(reconnectCountdown); reconnectCountdown = null; }
-  document.querySelector('.live-dot').classList.remove('disconnected');
+  if (reconnectCountdown) {
+    clearInterval(reconnectCountdown);
+    reconnectCountdown = null;
+  }
+
+  document.querySelector('.live-dot')
+    .classList.remove('disconnected');
+
   renderList();
 }
 
@@ -473,16 +1014,29 @@ function connectRelay() {
   };
 }
 
-// Prune stale vessels every minute
+/* Remove stale AIS positions */
 setInterval(() => {
   const now = Date.now();
-  for (const [mmsi, v] of vesselData) {
-    if (now - v.updatedAt > STALE_MS) removeVessel(mmsi);
-  }
-}, 60_000);
 
+  for (const [mmsi,v] of vesselData) {
+    if (
+      now - v.updatedAt >
+      STALE_MS
+    ) {
+      removeVessel(mmsi);
+    }
+  }
+},60000);
+
+/* Start */
 connectRelay();
 syncMapOffset();
+
+window.addEventListener(
+  'resize',
+  syncMapOffset
+);
 </script>
+
 </body>
 </html>
