@@ -154,8 +154,10 @@ html, body { height: 100%; overflow: hidden; background: #0f1923; }
 </div>
 
 <script>
-// ── Config — replace with your AISStream.io key ───────────────────────────────
-const AISSTREAM_API_KEY = 'd67370ad46a84b5ed46847aaf1dde2a59df2eb9d';
+// ── Config ───────────────────────────────────────────────────────────────────
+// Vessel data is relayed through a Cloudflare Worker so the AISStream API key
+// never ships to the browser. See worker/README.md.
+const RELAY_EVENTS_URL = 'https://barge-tracker-relay.jerry-ahart.workers.dev/events';
 
 // ── Constants ────────────────────────────────────────────────────────────────
 const OVRC            = [39.2833, -81.5631];  // Memorial Bridge, Parkersburg WV
@@ -163,7 +165,6 @@ const ZONE_CENTER     = [39.2851, -81.5631];  // Danger zone center — 1/8 mi n
 const DANGER_RADIUS_M = 4828;                 // 3 miles
 const MAP_CENTER      = [39.2900, -81.5631];
 const MAP_ZOOM        = 13;
-const BOUNDING_BOX    = [[39.05, -81.80], [39.42, -81.25]]; // widened to cover Belleville + Willow Island
 const STALE_MS        = 10 * 60 * 1000;
 const BELLEVILLE      = [39.1193, -81.7425]; // Belleville Locks and Dam — river mile 203.9, south of OVRC
 const WILLOW_ISLAND   = [39.3592, -81.3192]; // Willow Island Locks and Dam — river mile 161.7, north of OVRC
@@ -436,55 +437,40 @@ function clearReconnecting() {
   renderList();
 }
 
-// ── AISStream.io — direct browser WebSocket ──────────────────────────────────
-const RECONNECT_MS     = 5000;
-const MAX_RECONNECT_MS = 5 * 60 * 1000;
-let reconnectDelay = RECONNECT_MS;
+// ── Relay (Cloudflare Worker) ─────────────────────────────────────────────────
+function connectRelay() {
+  const source = new EventSource(RELAY_EVENTS_URL);
 
-function connectAIS() {
-  const ws = new WebSocket('wss://stream.aisstream.io/v0/stream');
+  source.onmessage = e => {
+    const msg = JSON.parse(e.data);
 
-  ws.addEventListener('open', () => {
-    reconnectDelay = RECONNECT_MS;
-    console.log('AISStream connected');
-    clearReconnecting();
-    ws.send(JSON.stringify({
-      APIKey: AISSTREAM_API_KEY,
-      BoundingBoxes: [BOUNDING_BOX],
-      FilterMessageTypes: ['PositionReport'],
-    }));
-  });
+    switch (msg.type) {
+      case 'snapshot':
+        msg.vessels.forEach(applyVessel);
+        clearReconnecting();
+        break;
 
-  ws.addEventListener('message', async (e) => {
-    try {
-      const text = e.data instanceof Blob ? await e.data.text() : e.data;
-      const msg = JSON.parse(text);
-      if (msg.MessageType !== 'PositionReport') return;
-      const pos  = msg.Message.PositionReport;
-      const meta = msg.MetaData || {};
-      applyVessel({
-        mmsi:      String(pos.UserID),
-        name:      (meta.ShipName || '').trim() || `MMSI ${pos.UserID}`,
-        lat:       pos.Latitude,
-        lon:       pos.Longitude,
-        sog:       pos.Sog,
-        cog:       pos.Cog,
-        updatedAt: Date.now(),
-      });
-    } catch (err) {
-      console.error('AIS parse error:', err);
+      case 'update':
+        applyVessel(msg.vessel);
+        break;
+
+      case 'remove':
+        removeVessel(msg.mmsi);
+        break;
+
+      case 'ais-connected':
+        clearReconnecting();
+        break;
+
+      case 'ais-reconnecting':
+        showReconnecting(msg.reconnectAt);
+        break;
     }
-  });
+  };
 
-  ws.addEventListener('error', (e) => console.error('AISStream error', e));
-
-  ws.addEventListener('close', () => {
-    const reconnectAt = Date.now() + reconnectDelay;
-    console.log(`AISStream disconnected — reconnecting in ${reconnectDelay / 1000}s`);
-    showReconnecting(reconnectAt);
-    setTimeout(connectAIS, reconnectDelay);
-    reconnectDelay = Math.min(reconnectDelay * 2, MAX_RECONNECT_MS);
-  });
+  source.onerror = () => {
+    console.error('Relay connection error — browser will retry automatically');
+  };
 }
 
 // Prune stale vessels every minute
@@ -495,7 +481,7 @@ setInterval(() => {
   }
 }, 60_000);
 
-connectAIS();
+connectRelay();
 syncMapOffset();
 </script>
 </body>
