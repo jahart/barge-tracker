@@ -92,7 +92,7 @@ html,body { height:100%; overflow:hidden; background:#0f1923; }
 
 .river-stats {
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:1fr;
   gap:7px;
 }
 
@@ -144,26 +144,26 @@ html,body { height:100%; overflow:hidden; background:#0f1923; }
   flex-shrink:0;
 }
 
-#river-condition.elevated {
+#river-condition.minor {
   background:#2a200b;
   border-color:#92400e;
   color:#fbbf24;
 }
-#river-condition.elevated #river-condition-dot { background:#f59e0b; }
+#river-condition.minor #river-condition-dot { background:#f59e0b; }
 
-#river-condition.strong {
+#river-condition.moderate {
   background:#2a1308;
   border-color:#c2410c;
   color:#fb923c;
 }
-#river-condition.strong #river-condition-dot { background:#f97316; }
+#river-condition.moderate #river-condition-dot { background:#f97316; }
 
-#river-condition.very-strong {
+#river-condition.major {
   background:#300909;
   border-color:#991b1b;
   color:#f87171;
 }
-#river-condition.very-strong #river-condition-dot { background:#ef4444; }
+#river-condition.major #river-condition-dot { background:#ef4444; }
 
 #river-condition.error {
   background:#1e293b;
