@@ -19,7 +19,7 @@ describe('worker fetch routing', () => {
     const request = new Request('https://relay.example/events');
     const res = await worker.fetch(request, env);
 
-    expect(env.AIS_RELAY.idFromName).toHaveBeenCalledWith('ohio-river');
+    expect(env.AIS_RELAY.idFromName).toHaveBeenCalledWith('ohio-river-v2');
     expect(env.AIS_RELAY.get).toHaveBeenCalledWith('id-ohio-river');
     expect(stub.fetch).toHaveBeenCalledWith(request);
     expect(res).toBe(stubResponse);
