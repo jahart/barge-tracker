@@ -347,14 +347,16 @@ html,body { height:100%; overflow:hidden; background:#0f1923; }
 // ── Config ───────────────────────────────────────────────────────────────────
 // Vessel data is relayed through a Cloudflare Worker so the AISStream API key
 // never ships to the browser. See worker/README.md.
-const RELAY_URL = 'https://barge-tracker-relay.jerry-ahart.workers.dev/events';
-const RELAY_POLL_MS = 30000;
+const RELAY_URL = 'wss://barge-tracker-relay.jerry-ahart.workers.dev/events';
+const RELAY_INITIAL_DELAY_MS = 5000;
+const RELAY_MAX_DELAY_MS = 5 * 60 * 1000;
 
 const OVRC            = [39.2833, -81.5631];
 const ZONE_CENTER     = [39.2851, -81.5631];
 const DANGER_RADIUS_M = 4828;
 const MAP_CENTER      = [39.2900, -81.5631];
 const MAP_ZOOM        = 13;
+const STALE_MS        = 10 * 60 * 1000;
 const BELLEVILLE      = [39.1193, -81.7425];
 const WILLOW_ISLAND   = [39.3592, -81.3192];
 const NEARBY_RADIUS_M = 12875;
@@ -959,37 +961,62 @@ function clearReconnecting() {
 }
 
 // ── Relay (Cloudflare Worker) ─────────────────────────────────────────────────
-// The relay is polled rather than held open via EventSource/SSE: a
-// permanently-open connection keeps the Durable Object continuously active,
-// which burns through Cloudflare's free-tier daily duration allowance. Each
-// poll returns the full current vessel snapshot, so the client just
-// reconciles against it.
-async function pollRelay() {
-  try {
-    const res = await fetch(RELAY_URL);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const data = await res.json();
+// A plain (non-Durable-Object) Worker proxies this WebSocket straight through
+// to AISStream, so updates arrive in real time with no polling gaps. The
+// browser owns reconnect/backoff itself since native WebSocket, unlike
+// EventSource, doesn't auto-reconnect.
+let relayReconnectDelay = RELAY_INITIAL_DELAY_MS;
 
-    const seen = new Set();
-    data.vessels.forEach(v => { applyVessel(v); seen.add(v.mmsi); });
-    for (const mmsi of [...vesselData.keys()]) {
-      if (!seen.has(mmsi)) removeVessel(mmsi);
-    }
+function connectRelay() {
+  const ws = new WebSocket(RELAY_URL);
 
-    if (data.connected) {
-      clearReconnecting();
-    } else {
-      showReconnecting(Date.now() + RELAY_POLL_MS);
+  ws.onopen = () => {
+    relayReconnectDelay = RELAY_INITIAL_DELAY_MS;
+  };
+
+  ws.onmessage = e => {
+    const msg = JSON.parse(e.data);
+
+    switch (msg.type) {
+      case 'update':
+        applyVessel(msg.vessel);
+        break;
+
+      case 'ais-connected':
+        clearReconnecting();
+        break;
+
+      case 'ais-reconnecting':
+        showReconnecting(msg.reconnectAt);
+        break;
     }
-  } catch (err) {
-    console.error('Relay poll failed — will retry:', err.message);
-    showReconnecting(Date.now() + RELAY_POLL_MS);
-  }
+  };
+
+  ws.onclose = () => {
+    const reconnectAt = Date.now() + relayReconnectDelay;
+    showReconnecting(reconnectAt);
+    setTimeout(connectRelay, relayReconnectDelay);
+    relayReconnectDelay = Math.min(relayReconnectDelay * 2, RELAY_MAX_DELAY_MS);
+  };
+
+  ws.onerror = () => {
+    console.error('Relay connection error');
+  };
 }
 
+/* Remove stale AIS positions */
+setInterval(() => {
+  const now = Date.now();
+
+  for (const [mmsi, v] of vesselData) {
+    if (now - v.updatedAt > STALE_MS) {
+      removeVessel(mmsi);
+    }
+  }
+}, 60000);
+
 /* Start */
-pollRelay();
-setInterval(pollRelay, RELAY_POLL_MS);
+connectRelay();
 syncMapOffset();
 
 window.addEventListener(
