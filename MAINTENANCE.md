@@ -10,55 +10,49 @@ There is no build step — `index.html` at the repo root is served as-is.
 
 ## Cloudflare Worker (AIS relay)
 
-**What it does:** Holds the AISStream.io API key as a server-side secret and relays live vessel position data to the browser over Server-Sent Events, so the key is never exposed client-side. Lives in `worker/`.
+**What it does:** Holds the AISStream.io API key as a server-side secret and relays live vessel position data to the browser over a plain WebSocket connection, so the key is never exposed client-side. Lives in `worker/`.
+
+It's a plain Worker — no Durable Object, no persisted/shared state. Each browser connection to `/events` gets its own dedicated upstream AISStream WebSocket for as long as that browser stays connected; the Worker reshapes AIS messages and forwards them straight through. This replaced an earlier Durable-Object-based design (one shared upstream connection broadcasting SSE to all browsers) that hit the Durable Objects wall-clock "duration" billing quota — a plain Worker only bills CPU time, so holding a per-browser socket open costs nothing while idle. See git history (`fix: drop the Durable Object, proxy AISStream over a plain Worker WebSocket`) for that change.
 
 **Files:**
-- `worker/src/index.js` — Worker entry point, routes `GET /events` to the Durable Object.
-- `worker/src/AisRelay.js` — the Durable Object: owns the persistent AISStream WebSocket, keeps an in-memory vessel map, broadcasts SSE to connected browsers, sweeps stale vessels every 60s via a Durable Object alarm.
-- `worker/src/lib/backoff.js`, `worker/src/lib/vessels.js` — pure, unit-tested helper logic (reconnect delay, AIS message parsing, staleness).
-- `worker/wrangler.toml` — Worker + Durable Object config. Deployed as `barge-tracker-relay`, live at `https://barge-tracker-relay.jerry-ahart.workers.dev`.
+- `worker/src/index.js` — the entire relay: routes `GET /events` (WebSocket upgrade only, else 404/426), opens one upstream AISStream connection per browser connection, parses and forwards `PositionReport` messages, reconnects with backoff if the upstream drops, and closes the upstream when the browser disconnects.
+- `worker/src/lib/backoff.js` — reconnect delay (starts at `INITIAL_DELAY_MS`, doubles via `nextDelay()`, caps at `MAX_DELAY_MS`).
+- `worker/src/lib/vessels.js` — `parsePositionReport()` turns a raw AIS message into a vessel object. Also exports `findStale()`, which is still unit-tested but has **no caller** — it was for the old Durable Object's in-memory vessel map/sweep; this Worker keeps no server-side vessel state, so staleness is entirely a client-side concern now.
+- `worker/wrangler.toml` — Worker config. Deployed as `barge-tracker-relay`, live at `https://barge-tracker-relay.jerry-ahart.workers.dev`. Its `[[migrations]]` entries record creating and then deleting the old `AisRelay` Durable Object class.
 
 **Deploying a change:**
 ```bash
 cd worker
-npx wrangler deploy
+npm run deploy   # or: npx wrangler deploy
 ```
 
 **Rotating the AISStream API key** (do this if it's ever exposed again, e.g. pasted somewhere public):
 1. Get a new key at https://aisstream.io (and revoke the old one there).
-2. Set it as the secret, trimmed (no trailing newline — see gotcha below):
+2. Set it as the secret, trimmed (no trailing newline):
    ```bash
    cd worker
    printf '%s' "$(cut -d= -f2- .dev.vars)" | npx wrangler secret put AISSTREAM_API_KEY
    ```
-3. **Important gotcha:** updating the secret is *not enough by itself*. The already-running Durable Object instance captured the old key in memory at construction time and keeps using it — it does not re-read the secret. You must also force a fresh instance by changing the `idFromName(...)` argument in `worker/src/index.js` (e.g. `'ohio-river-v2'` → `'ohio-river-v3'`), then `npx wrangler deploy`. Add a comment explaining the rename (see the existing one in that file) so a future rotation doesn't lose this context.
-4. After rotating, **don't immediately hammer the endpoint with repeated test connections.** AISStream documents throttling "at the api key and user level" for accounts with many concurrent/rapid connections — several quick test connections against a brand-new key (from prior debugging) produced a WebSocket close code `1006` (abnormal closure, no reason given) on every single attempt, across three different WebSocket client implementations (Cloudflare Workers, plain Node, the `ws` npm package) — strongly suggesting the rapid testing itself triggered throttling rather than there being a real bug. After rotating, deploy once, then wait at least 15–20 minutes before checking `/events` again.
+3. No redeploy or ID-rotation dance needed here (that was only required by the old Durable Object, which captured the key once at construction and never re-read it). This Worker reads `env.AISSTREAM_API_KEY` fresh on every new browser connection, so an updated secret takes effect on the next connection automatically.
+4. After rotating, **don't immediately hammer the endpoint with repeated test connections** — see the throttling note below.
 
 **Local development:**
 1. `cd worker && npm install` (first time only).
 2. Create `worker/.dev.vars` (gitignored, never committed) with `AISSTREAM_API_KEY=your_key_here`.
-3. `npx wrangler dev` — runs a local copy on `http://localhost:8787`.
-4. Point a local test copy of `index.html`'s `RELAY_EVENTS_URL` at `http://localhost:8787/events` to test end-to-end. Note: the Worker's CORS is locked to `https://jahart.github.io` (see below), so a plain browser fetch from `localhost` will be blocked — either temporarily add your local origin to `AisRelay.js`'s `CORS_ORIGIN`, or just verify with `curl` (CORS is a browser-enforced restriction, not a server one).
+3. `npm run dev` (or `npx wrangler dev`) — runs a local copy on `http://localhost:8787`.
+4. Point a local test copy of `index.html`'s `RELAY_URL` at `ws://localhost:8787/events` to test end-to-end.
+5. There's no CORS handling in `index.js`, and none is needed — WebSocket upgrades aren't subject to browser CORS the way `fetch`/SSE requests are. (The old Durable-Object version hardcoded `Access-Control-Allow-Origin` for its SSE endpoint; that went away with the DO.)
 
-**Tests:** `cd worker && npx vitest run` — covers `backoff.js` and `vessels.js` (pure logic only). `AisRelay.js` itself isn't unit-tested — it depends on Workers-runtime-only globals (`WebSocket`, `DurableObjectState`, `TransformStream`) that don't mock cleanly outside the real runtime, so it's verified manually via `wrangler dev` + `curl` after any change to it.
+**Tests:** `cd worker && npm test` (or `npx vitest run`) — `test/backoff.test.js` and `test/vessels.test.js` cover pure logic; `test/index.test.js` covers routing (404 for unknown paths, 426 for non-upgrade requests to `/events`). The actual relay behavior in `relayToClient()` isn't unit-tested — it depends on Workers-runtime WebSocket behavior that doesn't mock cleanly, so verify manually via `wrangler dev` plus a real WebSocket client after any change to it (`curl` can't do a real WebSocket handshake — see below).
 
-**Watching live logs:** `cd worker && npx wrangler tail` — streams real-time logs from the deployed Worker (useful for confirming AIS messages are actually arriving, or diagnosing errors).
+**Watching live logs:** `cd worker && npx wrangler tail` — streams real-time logs from the deployed Worker. All relay logic now runs directly in the top-level `fetch` handler (no Durable Object indirection), so `console.log`/`console.error` calls in `index.js` show up reliably here.
 
-**CORS:** `AisRelay.js` hardcodes `Access-Control-Allow-Origin: https://jahart.github.io`. If the site is ever served from a different domain, update the `CORS_ORIGIN` constant in `worker/src/AisRelay.js` and redeploy.
+**Known open issue: no vessel traffic observed yet — needs re-verification under this architecture.** The last investigation (done under the old Durable-Object design) found AISStream connections closing abruptly (WebSocket code `1006`, no reason) roughly 700ms after the subscribe message, across three separate client implementations, with zero AIS messages received even against a global bounding box. Leading theory was AISStream-side throttling triggered by many rapid connection attempts made while debugging, not a real bug — see git history for the full writeup if useful.
 
-**Known open issue: no vessel traffic observed yet.** As of this writing, `snapshot.vessels` has stayed empty in every check, even though the Worker successfully connects to AISStream (`ais-connected` fires). This has NOT yet been confirmed as either "genuinely no traffic" or "a real bug" — the investigation is incomplete. Read this before spending more time on it, to avoid repeating dead ends:
-
-- **`wrangler tail` is unreliable for this.** Confirmed by testing: a `console.log` in the top-level Worker (`index.js`) shows up in `wrangler tail --format json`; an equivalent `console.log` inside the Durable Object (`AisRelay.js`, invoked via `stub.fetch()`) does not, even though the request itself is traced. Don't trust "I don't see logs" as evidence of anything — if you need visibility into what's happening inside the DO, expose it via the HTTP response instead (e.g., a temporary counter field in the `snapshot` payload), the way this investigation eventually did.
-- **A real, reproducible failure was found and is not yet fully explained:** using a temporary global bounding box (`[[-90,-180],[90,180]]`) and a diagnostic message counter (bypassing the tail-logging gap above), zero AIS messages arrived over 30+ seconds — which should be an obvious firehose if the subscription were working normally. The WebSocket connection itself gets abruptly closed (code `1006`, no reason, `wasClean: false`) roughly 700ms after the subscribe message is sent. This was reproduced identically across three separate WebSocket client implementations (Cloudflare Workers, a plain Node script, the `ws` npm package), which rules out our code/library as the cause.
-- **Leading theory, not yet confirmed:** AISStream's own docs mention throttling "at the api key and user level" for many connections on one key. The 1006 pattern first appeared after this investigation had already made many rapid connection attempts while debugging (several diagnostic Durable Object instances, each holding its own persistent connection on the same key, plus multiple manual test scripts run back-to-back). The key was rotated once already during this investigation and the failure persisted — but that rotation was immediately followed by more rapid testing, which may have re-triggered the same throttling before it could be ruled out cleanly.
-- **AISStream's docs say an invalid key produces an explicit `{"error": "Api Key Is Not Valid"}` message**, not a silent connection drop — so the 1006 pattern doesn't look like "the key is wrong," it looks more like a network/throttling-level rejection.
-
-**How to verify from a fresh session, without repeating the mistake above:**
-1. Check `worker/src/index.js` for the current `idFromName(...)` value and `worker/src/AisRelay.js` for the current `BOUNDING_BOX` — confirm both are the real production values (a narrow real bounding box, not a diagnostic global one; a plain descriptive ID, not one with "diag" in the name). If either looks like leftover diagnostic scaffolding, that's a sign a previous session didn't clean up — revert to real values and redeploy once.
-2. Make exactly **one** request: `curl -N --max-time 15 https://barge-tracker-relay.jerry-ahart.workers.dev/events` and read the full output.
-3. If you see `ais-connected` and, over that window, at least one `update` event with real vessel data — it's fixed, no further action needed.
-4. If you see zero `update` events, **wait at least 15–20 minutes without making any further requests**, then make exactly one more check the same way. Resist the urge to retry rapidly — that's the exact pattern suspected of causing the 1006 closures in the first place.
-5. If it's still empty after that patient check, the next real diagnostic step (not yet done — the diagnostic code from this investigation was reverted rather than committed, so it doesn't exist in git history): temporarily add a counter to `AisRelay.js` — e.g. `this.diagnosticRawMessageCount = 0` in the constructor, `this.diagnosticRawMessageCount++` at the top of `handleAisMessage()` (before the `parsePositionReport` filter, so it counts *any* message, not just position reports), and include it in the `snapshot` object in `fetch()`. This surfaces whether AISStream is sending anything at all, sidestepping the `wrangler tail` gap described above. Redeploy under a fresh `idFromName` (to guarantee a clean instance), make **one** check, then immediately revert both the counter and the ID change and redeploy the clean version regardless of outcome — don't leave diagnostic code or IDs deployed.
+This has **not been re-checked since the Durable Object was dropped** for the current per-browser-connection design, and the old verification method (treating `/events` as an SSE endpoint via `curl -N`) no longer applies — `/events` is WebSocket-only now, so plain `curl` just gets a 426. To verify:
+1. Use a real WebSocket client (e.g. `wscat`, `websocat`, or a browser tab) to connect to `wss://barge-tracker-relay.jerry-ahart.workers.dev/events`.
+2. Watch for an `{"type":"ais-connected"}` message followed by `{"type":"update",...}` messages with real vessel data.
+3. If you see zero `update` messages, don't retry rapidly — wait at least 15–20 minutes before checking again, to avoid re-triggering the suspected throttling.
 
 ## River conditions (`river.json`)
 
