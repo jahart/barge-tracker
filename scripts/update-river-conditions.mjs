@@ -1,7 +1,9 @@
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { computeTrend } from './compute-trend.mjs';
+
+const STALE_THRESHOLD_MS = 12 * 60 * 60 * 1000;
 
 const USGS_URL =
   'https://waterservices.usgs.gov/nwis/iv/?sites=03151000&parameterCd=00065&period=PT3H&format=json';
@@ -65,6 +67,14 @@ async function fetchFloodCategory() {
   });
 }
 
+const repoRoot = join(dirname(fileURLToPath(import.meta.url)), '..');
+const riverJsonPath = join(repoRoot, 'river.json');
+
+function lastUpdateAgeMs() {
+  const existing = JSON.parse(readFileSync(riverJsonPath, 'utf8'));
+  return Date.now() - Date.parse(existing.updated);
+}
+
 async function main() {
   const [{ stageFt, trend }, floodCategory] = await Promise.all([
     fetchStageAndTrend(),
@@ -78,13 +88,28 @@ async function main() {
     updated: new Date().toISOString(),
   };
 
-  const repoRoot = join(dirname(fileURLToPath(import.meta.url)), '..');
-  writeFileSync(join(repoRoot, 'river.json'), JSON.stringify(output, null, 2) + '\n');
+  writeFileSync(riverJsonPath, JSON.stringify(output, null, 2) + '\n');
 
   console.log('Wrote river.json:', output);
 }
 
 main().catch((err) => {
   console.error('Failed to update river conditions:', err);
+
+  let ageMs;
+  try {
+    ageMs = lastUpdateAgeMs();
+  } catch {
+    ageMs = Infinity; // no prior data to fall back on — treat as a real outage
+  }
+
+  if (ageMs < STALE_THRESHOLD_MS) {
+    console.warn(
+      `river.json is only ${Math.round(ageMs / 60_000)}m old — within the ${STALE_THRESHOLD_MS / 3_600_000}h tolerance, not failing the job.`
+    );
+    process.exit(0);
+  }
+
+  console.error(`river.json has been stale for over ${STALE_THRESHOLD_MS / 3_600_000}h — failing the job.`);
   process.exit(1);
 });
