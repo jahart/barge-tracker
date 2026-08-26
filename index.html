@@ -536,6 +536,44 @@ setInterval(updateRiverConditions, 10 * 60 * 1000);
 const LOCK_TRAFFIC_URL = './lock-traffic.json';
 const LOCK_KEYS = ['belleville', 'willowIsland'];
 
+// Rough, not-required-to-be-accurate estimate — 8 mph is a round-number
+// typical towboat cruising speed, not measured data.
+const ASSUMED_TOW_SPEED_MPS = 8 * 0.44704;
+
+// Only this direction, per lock, heads toward OVRC (matches approachSource()'s
+// existing convention for live AIS vessels).
+const LOCK_APPROACH_DIRECTION = { belleville: 'U', willowIsland: 'D' };
+
+const LOCK_DISTANCE_M = {
+  belleville: distanceM(BELLEVILLE, OVRC),
+  willowIsland: distanceM(WILLOW_ISLAND, OVRC),
+};
+
+function estimateArrival(lockageIso, distanceMeters, speedMps) {
+  return Date.parse(lockageIso) + (distanceMeters / speedMps) * 1000;
+}
+
+function formatEtaCountdown(arrivalMs, nowMs) {
+  const remainingMs = arrivalMs - nowMs;
+
+  if (remainingMs >= 60_000) {
+    const hours = Math.floor(remainingMs / 3_600_000);
+    const mins = Math.round((remainingMs % 3_600_000) / 60_000);
+    return hours > 0
+      ? `ETA ${hours}h${mins > 0 ? ' ' + mins + 'm' : ''}`
+      : `ETA ${mins}m`;
+  }
+
+  if (remainingMs > -60_000) {
+    return 'ETA arriving now';
+  }
+
+  const pastMs = -remainingMs;
+  const hours = Math.floor(pastMs / 3_600_000);
+  const mins = Math.round((pastMs % 3_600_000) / 60_000);
+  return hours > 0 ? `Passed ~${hours}h ago` : `Passed ~${mins}m ago`;
+}
+
 function timeAgo(date) {
   const diffMs = Date.now() - date.getTime();
   if (!Number.isFinite(diffMs) || diffMs < 0) return 'just now';
