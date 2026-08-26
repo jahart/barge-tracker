@@ -602,12 +602,21 @@ function renderLockPanel(key, lockData) {
   list.innerHTML = lockages.map(l => {
     const dirClass = l.direction === 'U' ? 'lockage-up' : 'lockage-down';
     const dirIcon = l.direction === 'U' ? '↑' : '↓';
-    const when = timeAgo(new Date(l.endOfLockage));
+
+    let detail;
+    if (l.direction === LOCK_APPROACH_DIRECTION[key]) {
+      const arrivalMs = estimateArrival(l.endOfLockage, LOCK_DISTANCE_M[key], ASSUMED_TOW_SPEED_MPS);
+      const eta = formatEtaCountdown(arrivalMs, Date.now());
+      detail = `${l.numBarges} barges · <span class="eta-countdown" data-arrival="${new Date(arrivalMs).toISOString()}">${eta}</span>`;
+    } else {
+      const when = timeAgo(new Date(l.endOfLockage));
+      detail = `${l.numBarges} barges · ${when}`;
+    }
 
     return `
       <div class="lockage-row">
         <span class="lockage-vessel"><span class="${dirClass}">${dirIcon}</span> ${l.vesselName}</span>
-        <span class="lockage-detail">${l.numBarges} barges · ${when}</span>
+        <span class="lockage-detail">${detail}</span>
       </div>`;
   }).join('');
 }
@@ -655,9 +664,19 @@ async function updateLockTraffic() {
   }
 }
 
+function tickEtaCountdowns() {
+  document.querySelectorAll('.eta-countdown').forEach(el => {
+    const arrivalMs = Date.parse(el.dataset.arrival);
+    el.textContent = formatEtaCountdown(arrivalMs, Date.now());
+  });
+}
+
 /* Initial lock-traffic load + refresh every 10 minutes */
 updateLockTraffic();
 setInterval(updateLockTraffic, 10 * 60 * 1000);
+
+/* Live ETA countdown tick — independent of the 10-minute data refresh */
+setInterval(tickEtaCountdowns, 30 * 1000);
 
 /* ==========================================================================
    TABS
