@@ -41,6 +41,8 @@ Despite the page's "Lock Queue Report" label, this returns actual **completed lo
 
 **`timezone` is always literally `"EST"`, even for August timestamps** — confirmed against real data pulled during this design (both locks). USACE is not doing DST-aware labeling here; treat `timezone` as a fixed **UTC-5** offset when converting to ISO-8601, not as a real IANA zone name to look up.
 
+**A vessel currently at the lock but not yet cleared has `SOLdate`/`endOfLockage` set to `null`** (`arrivalDate` is still populated) — discovered during implementation when live data returned an in-progress entry. Since this feed is documented as completed lockages, entries with a null `endOfLockage` are filtered out before applying the top-5 cap, rather than surfaced with a fabricated timestamp.
+
 ## `lock-traffic.json` shape
 
 Published at the repo root, alongside `river.json`:
