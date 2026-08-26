@@ -557,8 +557,9 @@ function formatEtaCountdown(arrivalMs, nowMs) {
   const remainingMs = arrivalMs - nowMs;
 
   if (remainingMs >= 60_000) {
-    const hours = Math.floor(remainingMs / 3_600_000);
-    const mins = Math.round((remainingMs % 3_600_000) / 60_000);
+    const totalMins = Math.round(remainingMs / 60_000);
+    const hours = Math.floor(totalMins / 60);
+    const mins = totalMins % 60;
     return hours > 0
       ? `ETA ${hours}h${mins > 0 ? ' ' + mins + 'm' : ''}`
       : `ETA ${mins}m`;
@@ -568,9 +569,9 @@ function formatEtaCountdown(arrivalMs, nowMs) {
     return 'ETA arriving now';
   }
 
-  const pastMs = -remainingMs;
-  const hours = Math.floor(pastMs / 3_600_000);
-  const mins = Math.round((pastMs % 3_600_000) / 60_000);
+  const totalMins = Math.round(-remainingMs / 60_000);
+  const hours = Math.floor(totalMins / 60);
+  const mins = totalMins % 60;
   return hours > 0 ? `Passed ~${hours}h ago` : `Passed ~${mins}m ago`;
 }
 
