@@ -11,13 +11,20 @@ function toIso8601(usaceDateStr) {
 }
 
 export function shapeLockQueue(rawArray) {
-  const recentLockages = rawArray.slice(0, LOCKAGE_LIMIT).map((entry) => ({
-    vesselName: entry.vesselName,
-    direction: entry.direction,
-    numBarges: entry.numBarges,
-    endOfLockage: toIso8601(entry.endOfLockage),
-    mmsi: entry.MMSI,
-  }));
+  // Vessels currently at the lock but not yet cleared have a null
+  // endOfLockage (confirmed against real data) — this feed is documented as
+  // completed lockages, so in-progress entries are skipped rather than shown
+  // with a fabricated timestamp.
+  const recentLockages = rawArray
+    .filter((entry) => entry.endOfLockage !== null)
+    .slice(0, LOCKAGE_LIMIT)
+    .map((entry) => ({
+      vesselName: entry.vesselName,
+      direction: entry.direction,
+      numBarges: entry.numBarges,
+      endOfLockage: toIso8601(entry.endOfLockage),
+      mmsi: entry.MMSI,
+    }));
 
   return { recentLockages };
 }

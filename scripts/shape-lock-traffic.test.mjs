@@ -68,3 +68,33 @@ test('handles an empty array (no lockages in the past 30 days)', () => {
   const result = shapeLockQueue([]);
   assert.deepEqual(result.recentLockages, []);
 });
+
+test('skips in-progress lockages (vessel still at the lock, endOfLockage not yet set)', () => {
+  const result = shapeLockQueue([
+    {
+      vesselName: 'THOMAS E. ERICKSON',
+      vesselNo: '0581142',
+      direction: 'U',
+      numBarges: 15,
+      SOLdate: null,
+      arrivalDate: '08/26/26 16:04',
+      endOfLockage: null,
+      timezone: 'EST',
+      MMSI: 367638210,
+    },
+    {
+      vesselName: 'M/V KEVIN MICHAEL',
+      vesselNo: '0273675',
+      direction: 'U',
+      numBarges: 14,
+      SOLdate: '08/26/26 15:06',
+      arrivalDate: '08/26/26 14:37',
+      endOfLockage: '08/26/26 16:30',
+      timezone: 'EST',
+      MMSI: 368416120,
+    },
+  ]);
+
+  assert.equal(result.recentLockages.length, 1);
+  assert.equal(result.recentLockages[0].vesselName, 'M/V KEVIN MICHAEL');
+});
