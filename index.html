@@ -554,6 +554,8 @@ function estimateArrival(lockageIso, distanceMeters, speedMps) {
 }
 
 function formatEtaCountdown(arrivalMs, nowMs) {
+  if (!Number.isFinite(arrivalMs)) return 'ETA unavailable';
+
   const remainingMs = arrivalMs - nowMs;
 
   if (remainingMs >= 60_000) {
@@ -607,7 +609,7 @@ function renderLockPanel(key, lockData) {
     if (l.direction === LOCK_APPROACH_DIRECTION[key]) {
       const arrivalMs = estimateArrival(l.endOfLockage, LOCK_DISTANCE_M[key], ASSUMED_TOW_SPEED_MPS);
       const eta = formatEtaCountdown(arrivalMs, Date.now());
-      detail = `${l.numBarges} barges · <span class="eta-countdown" data-arrival="${new Date(arrivalMs).toISOString()}">${eta}</span>`;
+      detail = `${l.numBarges} barges · <span class="eta-countdown" data-arrival="${arrivalMs}">${eta}</span>`;
     } else {
       const when = timeAgo(new Date(l.endOfLockage));
       detail = `${l.numBarges} barges · ${when}`;
@@ -666,7 +668,7 @@ async function updateLockTraffic() {
 
 function tickEtaCountdowns() {
   document.querySelectorAll('.eta-countdown').forEach(el => {
-    const arrivalMs = Date.parse(el.dataset.arrival);
+    const arrivalMs = Number(el.dataset.arrival);
     el.textContent = formatEtaCountdown(arrivalMs, Date.now());
   });
 }
