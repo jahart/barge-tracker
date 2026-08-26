@@ -53,9 +53,9 @@ The estimate is a genuine ticking countdown, not a value that only refreshes on 
 
 Given `remainingMs = arrivalMs - nowMs`, evaluated in this order:
 
-1. `remainingMs >= 60_000` (still approaching, 1 minute or more of runway): `ETA ${hours}h ${mins}m` if `hours > 0` (omit `${mins}m` entirely when `mins === 0`), else `ETA ${mins}m` — where `hours = Math.floor(remainingMs / 3_600_000)` and `mins = Math.round((remainingMs % 3_600_000) / 60_000)`.
+1. `remainingMs >= 60_000` (still approaching, 1 minute or more of runway): `ETA ${hours}h ${mins}m` if `hours > 0` (omit `${mins}m` entirely when `mins === 0`), else `ETA ${mins}m` — where `totalMins = Math.round(remainingMs / 60_000)`, `hours = Math.floor(totalMins / 60)`, `mins = totalMins % 60`. Deriving both from one rounded total (rather than flooring `hours` and separately rounding `mins` from the raw ms value) matters: independent rounding disagrees right at an hour boundary — at 59.5–60 minutes remaining, floor(hours)=0 while round(mins)=60, rendering the nonsensical `ETA 60m` instead of `ETA 1h`.
 2. `-60_000 < remainingMs < 60_000` (within a minute either side of the estimate): `ETA arriving now`.
-3. `remainingMs <= -60_000` (already passed): `Passed ~${hours}h ago` if `hours > 0`, else `Passed ~${mins}m ago` — where `hours`/`mins` are derived the same way as case 1, but from `Math.abs(remainingMs)` (this is already a rough estimate, so once it's past the 1-hour mark, minutes of precision on "how long ago" stop being meaningful and are dropped).
+3. `remainingMs <= -60_000` (already passed): `Passed ~${hours}h ago` if `hours > 0`, else `Passed ~${mins}m ago` — where `hours`/`mins` are derived the same way as case 1 (single rounded total, same boundary-consistency rationale), but from `Math.abs(remainingMs)` (this is already a rough estimate, so once it's past the 1-hour mark, minutes of precision on "how long ago" stop being meaningful and are dropped).
 
 ## Visual treatment
 
