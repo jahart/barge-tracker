@@ -530,6 +530,117 @@ updateRiverConditions();
 setInterval(updateRiverConditions, 10 * 60 * 1000);
 
 /* ==========================================================================
+   LOCK TRAFFIC
+   ========================================================================== */
+
+const LOCK_TRAFFIC_URL = './lock-traffic.json';
+const LOCK_KEYS = ['belleville', 'willowIsland'];
+
+function timeAgo(date) {
+  const diffMs = Date.now() - date.getTime();
+  if (!Number.isFinite(diffMs) || diffMs < 0) return 'just now';
+
+  const mins = Math.floor(diffMs / 60000);
+  if (mins < 1) return 'just now';
+  if (mins < 60) return `${mins}m ago`;
+
+  const hours = Math.floor(mins / 60);
+  if (hours < 24) return `${hours}h ago`;
+
+  const days = Math.floor(hours / 24);
+  return `${days}d ago`;
+}
+
+function renderLockPanel(key, lockData) {
+  const list = document.getElementById(`lock-list-${key}`);
+  const lockages = lockData?.recentLockages || [];
+
+  if (lockages.length === 0) {
+    list.innerHTML = '<div class="empty-state">No recent lockages</div>';
+    return;
+  }
+
+  list.innerHTML = lockages.map(l => {
+    const dirClass = l.direction === 'U' ? 'lockage-up' : 'lockage-down';
+    const dirIcon = l.direction === 'U' ? '↑' : '↓';
+    const when = timeAgo(new Date(l.endOfLockage));
+
+    return `
+      <div class="lockage-row">
+        <span class="lockage-vessel"><span class="${dirClass}">${dirIcon}</span> ${l.vesselName}</span>
+        <span class="lockage-detail">${l.numBarges} barges · ${when}</span>
+      </div>`;
+  }).join('');
+}
+
+async function updateLockTraffic() {
+  try {
+    const response = await fetch(
+      LOCK_TRAFFIC_URL + '?t=' + Date.now(),
+      { cache: 'no-store' }
+    );
+
+    if (!response.ok) {
+      throw new Error(`lock-traffic.json HTTP ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    for (const key of LOCK_KEYS) {
+      renderLockPanel(key, data.locks?.[key]);
+    }
+
+    const updated = data.updated
+      ? new Date(data.updated)
+      : null;
+
+    document.getElementById('lock-updated').textContent =
+      updated && !isNaN(updated)
+        ? 'Updated ' + updated.toLocaleTimeString([], {
+            hour: 'numeric',
+            minute: '2-digit'
+          })
+        : 'No timestamp';
+
+    console.log('Lock traffic data:', data);
+
+  } catch (err) {
+    console.error('Lock traffic data error:', err);
+
+    document.getElementById('lock-updated').textContent = 'Fetch failed';
+
+    for (const key of LOCK_KEYS) {
+      document.getElementById(`lock-list-${key}`).innerHTML =
+        '<div class="empty-state">Lock traffic unavailable</div>';
+    }
+  }
+}
+
+/* Initial lock-traffic load + refresh every 10 minutes */
+updateLockTraffic();
+setInterval(updateLockTraffic, 10 * 60 * 1000);
+
+/* ==========================================================================
+   TABS
+   ========================================================================== */
+
+function switchTab(tab) {
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.tab === tab);
+  });
+
+  document.getElementById('tab-map').classList.toggle('active', tab === 'map');
+  document.getElementById('tab-traffic').classList.toggle('active', tab === 'traffic');
+
+  if (tab === 'map') {
+    // Leaflet caches container size; switching back from a display:none
+    // ancestor leaves stale/gray tiles until it's told to remeasure.
+    map.invalidateSize();
+    syncMapOffset();
+  }
+}
+
+/* ==========================================================================
    HELPERS
    ========================================================================== */
 
@@ -994,6 +1105,7 @@ function dismissAlert() {
 window.focusVessel = focusVessel;
 window.dismissAlert = dismissAlert;
 window.toggleApproachPanel = toggleApproachPanel;
+window.switchTab = switchTab;
 
 /* ==========================================================================
    AIS RECONNECT
