@@ -31,8 +31,32 @@ html,body { height:100%; overflow:hidden; background:#0f1923; }
 .live-dot.disconnected { background:#f59e0b; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.8)} }
 
-#alert-banner {
+/* ── Tabs ───────────────────────────────────────────────────────────────── */
+
+#tabbar {
   position:fixed; top:57px; left:0; right:0; z-index:1000;
+  display:flex; background:rgba(10,18,28,.96); border-bottom:1px solid #1e3a5f;
+  backdrop-filter:blur(8px);
+}
+.tab-btn {
+  flex:1; padding:11px 0; text-align:center; background:none; border:none;
+  border-bottom:2px solid transparent;
+  font-family:-apple-system,sans-serif; font-size:.78rem; font-weight:700;
+  color:#64748b; letter-spacing:.02em; cursor:pointer;
+}
+.tab-btn.active { color:#93c5fd; border-bottom-color:#3b82f6; }
+
+.tab-panel { display:none; }
+.tab-panel.active { display:block; }
+
+#tab-traffic {
+  position:fixed; top:101px; bottom:0; left:0; right:0;
+  overflow-y:auto; background:#0f1923;
+}
+.traffic-scroll { padding:16px 0 32px; }
+
+#alert-banner {
+  position:fixed; top:101px; left:0; right:0; z-index:1000;
   background:#450a0a; border-bottom:2px solid #dc2626;
   padding:12px 16px; display:flex; align-items:center; gap:12px;
   font-family:-apple-system,sans-serif; animation:slideDown .25s ease;
@@ -49,10 +73,10 @@ html,body { height:100%; overflow:hidden; background:#0f1923; }
 }
 
 #map {
-  position:fixed; top:57px; bottom:120px; left:0; right:0;
+  position:fixed; top:101px; bottom:120px; left:0; right:0;
   transition:top .2s,bottom .2s;
 }
-#map.with-alert { top:113px; }
+#map.with-alert { top:157px; }
 
 #sheet {
   position:fixed; bottom:0; left:0; right:0; z-index:1000;
@@ -172,6 +196,35 @@ html,body { height:100%; overflow:hidden; background:#0f1923; }
 }
 #river-condition.error #river-condition-dot { background:#64748b; }
 
+/* ── Lock traffic ───────────────────────────────────────────────────────── */
+
+#lock-panel {
+  padding:16px 16px 11px;
+}
+
+.lock-lock { margin-bottom:14px; }
+.lock-lock:last-child { margin-bottom:0; }
+
+.lock-lock-name {
+  font-size:.72rem; font-weight:700; color:#93c5fd;
+  margin-bottom:6px;
+}
+
+.lockage-list {
+  display:flex; flex-direction:column; gap:6px;
+}
+
+.lockage-row {
+  background:#131f2e; border:1px solid #26384d; border-radius:9px;
+  padding:8px 10px; display:flex; justify-content:space-between;
+  align-items:center; gap:10px; font-size:.72rem;
+}
+
+.lockage-row .lockage-vessel { color:#e2e8f0; font-weight:600; }
+.lockage-row .lockage-up { color:#f59e0b; }
+.lockage-row .lockage-down { color:#2563eb; }
+.lockage-row .lockage-detail { color:#64748b; flex-shrink:0; }
+
 /* ── Approach panel ─────────────────────────────────────────────────────── */
 
 #approach-header {
@@ -283,63 +336,96 @@ html,body { height:100%; overflow:hidden; background:#0f1923; }
   </div>
 </div>
 
-<div id="alert-banner" class="hidden">
-  <div class="icon">🚨</div>
-  <div>
-    <strong id="alert-name"></strong>
-    <small id="alert-detail"></small>
-  </div>
-  <div class="close" onclick="dismissAlert()">✕</div>
+<div id="tabbar">
+  <button class="tab-btn active" data-tab="map" onclick="switchTab('map')">Map &amp; Vessels</button>
+  <button class="tab-btn" data-tab="traffic" onclick="switchTab('traffic')">Traffic Log</button>
 </div>
 
-<div id="map"></div>
+<div id="tab-map" class="tab-panel active">
+  <div id="alert-banner" class="hidden">
+    <div class="icon">🚨</div>
+    <div>
+      <strong id="alert-name"></strong>
+      <small id="alert-detail"></small>
+    </div>
+    <div class="close" onclick="dismissAlert()">✕</div>
+  </div>
 
-<div id="sheet">
-  <div class="sheet-handle"></div>
+  <div id="map"></div>
 
-  <!-- River conditions -->
-  <div id="river-panel">
-    <div class="river-header">
-      <span class="sheet-label">River conditions</span>
-      <span id="river-updated">Loading…</span>
+  <div id="sheet">
+    <div class="sheet-handle"></div>
+
+    <!-- Approach -->
+    <div id="approach-header" onclick="toggleApproachPanel()">
+      <span class="sheet-label">Approaching</span>
+      <span id="approach-badge" class="approach-badge hidden">0</span>
+      <span class="approach-chevron">▾</span>
     </div>
 
-    <div class="river-stats">
-      <div class="river-stat">
-        <div class="river-stat-label">Stage</div>
-        <div class="river-stat-value" id="river-stage">—</div>
-        <div class="river-stat-unit">ft · Parkersburg</div>
+    <div id="approach-body">
+      <div class="approach-group-label">↑ From Belleville</div>
+      <div class="vessel-scroll" id="approach-list-belleville">
+        <div class="empty-state">None</div>
       </div>
 
-      <div class="river-condition" id="river-condition">
-        <span id="river-condition-dot"></span>
-        <span id="river-condition-text">Loading river data…</span>
+      <div class="approach-group-label">↓ From Willow Island</div>
+      <div class="vessel-scroll" id="approach-list-willow">
+        <div class="empty-state">None</div>
       </div>
     </div>
-  </div>
 
-  <!-- Approach -->
-  <div id="approach-header" onclick="toggleApproachPanel()">
-    <span class="sheet-label">Approaching</span>
-    <span id="approach-badge" class="approach-badge hidden">0</span>
-    <span class="approach-chevron">▾</span>
-  </div>
-
-  <div id="approach-body">
-    <div class="approach-group-label">↑ From Belleville</div>
-    <div class="vessel-scroll" id="approach-list-belleville">
-      <div class="empty-state">None</div>
-    </div>
-
-    <div class="approach-group-label">↓ From Willow Island</div>
-    <div class="vessel-scroll" id="approach-list-willow">
-      <div class="empty-state">None</div>
+    <div class="sheet-label">Nearby vessels</div>
+    <div class="vessel-scroll" id="vessel-list">
+      <div class="empty-state">Connecting to AIS…</div>
     </div>
   </div>
+</div>
 
-  <div class="sheet-label">Nearby vessels</div>
-  <div class="vessel-scroll" id="vessel-list">
-    <div class="empty-state">Connecting to AIS…</div>
+<div id="tab-traffic" class="tab-panel">
+  <div class="traffic-scroll">
+    <!-- River conditions -->
+    <div id="river-panel">
+      <div class="river-header">
+        <span class="sheet-label">River conditions</span>
+        <span id="river-updated">Loading…</span>
+      </div>
+
+      <div class="river-stats">
+        <div class="river-stat">
+          <div class="river-stat-label">Stage</div>
+          <div class="river-stat-value" id="river-stage">—</div>
+          <div class="river-stat-unit">ft · Parkersburg</div>
+        </div>
+
+        <div class="river-condition" id="river-condition">
+          <span id="river-condition-dot"></span>
+          <span id="river-condition-text">Loading river data…</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lock traffic -->
+    <div id="lock-panel">
+      <div class="river-header">
+        <span class="sheet-label">Lock traffic</span>
+        <span id="lock-updated">Loading…</span>
+      </div>
+
+      <div class="lock-lock">
+        <div class="lock-lock-name">Belleville Locks and Dam</div>
+        <div class="lockage-list" id="lock-list-belleville">
+          <div class="empty-state">Loading…</div>
+        </div>
+      </div>
+
+      <div class="lock-lock">
+        <div class="lock-lock-name">Willow Island Locks and Dam</div>
+        <div class="lockage-list" id="lock-list-willowIsland">
+          <div class="empty-state">Loading…</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -442,6 +528,117 @@ function setFloodCategory(category) {
 /* Initial river load + refresh every 10 minutes */
 updateRiverConditions();
 setInterval(updateRiverConditions, 10 * 60 * 1000);
+
+/* ==========================================================================
+   LOCK TRAFFIC
+   ========================================================================== */
+
+const LOCK_TRAFFIC_URL = './lock-traffic.json';
+const LOCK_KEYS = ['belleville', 'willowIsland'];
+
+function timeAgo(date) {
+  const diffMs = Date.now() - date.getTime();
+  if (!Number.isFinite(diffMs) || diffMs < 0) return 'just now';
+
+  const mins = Math.floor(diffMs / 60000);
+  if (mins < 1) return 'just now';
+  if (mins < 60) return `${mins}m ago`;
+
+  const hours = Math.floor(mins / 60);
+  if (hours < 24) return `${hours}h ago`;
+
+  const days = Math.floor(hours / 24);
+  return `${days}d ago`;
+}
+
+function renderLockPanel(key, lockData) {
+  const list = document.getElementById(`lock-list-${key}`);
+  const lockages = lockData?.recentLockages || [];
+
+  if (lockages.length === 0) {
+    list.innerHTML = '<div class="empty-state">No recent lockages</div>';
+    return;
+  }
+
+  list.innerHTML = lockages.map(l => {
+    const dirClass = l.direction === 'U' ? 'lockage-up' : 'lockage-down';
+    const dirIcon = l.direction === 'U' ? '↑' : '↓';
+    const when = timeAgo(new Date(l.endOfLockage));
+
+    return `
+      <div class="lockage-row">
+        <span class="lockage-vessel"><span class="${dirClass}">${dirIcon}</span> ${l.vesselName}</span>
+        <span class="lockage-detail">${l.numBarges} barges · ${when}</span>
+      </div>`;
+  }).join('');
+}
+
+async function updateLockTraffic() {
+  try {
+    const response = await fetch(
+      LOCK_TRAFFIC_URL + '?t=' + Date.now(),
+      { cache: 'no-store' }
+    );
+
+    if (!response.ok) {
+      throw new Error(`lock-traffic.json HTTP ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    for (const key of LOCK_KEYS) {
+      renderLockPanel(key, data.locks?.[key]);
+    }
+
+    const updated = data.updated
+      ? new Date(data.updated)
+      : null;
+
+    document.getElementById('lock-updated').textContent =
+      updated && !isNaN(updated)
+        ? 'Updated ' + updated.toLocaleTimeString([], {
+            hour: 'numeric',
+            minute: '2-digit'
+          })
+        : 'No timestamp';
+
+    console.log('Lock traffic data:', data);
+
+  } catch (err) {
+    console.error('Lock traffic data error:', err);
+
+    document.getElementById('lock-updated').textContent = 'Fetch failed';
+
+    for (const key of LOCK_KEYS) {
+      document.getElementById(`lock-list-${key}`).innerHTML =
+        '<div class="empty-state">Lock traffic unavailable</div>';
+    }
+  }
+}
+
+/* Initial lock-traffic load + refresh every 10 minutes */
+updateLockTraffic();
+setInterval(updateLockTraffic, 10 * 60 * 1000);
+
+/* ==========================================================================
+   TABS
+   ========================================================================== */
+
+function switchTab(tab) {
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.tab === tab);
+  });
+
+  document.getElementById('tab-map').classList.toggle('active', tab === 'map');
+  document.getElementById('tab-traffic').classList.toggle('active', tab === 'traffic');
+
+  if (tab === 'map') {
+    // Leaflet caches container size; switching back from a display:none
+    // ancestor leaves stale/gray tiles until it's told to remeasure.
+    map.invalidateSize();
+    syncMapOffset();
+  }
+}
 
 /* ==========================================================================
    HELPERS
@@ -908,6 +1105,7 @@ function dismissAlert() {
 window.focusVessel = focusVessel;
 window.dismissAlert = dismissAlert;
 window.toggleApproachPanel = toggleApproachPanel;
+window.switchTab = switchTab;
 
 /* ==========================================================================
    AIS RECONNECT
