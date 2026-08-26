@@ -45,7 +45,7 @@ Straight-line distance (`distanceM()`, already used for the live AIS ETA in `eta
 The estimate is a genuine ticking countdown, not a value that only refreshes on the next 10-minute `lock-traffic.json` poll:
 
 - Each approaching row's detail line becomes `${numBarges} barges · ETA ${countdown}`, replacing the "time ago" text (e.g. `11 barges · ETA 20m`).
-- The rendered `<span>` carries the computed arrival timestamp in a `data-arrival` attribute (ISO string), so a lightweight tick doesn't need to re-fetch or re-render the whole row.
+- The rendered `<span>` carries the computed arrival timestamp in a `data-arrival` attribute (raw millisecond-epoch number, read back with `Number(...)` — not an ISO string, to avoid ever constructing a `Date` from a possibly-invalid value and having `.toISOString()` throw), so a lightweight tick doesn't need to re-fetch or re-render the whole row. `formatEtaCountdown` itself guards non-finite input (`Number.isFinite(arrivalMs)`) and renders `ETA unavailable` for a malformed lockage timestamp, so one bad row degrades gracefully instead of an uncaught exception blanking the entire panel.
 - A new `setInterval(tickEtaCountdowns, 30_000)` re-reads every `.eta-countdown` element's `data-arrival` and updates its text in place. 30 seconds keeps the display feeling live without meaningfully more DOM work than the existing 1-second AIS-reconnect countdown already in the app.
 - No expiry: a lockage stays visible (and keeps counting up) for as long as it remains in the top-5 `recentLockages` list — same lifecycle as today, no new logic needed to hide old entries.
 
