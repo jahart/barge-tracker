@@ -1,0 +1,85 @@
+{
+  "updated": "2026-08-27T00:31:00.957Z",
+  "locks": {
+    "belleville": {
+      "name": "Belleville Locks and Dam",
+      "recentLockages": [
+        {
+          "vesselName": "FRANK CHOPP",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-08-20T07:28:00-05:00",
+          "mmsi": 367539060
+        },
+        {
+          "vesselName": "MACKENZIE ROSE",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-08-20T05:40:00-05:00",
+          "mmsi": 368288130
+        },
+        {
+          "vesselName": "M/V SAMUEL J",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-08-20T04:15:00-05:00",
+          "mmsi": 368269040
+        },
+        {
+          "vesselName": "ENID DIBERT",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-08-20T02:52:00-05:00",
+          "mmsi": 367402450
+        },
+        {
+          "vesselName": "MT. AIRY",
+          "direction": "D",
+          "numBarges": 2,
+          "endOfLockage": "2026-08-20T01:10:00-05:00",
+          "mmsi": 367011830
+        }
+      ]
+    },
+    "willowIsland": {
+      "name": "Willow Island Locks and Dam",
+      "recentLockages": [
+        {
+          "vesselName": "PATRIOT - 1236135",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-08-26T20:02:00-05:00",
+          "mmsi": 367520270
+        },
+        {
+          "vesselName": "DREMA G. WOODS",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-08-26T19:37:00-05:00",
+          "mmsi": 367321070
+        },
+        {
+          "vesselName": "CAPT RICK NEALE",
+          "direction": "U",
+          "numBarges": 3,
+          "endOfLockage": "2026-08-26T18:54:00-05:00",
+          "mmsi": 367519160
+        },
+        {
+          "vesselName": "CANTON",
+          "direction": "U",
+          "numBarges": 3,
+          "endOfLockage": "2026-08-26T18:00:00-05:00",
+          "mmsi": 367433690
+        },
+        {
+          "vesselName": "DEBI SHARP",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-08-26T19:05:00-05:00",
+          "mmsi": 367402530
+        }
+      ]
+    }
+  }
+}
