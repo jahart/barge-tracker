@@ -1,43 +1,43 @@
 {
-  "updated": "2026-08-27T00:31:00.957Z",
+  "updated": "2026-08-27T10:09:48.277Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "FRANK CHOPP",
+          "vesselName": "D A GRIMM",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-08-23T23:20:00-05:00",
+          "mmsi": 367434610
+        },
+        {
+          "vesselName": "RECREATION VESSEL(S)",
           "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-08-20T07:28:00-05:00",
+          "numBarges": 0,
+          "endOfLockage": "2026-08-23T12:26:00-05:00",
+          "mmsi": 368179080
+        },
+        {
+          "vesselName": "JINCY",
+          "direction": "U",
+          "numBarges": 12,
+          "endOfLockage": "2026-08-23T10:50:00-05:00",
+          "mmsi": 367402580
+        },
+        {
+          "vesselName": "FRANK CHOPP",
+          "direction": "D",
+          "numBarges": 10,
+          "endOfLockage": "2026-08-23T08:36:00-05:00",
           "mmsi": 367539060
         },
         {
-          "vesselName": "MACKENZIE ROSE",
+          "vesselName": "M/V KEVIN MICHAEL",
           "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-08-20T05:40:00-05:00",
-          "mmsi": 368288130
-        },
-        {
-          "vesselName": "M/V SAMUEL J",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-08-20T04:15:00-05:00",
-          "mmsi": 368269040
-        },
-        {
-          "vesselName": "ENID DIBERT",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-08-20T02:52:00-05:00",
-          "mmsi": 367402450
-        },
-        {
-          "vesselName": "MT. AIRY",
-          "direction": "D",
-          "numBarges": 2,
-          "endOfLockage": "2026-08-20T01:10:00-05:00",
-          "mmsi": 367011830
+          "numBarges": 12,
+          "endOfLockage": "2026-08-23T07:10:00-05:00",
+          "mmsi": 368416120
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "PATRIOT - 1236135",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-08-26T20:02:00-05:00",
-          "mmsi": 367520270
-        },
-        {
-          "vesselName": "DREMA G. WOODS",
+          "vesselName": "PAULA RUBLE",
           "direction": "U",
           "numBarges": 6,
-          "endOfLockage": "2026-08-26T19:37:00-05:00",
-          "mmsi": 367321070
+          "endOfLockage": "2026-08-27T05:46:00-05:00",
+          "mmsi": 367426860
         },
         {
-          "vesselName": "CAPT RICK NEALE",
-          "direction": "U",
-          "numBarges": 3,
-          "endOfLockage": "2026-08-26T18:54:00-05:00",
-          "mmsi": 367519160
+          "vesselName": "FINDLAY",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-08-27T05:29:00-05:00",
+          "mmsi": 367414110
         },
         {
-          "vesselName": "CANTON",
-          "direction": "U",
-          "numBarges": 3,
-          "endOfLockage": "2026-08-26T18:00:00-05:00",
-          "mmsi": 367433690
+          "vesselName": "HAILEY NICOLE",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-08-27T02:15:00-05:00",
+          "mmsi": 368021840
         },
         {
-          "vesselName": "DEBI SHARP",
+          "vesselName": "M/V SAMUEL J",
           "direction": "D",
           "numBarges": 15,
-          "endOfLockage": "2026-08-26T19:05:00-05:00",
-          "mmsi": 367402530
+          "endOfLockage": "2026-08-27T00:26:00-05:00",
+          "mmsi": 368269040
+        },
+        {
+          "vesselName": "LOUISE S",
+          "direction": "U",
+          "numBarges": 12,
+          "endOfLockage": "2026-08-26T22:06:00-05:00",
+          "mmsi": 367412620
         }
       ]
     }
