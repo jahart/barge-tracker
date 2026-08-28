@@ -1,85 +1,13 @@
 {
-  "updated": "2026-08-27T20:41:18.771Z",
+  "updated": "2026-08-28T05:08:23.871Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
-      "recentLockages": [
-        {
-          "vesselName": "CHARLES T. JONES",
-          "direction": "D",
-          "numBarges": 2,
-          "endOfLockage": "2026-08-27T14:52:00-05:00",
-          "mmsi": 368142180
-        },
-        {
-          "vesselName": "STACY LYNN",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-08-27T14:10:00-05:00",
-          "mmsi": 368156330
-        },
-        {
-          "vesselName": "FINDLAY",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-08-27T12:09:00-05:00",
-          "mmsi": 367414110
-        },
-        {
-          "vesselName": "M/V SAMUEL J",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-08-27T08:31:00-05:00",
-          "mmsi": 368269040
-        },
-        {
-          "vesselName": "OHIO",
-          "direction": "U",
-          "numBarges": 12,
-          "endOfLockage": "2026-08-27T07:22:00-05:00",
-          "mmsi": 368243490
-        }
-      ]
+      "recentLockages": []
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
-      "recentLockages": [
-        {
-          "vesselName": "D A GRIMM",
-          "direction": "U",
-          "numBarges": 8,
-          "endOfLockage": "2026-08-18T08:33:00-05:00",
-          "mmsi": 367434610
-        },
-        {
-          "vesselName": "MACKENZIE ROSE",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-08-18T07:44:00-05:00",
-          "mmsi": 368288130
-        },
-        {
-          "vesselName": "FINDLAY",
-          "direction": "U",
-          "numBarges": 4,
-          "endOfLockage": "2026-08-18T06:45:00-05:00",
-          "mmsi": 367414110
-        },
-        {
-          "vesselName": "DAVE FOREMAN",
-          "direction": "U",
-          "numBarges": 2,
-          "endOfLockage": "2026-08-18T05:40:00-05:00",
-          "mmsi": 338591000
-        },
-        {
-          "vesselName": "WEST VIRGINIA",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-08-18T01:53:00-05:00",
-          "mmsi": 367320710
-        }
-      ]
+      "recentLockages": []
     }
   }
 }
