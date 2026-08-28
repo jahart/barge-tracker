@@ -1,9 +1,23 @@
 {
-  "updated": "2026-08-28T12:57:45.232Z",
+  "updated": "2026-08-28T17:37:47.717Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CAPT STOGIE WHITE",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-08-28T10:32:00-05:00",
+          "mmsi": 367412630
+        },
+        {
+          "vesselName": "WEST VIRGINIA (MARATHON)",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-08-28T09:04:00-05:00",
+          "mmsi": 368006910
+        },
         {
           "vesselName": "FRANK STEGBAUER ",
           "direction": "D",
@@ -24,26 +38,33 @@
           "numBarges": 7,
           "endOfLockage": "2026-08-28T05:04:00-05:00",
           "mmsi": 367433690
-        },
-        {
-          "vesselName": "ELEANOR",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-08-28T03:23:00-05:00",
-          "mmsi": 367655380
-        },
-        {
-          "vesselName": "ENID DIBERT",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-08-28T01:54:00-05:00",
-          "mmsi": 367402450
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "DAN ELDER",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-08-28T11:12:00-05:00",
+          "mmsi": 367503540
+        },
+        {
+          "vesselName": "VALLEY GEM",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-08-28T11:11:00-05:00",
+          "mmsi": 366937890
+        },
+        {
+          "vesselName": "ENID DIBERT",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-08-28T09:16:00-05:00",
+          "mmsi": 367402450
+        },
         {
           "vesselName": "PATRIOT - 1236135",
           "direction": "D",
@@ -57,27 +78,6 @@
           "numBarges": 9,
           "endOfLockage": "2026-08-28T02:06:00-05:00",
           "mmsi": 368416120
-        },
-        {
-          "vesselName": "CAPT STOGIE WHITE",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-08-27T23:51:00-05:00",
-          "mmsi": 367412630
-        },
-        {
-          "vesselName": "OHIO",
-          "direction": "U",
-          "numBarges": 14,
-          "endOfLockage": "2026-08-27T22:40:00-05:00",
-          "mmsi": 368243490
-        },
-        {
-          "vesselName": "SALLY WHALEN",
-          "direction": "U",
-          "numBarges": 11,
-          "endOfLockage": "2026-08-27T21:37:00-05:00",
-          "mmsi": 367402570
         }
       ]
     }
