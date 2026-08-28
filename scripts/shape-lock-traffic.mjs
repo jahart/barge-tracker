@@ -17,14 +17,18 @@ export function shapeLockQueue(rawArray) {
   // with a fabricated timestamp.
   const recentLockages = rawArray
     .filter((entry) => entry.endOfLockage !== null)
-    .slice(0, LOCKAGE_LIMIT)
     .map((entry) => ({
       vesselName: entry.vesselName,
       direction: entry.direction,
       numBarges: entry.numBarges,
       endOfLockage: toIso8601(entry.endOfLockage),
       mmsi: entry.MMSI,
-    }));
+    }))
+    // USACE doesn't guarantee newest-first order (confirmed: the same query
+    // returned entries out of chronological order across live calls) — sort
+    // explicitly rather than trusting response order.
+    .sort((a, b) => Date.parse(b.endOfLockage) - Date.parse(a.endOfLockage))
+    .slice(0, LOCKAGE_LIMIT);
 
   return { recentLockages };
 }

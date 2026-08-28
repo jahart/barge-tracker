@@ -20,6 +20,14 @@ async function fetchLockQueue(lockNo) {
     if (!Array.isArray(data)) {
       throw new Error(`Lock ${lockNo} response is not an array`);
     }
+    // An empty array from this feed has only ever been observed as a
+    // transient upstream glitch, never a real state (there's always
+    // hundreds of historical records) — treat it like a fetch failure so
+    // it goes through retry/staleness-fallback instead of overwriting good
+    // data with an empty result.
+    if (data.length === 0) {
+      throw new Error(`Lock ${lockNo} response was an empty array`);
+    }
     return data;
   });
 }

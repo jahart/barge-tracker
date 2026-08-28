@@ -64,6 +64,51 @@ test('caps recentLockages at the 5 most recent entries, preserving newest-first 
   assert.equal(result.recentLockages[4].vesselName, 'VESSEL 4');
 });
 
+test('sorts by endOfLockage descending instead of trusting response order', () => {
+  const raw = [
+    {
+      vesselName: 'OLDEST',
+      vesselNo: '1',
+      direction: 'U',
+      numBarges: 1,
+      SOLdate: '08/08/26 10:00',
+      arrivalDate: '08/08/26 09:00',
+      endOfLockage: '08/08/26 11:00',
+      timezone: 'EST',
+      MMSI: 111,
+    },
+    {
+      vesselName: 'NEWEST',
+      vesselNo: '2',
+      direction: 'U',
+      numBarges: 1,
+      SOLdate: '08/28/26 10:00',
+      arrivalDate: '08/28/26 09:00',
+      endOfLockage: '08/28/26 11:00',
+      timezone: 'EST',
+      MMSI: 222,
+    },
+    {
+      vesselName: 'MIDDLE',
+      vesselNo: '3',
+      direction: 'U',
+      numBarges: 1,
+      SOLdate: '08/19/26 10:00',
+      arrivalDate: '08/19/26 09:00',
+      endOfLockage: '08/19/26 11:00',
+      timezone: 'EST',
+      MMSI: 333,
+    },
+  ];
+
+  const result = shapeLockQueue(raw);
+
+  assert.deepEqual(
+    result.recentLockages.map((l) => l.vesselName),
+    ['NEWEST', 'MIDDLE', 'OLDEST']
+  );
+});
+
 test('handles an empty array (no lockages in the past 30 days)', () => {
   const result = shapeLockQueue([]);
   assert.deepEqual(result.recentLockages, []);
