@@ -54,9 +54,10 @@ function relayToClient(server, env) {
       server.send(JSON.stringify({ type: 'ais-connected' }));
     });
 
-    upstream.addEventListener('message', (event) => {
+    upstream.addEventListener('message', async (event) => {
       try {
-        const msg = JSON.parse(event.data);
+        const text = event.data instanceof Blob ? await event.data.text() : event.data;
+        const msg = JSON.parse(text);
         const vessel = parsePositionReport(msg, Date.now());
         if (vessel) server.send(JSON.stringify({ type: 'update', vessel }));
       } catch (err) {
