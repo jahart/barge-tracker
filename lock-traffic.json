@@ -1,49 +1,63 @@
 {
-  "updated": "2026-08-29T08:10:53.205Z",
+  "updated": "2026-08-29T13:57:16.010Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "DREMA G. WOODS",
+          "direction": "D",
+          "numBarges": 9,
+          "endOfLockage": "2026-08-29T09:20:00-05:00",
+          "mmsi": 367321070
+        },
+        {
+          "vesselName": "KILLIAN L. HUGER",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-08-29T08:02:00-05:00",
+          "mmsi": 367456850
+        },
+        {
+          "vesselName": "PAULA RUBLE",
+          "direction": "D",
+          "numBarges": 13,
+          "endOfLockage": "2026-08-29T06:52:00-05:00",
+          "mmsi": 367426860
+        },
+        {
+          "vesselName": "DAN L",
+          "direction": "U",
+          "numBarges": 4,
+          "endOfLockage": "2026-08-29T05:51:00-05:00",
+          "mmsi": 367536660
+        },
         {
           "vesselName": "FRANK CHOPP",
           "direction": "D",
           "numBarges": 12,
           "endOfLockage": "2026-08-29T03:43:00-05:00",
           "mmsi": 367539060
-        },
-        {
-          "vesselName": "LILLIAN LOUISE",
-          "direction": "U",
-          "numBarges": 2,
-          "endOfLockage": "2026-08-29T01:37:00-05:00",
-          "mmsi": 367724780
-        },
-        {
-          "vesselName": "CHIP LACY",
-          "direction": "D",
-          "numBarges": 11,
-          "endOfLockage": "2026-08-29T01:03:00-05:00",
-          "mmsi": 366963310
-        },
-        {
-          "vesselName": "CAPT. KIRBY DUPUIS",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-08-28T23:53:00-05:00",
-          "mmsi": 368235550
-        },
-        {
-          "vesselName": "DAN ELDER",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-08-28T17:40:00-05:00",
-          "mmsi": 367503540
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CAPT. KIRBY DUPUIS",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-08-29T09:22:00-05:00",
+          "mmsi": 368235550
+        },
+        {
+          "vesselName": "LILLIAN LOUISE",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-08-29T07:58:00-05:00",
+          "mmsi": 367724780
+        },
         {
           "vesselName": "KILLIAN L. HUGER",
           "direction": "D",
@@ -64,20 +78,6 @@
           "numBarges": 2,
           "endOfLockage": "2026-08-28T19:33:00-05:00",
           "mmsi": 367321070
-        },
-        {
-          "vesselName": "FRANK CHOPP",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-08-28T18:27:00-05:00",
-          "mmsi": 367539060
-        },
-        {
-          "vesselName": "CHIP LACY",
-          "direction": "D",
-          "numBarges": 9,
-          "endOfLockage": "2026-08-28T17:27:00-05:00",
-          "mmsi": 366963310
         }
       ]
     }
