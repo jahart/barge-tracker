@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29T13:57:16.010Z",
+  "updated": "2026-08-29T17:32:19.665Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
@@ -45,6 +45,27 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "DAN L",
+          "direction": "U",
+          "numBarges": 3,
+          "endOfLockage": "2026-08-29T13:08:00-05:00",
+          "mmsi": 367536660
+        },
+        {
+          "vesselName": "EVANICK - CORP",
+          "direction": "D",
+          "numBarges": 2,
+          "endOfLockage": "2026-08-29T12:08:00-05:00",
+          "mmsi": null
+        },
+        {
+          "vesselName": "SALLY WHALEN",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-08-29T12:05:00-05:00",
+          "mmsi": 367402570
+        },
+        {
           "vesselName": "CAPT. KIRBY DUPUIS",
           "direction": "U",
           "numBarges": 15,
@@ -57,27 +78,6 @@
           "numBarges": 2,
           "endOfLockage": "2026-08-29T07:58:00-05:00",
           "mmsi": 367724780
-        },
-        {
-          "vesselName": "KILLIAN L. HUGER",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-08-28T23:30:00-05:00",
-          "mmsi": 367456850
-        },
-        {
-          "vesselName": "PAULA RUBLE",
-          "direction": "D",
-          "numBarges": 13,
-          "endOfLockage": "2026-08-28T22:03:00-05:00",
-          "mmsi": 367426860
-        },
-        {
-          "vesselName": "DREMA G. WOODS",
-          "direction": "D",
-          "numBarges": 2,
-          "endOfLockage": "2026-08-28T19:33:00-05:00",
-          "mmsi": 367321070
         }
       ]
     }
