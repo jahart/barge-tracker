@@ -1,9 +1,16 @@
 {
-  "updated": "2026-08-30T05:43:24.458Z",
+  "updated": "2026-08-30T11:27:49.685Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "ENID DIBERT",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-08-30T07:22:00-05:00",
+          "mmsi": 367402450
+        },
         {
           "vesselName": "SALLY WHALEN",
           "direction": "D",
@@ -31,19 +38,26 @@
           "numBarges": 6,
           "endOfLockage": "2026-08-29T19:19:00-05:00",
           "mmsi": 367441870
-        },
-        {
-          "vesselName": "EVANICK - CORP",
-          "direction": "D",
-          "numBarges": 2,
-          "endOfLockage": "2026-08-29T17:43:00-05:00",
-          "mmsi": null
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "GALVESTON BAY",
+          "direction": "U",
+          "numBarges": 4,
+          "endOfLockage": "2026-08-30T04:37:00-05:00",
+          "mmsi": 367441870
+        },
+        {
+          "vesselName": "WILLIAM R BARR",
+          "direction": "D",
+          "numBarges": 14,
+          "endOfLockage": "2026-08-30T03:23:00-05:00",
+          "mmsi": 367539140
+        },
         {
           "vesselName": "STACY LYNN",
           "direction": "U",
@@ -64,20 +78,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-08-29T19:44:00-05:00",
           "mmsi": 368235550
-        },
-        {
-          "vesselName": "RECREATION VESSEL(S)",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-08-29T19:11:00-05:00",
-          "mmsi": 368179080
-        },
-        {
-          "vesselName": "CAPT RICK NEALE",
-          "direction": "U",
-          "numBarges": 3,
-          "endOfLockage": "2026-08-29T18:55:00-05:00",
-          "mmsi": 367519160
         }
       ]
     }
