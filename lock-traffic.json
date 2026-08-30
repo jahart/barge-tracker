@@ -1,43 +1,43 @@
 {
-  "updated": "2026-08-30T15:25:59.847Z",
+  "updated": "2026-08-30T18:44:03.551Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "THOMAS E. ERICKSON",
+          "direction": "D",
+          "numBarges": 11,
+          "endOfLockage": "2026-08-30T14:28:00-05:00",
+          "mmsi": 367638210
+        },
+        {
+          "vesselName": "JEAN AKIN",
+          "direction": "U",
+          "numBarges": 9,
+          "endOfLockage": "2026-08-30T13:13:00-05:00",
+          "mmsi": 367402930
+        },
+        {
+          "vesselName": "RECREATION VESSEL(S)",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-08-30T12:46:00-05:00",
+          "mmsi": 368179080
+        },
+        {
+          "vesselName": "FRANK CHOPP",
+          "direction": "U",
+          "numBarges": 12,
+          "endOfLockage": "2026-08-30T12:23:00-05:00",
+          "mmsi": 367539060
+        },
         {
           "vesselName": "WILLIAM R BARR",
           "direction": "D",
           "numBarges": 14,
           "endOfLockage": "2026-08-30T10:55:00-05:00",
           "mmsi": 367539140
-        },
-        {
-          "vesselName": "CAPT. KIRBY DUPUIS",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-08-30T08:18:00-05:00",
-          "mmsi": 368235550
-        },
-        {
-          "vesselName": "ENID DIBERT",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-08-30T07:22:00-05:00",
-          "mmsi": 367402450
-        },
-        {
-          "vesselName": "SALLY WHALEN",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-08-30T00:20:00-05:00",
-          "mmsi": 367402570
-        },
-        {
-          "vesselName": "CHUCK ZEBULA",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-08-29T22:54:00-05:00",
-          "mmsi": 367362240
         }
       ]
     },
