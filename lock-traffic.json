@@ -1,9 +1,16 @@
 {
-  "updated": "2026-08-30T18:44:03.551Z",
+  "updated": "2026-08-30T21:51:11.417Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "DARRELL L",
+          "direction": "U",
+          "numBarges": 9,
+          "endOfLockage": "2026-08-30T16:25:00-05:00",
+          "mmsi": 367797440
+        },
         {
           "vesselName": "THOMAS E. ERICKSON",
           "direction": "D",
@@ -31,13 +38,6 @@
           "numBarges": 12,
           "endOfLockage": "2026-08-30T12:23:00-05:00",
           "mmsi": 367539060
-        },
-        {
-          "vesselName": "WILLIAM R BARR",
-          "direction": "D",
-          "numBarges": 14,
-          "endOfLockage": "2026-08-30T10:55:00-05:00",
-          "mmsi": 367539140
         }
       ]
     },
