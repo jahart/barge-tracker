@@ -1,9 +1,23 @@
 {
-  "updated": "2026-08-31T19:25:43.247Z",
+  "updated": "2026-08-31T23:17:24.431Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "DAN ELDER",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-08-31T18:58:00-05:00",
+          "mmsi": 367503540
+        },
+        {
+          "vesselName": "OHIO",
+          "direction": "D",
+          "numBarges": 11,
+          "endOfLockage": "2026-08-31T17:25:00-05:00",
+          "mmsi": 368243490
+        },
         {
           "vesselName": "MACKENZIE ROSE",
           "direction": "U",
@@ -24,26 +38,33 @@
           "numBarges": 6,
           "endOfLockage": "2026-08-31T12:53:00-05:00",
           "mmsi": 368006910
-        },
-        {
-          "vesselName": "JOHN VAUGHN",
-          "direction": "U",
-          "numBarges": 12,
-          "endOfLockage": "2026-08-31T11:33:00-05:00",
-          "mmsi": 368008740
-        },
-        {
-          "vesselName": "LOUISE S",
-          "direction": "D",
-          "numBarges": 14,
-          "endOfLockage": "2026-08-31T10:20:00-05:00",
-          "mmsi": 367412620
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CRYSTAL D. TAYLOR",
+          "direction": "U",
+          "numBarges": 11,
+          "endOfLockage": "2026-08-31T18:19:00-05:00",
+          "mmsi": 367522170
+        },
+        {
+          "vesselName": "RECREATION VESSEL(S)",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-08-31T17:10:00-05:00",
+          "mmsi": 368179080
+        },
+        {
+          "vesselName": "ELEANOR",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-08-31T16:30:00-05:00",
+          "mmsi": 367655380
+        },
         {
           "vesselName": "M/V KEVIN MICHAEL",
           "direction": "U",
@@ -57,27 +78,6 @@
           "numBarges": 1,
           "endOfLockage": "2026-08-31T12:50:00-05:00",
           "mmsi": 367519160
-        },
-        {
-          "vesselName": "RECREATION VESSEL(S)",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-08-31T11:38:00-05:00",
-          "mmsi": 368179080
-        },
-        {
-          "vesselName": "CAPT STOGIE WHITE",
-          "direction": "U",
-          "numBarges": 9,
-          "endOfLockage": "2026-08-31T11:13:00-05:00",
-          "mmsi": 367412630
-        },
-        {
-          "vesselName": "OHIO",
-          "direction": "D",
-          "numBarges": 11,
-          "endOfLockage": "2026-08-31T08:36:00-05:00",
-          "mmsi": 368243490
         }
       ]
     }
