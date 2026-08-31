@@ -1,9 +1,23 @@
 {
-  "updated": "2026-08-30T21:51:11.417Z",
+  "updated": "2026-08-31T00:15:05.084Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "LUCEDALE",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-08-30T19:27:00-05:00",
+          "mmsi": 367662490
+        },
+        {
+          "vesselName": "RECREATION VESSEL(S)",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-08-30T17:53:00-05:00",
+          "mmsi": 368179080
+        },
         {
           "vesselName": "DARRELL L",
           "direction": "U",
@@ -24,20 +38,6 @@
           "numBarges": 9,
           "endOfLockage": "2026-08-30T13:13:00-05:00",
           "mmsi": 367402930
-        },
-        {
-          "vesselName": "RECREATION VESSEL(S)",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-08-30T12:46:00-05:00",
-          "mmsi": 368179080
-        },
-        {
-          "vesselName": "FRANK CHOPP",
-          "direction": "U",
-          "numBarges": 12,
-          "endOfLockage": "2026-08-30T12:23:00-05:00",
-          "mmsi": 367539060
         }
       ]
     },
