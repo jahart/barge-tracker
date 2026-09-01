@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-01T07:25:20.447Z",
+  "updated": "2026-09-01T12:41:42.800Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "FINDLAY",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-09-01T07:13:00-05:00",
+          "mmsi": 367414110
+        },
         {
           "vesselName": "ELEANOR",
           "direction": "D",
@@ -31,19 +38,26 @@
           "numBarges": 11,
           "endOfLockage": "2026-08-31T17:25:00-05:00",
           "mmsi": 368243490
-        },
-        {
-          "vesselName": "MACKENZIE ROSE",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-08-31T14:50:00-05:00",
-          "mmsi": 368288130
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "ALAN P HALL",
+          "direction": "U",
+          "numBarges": 8,
+          "endOfLockage": "2026-09-01T06:00:00-05:00",
+          "mmsi": 367539160
+        },
+        {
+          "vesselName": "DAVE FOREMAN",
+          "direction": "D",
+          "numBarges": 8,
+          "endOfLockage": "2026-09-01T04:10:00-05:00",
+          "mmsi": 338591000
+        },
         {
           "vesselName": "DAN ELDER",
           "direction": "U",
@@ -64,20 +78,6 @@
           "numBarges": 13,
           "endOfLockage": "2026-08-31T22:45:00-05:00",
           "mmsi": 368008740
-        },
-        {
-          "vesselName": "RONALD L LOUGHMILLER",
-          "direction": "U",
-          "numBarges": 16,
-          "endOfLockage": "2026-08-31T19:22:00-05:00",
-          "mmsi": 367143650
-        },
-        {
-          "vesselName": "MISTER CHARLIE NEALE",
-          "direction": "U",
-          "numBarges": 2,
-          "endOfLockage": "2026-08-31T19:13:00-05:00",
-          "mmsi": 367385950
         }
       ]
     }
