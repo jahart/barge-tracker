@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-01T12:41:42.800Z",
+  "updated": "2026-09-01T17:12:15.668Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CHUCK ZEBULA",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-01T12:42:00-05:00",
+          "mmsi": 367362240
+        },
         {
           "vesselName": "FINDLAY",
           "direction": "U",
@@ -31,19 +38,19 @@
           "numBarges": 15,
           "endOfLockage": "2026-08-31T18:58:00-05:00",
           "mmsi": 367503540
-        },
-        {
-          "vesselName": "OHIO",
-          "direction": "D",
-          "numBarges": 11,
-          "endOfLockage": "2026-08-31T17:25:00-05:00",
-          "mmsi": 368243490
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "GALVESTON BAY",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-09-01T12:34:00-05:00",
+          "mmsi": 367441870
+        },
         {
           "vesselName": "ALAN P HALL",
           "direction": "U",
@@ -71,13 +78,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-01T00:34:00-05:00",
           "mmsi": 368288130
-        },
-        {
-          "vesselName": "JOHN VAUGHN",
-          "direction": "U",
-          "numBarges": 13,
-          "endOfLockage": "2026-08-31T22:45:00-05:00",
-          "mmsi": 368008740
         }
       ]
     }
