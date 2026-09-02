@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-02T00:26:49.857Z",
+  "updated": "2026-09-02T04:55:42.259Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "GALVESTON BAY",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-09-01T22:20:00-05:00",
+          "mmsi": 367441870
+        },
         {
           "vesselName": "BOB STITH",
           "direction": "U",
@@ -31,13 +38,6 @@
           "numBarges": 6,
           "endOfLockage": "2026-09-01T07:13:00-05:00",
           "mmsi": 367414110
-        },
-        {
-          "vesselName": "ELEANOR",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-01T02:30:00-05:00",
-          "mmsi": 367655380
         }
       ]
     },
