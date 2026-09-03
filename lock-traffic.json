@@ -1,43 +1,43 @@
 {
-  "updated": "2026-09-03T14:54:11.899Z",
+  "updated": "2026-09-03T21:14:02.416Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "ALAN P HALL",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-03T15:19:00-05:00",
+          "mmsi": 367539160
+        },
+        {
+          "vesselName": "CATLETTSBURG",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-09-03T13:54:00-05:00",
+          "mmsi": 367105910
+        },
+        {
+          "vesselName": "RECREATION VESSEL(S)",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-03T11:55:00-05:00",
+          "mmsi": 368179080
+        },
+        {
+          "vesselName": "MARY ELLEN JONES",
+          "direction": "U",
+          "numBarges": 14,
+          "endOfLockage": "2026-09-03T11:27:00-05:00",
+          "mmsi": 367320890
+        },
         {
           "vesselName": "CHUCK ZEBULA",
           "direction": "D",
           "numBarges": 15,
           "endOfLockage": "2026-09-03T10:15:00-05:00",
           "mmsi": 367362240
-        },
-        {
-          "vesselName": "DREMA G. WOODS",
-          "direction": "U",
-          "numBarges": 11,
-          "endOfLockage": "2026-09-03T08:57:00-05:00",
-          "mmsi": 367321070
-        },
-        {
-          "vesselName": "JINCY",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-03T04:55:00-05:00",
-          "mmsi": 367402580
-        },
-        {
-          "vesselName": "JEAN MARIE",
-          "direction": "U",
-          "numBarges": 1,
-          "endOfLockage": "2026-09-03T04:20:00-05:00",
-          "mmsi": 368260120
-        },
-        {
-          "vesselName": "CAPT STOGIE WHITE",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-03T03:40:00-05:00",
-          "mmsi": 367412630
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "JEAN AKIN",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-03T09:05:00-05:00",
-          "mmsi": 367402930
-        },
-        {
-          "vesselName": "CATLETTSBURG",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-09-03T07:45:00-05:00",
-          "mmsi": 367105910
-        },
-        {
-          "vesselName": "CAPT REGGIE TUBBS",
+          "vesselName": "JINCY",
           "direction": "U",
+          "numBarges": 16,
+          "endOfLockage": "2026-09-03T16:30:00-05:00",
+          "mmsi": 367402580
+        },
+        {
+          "vesselName": "DAVE FOREMAN",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-09-03T15:35:00-05:00",
+          "mmsi": 338591000
+        },
+        {
+          "vesselName": "CRYSTAL D. TAYLOR",
+          "direction": "D",
+          "numBarges": 8,
+          "endOfLockage": "2026-09-03T15:01:00-05:00",
+          "mmsi": 367522170
+        },
+        {
+          "vesselName": "JEAN MARIE",
+          "direction": "U",
+          "numBarges": 1,
+          "endOfLockage": "2026-09-03T14:45:00-05:00",
+          "mmsi": 368260120
+        },
+        {
+          "vesselName": "STACY LYNN",
+          "direction": "D",
           "numBarges": 14,
-          "endOfLockage": "2026-09-03T06:50:00-05:00",
-          "mmsi": 368256650
-        },
-        {
-          "vesselName": "ALAN P HALL",
-          "direction": "D",
-          "numBarges": 11,
-          "endOfLockage": "2026-09-03T04:50:00-05:00",
-          "mmsi": 367539160
-        },
-        {
-          "vesselName": "CHUCK ZEBULA",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-03T03:45:00-05:00",
-          "mmsi": 367362240
+          "endOfLockage": "2026-09-03T13:58:00-05:00",
+          "mmsi": 368156330
         }
       ]
     }
