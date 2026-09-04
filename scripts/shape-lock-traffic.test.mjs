@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { shapeLockQueue } from './shape-lock-traffic.mjs';
 
-test('normalizes USACE MM/DD/YY date format to ISO-8601 with a fixed UTC-5 offset', () => {
+test('normalizes USACE MM/DD/YY date format to ISO-8601 using the offset actually in effect', () => {
   const result = shapeLockQueue([
     {
       vesselName: 'GLENN A HENDON',
@@ -17,7 +17,7 @@ test('normalizes USACE MM/DD/YY date format to ISO-8601 with a fixed UTC-5 offse
     },
   ]);
 
-  assert.equal(result.recentLockages[0].endOfLockage, '2026-08-11T20:48:00-05:00');
+  assert.equal(result.recentLockages[0].endOfLockage, '2026-08-11T20:48:00-04:00');
 });
 
 test('passes through vesselName, direction, numBarges, and mmsi unchanged', () => {
@@ -39,7 +39,7 @@ test('passes through vesselName, direction, numBarges, and mmsi unchanged', () =
     vesselName: 'CANTON',
     direction: 'D',
     numBarges: 6,
-    endOfLockage: '2026-08-19T04:24:00-05:00',
+    endOfLockage: '2026-08-19T04:24:00-04:00',
     mmsi: 367433690,
   });
 });
@@ -142,4 +142,56 @@ test('skips in-progress lockages (vessel still at the lock, endOfLockage not yet
 
   assert.equal(result.recentLockages.length, 1);
   assert.equal(result.recentLockages[0].vesselName, 'M/V KEVIN MICHAEL');
+});
+
+// The feed labels every entry "EST" year-round, so these cases pin the real
+// DST behavior: the wall-clock string is local time at the lock, and the
+// offset must follow the calendar, not the (useless) timezone field.
+const isoFor = (endOfLockage) =>
+  shapeLockQueue([
+    {
+      vesselName: 'TEST TOW',
+      vesselNo: '1',
+      direction: 'U',
+      numBarges: 1,
+      SOLdate: endOfLockage,
+      arrivalDate: endOfLockage,
+      endOfLockage,
+      timezone: 'EST',
+      MMSI: 1,
+    },
+  ]).recentLockages[0].endOfLockage;
+
+test('uses EDT (-04:00) for a summer lockage despite the feed claiming EST', () => {
+  assert.equal(isoFor('09/03/26 15:19'), '2026-09-03T15:19:00-04:00');
+  assert.equal(Date.parse(isoFor('09/03/26 15:19')), Date.parse('2026-09-03T19:19:00Z'));
+});
+
+test('uses EST (-05:00) for a winter lockage', () => {
+  assert.equal(isoFor('01/15/26 10:00'), '2026-01-15T10:00:00-05:00');
+  assert.equal(Date.parse(isoFor('01/15/26 10:00')), Date.parse('2026-01-15T15:00:00Z'));
+});
+
+test('switches offset across the spring-forward boundary (2026-03-08)', () => {
+  assert.equal(isoFor('03/08/26 01:30'), '2026-03-08T01:30:00-05:00');
+  assert.equal(isoFor('03/08/26 03:30'), '2026-03-08T03:30:00-04:00');
+});
+
+test('normalizes a nonexistent spring-forward wall clock to a real instant', () => {
+  // 02:30 local never happens on 2026-03-08 — the clock jumps 02:00 -> 03:00.
+  // Rendering from the resolved instant yields a real local time rather than
+  // echoing back a reading that cannot exist.
+  const iso = isoFor('03/08/26 02:30');
+  assert.equal(iso, '2026-03-08T01:30:00-05:00');
+  assert.ok(Number.isFinite(Date.parse(iso)));
+});
+
+test('resolves an ambiguous fall-back wall clock deterministically (2026-11-01)', () => {
+  // 01:30 local occurs twice; the first (still-EDT) occurrence is chosen.
+  assert.equal(isoFor('11/01/26 01:30'), '2026-11-01T01:30:00-04:00');
+  assert.equal(isoFor('11/01/26 03:30'), '2026-11-01T03:30:00-05:00');
+});
+
+test('handles a midnight reading (ICU may render hour 24 under hour12:false)', () => {
+  assert.equal(isoFor('07/04/26 00:00'), '2026-07-04T00:00:00-04:00');
 });
