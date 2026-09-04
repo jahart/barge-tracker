@@ -1,43 +1,43 @@
 {
-  "updated": "2026-09-04T15:55:58.473Z",
+  "updated": "2026-09-04T21:17:39.726Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "RECREATION VESSEL(S)",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-04T15:47:00-04:00",
+          "mmsi": 368179080
+        },
+        {
+          "vesselName": "RONALD L LOUGHMILLER",
+          "direction": "D",
+          "numBarges": 7,
+          "endOfLockage": "2026-09-04T15:20:00-04:00",
+          "mmsi": 367143650
+        },
+        {
+          "vesselName": "OZZIE",
+          "direction": "U",
+          "numBarges": 13,
+          "endOfLockage": "2026-09-04T14:17:00-04:00",
+          "mmsi": 367522180
+        },
+        {
           "vesselName": "RICK HAY",
           "direction": "U",
           "numBarges": 7,
-          "endOfLockage": "2026-09-04T06:29:00-05:00",
+          "endOfLockage": "2026-09-04T06:29:00-04:00",
           "mmsi": 368401570
         },
         {
           "vesselName": "DAN ELDER",
           "direction": "U",
           "numBarges": 15,
-          "endOfLockage": "2026-09-04T04:24:00-05:00",
+          "endOfLockage": "2026-09-04T04:24:00-04:00",
           "mmsi": 367503540
-        },
-        {
-          "vesselName": "BILL STILE",
-          "direction": "D",
-          "numBarges": 9,
-          "endOfLockage": "2026-09-04T00:09:00-05:00",
-          "mmsi": 367441040
-        },
-        {
-          "vesselName": "STACY LYNN",
-          "direction": "D",
-          "numBarges": 14,
-          "endOfLockage": "2026-09-03T22:36:00-05:00",
-          "mmsi": 368156330
-        },
-        {
-          "vesselName": "CRYSTAL D. TAYLOR",
-          "direction": "D",
-          "numBarges": 8,
-          "endOfLockage": "2026-09-03T21:19:00-05:00",
-          "mmsi": 367522170
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "FINDLAY",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-09-04T12:09:00-05:00",
-          "mmsi": 367414110
-        },
-        {
-          "vesselName": "MARY ELLEN JONES",
-          "direction": "U",
-          "numBarges": 11,
-          "endOfLockage": "2026-09-04T11:04:00-05:00",
-          "mmsi": 367320890
-        },
-        {
-          "vesselName": "FRANK CHOPP",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-09-04T09:16:00-05:00",
-          "mmsi": 367539060
-        },
-        {
-          "vesselName": "JOHN VAUGHN",
+          "vesselName": "D A GRIMM",
           "direction": "D",
           "numBarges": 15,
-          "endOfLockage": "2026-09-04T06:27:00-05:00",
-          "mmsi": 368008740
+          "endOfLockage": "2026-09-04T15:46:00-04:00",
+          "mmsi": 367434610
         },
         {
-          "vesselName": "LESTER PARKER",
+          "vesselName": "RECREATION VESSEL(S)",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-04T15:28:00-04:00",
+          "mmsi": 368179080
+        },
+        {
+          "vesselName": "M/V KEVIN MICHAEL",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-04T14:49:00-04:00",
+          "mmsi": 368416120
+        },
+        {
+          "vesselName": "DAN ELDER",
           "direction": "U",
-          "numBarges": 4,
-          "endOfLockage": "2026-09-04T05:20:00-05:00",
-          "mmsi": 367681320
+          "numBarges": 15,
+          "endOfLockage": "2026-09-04T13:19:00-04:00",
+          "mmsi": 367503540
+        },
+        {
+          "vesselName": "RECREATION VESSEL(S)",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-04T13:14:00-04:00",
+          "mmsi": 368179080
         }
       ]
     }
