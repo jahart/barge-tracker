@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04T11:35:24.712Z",
+  "updated": "2026-09-04T15:55:58.473Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
@@ -45,6 +45,27 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "FINDLAY",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-09-04T12:09:00-05:00",
+          "mmsi": 367414110
+        },
+        {
+          "vesselName": "MARY ELLEN JONES",
+          "direction": "U",
+          "numBarges": 11,
+          "endOfLockage": "2026-09-04T11:04:00-05:00",
+          "mmsi": 367320890
+        },
+        {
+          "vesselName": "FRANK CHOPP",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-09-04T09:16:00-05:00",
+          "mmsi": 367539060
+        },
+        {
           "vesselName": "JOHN VAUGHN",
           "direction": "D",
           "numBarges": 15,
@@ -57,27 +78,6 @@
           "numBarges": 4,
           "endOfLockage": "2026-09-04T05:20:00-05:00",
           "mmsi": 367681320
-        },
-        {
-          "vesselName": "CAPT RICK NEALE",
-          "direction": "D",
-          "numBarges": 1,
-          "endOfLockage": "2026-09-04T05:10:00-05:00",
-          "mmsi": 367519160
-        },
-        {
-          "vesselName": "RONALD L LOUGHMILLER",
-          "direction": "D",
-          "numBarges": 5,
-          "endOfLockage": "2026-09-04T04:10:00-05:00",
-          "mmsi": 367143650
-        },
-        {
-          "vesselName": "DREMA G. WOODS",
-          "direction": "U",
-          "numBarges": 11,
-          "endOfLockage": "2026-09-03T18:50:00-05:00",
-          "mmsi": 367321070
         }
       ]
     }
