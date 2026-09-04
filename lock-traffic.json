@@ -1,9 +1,30 @@
 {
-  "updated": "2026-09-04T01:11:08.654Z",
+  "updated": "2026-09-04T06:20:18.828Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "BILL STILE",
+          "direction": "D",
+          "numBarges": 9,
+          "endOfLockage": "2026-09-04T00:09:00-05:00",
+          "mmsi": 367441040
+        },
+        {
+          "vesselName": "STACY LYNN",
+          "direction": "D",
+          "numBarges": 14,
+          "endOfLockage": "2026-09-03T22:36:00-05:00",
+          "mmsi": 368156330
+        },
+        {
+          "vesselName": "CRYSTAL D. TAYLOR",
+          "direction": "D",
+          "numBarges": 8,
+          "endOfLockage": "2026-09-03T21:19:00-05:00",
+          "mmsi": 367522170
+        },
         {
           "vesselName": "JEAN AKIN",
           "direction": "D",
@@ -17,27 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-03T15:19:00-05:00",
           "mmsi": 367539160
-        },
-        {
-          "vesselName": "CATLETTSBURG",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-09-03T13:54:00-05:00",
-          "mmsi": 367105910
-        },
-        {
-          "vesselName": "RECREATION VESSEL(S)",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-03T11:55:00-05:00",
-          "mmsi": 368179080
-        },
-        {
-          "vesselName": "MARY ELLEN JONES",
-          "direction": "U",
-          "numBarges": 14,
-          "endOfLockage": "2026-09-03T11:27:00-05:00",
-          "mmsi": 367320890
         }
       ]
     },
