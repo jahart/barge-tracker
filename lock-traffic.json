@@ -1,9 +1,30 @@
 {
-  "updated": "2026-09-05T01:16:44.428Z",
+  "updated": "2026-09-05T06:09:00.083Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "M/V KEVIN MICHAEL",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-05T00:20:00-04:00",
+          "mmsi": 368416120
+        },
+        {
+          "vesselName": "FINDLAY",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-09-04T23:18:00-04:00",
+          "mmsi": 367414110
+        },
+        {
+          "vesselName": "GIANNA HULL",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-04T22:02:00-04:00",
+          "mmsi": 368169460
+        },
         {
           "vesselName": "FRANK CHOPP",
           "direction": "D",
@@ -17,33 +38,26 @@
           "numBarges": 6,
           "endOfLockage": "2026-09-04T18:35:00-04:00",
           "mmsi": 368006910
-        },
-        {
-          "vesselName": "JOHN VAUGHN",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-04T17:24:00-04:00",
-          "mmsi": 368008740
-        },
-        {
-          "vesselName": "RECREATION VESSEL(S)",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-04T15:47:00-04:00",
-          "mmsi": 368179080
-        },
-        {
-          "vesselName": "RONALD L LOUGHMILLER",
-          "direction": "D",
-          "numBarges": 7,
-          "endOfLockage": "2026-09-04T15:20:00-04:00",
-          "mmsi": 367143650
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "OZZIE",
+          "direction": "U",
+          "numBarges": 12,
+          "endOfLockage": "2026-09-05T01:10:00-04:00",
+          "mmsi": 367522180
+        },
+        {
+          "vesselName": "RICK HAY",
+          "direction": "U",
+          "numBarges": 7,
+          "endOfLockage": "2026-09-04T22:15:00-04:00",
+          "mmsi": 368401570
+        },
         {
           "vesselName": "LESTER PARKER",
           "direction": "D",
@@ -64,20 +78,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-04T15:46:00-04:00",
           "mmsi": 367434610
-        },
-        {
-          "vesselName": "RECREATION VESSEL(S)",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-04T15:28:00-04:00",
-          "mmsi": 368179080
-        },
-        {
-          "vesselName": "M/V KEVIN MICHAEL",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-04T14:49:00-04:00",
-          "mmsi": 368416120
         }
       ]
     }
