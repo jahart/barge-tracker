@@ -1,9 +1,23 @@
 {
-  "updated": "2026-09-05T13:42:52.450Z",
+  "updated": "2026-09-05T16:36:10.875Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "D A GRIMM",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-05T11:40:00-04:00",
+          "mmsi": 367434610
+        },
+        {
+          "vesselName": "CAPT STOGIE WHITE",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-05T10:12:00-04:00",
+          "mmsi": 367412630
+        },
         {
           "vesselName": "BILL STILE",
           "direction": "U",
@@ -24,20 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-05T00:20:00-04:00",
           "mmsi": 368416120
-        },
-        {
-          "vesselName": "FINDLAY",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-09-04T23:18:00-04:00",
-          "mmsi": 367414110
-        },
-        {
-          "vesselName": "GIANNA HULL",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-04T22:02:00-04:00",
-          "mmsi": 368169460
         }
       ]
     },
