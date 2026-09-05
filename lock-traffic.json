@@ -1,9 +1,23 @@
 {
-  "updated": "2026-09-05T10:50:32.934Z",
+  "updated": "2026-09-05T13:42:52.450Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "BILL STILE",
+          "direction": "U",
+          "numBarges": 9,
+          "endOfLockage": "2026-09-05T09:25:00-04:00",
+          "mmsi": 367441040
+        },
+        {
+          "vesselName": "RECREATION VESSEL(S)",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-05T08:13:00-04:00",
+          "mmsi": 368179080
+        },
         {
           "vesselName": "M/V KEVIN MICHAEL",
           "direction": "D",
@@ -24,26 +38,19 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-04T22:02:00-04:00",
           "mmsi": 368169460
-        },
-        {
-          "vesselName": "FRANK CHOPP",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-09-04T20:13:00-04:00",
-          "mmsi": 367539060
-        },
-        {
-          "vesselName": "WEST VIRGINIA (MARATHON)",
-          "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-09-04T18:35:00-04:00",
-          "mmsi": 368006910
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "GIANNA HULL",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-05T08:44:00-04:00",
+          "mmsi": 368169460
+        },
         {
           "vesselName": "WEST VIRGINIA (MARATHON)",
           "direction": "U",
@@ -71,13 +78,6 @@
           "numBarges": 4,
           "endOfLockage": "2026-09-04T20:45:00-04:00",
           "mmsi": 367681320
-        },
-        {
-          "vesselName": "DAN L",
-          "direction": "U",
-          "numBarges": 1,
-          "endOfLockage": "2026-09-04T17:59:00-04:00",
-          "mmsi": 367536660
         }
       ]
     }
