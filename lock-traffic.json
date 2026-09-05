@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-05T16:36:10.875Z",
+  "updated": "2026-09-05T18:50:17.511Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
@@ -45,6 +45,13 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "DAN L",
+          "direction": "D",
+          "numBarges": 1,
+          "endOfLockage": "2026-09-05T13:32:00-04:00",
+          "mmsi": 367536660
+        },
+        {
           "vesselName": "GIANNA HULL",
           "direction": "U",
           "numBarges": 15,
@@ -71,13 +78,6 @@
           "numBarges": 7,
           "endOfLockage": "2026-09-04T22:15:00-04:00",
           "mmsi": 368401570
-        },
-        {
-          "vesselName": "LESTER PARKER",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-09-04T20:45:00-04:00",
-          "mmsi": 367681320
         }
       ]
     }
