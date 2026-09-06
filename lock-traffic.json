@@ -1,9 +1,23 @@
 {
-  "updated": "2026-09-06T13:45:30.322Z",
+  "updated": "2026-09-06T16:44:51.826Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "FRANK CHOPP",
+          "direction": "U",
+          "numBarges": 12,
+          "endOfLockage": "2026-09-06T11:57:00-04:00",
+          "mmsi": 367539060
+        },
+        {
+          "vesselName": "RECREATION VESSEL(S)",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-06T10:56:00-04:00",
+          "mmsi": 368179080
+        },
         {
           "vesselName": "MACKENZIE ROSE",
           "direction": "D",
@@ -24,26 +38,26 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-06T05:49:00-04:00",
           "mmsi": 367421310
-        },
-        {
-          "vesselName": "BOB STITH",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-09-06T05:04:00-04:00",
-          "mmsi": 367066070
-        },
-        {
-          "vesselName": "MARK DULEY",
-          "direction": "U",
-          "numBarges": 11,
-          "endOfLockage": "2026-09-06T03:50:00-04:00",
-          "mmsi": 367522240
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CANTON",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-09-06T11:15:00-04:00",
+          "mmsi": 367433690
+        },
+        {
+          "vesselName": "DREMA G. WOODS",
+          "direction": "D",
+          "numBarges": 11,
+          "endOfLockage": "2026-09-06T10:29:00-04:00",
+          "mmsi": 367321070
+        },
         {
           "vesselName": "JINCY",
           "direction": "D",
@@ -64,20 +78,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-06T01:15:00-04:00",
           "mmsi": 367503540
-        },
-        {
-          "vesselName": "MACKENZIE ROSE",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-06T00:15:00-04:00",
-          "mmsi": 368288130
-        },
-        {
-          "vesselName": "BILL STILE",
-          "direction": "U",
-          "numBarges": 9,
-          "endOfLockage": "2026-09-05T23:17:00-04:00",
-          "mmsi": 367441040
         }
       ]
     }
