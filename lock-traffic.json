@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-05T22:41:25.328Z",
+  "updated": "2026-09-06T00:40:24.032Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
@@ -45,6 +45,13 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "CONNIE K",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-05T19:05:00-04:00",
+          "mmsi": 367543880
+        },
+        {
           "vesselName": "GIANNA HULL",
           "direction": "D",
           "numBarges": 15,
@@ -71,13 +78,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-05T08:44:00-04:00",
           "mmsi": 368169460
-        },
-        {
-          "vesselName": "WEST VIRGINIA (MARATHON)",
-          "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-09-05T02:51:00-04:00",
-          "mmsi": 368006910
         }
       ]
     }
