@@ -1,43 +1,43 @@
 {
-  "updated": "2026-09-07T17:27:28.646Z",
+  "updated": "2026-09-07T20:43:19.183Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "MARCI GALE",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-07T12:02:00-04:00",
-          "mmsi": 368173140
+          "vesselName": "OZZIE",
+          "direction": "D",
+          "numBarges": 11,
+          "endOfLockage": "2026-09-07T15:49:00-04:00",
+          "mmsi": 367522180
         },
         {
-          "vesselName": "RANDY HOPSON",
+          "vesselName": "RECREATION VESSEL(S)",
           "direction": "D",
-          "numBarges": 7,
-          "endOfLockage": "2026-09-07T10:34:00-04:00",
-          "mmsi": 367642130
+          "numBarges": 0,
+          "endOfLockage": "2026-09-07T14:05:00-04:00",
+          "mmsi": 368179080
         },
         {
           "vesselName": "RECREATION VESSEL(S)",
           "direction": "U",
           "numBarges": 0,
-          "endOfLockage": "2026-09-07T10:18:00-04:00",
+          "endOfLockage": "2026-09-07T13:40:00-04:00",
           "mmsi": 368179080
         },
         {
-          "vesselName": "MARY ELLEN JONES",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-09-07T06:30:00-04:00",
-          "mmsi": 367320890
+          "vesselName": "MISS MAE",
+          "direction": "U",
+          "numBarges": 1,
+          "endOfLockage": "2026-09-07T13:40:00-04:00",
+          "mmsi": 367717890
         },
         {
-          "vesselName": "BREES",
+          "vesselName": "CHUCK ZEBULA",
           "direction": "U",
           "numBarges": 15,
-          "endOfLockage": "2026-09-07T02:38:00-04:00",
-          "mmsi": 367489730
+          "endOfLockage": "2026-09-07T13:33:00-04:00",
+          "mmsi": 367362240
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "CAPT REGGIE TUBBS",
+          "vesselName": "HUNTINGTON",
           "direction": "D",
-          "numBarges": 14,
-          "endOfLockage": "2026-09-07T13:21:00-04:00",
-          "mmsi": 368256650
+          "numBarges": 3,
+          "endOfLockage": "2026-09-07T15:55:00-04:00",
+          "mmsi": 368113420
         },
         {
-          "vesselName": "BREES",
+          "vesselName": "VALLEY GEM",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-07T14:51:00-04:00",
+          "mmsi": 366937890
+        },
+        {
+          "vesselName": "VALLEY GEM",
           "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-07T12:02:00-04:00",
-          "mmsi": 367489730
+          "numBarges": 0,
+          "endOfLockage": "2026-09-07T14:21:00-04:00",
+          "mmsi": 366937890
         },
         {
           "vesselName": "FINDLAY",
-          "direction": "U",
-          "numBarges": 3,
-          "endOfLockage": "2026-09-07T11:05:00-04:00",
+          "direction": "D",
+          "numBarges": 2,
+          "endOfLockage": "2026-09-07T14:06:00-04:00",
           "mmsi": 367414110
         },
         {
-          "vesselName": "OZZIE",
-          "direction": "D",
-          "numBarges": 11,
-          "endOfLockage": "2026-09-07T10:00:00-04:00",
-          "mmsi": 367522180
-        },
-        {
-          "vesselName": "COOPER T",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-07T09:08:00-04:00",
-          "mmsi": 368359850
+          "vesselName": "DAVE FOREMAN",
+          "direction": "U",
+          "numBarges": 3,
+          "endOfLockage": "2026-09-07T13:41:00-04:00",
+          "mmsi": 338591000
         }
       ]
     }
