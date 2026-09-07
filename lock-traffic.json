@@ -1,9 +1,23 @@
 {
-  "updated": "2026-09-06T22:59:41.190Z",
+  "updated": "2026-09-07T00:44:29.461Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "RECREATION VESSEL(S)",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-06T19:30:00-04:00",
+          "mmsi": 368179080
+        },
+        {
+          "vesselName": "CANTON",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-09-06T18:52:00-04:00",
+          "mmsi": 367433690
+        },
         {
           "vesselName": "RECREATION VESSEL(S)",
           "direction": "U",
@@ -24,20 +38,6 @@
           "numBarges": 5,
           "endOfLockage": "2026-09-06T17:39:00-04:00",
           "mmsi": 367642130
-        },
-        {
-          "vesselName": "JINCY",
-          "direction": "D",
-          "numBarges": 9,
-          "endOfLockage": "2026-09-06T16:20:00-04:00",
-          "mmsi": 367402580
-        },
-        {
-          "vesselName": "CIBOLO",
-          "direction": "D",
-          "numBarges": 2,
-          "endOfLockage": "2026-09-06T15:14:00-04:00",
-          "mmsi": 367728710
         }
       ]
     },
