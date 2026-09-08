@@ -1,9 +1,23 @@
 {
-  "updated": "2026-09-08T06:20:06.333Z",
+  "updated": "2026-09-08T11:36:14.937Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "MACKENZIE ROSE",
+          "direction": "U",
+          "numBarges": 12,
+          "endOfLockage": "2026-09-08T05:44:00-04:00",
+          "mmsi": 368288130
+        },
+        {
+          "vesselName": "LEO G. LUTGRING",
+          "direction": "U",
+          "numBarges": 8,
+          "endOfLockage": "2026-09-08T03:20:00-04:00",
+          "mmsi": 367142710
+        },
         {
           "vesselName": "M/V KEVIN MICHAEL",
           "direction": "U",
@@ -24,20 +38,6 @@
           "numBarges": 3,
           "endOfLockage": "2026-09-07T21:44:00-04:00",
           "mmsi": 368113420
-        },
-        {
-          "vesselName": "CAPT REGGIE TUBBS",
-          "direction": "D",
-          "numBarges": 14,
-          "endOfLockage": "2026-09-07T21:00:00-04:00",
-          "mmsi": 368256650
-        },
-        {
-          "vesselName": "JINCY",
-          "direction": "U",
-          "numBarges": 14,
-          "endOfLockage": "2026-09-07T19:58:00-04:00",
-          "mmsi": 367402580
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "ALAN P HALL",
+          "direction": "U",
+          "numBarges": 11,
+          "endOfLockage": "2026-09-08T06:58:00-04:00",
+          "mmsi": 367539160
+        },
+        {
+          "vesselName": "RICK HAY",
+          "direction": "D",
+          "numBarges": 1,
+          "endOfLockage": "2026-09-08T06:22:00-04:00",
+          "mmsi": 368401570
+        },
+        {
+          "vesselName": "ARTHUR E. SNIDER",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-08T05:54:00-04:00",
+          "mmsi": 367699340
+        },
+        {
+          "vesselName": "JINCY",
+          "direction": "U",
+          "numBarges": 14,
+          "endOfLockage": "2026-09-08T04:50:00-04:00",
+          "mmsi": 367402580
+        },
+        {
           "vesselName": "MARCI GALE",
           "direction": "U",
           "numBarges": 15,
           "endOfLockage": "2026-09-07T22:40:00-04:00",
           "mmsi": 368173140
-        },
-        {
-          "vesselName": "MICHELE LAY",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-07T22:03:00-04:00",
-          "mmsi": 367553870
-        },
-        {
-          "vesselName": "CHUCK ZEBULA",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-07T20:10:00-04:00",
-          "mmsi": 367362240
-        },
-        {
-          "vesselName": "MICHELE LAY",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-07T18:36:00-04:00",
-          "mmsi": 367553870
-        },
-        {
-          "vesselName": "MISTER CHARLIE NEALE",
-          "direction": "U",
-          "numBarges": 4,
-          "endOfLockage": "2026-09-07T18:00:00-04:00",
-          "mmsi": 367385950
         }
       ]
     }
