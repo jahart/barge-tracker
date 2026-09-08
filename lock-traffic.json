@@ -1,9 +1,30 @@
 {
-  "updated": "2026-09-07T23:19:20.543Z",
+  "updated": "2026-09-08T01:19:16.886Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CAPT REGGIE TUBBS",
+          "direction": "D",
+          "numBarges": 14,
+          "endOfLockage": "2026-09-07T21:00:00-04:00",
+          "mmsi": 368256650
+        },
+        {
+          "vesselName": "JINCY",
+          "direction": "U",
+          "numBarges": 14,
+          "endOfLockage": "2026-09-07T19:58:00-04:00",
+          "mmsi": 367402580
+        },
+        {
+          "vesselName": "ALAN P HALL",
+          "direction": "U",
+          "numBarges": 14,
+          "endOfLockage": "2026-09-07T19:09:00-04:00",
+          "mmsi": 367539160
+        },
         {
           "vesselName": "ARTHUR E. SNIDER",
           "direction": "U",
@@ -17,33 +38,19 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-07T16:50:00-04:00",
           "mmsi": 368359850
-        },
-        {
-          "vesselName": "OZZIE",
-          "direction": "D",
-          "numBarges": 11,
-          "endOfLockage": "2026-09-07T15:49:00-04:00",
-          "mmsi": 367522180
-        },
-        {
-          "vesselName": "RECREATION VESSEL(S)",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-07T14:05:00-04:00",
-          "mmsi": 368179080
-        },
-        {
-          "vesselName": "RECREATION VESSEL(S)",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-07T13:40:00-04:00",
-          "mmsi": 368179080
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CHUCK ZEBULA",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-07T20:10:00-04:00",
+          "mmsi": 367362240
+        },
         {
           "vesselName": "MICHELE LAY",
           "direction": "D",
@@ -71,13 +78,6 @@
           "numBarges": 3,
           "endOfLockage": "2026-09-07T15:55:00-04:00",
           "mmsi": 368113420
-        },
-        {
-          "vesselName": "VALLEY GEM",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-07T14:51:00-04:00",
-          "mmsi": 366937890
         }
       ]
     }
