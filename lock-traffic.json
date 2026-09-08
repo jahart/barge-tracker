@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-08T16:12:15.514Z",
+  "updated": "2026-09-08T19:30:32.817Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
@@ -45,10 +45,31 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "MACKENZIE ROSE",
+          "direction": "U",
+          "numBarges": 12,
+          "endOfLockage": "2026-09-08T15:10:00-04:00",
+          "mmsi": 368288130
+        },
+        {
+          "vesselName": "CAPT RICK NEALE",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-08T15:00:00-04:00",
+          "mmsi": 367519160
+        },
+        {
+          "vesselName": "BREES",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-08T15:00:00-04:00",
+          "mmsi": 367489730
+        },
+        {
           "vesselName": "DJP II",
           "direction": "D",
           "numBarges": 3,
-          "endOfLockage": "2026-09-08T12:18:00-04:00",
+          "endOfLockage": "2026-09-08T12:23:00-04:00",
           "mmsi": 368066030
         },
         {
@@ -57,27 +78,6 @@
           "numBarges": 0,
           "endOfLockage": "2026-09-08T10:20:00-04:00",
           "mmsi": 368179080
-        },
-        {
-          "vesselName": "YVONNE CONWAY",
-          "direction": "D",
-          "numBarges": 9,
-          "endOfLockage": "2026-09-08T08:04:00-04:00",
-          "mmsi": 367402550
-        },
-        {
-          "vesselName": "ALAN P HALL",
-          "direction": "U",
-          "numBarges": 11,
-          "endOfLockage": "2026-09-08T06:58:00-04:00",
-          "mmsi": 367539160
-        },
-        {
-          "vesselName": "RICK HAY",
-          "direction": "D",
-          "numBarges": 1,
-          "endOfLockage": "2026-09-08T06:22:00-04:00",
-          "mmsi": 368401570
         }
       ]
     }
