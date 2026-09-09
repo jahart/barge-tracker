@@ -1,9 +1,30 @@
 {
-  "updated": "2026-09-09T19:57:07.777Z",
+  "updated": "2026-09-09T22:19:41.043Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CHUCK ZEBULA",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-09T16:45:00-04:00",
+          "mmsi": 367362240
+        },
+        {
+          "vesselName": "RECREATION VESSEL(S)",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-09T16:35:00-04:00",
+          "mmsi": 368179080
+        },
+        {
+          "vesselName": "LILLIAN LOUISE",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-09-09T15:52:00-04:00",
+          "mmsi": 367724780
+        },
         {
           "vesselName": "LESTER PARKER",
           "direction": "D",
@@ -17,27 +38,6 @@
           "numBarges": 13,
           "endOfLockage": "2026-09-09T10:15:00-04:00",
           "mmsi": 367539140
-        },
-        {
-          "vesselName": "CANTON",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-09-09T08:57:00-04:00",
-          "mmsi": 367433690
-        },
-        {
-          "vesselName": "JAMES MURPHY",
-          "direction": "U",
-          "numBarges": 2,
-          "endOfLockage": "2026-09-09T07:52:00-04:00",
-          "mmsi": 367757680
-        },
-        {
-          "vesselName": "DAN ELDER",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-09T06:10:00-04:00",
-          "mmsi": 367503540
         }
       ]
     },
