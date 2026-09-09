@@ -1,49 +1,56 @@
 {
-  "updated": "2026-09-09T08:45:54.602Z",
+  "updated": "2026-09-09T13:30:50.149Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CANTON",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-09-09T08:57:00-04:00",
+          "mmsi": 367433690
+        },
+        {
+          "vesselName": "JAMES MURPHY",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-09-09T07:52:00-04:00",
+          "mmsi": 367757680
+        },
+        {
+          "vesselName": "DAN ELDER",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-09T06:10:00-04:00",
+          "mmsi": 367503540
+        },
+        {
+          "vesselName": "MARK DULEY",
+          "direction": "D",
+          "numBarges": 5,
+          "endOfLockage": "2026-09-09T02:56:00-04:00",
+          "mmsi": 367522240
+        },
         {
           "vesselName": "LISA MARIE",
           "direction": "D",
           "numBarges": 10,
           "endOfLockage": "2026-09-09T01:42:00-04:00",
           "mmsi": 368372010
-        },
-        {
-          "vesselName": "BREES",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-08T19:40:00-04:00",
-          "mmsi": 367489730
-        },
-        {
-          "vesselName": "YVONNE CONWAY",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-09-08T17:22:00-04:00",
-          "mmsi": 367402550
-        },
-        {
-          "vesselName": "CHARLES T. JONES",
-          "direction": "U",
-          "numBarges": 13,
-          "endOfLockage": "2026-09-08T15:38:00-04:00",
-          "mmsi": 368142180
-        },
-        {
-          "vesselName": "RICK HAY",
-          "direction": "D",
-          "numBarges": 1,
-          "endOfLockage": "2026-09-08T12:01:00-04:00",
-          "mmsi": 368401570
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CHARLES T. JONES",
+          "direction": "U",
+          "numBarges": 12,
+          "endOfLockage": "2026-09-09T08:50:00-04:00",
+          "mmsi": 368142180
+        },
         {
           "vesselName": "CANTON",
           "direction": "D",
@@ -71,13 +78,6 @@
           "numBarges": 7,
           "endOfLockage": "2026-09-08T19:00:00-04:00",
           "mmsi": 367142710
-        },
-        {
-          "vesselName": "LISA MARIE",
-          "direction": "D",
-          "numBarges": 10,
-          "endOfLockage": "2026-09-08T17:38:00-04:00",
-          "mmsi": 368372010
         }
       ]
     }
