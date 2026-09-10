@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-10T05:04:22.091Z",
+  "updated": "2026-09-10T09:35:25.644Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "LISA MARIE",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-09-10T02:20:00-04:00",
+          "mmsi": 368372010
+        },
         {
           "vesselName": "M/V SAMUEL J",
           "direction": "U",
@@ -31,13 +38,6 @@
           "numBarges": 0,
           "endOfLockage": "2026-09-09T16:35:00-04:00",
           "mmsi": 368179080
-        },
-        {
-          "vesselName": "LILLIAN LOUISE",
-          "direction": "U",
-          "numBarges": 2,
-          "endOfLockage": "2026-09-09T15:52:00-04:00",
-          "mmsi": 367724780
         }
       ]
     },
