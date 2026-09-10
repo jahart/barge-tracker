@@ -1,9 +1,23 @@
 {
-  "updated": "2026-09-10T00:26:30.535Z",
+  "updated": "2026-09-10T05:04:22.091Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "M/V SAMUEL J",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-09T22:52:00-04:00",
+          "mmsi": 368269040
+        },
+        {
+          "vesselName": "FRANK STEGBAUER ",
+          "direction": "U",
+          "numBarges": 13,
+          "endOfLockage": "2026-09-09T21:15:00-04:00",
+          "mmsi": 366917110
+        },
         {
           "vesselName": "CHUCK ZEBULA",
           "direction": "D",
@@ -24,20 +38,6 @@
           "numBarges": 2,
           "endOfLockage": "2026-09-09T15:52:00-04:00",
           "mmsi": 367724780
-        },
-        {
-          "vesselName": "LESTER PARKER",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-09-09T13:16:00-04:00",
-          "mmsi": 367681320
-        },
-        {
-          "vesselName": "WILLIAM R BARR",
-          "direction": "U",
-          "numBarges": 13,
-          "endOfLockage": "2026-09-09T10:15:00-04:00",
-          "mmsi": 367539140
         }
       ]
     },
