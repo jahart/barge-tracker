@@ -1,9 +1,30 @@
 {
-  "updated": "2026-09-11T05:40:15.899Z",
+  "updated": "2026-09-11T10:47:20.019Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "ARTHUR E. SNIDER",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-11T06:25:00-04:00",
+          "mmsi": 367699340
+        },
+        {
+          "vesselName": "JEAN MARIE",
+          "direction": "D",
+          "numBarges": 1,
+          "endOfLockage": "2026-09-11T05:13:00-04:00",
+          "mmsi": 368260120
+        },
+        {
+          "vesselName": "MARCI GALE",
+          "direction": "D",
+          "numBarges": 14,
+          "endOfLockage": "2026-09-11T04:09:00-04:00",
+          "mmsi": 368173140
+        },
         {
           "vesselName": "DAVE FOREMAN",
           "direction": "D",
@@ -17,33 +38,26 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-10T23:53:00-04:00",
           "mmsi": 367362240
-        },
-        {
-          "vesselName": "CAPT REGGIE TUBBS",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-10T20:23:00-04:00",
-          "mmsi": 368256650
-        },
-        {
-          "vesselName": "WEST VIRGINIA (MARATHON)",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-09-10T18:55:00-04:00",
-          "mmsi": 368006910
-        },
-        {
-          "vesselName": "RECREATION VESSEL(S)",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-10T18:42:00-04:00",
-          "mmsi": 368179080
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "DJP II",
+          "direction": "D",
+          "numBarges": 1,
+          "endOfLockage": "2026-09-11T04:30:00-04:00",
+          "mmsi": 368066030
+        },
+        {
+          "vesselName": "M/V SAMUEL J",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-11T02:08:00-04:00",
+          "mmsi": 368269040
+        },
         {
           "vesselName": "JINCY",
           "direction": "U",
@@ -64,20 +78,6 @@
           "numBarges": 1,
           "endOfLockage": "2026-09-10T23:22:00-04:00",
           "mmsi": 368260120
-        },
-        {
-          "vesselName": "CATLETTSBURG",
-          "direction": "D",
-          "numBarges": 5,
-          "endOfLockage": "2026-09-10T22:40:00-04:00",
-          "mmsi": 367105910
-        },
-        {
-          "vesselName": "MARCI GALE",
-          "direction": "D",
-          "numBarges": 14,
-          "endOfLockage": "2026-09-10T21:48:00-04:00",
-          "mmsi": 368173140
         }
       ]
     }
