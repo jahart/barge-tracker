@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-11T18:13:12.062Z",
+  "updated": "2026-09-11T21:09:43.945Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "ROBINSON",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-09-11T15:19:00-04:00",
+          "mmsi": 368316650
+        },
         {
           "vesselName": "DJP II",
           "direction": "D",
@@ -31,19 +38,26 @@
           "numBarges": 6,
           "endOfLockage": "2026-09-11T08:14:00-04:00",
           "mmsi": 367105910
-        },
-        {
-          "vesselName": "DAN ELDER",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-11T07:27:00-04:00",
-          "mmsi": 367503540
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "LEO G. LUTGRING",
+          "direction": "D",
+          "numBarges": 7,
+          "endOfLockage": "2026-09-11T16:30:00-04:00",
+          "mmsi": 367142710
+        },
+        {
+          "vesselName": "M/V KEVIN MICHAEL",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-11T14:45:00-04:00",
+          "mmsi": 368416120
+        },
         {
           "vesselName": "DAN L",
           "direction": "U",
@@ -64,20 +78,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-11T07:35:00-04:00",
           "mmsi": 367362240
-        },
-        {
-          "vesselName": "CAPT REGGIE TUBBS",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-11T06:40:00-04:00",
-          "mmsi": 368256650
-        },
-        {
-          "vesselName": "DJP II",
-          "direction": "D",
-          "numBarges": 1,
-          "endOfLockage": "2026-09-11T04:30:00-04:00",
-          "mmsi": 368066030
         }
       ]
     }
