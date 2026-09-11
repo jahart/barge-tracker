@@ -1,9 +1,23 @@
 {
-  "updated": "2026-09-10T22:44:06.211Z",
+  "updated": "2026-09-11T00:51:33.218Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CAPT REGGIE TUBBS",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-10T20:23:00-04:00",
+          "mmsi": 368256650
+        },
+        {
+          "vesselName": "WEST VIRGINIA (MARATHON)",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-09-10T18:55:00-04:00",
+          "mmsi": 368006910
+        },
         {
           "vesselName": "RECREATION VESSEL(S)",
           "direction": "U",
@@ -24,20 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-10T13:26:00-04:00",
           "mmsi": 367402520
-        },
-        {
-          "vesselName": "JAMES MURPHY",
-          "direction": "D",
-          "numBarges": 2,
-          "endOfLockage": "2026-09-10T10:34:00-04:00",
-          "mmsi": 367757680
-        },
-        {
-          "vesselName": "DAN L",
-          "direction": "U",
-          "numBarges": 4,
-          "endOfLockage": "2026-09-10T09:11:00-04:00",
-          "mmsi": 367536660
         }
       ]
     },
