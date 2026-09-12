@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-12T11:07:04.200Z",
+  "updated": "2026-09-12T14:17:16.037Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "FRANK CHOPP",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-09-12T07:32:00-04:00",
+          "mmsi": 367539060
+        },
         {
           "vesselName": "LEO G. LUTGRING",
           "direction": "D",
@@ -31,19 +38,33 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-11T23:18:00-04:00",
           "mmsi": 368416120
-        },
-        {
-          "vesselName": "GLENN A HENDON",
-          "direction": "U",
-          "numBarges": 11,
-          "endOfLockage": "2026-09-11T19:38:00-04:00",
-          "mmsi": 367375080
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "RECREATION VESSEL(S)",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-12T10:20:00-04:00",
+          "mmsi": 368179080
+        },
+        {
+          "vesselName": "LISA MARIE",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-09-12T10:05:00-04:00",
+          "mmsi": 368372010
+        },
+        {
+          "vesselName": "WILLIAM R BARR",
+          "direction": "D",
+          "numBarges": 7,
+          "endOfLockage": "2026-09-12T08:26:00-04:00",
+          "mmsi": 367539140
+        },
         {
           "vesselName": "GLENN A HENDON",
           "direction": "U",
@@ -57,27 +78,6 @@
           "numBarges": 7,
           "endOfLockage": "2026-09-12T03:32:00-04:00",
           "mmsi": 367402990
-        },
-        {
-          "vesselName": "BILL STILE",
-          "direction": "D",
-          "numBarges": 14,
-          "endOfLockage": "2026-09-12T02:19:00-04:00",
-          "mmsi": 367441040
-        },
-        {
-          "vesselName": "FRANK STEGBAUER ",
-          "direction": "D",
-          "numBarges": 9,
-          "endOfLockage": "2026-09-12T01:27:00-04:00",
-          "mmsi": 366917110
-        },
-        {
-          "vesselName": "DREMA G. WOODS",
-          "direction": "U",
-          "numBarges": 5,
-          "endOfLockage": "2026-09-12T01:01:00-04:00",
-          "mmsi": 367321070
         }
       ]
     }
