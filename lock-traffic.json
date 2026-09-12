@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-12T21:35:34.481Z",
+  "updated": "2026-09-12T23:49:40.913Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "LISA MARIE",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-09-12T19:01:00-04:00",
+          "mmsi": 368372010
+        },
         {
           "vesselName": "CANTON",
           "direction": "U",
@@ -31,13 +38,6 @@
           "numBarges": 14,
           "endOfLockage": "2026-09-12T10:00:00-04:00",
           "mmsi": 367441040
-        },
-        {
-          "vesselName": "FRANK CHOPP",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-09-12T07:32:00-04:00",
-          "mmsi": 367539060
         }
       ]
     },
