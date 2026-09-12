@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T19:33:54.027Z",
+  "updated": "2026-09-12T21:35:34.481Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
@@ -45,6 +45,13 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "DAVE FOREMAN",
+          "direction": "U",
+          "numBarges": 8,
+          "endOfLockage": "2026-09-12T18:08:00-04:00",
+          "mmsi": 338591000
+        },
+        {
           "vesselName": "RECREATION VESSEL(S)",
           "direction": "U",
           "numBarges": 0,
@@ -71,13 +78,6 @@
           "numBarges": 0,
           "endOfLockage": "2026-09-12T10:20:00-04:00",
           "mmsi": 368179080
-        },
-        {
-          "vesselName": "LISA MARIE",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-09-12T10:05:00-04:00",
-          "mmsi": 368372010
         }
       ]
     }
