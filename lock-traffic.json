@@ -1,9 +1,30 @@
 {
-  "updated": "2026-09-12T06:14:22.518Z",
+  "updated": "2026-09-12T11:07:04.200Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "LEO G. LUTGRING",
+          "direction": "D",
+          "numBarges": 9,
+          "endOfLockage": "2026-09-12T06:10:00-04:00",
+          "mmsi": 367142710
+        },
+        {
+          "vesselName": "ALAN P HALL",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-12T05:15:00-04:00",
+          "mmsi": 367539160
+        },
+        {
+          "vesselName": "CAPT. KIRBY DUPUIS",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-12T03:42:00-04:00",
+          "mmsi": 368235550
+        },
         {
           "vesselName": "M/V KEVIN MICHAEL",
           "direction": "D",
@@ -17,33 +38,26 @@
           "numBarges": 11,
           "endOfLockage": "2026-09-11T19:38:00-04:00",
           "mmsi": 367375080
-        },
-        {
-          "vesselName": "LINDA REED",
-          "direction": "D",
-          "numBarges": 8,
-          "endOfLockage": "2026-09-11T17:51:00-04:00",
-          "mmsi": 367402990
-        },
-        {
-          "vesselName": "LINDA REED",
-          "direction": "U",
-          "numBarges": 9,
-          "endOfLockage": "2026-09-11T16:50:00-04:00",
-          "mmsi": 367402990
-        },
-        {
-          "vesselName": "ROBINSON",
-          "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-09-11T15:19:00-04:00",
-          "mmsi": 368316650
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "GLENN A HENDON",
+          "direction": "U",
+          "numBarges": 11,
+          "endOfLockage": "2026-09-12T04:23:00-04:00",
+          "mmsi": 367375080
+        },
+        {
+          "vesselName": "LINDA REED",
+          "direction": "U",
+          "numBarges": 7,
+          "endOfLockage": "2026-09-12T03:32:00-04:00",
+          "mmsi": 367402990
+        },
         {
           "vesselName": "BILL STILE",
           "direction": "D",
@@ -64,20 +78,6 @@
           "numBarges": 5,
           "endOfLockage": "2026-09-12T01:01:00-04:00",
           "mmsi": 367321070
-        },
-        {
-          "vesselName": "ROBINSON",
-          "direction": "U",
-          "numBarges": 3,
-          "endOfLockage": "2026-09-12T00:20:00-04:00",
-          "mmsi": 368316650
-        },
-        {
-          "vesselName": "FRANK CHOPP",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-09-11T23:15:00-04:00",
-          "mmsi": 367539060
         }
       ]
     }
