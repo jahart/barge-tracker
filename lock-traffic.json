@@ -1,9 +1,23 @@
 {
-  "updated": "2026-09-13T17:19:17.874Z",
+  "updated": "2026-09-13T19:39:32.788Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "GIANNA HULL",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-13T15:23:00-04:00",
+          "mmsi": 368169460
+        },
+        {
+          "vesselName": "ALEXA GOLDING",
+          "direction": "D",
+          "numBarges": 1,
+          "endOfLockage": "2026-09-13T14:10:00-04:00",
+          "mmsi": null
+        },
         {
           "vesselName": "RECREATION VESSEL(S)",
           "direction": "D",
@@ -24,26 +38,33 @@
           "numBarges": 3,
           "endOfLockage": "2026-09-13T11:00:00-04:00",
           "mmsi": 367536660
-        },
-        {
-          "vesselName": "ARTHUR E. SNIDER",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-13T10:20:00-04:00",
-          "mmsi": 367699340
-        },
-        {
-          "vesselName": "CAPT REGGIE TUBBS",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-13T08:35:00-04:00",
-          "mmsi": 368256650
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "ELEANOR G MCDONALD",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-09-13T13:48:00-04:00",
+          "mmsi": 367532820
+        },
+        {
+          "vesselName": "RECREATION VESSEL(S)",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-13T13:44:00-04:00",
+          "mmsi": 368179080
+        },
+        {
+          "vesselName": "RECREATION VESSEL(S)",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-13T13:21:00-04:00",
+          "mmsi": 368179080
+        },
         {
           "vesselName": "RECREATION VESSEL(S)",
           "direction": "U",
@@ -57,27 +78,6 @@
           "numBarges": 13,
           "endOfLockage": "2026-09-13T11:21:00-04:00",
           "mmsi": 367402570
-        },
-        {
-          "vesselName": "RECREATION VESSEL(S)",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-13T11:15:00-04:00",
-          "mmsi": 368179080
-        },
-        {
-          "vesselName": "RECREATION VESSEL(S)",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-13T10:42:00-04:00",
-          "mmsi": 368179080
-        },
-        {
-          "vesselName": "RECREATION VESSEL(S)",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-13T10:12:00-04:00",
-          "mmsi": 368179080
         }
       ]
     }
