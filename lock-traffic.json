@@ -1,9 +1,30 @@
 {
-  "updated": "2026-09-12T23:49:40.913Z",
+  "updated": "2026-09-13T03:44:54.633Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CHUCK ZEBULA",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-12T21:53:00-04:00",
+          "mmsi": 367362240
+        },
+        {
+          "vesselName": "WILLIAM R BARR",
+          "direction": "D",
+          "numBarges": 8,
+          "endOfLockage": "2026-09-12T21:00:00-04:00",
+          "mmsi": 367539140
+        },
+        {
+          "vesselName": "FRANK STEGBAUER ",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-09-12T20:08:00-04:00",
+          "mmsi": 366917110
+        },
         {
           "vesselName": "LISA MARIE",
           "direction": "D",
@@ -17,33 +38,33 @@
           "numBarges": 4,
           "endOfLockage": "2026-09-12T13:07:00-04:00",
           "mmsi": 367433690
-        },
-        {
-          "vesselName": "SALLY WHALEN",
-          "direction": "U",
-          "numBarges": 13,
-          "endOfLockage": "2026-09-12T12:13:00-04:00",
-          "mmsi": 367402570
-        },
-        {
-          "vesselName": "DAVE FOREMAN",
-          "direction": "U",
-          "numBarges": 8,
-          "endOfLockage": "2026-09-12T10:50:00-04:00",
-          "mmsi": 338591000
-        },
-        {
-          "vesselName": "BILL STILE",
-          "direction": "D",
-          "numBarges": 14,
-          "endOfLockage": "2026-09-12T10:00:00-04:00",
-          "mmsi": 367441040
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CAPT REGGIE TUBBS",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-12T23:40:00-04:00",
+          "mmsi": 368256650
+        },
+        {
+          "vesselName": "JINCY",
+          "direction": "D",
+          "numBarges": 9,
+          "endOfLockage": "2026-09-12T21:09:00-04:00",
+          "mmsi": 367402580
+        },
+        {
+          "vesselName": "DAN L",
+          "direction": "U",
+          "numBarges": 3,
+          "endOfLockage": "2026-09-12T20:10:00-04:00",
+          "mmsi": 367536660
+        },
         {
           "vesselName": "DAVE FOREMAN",
           "direction": "U",
@@ -56,27 +77,6 @@
           "direction": "U",
           "numBarges": 0,
           "endOfLockage": "2026-09-12T13:46:00-04:00",
-          "mmsi": 368179080
-        },
-        {
-          "vesselName": "CHUCK ZEBULA",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-12T13:46:00-04:00",
-          "mmsi": 367362240
-        },
-        {
-          "vesselName": "DAN L",
-          "direction": "D",
-          "numBarges": 1,
-          "endOfLockage": "2026-09-12T12:46:00-04:00",
-          "mmsi": 367536660
-        },
-        {
-          "vesselName": "RECREATION VESSEL(S)",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-12T10:20:00-04:00",
           "mmsi": 368179080
         }
       ]
