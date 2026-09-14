@@ -1,9 +1,23 @@
 {
-  "updated": "2026-09-14T05:18:19.927Z",
+  "updated": "2026-09-14T10:53:55.801Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "LISA MARIE",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-14T05:01:00-04:00",
+          "mmsi": 368372010
+        },
+        {
+          "vesselName": "CAPT. KIRBY DUPUIS",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-14T02:30:00-04:00",
+          "mmsi": 368235550
+        },
         {
           "vesselName": "JENNIFER ANN",
           "direction": "D",
@@ -24,26 +38,19 @@
           "numBarges": 6,
           "endOfLockage": "2026-09-13T19:05:00-04:00",
           "mmsi": 367532820
-        },
-        {
-          "vesselName": "LINDA REED",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-13T17:45:00-04:00",
-          "mmsi": 367402990
-        },
-        {
-          "vesselName": "RONALD L LOUGHMILLER",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-13T16:55:00-04:00",
-          "mmsi": 367143650
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "GIANNA HULL",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-14T02:48:00-04:00",
+          "mmsi": 368169460
+        },
         {
           "vesselName": "DREMA G. WOODS",
           "direction": "D",
@@ -71,13 +78,6 @@
           "numBarges": 5,
           "endOfLockage": "2026-09-13T20:46:00-04:00",
           "mmsi": 368470980
-        },
-        {
-          "vesselName": "CAPT. KIRBY DUPUIS",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-13T20:01:00-04:00",
-          "mmsi": 368235550
         }
       ]
     }
