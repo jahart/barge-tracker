@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14T16:49:14.188Z",
+  "updated": "2026-09-14T20:46:36.027Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
@@ -46,38 +46,38 @@
       "recentLockages": [
         {
           "vesselName": "GIANNA HULL",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-14T02:48:00-04:00",
+          "direction": "D",
+          "numBarges": 14,
+          "endOfLockage": "2026-09-14T16:50:00-04:00",
           "mmsi": 368169460
         },
         {
-          "vesselName": "DREMA G. WOODS",
+          "vesselName": "D A  GRIMM",
           "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-09-14T01:02:00-04:00",
-          "mmsi": 367321070
+          "numBarges": 10,
+          "endOfLockage": "2026-09-14T13:46:00-04:00",
+          "mmsi": 367434610
         },
         {
-          "vesselName": "LEONARD L. WHITTINGTON",
-          "direction": "D",
-          "numBarges": 11,
-          "endOfLockage": "2026-09-14T00:11:00-04:00",
-          "mmsi": 368142180
-        },
-        {
-          "vesselName": "ARTHUR E SNIDER",
+          "vesselName": "WEST VIRGINIA 1279888",
           "direction": "U",
+          "numBarges": 3,
+          "endOfLockage": "2026-09-14T11:00:00-04:00",
+          "mmsi": 368006910
+        },
+        {
+          "vesselName": "REC VESSEL M5",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-14T10:07:00-04:00",
+          "mmsi": 368179080
+        },
+        {
+          "vesselName": "MACKENZIE ROSE",
+          "direction": "D",
           "numBarges": 15,
-          "endOfLockage": "2026-09-13T23:03:00-04:00",
-          "mmsi": 367699340
-        },
-        {
-          "vesselName": "MACKENZIE J LYNN",
-          "direction": "U",
-          "numBarges": 5,
-          "endOfLockage": "2026-09-13T20:46:00-04:00",
-          "mmsi": 368470980
+          "endOfLockage": "2026-09-14T08:53:00-04:00",
+          "mmsi": 368288130
         }
       ]
     }
