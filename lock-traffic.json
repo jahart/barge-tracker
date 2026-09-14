@@ -1,15 +1,22 @@
 {
-  "updated": "2026-09-14T10:53:55.801Z",
+  "updated": "2026-09-14T16:49:14.188Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "M/V ROBINSON",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-09-14T07:50:00-04:00",
+          "mmsi": 366919640
+        },
+        {
           "vesselName": "LISA MARIE",
           "direction": "U",
           "numBarges": 15,
           "endOfLockage": "2026-09-14T05:01:00-04:00",
-          "mmsi": 368372010
+          "mmsi": 368279390
         },
         {
           "vesselName": "CAPT. KIRBY DUPUIS",
@@ -26,18 +33,11 @@
           "mmsi": 368033840
         },
         {
-          "vesselName": "WEST VIRGINIA (MARATHON)",
+          "vesselName": "WEST VIRGINIA 1279888",
           "direction": "U",
           "numBarges": 6,
           "endOfLockage": "2026-09-13T22:20:00-04:00",
           "mmsi": 368006910
-        },
-        {
-          "vesselName": "ELEANOR G MCDONALD",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-09-13T19:05:00-04:00",
-          "mmsi": 367532820
         }
       ]
     },
@@ -59,14 +59,14 @@
           "mmsi": 367321070
         },
         {
-          "vesselName": "CHARLES T. JONES",
+          "vesselName": "LEONARD L. WHITTINGTON",
           "direction": "D",
           "numBarges": 11,
           "endOfLockage": "2026-09-14T00:11:00-04:00",
           "mmsi": 368142180
         },
         {
-          "vesselName": "ARTHUR E. SNIDER",
+          "vesselName": "ARTHUR E SNIDER",
           "direction": "U",
           "numBarges": 15,
           "endOfLockage": "2026-09-13T23:03:00-04:00",
