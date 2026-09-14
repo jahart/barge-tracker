@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-13T22:11:38.658Z",
+  "updated": "2026-09-14T00:20:34.246Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "ELEANOR G MCDONALD",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-09-13T19:05:00-04:00",
+          "mmsi": 367532820
+        },
         {
           "vesselName": "LINDA REED",
           "direction": "D",
@@ -31,19 +38,33 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-13T15:23:00-04:00",
           "mmsi": 368169460
-        },
-        {
-          "vesselName": "ALEXA GOLDING",
-          "direction": "D",
-          "numBarges": 1,
-          "endOfLockage": "2026-09-13T14:10:00-04:00",
-          "mmsi": null
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CAPT. KIRBY DUPUIS",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-13T20:01:00-04:00",
+          "mmsi": 368235550
+        },
+        {
+          "vesselName": "M/V ROBINSON",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-09-13T19:10:00-04:00",
+          "mmsi": 366919640
+        },
+        {
+          "vesselName": "JENNIFER ANN",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-13T19:02:00-04:00",
+          "mmsi": 368033840
+        },
         {
           "vesselName": "DAN ELDER",
           "direction": "U",
@@ -57,27 +78,6 @@
           "numBarges": 0,
           "endOfLockage": "2026-09-13T15:41:00-04:00",
           "mmsi": 368179080
-        },
-        {
-          "vesselName": "RECREATION VESSEL(S)",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-13T15:08:00-04:00",
-          "mmsi": 368179080
-        },
-        {
-          "vesselName": "RECREATION VESSEL(S)",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-13T14:42:00-04:00",
-          "mmsi": 368179080
-        },
-        {
-          "vesselName": "ELEANOR G MCDONALD",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-09-13T13:48:00-04:00",
-          "mmsi": 367532820
         }
       ]
     }
