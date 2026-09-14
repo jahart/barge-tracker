@@ -1,9 +1,23 @@
 {
-  "updated": "2026-09-14T00:20:34.246Z",
+  "updated": "2026-09-14T05:18:19.927Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "JENNIFER ANN",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-13T22:52:00-04:00",
+          "mmsi": 368033840
+        },
+        {
+          "vesselName": "WEST VIRGINIA (MARATHON)",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-09-13T22:20:00-04:00",
+          "mmsi": 368006910
+        },
         {
           "vesselName": "ELEANOR G MCDONALD",
           "direction": "D",
@@ -24,20 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-13T16:55:00-04:00",
           "mmsi": 367143650
-        },
-        {
-          "vesselName": "RECREATION VESSEL(S)",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-13T16:09:00-04:00",
-          "mmsi": 368179080
-        },
-        {
-          "vesselName": "GIANNA HULL",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-13T15:23:00-04:00",
-          "mmsi": 368169460
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "DREMA G. WOODS",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-09-14T01:02:00-04:00",
+          "mmsi": 367321070
+        },
+        {
+          "vesselName": "CHARLES T. JONES",
+          "direction": "D",
+          "numBarges": 11,
+          "endOfLockage": "2026-09-14T00:11:00-04:00",
+          "mmsi": 368142180
+        },
+        {
+          "vesselName": "ARTHUR E. SNIDER",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-13T23:03:00-04:00",
+          "mmsi": 367699340
+        },
+        {
+          "vesselName": "MACKENZIE J LYNN",
+          "direction": "U",
+          "numBarges": 5,
+          "endOfLockage": "2026-09-13T20:46:00-04:00",
+          "mmsi": 368470980
+        },
+        {
           "vesselName": "CAPT. KIRBY DUPUIS",
           "direction": "D",
           "numBarges": 15,
           "endOfLockage": "2026-09-13T20:01:00-04:00",
           "mmsi": 368235550
-        },
-        {
-          "vesselName": "M/V ROBINSON",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-09-13T19:10:00-04:00",
-          "mmsi": 366919640
-        },
-        {
-          "vesselName": "JENNIFER ANN",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-13T19:02:00-04:00",
-          "mmsi": 368033840
-        },
-        {
-          "vesselName": "DAN ELDER",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-13T17:44:00-04:00",
-          "mmsi": 367503540
-        },
-        {
-          "vesselName": "RECREATION VESSEL(S)",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-13T15:41:00-04:00",
-          "mmsi": 368179080
         }
       ]
     }
