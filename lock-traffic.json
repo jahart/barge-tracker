@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-16T09:25:32.750Z",
+  "updated": "2026-09-16T14:17:25.102Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "GLENN A HENDON",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-09-16T09:30:00-04:00",
+          "mmsi": 367375080
+        },
         {
           "vesselName": "CAPT REGGIE TUBBS",
           "direction": "U",
@@ -26,18 +33,11 @@
           "mmsi": 367402550
         },
         {
-          "vesselName": "DAVID GOIN",
+          "vesselName": "CATLETTSBURG",
           "direction": "U",
           "numBarges": 6,
           "endOfLockage": "2026-09-15T19:09:00-04:00",
-          "mmsi": 368274380
-        },
-        {
-          "vesselName": "KEVIN MICHAEL",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-15T17:36:00-04:00",
-          "mmsi": 368416120
+          "mmsi": 368106340
         }
       ]
     },
@@ -45,11 +45,32 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "DAVID GOIN",
+          "vesselName": "YVONNE CONWAY",
+          "direction": "U",
+          "numBarges": 13,
+          "endOfLockage": "2026-09-16T10:00:00-04:00",
+          "mmsi": 367402550
+        },
+        {
+          "vesselName": "CAPT REGGIE TUBBS",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-16T08:30:00-04:00",
+          "mmsi": 368256650
+        },
+        {
+          "vesselName": "SUSAN K",
+          "direction": "U",
+          "numBarges": 14,
+          "endOfLockage": "2026-09-16T06:04:00-04:00",
+          "mmsi": 367420440
+        },
+        {
+          "vesselName": "CATLETTSBURG",
           "direction": "U",
           "numBarges": 2,
           "endOfLockage": "2026-09-16T04:02:00-04:00",
-          "mmsi": 368274380
+          "mmsi": 368106340
         },
         {
           "vesselName": "GLENN A HENDON",
@@ -57,27 +78,6 @@
           "numBarges": 12,
           "endOfLockage": "2026-09-16T03:19:00-04:00",
           "mmsi": 367375080
-        },
-        {
-          "vesselName": "JINCY",
-          "direction": "U",
-          "numBarges": 16,
-          "endOfLockage": "2026-09-16T01:45:00-04:00",
-          "mmsi": 367402580
-        },
-        {
-          "vesselName": "REC VESSEL M5",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-15T19:38:00-04:00",
-          "mmsi": 368179080
-        },
-        {
-          "vesselName": "CAPT RICK NEALE",
-          "direction": "D",
-          "numBarges": 2,
-          "endOfLockage": "2026-09-15T15:33:00-04:00",
-          "mmsi": 367519160
         }
       ]
     }
