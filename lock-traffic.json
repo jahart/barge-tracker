@@ -1,9 +1,30 @@
 {
-  "updated": "2026-09-16T00:01:13.870Z",
+  "updated": "2026-09-16T04:11:56.334Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CAPT REGGIE TUBBS",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-15T22:12:00-04:00",
+          "mmsi": 368256650
+        },
+        {
+          "vesselName": "SUSAN K",
+          "direction": "U",
+          "numBarges": 14,
+          "endOfLockage": "2026-09-15T21:23:00-04:00",
+          "mmsi": 367420440
+        },
+        {
+          "vesselName": "YVONNE CONWAY",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-15T20:12:00-04:00",
+          "mmsi": 367402550
+        },
         {
           "vesselName": "DAVID GOIN",
           "direction": "U",
@@ -17,27 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-15T17:36:00-04:00",
           "mmsi": 368416120
-        },
-        {
-          "vesselName": "GIANNA HULL",
-          "direction": "D",
-          "numBarges": 14,
-          "endOfLockage": "2026-09-15T16:16:00-04:00",
-          "mmsi": 368169460
-        },
-        {
-          "vesselName": "CANTON",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-09-15T15:34:00-04:00",
-          "mmsi": 367433690
-        },
-        {
-          "vesselName": "DAN ELDER",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-15T13:56:00-04:00",
-          "mmsi": 367503540
         }
       ]
     },
