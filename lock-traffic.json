@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-16T04:11:56.334Z",
+  "updated": "2026-09-16T09:25:32.750Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
@@ -45,6 +45,27 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "DAVID GOIN",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-09-16T04:02:00-04:00",
+          "mmsi": 368274380
+        },
+        {
+          "vesselName": "GLENN A HENDON",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-09-16T03:19:00-04:00",
+          "mmsi": 367375080
+        },
+        {
+          "vesselName": "JINCY",
+          "direction": "U",
+          "numBarges": 16,
+          "endOfLockage": "2026-09-16T01:45:00-04:00",
+          "mmsi": 367402580
+        },
+        {
           "vesselName": "REC VESSEL M5",
           "direction": "D",
           "numBarges": 0,
@@ -57,27 +78,6 @@
           "numBarges": 2,
           "endOfLockage": "2026-09-15T15:33:00-04:00",
           "mmsi": 367519160
-        },
-        {
-          "vesselName": "KEVIN MICHAEL",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-15T09:26:00-04:00",
-          "mmsi": 368416120
-        },
-        {
-          "vesselName": "CANTON",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-09-15T08:25:00-04:00",
-          "mmsi": 367433690
-        },
-        {
-          "vesselName": "CHUCK ZEBULA",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-15T07:20:00-04:00",
-          "mmsi": 367362240
         }
       ]
     }
