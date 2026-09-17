@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-17T21:36:39.280Z",
+  "updated": "2026-09-17T23:57:41.362Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
@@ -45,6 +45,13 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "CAPT STOGIE WHITE",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-17T18:48:00-04:00",
+          "mmsi": 367412630
+        },
+        {
           "vesselName": "LESTER CRUSE",
           "direction": "U",
           "numBarges": 2,
@@ -71,13 +78,6 @@
           "numBarges": 0,
           "endOfLockage": "2026-09-17T08:45:00-04:00",
           "mmsi": 367385950
-        },
-        {
-          "vesselName": "CHUCK ZEBULA",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-17T01:27:00-04:00",
-          "mmsi": 367362240
         }
       ]
     }
