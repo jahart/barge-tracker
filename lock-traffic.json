@@ -1,9 +1,30 @@
 {
-  "updated": "2026-09-17T18:26:49.733Z",
+  "updated": "2026-09-17T21:36:39.280Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "LINDA TAYLOR",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-09-17T16:53:00-04:00",
+          "mmsi": 367755550
+        },
+        {
+          "vesselName": "DAN ELDER",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-17T16:08:00-04:00",
+          "mmsi": 367503540
+        },
+        {
+          "vesselName": "ARTHUR E SNIDER",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-17T14:30:00-04:00",
+          "mmsi": 367699340
+        },
         {
           "vesselName": "D A  GRIMM",
           "direction": "U",
@@ -17,33 +38,19 @@
           "numBarges": 13,
           "endOfLockage": "2026-09-17T11:41:00-04:00",
           "mmsi": 368243490
-        },
-        {
-          "vesselName": "DAVE FOREMAN",
-          "direction": "D",
-          "numBarges": 8,
-          "endOfLockage": "2026-09-17T10:23:00-04:00",
-          "mmsi": 338591000
-        },
-        {
-          "vesselName": "L DALE MANNS",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-17T09:37:00-04:00",
-          "mmsi": 367546910
-        },
-        {
-          "vesselName": "CHUCK ZEBULA",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-17T08:47:00-04:00",
-          "mmsi": 367362240
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "LESTER CRUSE",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-09-17T15:15:00-04:00",
+          "mmsi": 367692890
+        },
         {
           "vesselName": "TAYLOR MARIE",
           "direction": "D",
@@ -71,13 +78,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-17T01:27:00-04:00",
           "mmsi": 367362240
-        },
-        {
-          "vesselName": "ARTHUR E SNIDER",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-17T00:26:00-04:00",
-          "mmsi": 367699340
         }
       ]
     }
