@@ -1,9 +1,30 @@
 {
-  "updated": "2026-09-17T03:55:30.034Z",
+  "updated": "2026-09-17T09:17:14.223Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "M K MCNALLY",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-17T02:55:00-04:00",
+          "mmsi": 367412630
+        },
+        {
+          "vesselName": "LESTER CRUSE",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-09-17T01:50:00-04:00",
+          "mmsi": 367692890
+        },
+        {
+          "vesselName": "WEST VIRGINIA 1279888",
+          "direction": "D",
+          "numBarges": 5,
+          "endOfLockage": "2026-09-17T00:51:00-04:00",
+          "mmsi": 368006910
+        },
         {
           "vesselName": "LISA MARIE",
           "direction": "D",
@@ -17,33 +38,26 @@
           "numBarges": 12,
           "endOfLockage": "2026-09-16T21:05:00-04:00",
           "mmsi": 367402570
-        },
-        {
-          "vesselName": "RECREATIONAL VESSEL",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-16T18:26:00-04:00",
-          "mmsi": null
-        },
-        {
-          "vesselName": "LILLIAN LOUISE",
-          "direction": "D",
-          "numBarges": 2,
-          "endOfLockage": "2026-09-16T16:30:00-04:00",
-          "mmsi": 367724780
-        },
-        {
-          "vesselName": "RECREATIONAL VESSEL",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-16T12:30:00-04:00",
-          "mmsi": null
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CHUCK ZEBULA",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-17T01:27:00-04:00",
+          "mmsi": 367362240
+        },
+        {
+          "vesselName": "ARTHUR E SNIDER",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-17T00:26:00-04:00",
+          "mmsi": 367699340
+        },
         {
           "vesselName": "L DALE MANNS",
           "direction": "D",
@@ -64,20 +78,6 @@
           "numBarges": 0,
           "endOfLockage": "2026-09-16T16:49:00-04:00",
           "mmsi": null
-        },
-        {
-          "vesselName": "WEST VIRGINIA 1279888",
-          "direction": "D",
-          "numBarges": 5,
-          "endOfLockage": "2026-09-16T16:18:00-04:00",
-          "mmsi": 368006910
-        },
-        {
-          "vesselName": "DAVE FOREMAN",
-          "direction": "D",
-          "numBarges": 9,
-          "endOfLockage": "2026-09-16T15:00:00-04:00",
-          "mmsi": 338591000
         }
       ]
     }
