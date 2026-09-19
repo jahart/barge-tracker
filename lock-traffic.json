@@ -1,9 +1,30 @@
 {
-  "updated": "2026-09-19T09:13:30.618Z",
+  "updated": "2026-09-19T13:17:59.606Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "LISA MARIE",
+          "direction": "U",
+          "numBarges": 9,
+          "endOfLockage": "2026-09-19T09:20:00-04:00",
+          "mmsi": 368279390
+        },
+        {
+          "vesselName": "KILLIAN L HUGER",
+          "direction": "U",
+          "numBarges": 11,
+          "endOfLockage": "2026-09-19T08:27:00-04:00",
+          "mmsi": 367456850
+        },
+        {
+          "vesselName": "JENNIFER ANN",
+          "direction": "U",
+          "numBarges": 13,
+          "endOfLockage": "2026-09-19T06:05:00-04:00",
+          "mmsi": 368033840
+        },
         {
           "vesselName": "SAMUEL J",
           "direction": "U",
@@ -17,33 +38,26 @@
           "numBarges": 12,
           "endOfLockage": "2026-09-19T03:10:00-04:00",
           "mmsi": 367402930
-        },
-        {
-          "vesselName": "CATLETTSBURG",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-09-19T01:40:00-04:00",
-          "mmsi": 368106340
-        },
-        {
-          "vesselName": "WARREN W HINES",
-          "direction": "U",
-          "numBarges": 12,
-          "endOfLockage": "2026-09-18T23:41:00-04:00",
-          "mmsi": 367610270
-        },
-        {
-          "vesselName": "JOHN R OPERLE",
-          "direction": "U",
-          "numBarges": 14,
-          "endOfLockage": "2026-09-18T22:40:00-04:00",
-          "mmsi": 366961510
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "L DALE MANNS",
+          "direction": "U",
+          "numBarges": 12,
+          "endOfLockage": "2026-09-19T08:40:00-04:00",
+          "mmsi": 367546910
+        },
+        {
+          "vesselName": "JULIA A HARRISON",
+          "direction": "D",
+          "numBarges": 8,
+          "endOfLockage": "2026-09-19T06:30:00-04:00",
+          "mmsi": 367334830
+        },
         {
           "vesselName": "TOMMY H ",
           "direction": "D",
@@ -64,20 +78,6 @@
           "numBarges": 10,
           "endOfLockage": "2026-09-18T23:02:00-04:00",
           "mmsi": 368288130
-        },
-        {
-          "vesselName": "TOMMY H ",
-          "direction": "U",
-          "numBarges": 10,
-          "endOfLockage": "2026-09-18T22:10:00-04:00",
-          "mmsi": 367782270
-        },
-        {
-          "vesselName": "DREMA G WOODS",
-          "direction": "U",
-          "numBarges": 9,
-          "endOfLockage": "2026-09-18T21:18:00-04:00",
-          "mmsi": 367321070
         }
       ]
     }
