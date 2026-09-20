@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-20T17:19:43.675Z",
+  "updated": "2026-09-20T19:39:39.688Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "JINCY",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-20T14:56:00-04:00",
+          "mmsi": 367402580
+        },
         {
           "vesselName": "SAMUEL J",
           "direction": "D",
@@ -31,19 +38,26 @@
           "numBarges": 0,
           "endOfLockage": "2026-09-20T07:14:00-04:00",
           "mmsi": 367371390
-        },
-        {
-          "vesselName": "WEST VIRGINIA",
-          "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-09-20T05:15:00-04:00",
-          "mmsi": 367320710
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "WEST VIRGINIA",
+          "direction": "U",
+          "numBarges": 3,
+          "endOfLockage": "2026-09-20T14:35:00-04:00",
+          "mmsi": 367320710
+        },
+        {
+          "vesselName": "LOUISE S",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-09-20T13:45:00-04:00",
+          "mmsi": 367412620
+        },
         {
           "vesselName": "ROBINSON",
           "direction": "D",
@@ -64,20 +78,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-20T08:14:00-04:00",
           "mmsi": 367412630
-        },
-        {
-          "vesselName": "SAMUEL J",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-20T06:52:00-04:00",
-          "mmsi": 368269040
-        },
-        {
-          "vesselName": "JINCY",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-20T05:30:00-04:00",
-          "mmsi": 367402580
         }
       ]
     }
