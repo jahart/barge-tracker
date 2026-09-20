@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-20T19:39:39.688Z",
+  "updated": "2026-09-20T22:14:49.807Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CAPT STOGIE WHITE",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-20T16:54:00-04:00",
+          "mmsi": 367412630
+        },
         {
           "vesselName": "JINCY",
           "direction": "D",
@@ -31,19 +38,19 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-20T08:43:00-04:00",
           "mmsi": 367503540
-        },
-        {
-          "vesselName": "RONALD E WAGENBLAST",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-20T07:14:00-04:00",
-          "mmsi": 367371390
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "DAVE FOREMAN",
+          "direction": "U",
+          "numBarges": 3,
+          "endOfLockage": "2026-09-20T18:02:00-04:00",
+          "mmsi": 338591000
+        },
         {
           "vesselName": "WEST VIRGINIA",
           "direction": "U",
@@ -71,13 +78,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-20T11:25:00-04:00",
           "mmsi": 368156330
-        },
-        {
-          "vesselName": "CAPT STOGIE WHITE",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-20T08:14:00-04:00",
-          "mmsi": 367412630
         }
       ]
     }
