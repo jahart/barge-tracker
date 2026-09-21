@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-21T16:49:22.016Z",
+  "updated": "2026-09-21T20:50:36.446Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CAPT REGGIE TUBBS",
+          "direction": "U",
+          "numBarges": 8,
+          "endOfLockage": "2026-09-21T16:06:00-04:00",
+          "mmsi": 368256650
+        },
         {
           "vesselName": "GEORGE LEAVELL",
           "direction": "U",
@@ -31,19 +38,19 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-20T14:56:00-04:00",
           "mmsi": 367402580
-        },
-        {
-          "vesselName": "SAMUEL J",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-20T13:26:00-04:00",
-          "mmsi": 368269040
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "JOCK CENAC",
+          "direction": "D",
+          "numBarges": 3,
+          "endOfLockage": "2026-09-21T14:50:00-04:00",
+          "mmsi": 368413610
+        },
         {
           "vesselName": "LESTER CRUSE",
           "direction": "D",
@@ -71,13 +78,6 @@
           "numBarges": 4,
           "endOfLockage": "2026-09-20T18:45:00-04:00",
           "mmsi": 367385950
-        },
-        {
-          "vesselName": "DAVE FOREMAN",
-          "direction": "U",
-          "numBarges": 3,
-          "endOfLockage": "2026-09-20T18:02:00-04:00",
-          "mmsi": 338591000
         }
       ]
     }
