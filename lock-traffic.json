@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-21T00:24:54.442Z",
+  "updated": "2026-09-21T05:17:49.524Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "GEORGE LEAVELL",
+          "direction": "U",
+          "numBarges": 1,
+          "endOfLockage": "2026-09-20T23:30:00-04:00",
+          "mmsi": 368449720
+        },
         {
           "vesselName": "ROBINSON",
           "direction": "D",
@@ -31,13 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-20T13:26:00-04:00",
           "mmsi": 368269040
-        },
-        {
-          "vesselName": "DAVE FOREMAN",
-          "direction": "U",
-          "numBarges": 4,
-          "endOfLockage": "2026-09-20T09:31:00-04:00",
-          "mmsi": 338591000
         }
       ]
     },
