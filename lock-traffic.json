@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-20T22:14:49.807Z",
+  "updated": "2026-09-21T00:24:54.442Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "ROBINSON",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-09-20T20:24:00-04:00",
+          "mmsi": 366919640
+        },
         {
           "vesselName": "CAPT STOGIE WHITE",
           "direction": "D",
@@ -31,19 +38,19 @@
           "numBarges": 4,
           "endOfLockage": "2026-09-20T09:31:00-04:00",
           "mmsi": 338591000
-        },
-        {
-          "vesselName": "DAN ELDER",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-20T08:43:00-04:00",
-          "mmsi": 367503540
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "MISTER CHARLIE NEALE",
+          "direction": "U",
+          "numBarges": 4,
+          "endOfLockage": "2026-09-20T18:45:00-04:00",
+          "mmsi": 367385950
+        },
         {
           "vesselName": "DAVE FOREMAN",
           "direction": "U",
@@ -71,13 +78,6 @@
           "numBarges": 4,
           "endOfLockage": "2026-09-20T12:26:00-04:00",
           "mmsi": 366919640
-        },
-        {
-          "vesselName": "STACY LYNN",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-20T11:25:00-04:00",
-          "mmsi": 368156330
         }
       ]
     }
