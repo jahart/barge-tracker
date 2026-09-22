@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-22T21:34:14.447Z",
+  "updated": "2026-09-22T23:46:14.796Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "TENNESSEE",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-22T18:20:00-04:00",
+          "mmsi": 367320740
+        },
         {
           "vesselName": "JULIA A HARRISON",
           "direction": "D",
@@ -31,19 +38,26 @@
           "numBarges": 4,
           "endOfLockage": "2026-09-22T14:52:00-04:00",
           "mmsi": 368106340
-        },
-        {
-          "vesselName": "RECREATIONAL VESSEL",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-22T13:30:00-04:00",
-          "mmsi": null
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CAPT REGGIE TUBBS",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-22T19:26:00-04:00",
+          "mmsi": 368256650
+        },
+        {
+          "vesselName": "WARREN W HINES",
+          "direction": "D",
+          "numBarges": 10,
+          "endOfLockage": "2026-09-22T18:29:00-04:00",
+          "mmsi": 367610270
+        },
         {
           "vesselName": "CAPT C R NEAL",
           "direction": "U",
@@ -64,20 +78,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-22T16:01:00-04:00",
           "mmsi": 367699340
-        },
-        {
-          "vesselName": "WILLIAM R BARR",
-          "direction": "U",
-          "numBarges": 12,
-          "endOfLockage": "2026-09-22T12:02:00-04:00",
-          "mmsi": 367539140
-        },
-        {
-          "vesselName": "JULIA A HARRISON",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-22T12:00:00-04:00",
-          "mmsi": 367334830
         }
       ]
     }
