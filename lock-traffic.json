@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22T23:46:14.796Z",
+  "updated": "2026-09-23T03:47:42.066Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "CATLETTSBURG",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-09-22T23:15:00-04:00",
+          "mmsi": 368106340
+        },
+        {
+          "vesselName": "LILLIAN LOUISE",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-09-22T22:30:00-04:00",
+          "mmsi": 367724780
+        },
+        {
+          "vesselName": "LISA MARIE",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-22T21:44:00-04:00",
+          "mmsi": 368279390
+        },
+        {
+          "vesselName": "JOHN R OPERLE",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-09-22T20:19:00-04:00",
+          "mmsi": 366961510
+        },
+        {
           "vesselName": "CAPT REGGIE TUBBS",
           "direction": "D",
           "numBarges": 15,
           "endOfLockage": "2026-09-22T19:26:00-04:00",
           "mmsi": 368256650
-        },
-        {
-          "vesselName": "WARREN W HINES",
-          "direction": "D",
-          "numBarges": 10,
-          "endOfLockage": "2026-09-22T18:29:00-04:00",
-          "mmsi": 367610270
-        },
-        {
-          "vesselName": "CAPT C R NEAL",
-          "direction": "U",
-          "numBarges": 1,
-          "endOfLockage": "2026-09-22T17:06:00-04:00",
-          "mmsi": 367730680
-        },
-        {
-          "vesselName": "MISTER CHARLIE NEALE",
-          "direction": "D",
-          "numBarges": 2,
-          "endOfLockage": "2026-09-22T16:33:00-04:00",
-          "mmsi": 367385950
-        },
-        {
-          "vesselName": "ARTHUR E SNIDER",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-22T16:01:00-04:00",
-          "mmsi": 367699340
         }
       ]
     }
