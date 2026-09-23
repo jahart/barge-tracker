@@ -1,9 +1,23 @@
 {
-  "updated": "2026-09-23T03:47:42.066Z",
+  "updated": "2026-09-23T09:09:09.388Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "JOHN R OPERLE",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-09-23T03:59:00-04:00",
+          "mmsi": 366961510
+        },
+        {
+          "vesselName": "CAPT REGGIE TUBBS",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-23T02:46:00-04:00",
+          "mmsi": 368256650
+        },
         {
           "vesselName": "TENNESSEE",
           "direction": "D",
@@ -24,26 +38,26 @@
           "numBarges": 0,
           "endOfLockage": "2026-09-22T16:13:00-04:00",
           "mmsi": 368413610
-        },
-        {
-          "vesselName": "LILLIAN LOUISE",
-          "direction": "U",
-          "numBarges": 2,
-          "endOfLockage": "2026-09-22T15:36:00-04:00",
-          "mmsi": 367724780
-        },
-        {
-          "vesselName": "CATLETTSBURG",
-          "direction": "U",
-          "numBarges": 4,
-          "endOfLockage": "2026-09-22T14:52:00-04:00",
-          "mmsi": 368106340
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CATLETTSBURG",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-09-23T02:41:00-04:00",
+          "mmsi": 368106340
+        },
+        {
+          "vesselName": "JEAN MARIE",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-09-23T01:26:00-04:00",
+          "mmsi": null
+        },
         {
           "vesselName": "CATLETTSBURG",
           "direction": "U",
@@ -64,20 +78,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-22T21:44:00-04:00",
           "mmsi": 368279390
-        },
-        {
-          "vesselName": "JOHN R OPERLE",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-09-22T20:19:00-04:00",
-          "mmsi": 366961510
-        },
-        {
-          "vesselName": "CAPT REGGIE TUBBS",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-22T19:26:00-04:00",
-          "mmsi": 368256650
         }
       ]
     }
