@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-24T19:24:55.370Z",
+  "updated": "2026-09-24T22:39:16.342Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "EUGENINE CENAC",
+          "direction": "U",
+          "numBarges": 4,
+          "endOfLockage": "2026-09-24T16:52:00-04:00",
+          "mmsi": 368488330
+        },
         {
           "vesselName": "BILL STILE",
           "direction": "U",
@@ -31,19 +38,19 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-24T10:26:00-04:00",
           "mmsi": 367503540
-        },
-        {
-          "vesselName": "LISA MARIE",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-24T08:40:00-04:00",
-          "mmsi": 368279390
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "RONALD L LOUGHMILLER",
+          "direction": "U",
+          "numBarges": 14,
+          "endOfLockage": "2026-09-24T17:50:00-04:00",
+          "mmsi": 367143650
+        },
         {
           "vesselName": "LOUISE S",
           "direction": "D",
@@ -71,13 +78,6 @@
           "numBarges": 4,
           "endOfLockage": "2026-09-24T08:00:00-04:00",
           "mmsi": 367502170
-        },
-        {
-          "vesselName": "DAN ELDER",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-24T04:11:00-04:00",
-          "mmsi": 367503540
         }
       ]
     }
