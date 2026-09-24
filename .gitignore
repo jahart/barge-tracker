@@ -2,3 +2,9 @@ node_modules/
 .env
 .superpowers/
 .worktrees/
+
+# Claude Code — local/personal config and vendored skills
+.claude/
+
+# macOS
+.DS_Store
