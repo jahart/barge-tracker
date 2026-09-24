@@ -1,9 +1,30 @@
 {
-  "updated": "2026-09-24T00:16:47.295Z",
+  "updated": "2026-09-24T05:11:55.981Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "RONALD L LOUGHMILLER",
+          "direction": "U",
+          "numBarges": 14,
+          "endOfLockage": "2026-09-24T00:47:00-04:00",
+          "mmsi": 367143650
+        },
+        {
+          "vesselName": "PATRIOT",
+          "direction": "U",
+          "numBarges": 4,
+          "endOfLockage": "2026-09-23T23:06:00-04:00",
+          "mmsi": 367502170
+        },
+        {
+          "vesselName": "KILLIAN L HUGER",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-23T21:56:00-04:00",
+          "mmsi": 367456850
+        },
         {
           "vesselName": "DIVINE MERCY",
           "direction": "U",
@@ -17,33 +38,19 @@
           "numBarges": 1,
           "endOfLockage": "2026-09-23T08:53:00-04:00",
           "mmsi": 367757680
-        },
-        {
-          "vesselName": "CATLETTSBURG",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-09-23T08:08:00-04:00",
-          "mmsi": 368106340
-        },
-        {
-          "vesselName": "WARREN W HINES",
-          "direction": "D",
-          "numBarges": 10,
-          "endOfLockage": "2026-09-23T06:53:00-04:00",
-          "mmsi": 367610270
-        },
-        {
-          "vesselName": "FINDLAY",
-          "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-09-23T05:16:00-04:00",
-          "mmsi": null
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "LISA MARIE",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-23T22:10:00-04:00",
+          "mmsi": 368279390
+        },
         {
           "vesselName": "JENNIFER ANN",
           "direction": "D",
@@ -71,13 +78,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-23T15:30:00-04:00",
           "mmsi": 367456850
-        },
-        {
-          "vesselName": "ENID DIBERT",
-          "direction": "D",
-          "numBarges": 10,
-          "endOfLockage": "2026-09-23T14:35:00-04:00",
-          "mmsi": 367402450
         }
       ]
     }
