@@ -9,6 +9,16 @@ const STALE_THRESHOLD_MS = 12 * 60 * 60 * 1000;
 const USGS_URL =
   'https://waterservices.usgs.gov/nwis/iv/?sites=03151000&parameterCd=00065&period=PT3H&format=json';
 const NWS_URL = 'https://api.water.noaa.gov/nwps/v1/gauges/parw2';
+// Parkersburg has no water-temperature sensor; Wheeling is the nearest Ohio
+// River mainstem gauge that reports one (~90 river miles upstream).
+const WATER_TEMP_URL =
+  'https://waterservices.usgs.gov/nwis/iv/?sites=03112500&parameterCd=00010&period=PT6H&format=json';
+// Mid-Ohio Valley Regional Airport, Parkersburg
+const AIR_TEMP_URL = 'https://api.weather.gov/stations/KPKB/observations/latest';
+// api.weather.gov rejects requests without a User-Agent
+const NWS_HEADERS = { 'User-Agent': 'barge-tracker (github.com/jahart/barge-tracker)' };
+
+const cToF = (c) => Math.round((c * 9) / 5 + 32);
 
 async function fetchStageAndTrend() {
   return withRetry(async () => {
@@ -37,6 +47,36 @@ async function fetchFloodCategory() {
   });
 }
 
+async function fetchWaterTempF() {
+  return withRetry(async () => {
+    const data = await fetchJson(WATER_TEMP_URL);
+    const values = data.value?.timeSeries?.[0]?.values?.[0]?.value;
+    const c = parseFloat(values?.[values.length - 1]?.value);
+    if (!Number.isFinite(c)) throw new Error('USGS response has no water temperature');
+    return cToF(c);
+  });
+}
+
+async function fetchAirTempF() {
+  return withRetry(async () => {
+    const data = await fetchJson(AIR_TEMP_URL, { headers: NWS_HEADERS });
+    const c = data.properties?.temperature?.value;
+    if (!Number.isFinite(c)) throw new Error('NWS observation has no air temperature');
+    return cToF(c);
+  });
+}
+
+// Temperatures are nice-to-have: a failure writes null rather than blocking
+// the stage/flood update.
+async function orNull(promise, label) {
+  try {
+    return await promise;
+  } catch (err) {
+    console.warn(`Could not fetch ${label}:`, err.message);
+    return null;
+  }
+}
+
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), '..');
 const riverJsonPath = join(repoRoot, 'river.json');
 
@@ -46,15 +86,19 @@ function lastUpdateAgeMs() {
 }
 
 async function main() {
-  const [{ stageFt, trend }, floodCategory] = await Promise.all([
+  const [{ stageFt, trend }, floodCategory, airTempF, waterTempF] = await Promise.all([
     fetchStageAndTrend(),
     fetchFloodCategory(),
+    orNull(fetchAirTempF(), 'air temperature'),
+    orNull(fetchWaterTempF(), 'water temperature'),
   ]);
 
   const output = {
     stageFt,
     trend,
     floodCategory,
+    airTempF,
+    waterTempF,
     updated: new Date().toISOString(),
   };
 

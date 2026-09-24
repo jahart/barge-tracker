@@ -60,7 +60,7 @@ This has **not been re-checked since the Durable Object was dropped** for the cu
 
 **Files:**
 - `.github/workflows/river-conditions.yml` — the schedule (`*/30 * * * *` cron + manual `workflow_dispatch`).
-- `scripts/update-river-conditions.mjs` — fetches USGS (stage) and NWS (flood category), writes `river.json`.
+- `scripts/update-river-conditions.mjs` — fetches USGS (stage at Parkersburg, water temp at Wheeling — Parkersburg has no temp sensor), NWS (flood category) and NWS KPKB (air temp), writes `river.json`. Temperature fetch failures write `null` instead of failing the job.
 - `scripts/compute-trend.mjs` (+ `compute-trend.test.mjs`) — pure trend classification logic (rising/falling/steady), unit-tested.
 
 **Data sources** (both public, no auth required):

@@ -4,11 +4,11 @@ const RETRY_DELAY_MS = 2_000;
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export async function fetchJson(url) {
+export async function fetchJson(url, options = {}) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
   try {
-    const res = await fetch(url, { signal: controller.signal });
+    const res = await fetch(url, { ...options, signal: controller.signal });
     if (!res.ok) throw new Error(`HTTP ${res.status} from ${url}`);
     return await res.json();
   } finally {

@@ -116,7 +116,7 @@ html,body { height:100%; overflow:hidden; background:#0f1923; }
 
 .river-stats {
   display:grid;
-  grid-template-columns:1fr;
+  grid-template-columns:repeat(3, 1fr);
   gap:7px;
 }
 
@@ -195,6 +195,42 @@ html,body { height:100%; overflow:hidden; background:#0f1923; }
   color:#94a3b8;
 }
 #river-condition.error #river-condition-dot { background:#64748b; }
+
+#cold-check {
+  grid-column:1/-1;
+  display:flex;
+  align-items:center;
+  gap:7px;
+  padding:6px 9px;
+  border-radius:8px;
+  font-size:.69rem;
+  font-weight:700;
+  background:#1e293b;
+  border:1px solid #475569;
+  color:#94a3b8;
+}
+
+#cold-check-dot {
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#64748b;
+  flex-shrink:0;
+}
+
+#cold-check.safe {
+  background:#0f2418;
+  border-color:#166534;
+  color:#4ade80;
+}
+#cold-check.safe #cold-check-dot { background:#22c55e; }
+
+#cold-check.unsafe {
+  background:#300909;
+  border-color:#991b1b;
+  color:#f87171;
+}
+#cold-check.unsafe #cold-check-dot { background:#ef4444; }
 
 /* ── Lock traffic ───────────────────────────────────────────────────────── */
 
@@ -398,6 +434,23 @@ html,body { height:100%; overflow:hidden; background:#0f1923; }
           <div class="river-stat-unit">ft · Parkersburg</div>
         </div>
 
+        <div class="river-stat">
+          <div class="river-stat-label">Air</div>
+          <div class="river-stat-value" id="air-temp">—</div>
+          <div class="river-stat-unit">°F · Parkersburg</div>
+        </div>
+
+        <div class="river-stat">
+          <div class="river-stat-label">Water</div>
+          <div class="river-stat-value" id="water-temp">—</div>
+          <div class="river-stat-unit">°F · Wheeling</div>
+        </div>
+
+        <div id="cold-check">
+          <span id="cold-check-dot"></span>
+          <span id="cold-check-text">Loading temperatures…</span>
+        </div>
+
         <div class="river-condition" id="river-condition">
           <span id="river-condition-dot"></span>
           <span id="river-condition-text">Loading river data…</span>
@@ -480,6 +533,8 @@ async function updateRiverConditions() {
       setFloodCategory(data.floodCategory);
     }
 
+    setColdCheck(data.airTempF, data.waterTempF);
+
     const updated = data.updated
       ? new Date(data.updated)
       : null;
@@ -523,6 +578,35 @@ function setFloodCategory(category) {
   }
 
   text.textContent = FLOOD_CATEGORY_TEXT[category] || 'UNKNOWN';
+}
+
+/* Rowing rule of thumb: air + water at or below 120°F is unsafe to row */
+const COLD_COMBINED_LIMIT_F = 120;
+
+function setColdCheck(airF, waterF) {
+  const check = document.getElementById('cold-check');
+  const text = document.getElementById('cold-check-text');
+  const hasAir = Number.isFinite(airF);
+  const hasWater = Number.isFinite(waterF);
+
+  document.getElementById('air-temp').textContent = hasAir ? airF : '—';
+  document.getElementById('water-temp').textContent = hasWater ? waterF : '—';
+
+  check.className = '';
+
+  if (!hasAir || !hasWater) {
+    text.textContent = 'Temperature data unavailable';
+    return;
+  }
+
+  const combined = airF + waterF;
+  if (combined <= COLD_COMBINED_LIMIT_F) {
+    check.classList.add('unsafe');
+    text.textContent = `COMBINED ${combined}°F · UNSAFE TO ROW (≤ ${COLD_COMBINED_LIMIT_F})`;
+  } else {
+    check.classList.add('safe');
+    text.textContent = `COMBINED ${combined}°F · ABOVE ${COLD_COMBINED_LIMIT_F}`;
+  }
 }
 
 /* Initial river load + refresh every 10 minutes */
