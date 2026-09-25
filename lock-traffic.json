@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T22:39:16.342Z",
+  "updated": "2026-09-25T01:12:21.119Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
@@ -45,6 +45,13 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "CAPT RICK NEALE",
+          "direction": "D",
+          "numBarges": 1,
+          "endOfLockage": "2026-09-24T19:37:00-04:00",
+          "mmsi": 367519160
+        },
+        {
           "vesselName": "RONALD L LOUGHMILLER",
           "direction": "U",
           "numBarges": 14,
@@ -71,13 +78,6 @@
           "numBarges": 4,
           "endOfLockage": "2026-09-24T10:30:00-04:00",
           "mmsi": 366919640
-        },
-        {
-          "vesselName": "PATRIOT",
-          "direction": "U",
-          "numBarges": 4,
-          "endOfLockage": "2026-09-24T08:00:00-04:00",
-          "mmsi": 367502170
         }
       ]
     }
