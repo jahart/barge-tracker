@@ -1,43 +1,43 @@
 {
-  "updated": "2026-09-26T07:11:02.216Z",
+  "updated": "2026-09-26T12:21:02.919Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CAPT REGGIE TUBBS",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-26T07:08:00-04:00",
+          "mmsi": 368256650
+        },
+        {
+          "vesselName": "ALAN P HALL",
+          "direction": "U",
+          "numBarges": 9,
+          "endOfLockage": "2026-09-26T06:18:00-04:00",
+          "mmsi": 367539160
+        },
+        {
+          "vesselName": "CHUCK ZEBULA",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-26T04:49:00-04:00",
+          "mmsi": 367362240
+        },
+        {
+          "vesselName": "C J QUEENAN",
+          "direction": "U",
+          "numBarges": 12,
+          "endOfLockage": "2026-09-26T03:47:00-04:00",
+          "mmsi": 367421310
+        },
         {
           "vesselName": "FINDLAY",
           "direction": "D",
           "numBarges": 6,
           "endOfLockage": "2026-09-26T02:18:00-04:00",
           "mmsi": null
-        },
-        {
-          "vesselName": "CANTON",
-          "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-09-25T22:35:00-04:00",
-          "mmsi": 367433690
-        },
-        {
-          "vesselName": "JOCK CENAC",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-09-25T20:52:00-04:00",
-          "mmsi": 368413610
-        },
-        {
-          "vesselName": "CHARLESTON",
-          "direction": "U",
-          "numBarges": 3,
-          "endOfLockage": "2026-09-25T19:44:00-04:00",
-          "mmsi": 368218350
-        },
-        {
-          "vesselName": "WEST VIRGINIA 1279888",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-09-25T18:27:00-04:00",
-          "mmsi": 368006910
         }
       ]
     },
