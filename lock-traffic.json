@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-26T19:34:20.963Z",
+  "updated": "2026-09-26T22:09:34.463Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "TENNESSEE",
+          "direction": "U",
+          "numBarges": 14,
+          "endOfLockage": "2026-09-26T15:22:00-04:00",
+          "mmsi": 367320740
+        },
         {
           "vesselName": "RECREATIONAL VESSEL",
           "direction": "D",
@@ -31,13 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-26T04:49:00-04:00",
           "mmsi": 367362240
-        },
-        {
-          "vesselName": "C J QUEENAN",
-          "direction": "U",
-          "numBarges": 12,
-          "endOfLockage": "2026-09-26T03:47:00-04:00",
-          "mmsi": 367421310
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "VALLEY GEM",
+          "vesselName": "CAPT REGGIE TUBBS",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-26T17:46:00-04:00",
+          "mmsi": 368256650
+        },
+        {
+          "vesselName": "EUGENINE CENAC",
+          "direction": "U",
+          "numBarges": 1,
+          "endOfLockage": "2026-09-26T16:50:00-04:00",
+          "mmsi": 368488330
+        },
+        {
+          "vesselName": "SAMUEL J",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-09-26T16:16:00-04:00",
+          "mmsi": 368269040
+        },
+        {
+          "vesselName": "MICHAEL T SOMALES",
           "direction": "U",
           "numBarges": 0,
-          "endOfLockage": "2026-09-26T14:32:00-04:00",
+          "endOfLockage": "2026-09-26T15:35:00-04:00",
+          "mmsi": 367333920
+        },
+        {
+          "vesselName": "VALLEY GEM",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-26T15:02:00-04:00",
           "mmsi": 366937890
-        },
-        {
-          "vesselName": "C J QUEENAN",
-          "direction": "U",
-          "numBarges": 12,
-          "endOfLockage": "2026-09-26T13:35:00-04:00",
-          "mmsi": 367421310
-        },
-        {
-          "vesselName": "DAVE FOREMAN",
-          "direction": "D",
-          "numBarges": 7,
-          "endOfLockage": "2026-09-26T12:20:00-04:00",
-          "mmsi": 338591000
-        },
-        {
-          "vesselName": "GLENN A HENDON",
-          "direction": "D",
-          "numBarges": 14,
-          "endOfLockage": "2026-09-26T11:35:00-04:00",
-          "mmsi": 367375080
-        },
-        {
-          "vesselName": "CANTON",
-          "direction": "U",
-          "numBarges": 3,
-          "endOfLockage": "2026-09-26T09:36:00-04:00",
-          "mmsi": 367433690
         }
       ]
     }
