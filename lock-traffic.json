@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-26T12:21:02.919Z",
+  "updated": "2026-09-26T16:36:23.085Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "RECREATIONAL VESSEL",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-26T11:56:00-04:00",
+          "mmsi": null
+        },
         {
           "vesselName": "CAPT REGGIE TUBBS",
           "direction": "U",
@@ -31,19 +38,33 @@
           "numBarges": 12,
           "endOfLockage": "2026-09-26T03:47:00-04:00",
           "mmsi": 367421310
-        },
-        {
-          "vesselName": "FINDLAY",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-09-26T02:18:00-04:00",
-          "mmsi": null
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "GLENN A HENDON",
+          "direction": "D",
+          "numBarges": 14,
+          "endOfLockage": "2026-09-26T11:35:00-04:00",
+          "mmsi": 367375080
+        },
+        {
+          "vesselName": "CANTON",
+          "direction": "U",
+          "numBarges": 3,
+          "endOfLockage": "2026-09-26T09:36:00-04:00",
+          "mmsi": 367433690
+        },
+        {
+          "vesselName": "MICHAEL T SOMALES",
+          "direction": "D",
+          "numBarges": 2,
+          "endOfLockage": "2026-09-26T08:25:00-04:00",
+          "mmsi": 367333920
+        },
         {
           "vesselName": "CHARLESTON",
           "direction": "U",
@@ -57,27 +78,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-26T01:21:00-04:00",
           "mmsi": 368033840
-        },
-        {
-          "vesselName": "JULIA A HARRISON",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-25T23:38:00-04:00",
-          "mmsi": 367334830
-        },
-        {
-          "vesselName": "SAMUEL J",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-25T23:38:00-04:00",
-          "mmsi": 368269040
-        },
-        {
-          "vesselName": "LISA MARIE",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-25T22:49:00-04:00",
-          "mmsi": 368279390
         }
       ]
     }
