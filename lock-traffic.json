@@ -1,9 +1,23 @@
 {
-  "updated": "2026-09-25T23:25:04.656Z",
+  "updated": "2026-09-26T01:50:15.667Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "JOCK CENAC",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-09-25T20:52:00-04:00",
+          "mmsi": 368413610
+        },
+        {
+          "vesselName": "CHARLESTON",
+          "direction": "U",
+          "numBarges": 3,
+          "endOfLockage": "2026-09-25T19:44:00-04:00",
+          "mmsi": 368218350
+        },
         {
           "vesselName": "WEST VIRGINIA 1279888",
           "direction": "D",
@@ -24,20 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-25T17:39:00-04:00",
           "mmsi": 368033840
-        },
-        {
-          "vesselName": "SAMUEL J",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-25T11:09:00-04:00",
-          "mmsi": 368269040
-        },
-        {
-          "vesselName": "DAN ELDER",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-25T09:33:00-04:00",
-          "mmsi": 367503540
         }
       ]
     },
