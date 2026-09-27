@@ -1,9 +1,23 @@
 {
-  "updated": "2026-09-26T22:09:34.463Z",
+  "updated": "2026-09-27T00:47:17.627Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "DEANA WOOSLEY",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-26T20:31:00-04:00",
+          "mmsi": 367402730
+        },
+        {
+          "vesselName": "GLENN A HENDON",
+          "direction": "D",
+          "numBarges": 14,
+          "endOfLockage": "2026-09-26T18:32:00-04:00",
+          "mmsi": 367375080
+        },
         {
           "vesselName": "TENNESSEE",
           "direction": "U",
@@ -24,26 +38,19 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-26T07:08:00-04:00",
           "mmsi": 368256650
-        },
-        {
-          "vesselName": "ALAN P HALL",
-          "direction": "U",
-          "numBarges": 9,
-          "endOfLockage": "2026-09-26T06:18:00-04:00",
-          "mmsi": 367539160
-        },
-        {
-          "vesselName": "CHUCK ZEBULA",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-26T04:49:00-04:00",
-          "mmsi": 367362240
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "RECREATIONAL VESSEL",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-26T18:15:00-04:00",
+          "mmsi": null
+        },
         {
           "vesselName": "CAPT REGGIE TUBBS",
           "direction": "U",
@@ -71,13 +78,6 @@
           "numBarges": 0,
           "endOfLockage": "2026-09-26T15:35:00-04:00",
           "mmsi": 367333920
-        },
-        {
-          "vesselName": "VALLEY GEM",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-26T15:02:00-04:00",
-          "mmsi": 366937890
         }
       ]
     }
