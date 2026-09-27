@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-27T17:10:26.328Z",
+  "updated": "2026-09-27T20:18:55.423Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "DAN ELDER",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-27T13:42:00-04:00",
+          "mmsi": 367503540
+        },
         {
           "vesselName": "RECREATIONAL VESSEL",
           "direction": "U",
@@ -31,13 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-27T03:30:00-04:00",
           "mmsi": 368269040
-        },
-        {
-          "vesselName": "CAPT KIRBY DUPUIS",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-26T23:58:00-04:00",
-          "mmsi": 368235550
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "TAYLOR MARIE",
-          "direction": "D",
-          "numBarges": 7,
-          "endOfLockage": "2026-09-27T13:20:00-04:00",
-          "mmsi": 366998130
+          "vesselName": "RECREATIONAL VESSEL",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-27T16:35:00-04:00",
+          "mmsi": null
         },
         {
-          "vesselName": "DEANA WOOSLEY",
+          "vesselName": "WILLIAM R BARR",
           "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-27T12:34:00-04:00",
-          "mmsi": 367402730
+          "numBarges": 11,
+          "endOfLockage": "2026-09-27T15:47:00-04:00",
+          "mmsi": 367539140
         },
         {
-          "vesselName": "CAPT KIRBY DUPUIS",
+          "vesselName": "VALLEY GEM",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-27T14:50:00-04:00",
+          "mmsi": 366937890
+        },
+        {
+          "vesselName": "CHUCK ZEBULA",
           "direction": "U",
           "numBarges": 15,
-          "endOfLockage": "2026-09-27T09:56:00-04:00",
-          "mmsi": 368235550
+          "endOfLockage": "2026-09-27T14:43:00-04:00",
+          "mmsi": 367362240
         },
         {
-          "vesselName": "DEANA WOOSLEY",
+          "vesselName": "VALLEY GEM",
           "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-27T08:53:00-04:00",
-          "mmsi": 367402730
-        },
-        {
-          "vesselName": "DAN ELDER",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-27T07:25:00-04:00",
-          "mmsi": 367503540
+          "numBarges": 0,
+          "endOfLockage": "2026-09-27T14:19:00-04:00",
+          "mmsi": 366937890
         }
       ]
     }
