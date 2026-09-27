@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-27T12:19:28.367Z",
+  "updated": "2026-09-27T17:10:26.328Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "RECREATIONAL VESSEL",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-27T09:42:00-04:00",
+          "mmsi": null
+        },
         {
           "vesselName": "CHUCK ZEBULA",
           "direction": "U",
@@ -31,13 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-26T23:58:00-04:00",
           "mmsi": 368235550
-        },
-        {
-          "vesselName": "DAVE FOREMAN",
-          "direction": "D",
-          "numBarges": 8,
-          "endOfLockage": "2026-09-26T22:45:00-04:00",
-          "mmsi": 338591000
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "TAYLOR MARIE",
+          "direction": "D",
+          "numBarges": 7,
+          "endOfLockage": "2026-09-27T13:20:00-04:00",
+          "mmsi": 366998130
+        },
+        {
+          "vesselName": "DEANA WOOSLEY",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-27T12:34:00-04:00",
+          "mmsi": 367402730
+        },
+        {
+          "vesselName": "CAPT KIRBY DUPUIS",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-27T09:56:00-04:00",
+          "mmsi": 368235550
+        },
+        {
+          "vesselName": "DEANA WOOSLEY",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-27T08:53:00-04:00",
+          "mmsi": 367402730
+        },
+        {
           "vesselName": "DAN ELDER",
           "direction": "D",
           "numBarges": 15,
           "endOfLockage": "2026-09-27T07:25:00-04:00",
           "mmsi": 367503540
-        },
-        {
-          "vesselName": "JOHN M RIVERS",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-27T04:58:00-04:00",
-          "mmsi": 366967620
-        },
-        {
-          "vesselName": "TENNESSEE",
-          "direction": "U",
-          "numBarges": 8,
-          "endOfLockage": "2026-09-27T01:41:00-04:00",
-          "mmsi": 367320740
-        },
-        {
-          "vesselName": "RECREATIONAL VESSEL",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-26T18:15:00-04:00",
-          "mmsi": null
-        },
-        {
-          "vesselName": "CAPT REGGIE TUBBS",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-26T17:46:00-04:00",
-          "mmsi": 368256650
         }
       ]
     }
