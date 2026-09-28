@@ -1,49 +1,63 @@
 {
-  "updated": "2026-09-28T01:53:38.305Z",
+  "updated": "2026-09-28T08:21:55.220Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "CATLETTSBURG",
-          "direction": "U",
+          "vesselName": "CHARLESTON",
+          "direction": "D",
           "numBarges": 6,
-          "endOfLockage": "2026-09-27T19:58:00-04:00",
-          "mmsi": 368106340
+          "endOfLockage": "2026-09-28T02:48:00-04:00",
+          "mmsi": 368218350
         },
         {
-          "vesselName": "TAYLOR MARIE",
-          "direction": "D",
-          "numBarges": 7,
-          "endOfLockage": "2026-09-27T18:55:00-04:00",
-          "mmsi": 366998130
-        },
-        {
-          "vesselName": "DAN ELDER",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-27T13:42:00-04:00",
-          "mmsi": 367503540
-        },
-        {
-          "vesselName": "RECREATIONAL VESSEL",
+          "vesselName": "DAVE FOREMAN",
           "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-27T09:42:00-04:00",
-          "mmsi": null
+          "numBarges": 3,
+          "endOfLockage": "2026-09-28T01:35:00-04:00",
+          "mmsi": 338591000
         },
         {
-          "vesselName": "CHUCK ZEBULA",
+          "vesselName": "WILLIAM R BARR",
+          "direction": "D",
+          "numBarges": 11,
+          "endOfLockage": "2026-09-28T00:29:00-04:00",
+          "mmsi": 367539140
+        },
+        {
+          "vesselName": "STACY LYNN",
           "direction": "U",
           "numBarges": 15,
-          "endOfLockage": "2026-09-27T05:45:00-04:00",
-          "mmsi": 367362240
+          "endOfLockage": "2026-09-27T23:13:00-04:00",
+          "mmsi": 368156330
+        },
+        {
+          "vesselName": "DEANA WOOSLEY",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-27T21:51:00-04:00",
+          "mmsi": 367402730
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CATLETTSBURG",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-09-28T03:13:00-04:00",
+          "mmsi": 368106340
+        },
+        {
+          "vesselName": "JENNIFER ANN",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-27T22:11:00-04:00",
+          "mmsi": 368033840
+        },
         {
           "vesselName": "CAPT RICK NEALE",
           "direction": "U",
@@ -64,20 +78,6 @@
           "numBarges": 0,
           "endOfLockage": "2026-09-27T16:35:00-04:00",
           "mmsi": null
-        },
-        {
-          "vesselName": "WILLIAM R BARR",
-          "direction": "D",
-          "numBarges": 11,
-          "endOfLockage": "2026-09-27T15:47:00-04:00",
-          "mmsi": 367539140
-        },
-        {
-          "vesselName": "VALLEY GEM",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-27T14:50:00-04:00",
-          "mmsi": 366937890
         }
       ]
     }
