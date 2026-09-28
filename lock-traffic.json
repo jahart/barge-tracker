@@ -1,9 +1,16 @@
 {
-  "updated": "2026-09-27T23:17:16.371Z",
+  "updated": "2026-09-28T01:53:38.305Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CATLETTSBURG",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-09-27T19:58:00-04:00",
+          "mmsi": 368106340
+        },
         {
           "vesselName": "TAYLOR MARIE",
           "direction": "D",
@@ -31,13 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-09-27T05:45:00-04:00",
           "mmsi": 367362240
-        },
-        {
-          "vesselName": "D A  GRIMM",
-          "direction": "D",
-          "numBarges": 2,
-          "endOfLockage": "2026-09-27T04:12:00-04:00",
-          "mmsi": 367434610
         }
       ]
     },
