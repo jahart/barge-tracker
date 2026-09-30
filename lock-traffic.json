@@ -1,9 +1,23 @@
 {
-  "updated": "2026-09-30T10:41:30.332Z",
+  "updated": "2026-09-30T16:42:36.045Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "C J QUEENAN",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-09-30T10:19:00-04:00",
+          "mmsi": 367421310
+        },
+        {
+          "vesselName": "CANTON",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-09-29T23:09:00-04:00",
+          "mmsi": 367433690
+        },
         {
           "vesselName": "FINDLAY",
           "direction": "U",
@@ -24,20 +38,6 @@
           "numBarges": 12,
           "endOfLockage": "2026-09-29T19:23:00-04:00",
           "mmsi": 367532820
-        },
-        {
-          "vesselName": "JEFFBOAT",
-          "direction": "D",
-          "numBarges": 5,
-          "endOfLockage": "2026-09-29T18:08:00-04:00",
-          "mmsi": 367057720
-        },
-        {
-          "vesselName": "CAPT REGGIE TUBBS",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-29T17:47:00-04:00",
-          "mmsi": 368256650
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "MARCI GALE",
-          "direction": "U",
-          "numBarges": 11,
-          "endOfLockage": "2026-09-29T23:50:00-04:00",
-          "mmsi": 368173140
+          "vesselName": "RECREATIONAL VESSEL",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-09-30T12:30:00-04:00",
+          "mmsi": null
+        },
+        {
+          "vesselName": "CHUCK ZEBULA",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-09-30T12:30:00-04:00",
+          "mmsi": 367362240
         },
         {
           "vesselName": "KEVIN MICHAEL",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-29T23:10:00-04:00",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-09-30T11:30:00-04:00",
           "mmsi": 368416120
         },
         {
-          "vesselName": "C J QUEENAN",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-09-29T22:00:00-04:00",
-          "mmsi": 367421310
-        },
-        {
-          "vesselName": "GALVESTON BAY",
+          "vesselName": "FINDLAY",
           "direction": "U",
-          "numBarges": 3,
-          "endOfLockage": "2026-09-29T18:24:00-04:00",
-          "mmsi": 367441870
+          "numBarges": 4,
+          "endOfLockage": "2026-09-30T11:25:00-04:00",
+          "mmsi": null
         },
         {
-          "vesselName": "CATLETTSBURG",
-          "direction": "D",
-          "numBarges": 2,
-          "endOfLockage": "2026-09-29T17:00:00-04:00",
-          "mmsi": 368106340
+          "vesselName": "WILLIAM R BARR",
+          "direction": "U",
+          "numBarges": 11,
+          "endOfLockage": "2026-09-30T10:40:00-04:00",
+          "mmsi": 367539140
         }
       ]
     }
