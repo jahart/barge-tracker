@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-30T16:42:36.045Z",
+  "updated": "2026-09-30T21:17:22.444Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "RECREATIONAL VESSEL",
+          "vesselName": "GALVESTON BAY",
           "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-09-30T12:30:00-04:00",
-          "mmsi": null
+          "numBarges": 6,
+          "endOfLockage": "2026-09-30T16:41:00-04:00",
+          "mmsi": 367441870
         },
         {
-          "vesselName": "CHUCK ZEBULA",
+          "vesselName": "DAVE FOREMAN",
           "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-30T12:30:00-04:00",
-          "mmsi": 367362240
+          "numBarges": 3,
+          "endOfLockage": "2026-09-30T16:06:00-04:00",
+          "mmsi": 338591000
         },
         {
           "vesselName": "KEVIN MICHAEL",
-          "direction": "U",
+          "direction": "D",
           "numBarges": 2,
-          "endOfLockage": "2026-09-30T11:30:00-04:00",
+          "endOfLockage": "2026-09-30T14:30:00-04:00",
           "mmsi": 368416120
         },
         {
-          "vesselName": "FINDLAY",
-          "direction": "U",
-          "numBarges": 4,
-          "endOfLockage": "2026-09-30T11:25:00-04:00",
-          "mmsi": null
+          "vesselName": "MISTER CHARLIE NEALE",
+          "direction": "D",
+          "numBarges": 1,
+          "endOfLockage": "2026-09-30T14:20:00-04:00",
+          "mmsi": 367385950
         },
         {
-          "vesselName": "WILLIAM R BARR",
-          "direction": "U",
-          "numBarges": 11,
-          "endOfLockage": "2026-09-30T10:40:00-04:00",
-          "mmsi": 367539140
+          "vesselName": "CAPT RICK NEALE",
+          "direction": "D",
+          "numBarges": 2,
+          "endOfLockage": "2026-09-30T14:12:00-04:00",
+          "mmsi": 367519160
         }
       ]
     }
