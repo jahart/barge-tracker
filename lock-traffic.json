@@ -1,9 +1,23 @@
 {
-  "updated": "2026-10-01T14:17:04.994Z",
+  "updated": "2026-10-01T19:43:06.700Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "DAN ELDER",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-01T13:06:00-04:00",
+          "mmsi": 367503540
+        },
+        {
+          "vesselName": "RECREATIONAL VESSEL",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-10-01T11:16:00-04:00",
+          "mmsi": null
+        },
         {
           "vesselName": "WEST VIRGINIA 1279888",
           "direction": "U",
@@ -24,20 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-01T06:53:00-04:00",
           "mmsi": 367699340
-        },
-        {
-          "vesselName": "BILL STILE",
-          "direction": "U",
-          "numBarges": 9,
-          "endOfLockage": "2026-10-01T00:41:00-04:00",
-          "mmsi": 367441040
-        },
-        {
-          "vesselName": "DAVE FOREMAN",
-          "direction": "D",
-          "numBarges": 3,
-          "endOfLockage": "2026-09-30T23:02:00-04:00",
-          "mmsi": 338591000
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "DAN ELDER",
+          "vesselName": "VALLEY GEM",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-10-01T14:15:00-04:00",
+          "mmsi": 366937890
+        },
+        {
+          "vesselName": "JOHN M RIVERS",
+          "direction": "D",
+          "numBarges": 11,
+          "endOfLockage": "2026-10-01T13:52:00-04:00",
+          "mmsi": 366967620
+        },
+        {
+          "vesselName": "STACY LYNN",
           "direction": "D",
           "numBarges": 15,
-          "endOfLockage": "2026-10-01T06:20:00-04:00",
-          "mmsi": 367503540
+          "endOfLockage": "2026-10-01T12:50:00-04:00",
+          "mmsi": 368156330
         },
         {
-          "vesselName": "FRANK STEGBAUER",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-09-30T23:01:00-04:00",
-          "mmsi": 366917110
+          "vesselName": "BILL STILE",
+          "direction": "U",
+          "numBarges": 9,
+          "endOfLockage": "2026-10-01T11:25:00-04:00",
+          "mmsi": 367441040
         },
         {
-          "vesselName": "GALVESTON BAY",
+          "vesselName": "ALAN P HALL",
           "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-09-30T16:41:00-04:00",
-          "mmsi": 367441870
-        },
-        {
-          "vesselName": "DAVE FOREMAN",
-          "direction": "D",
-          "numBarges": 3,
-          "endOfLockage": "2026-09-30T16:06:00-04:00",
-          "mmsi": 338591000
-        },
-        {
-          "vesselName": "KEVIN MICHAEL",
-          "direction": "D",
-          "numBarges": 2,
-          "endOfLockage": "2026-09-30T14:30:00-04:00",
-          "mmsi": 368416120
+          "numBarges": 12,
+          "endOfLockage": "2026-10-01T10:10:00-04:00",
+          "mmsi": 367539160
         }
       ]
     }
