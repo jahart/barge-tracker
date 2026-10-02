@@ -1,43 +1,43 @@
 {
-  "updated": "2026-10-02T10:41:57.501Z",
+  "updated": "2026-10-02T16:32:05.820Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "D A  GRIMM",
-          "direction": "U",
-          "numBarges": 14,
-          "endOfLockage": "2026-10-02T05:33:00-04:00",
-          "mmsi": 367434610
-        },
-        {
-          "vesselName": "COOPER T",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-02T03:55:00-04:00",
-          "mmsi": 368359850
-        },
-        {
-          "vesselName": "MACKENZIE ROSE",
+          "vesselName": "JENNIFER ANN",
           "direction": "D",
           "numBarges": 15,
-          "endOfLockage": "2026-10-02T02:56:00-04:00",
-          "mmsi": 368288130
+          "endOfLockage": "2026-10-02T11:40:00-04:00",
+          "mmsi": 368033840
         },
         {
-          "vesselName": "CHUCK ZEBULA",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-02T01:24:00-04:00",
-          "mmsi": 367362240
+          "vesselName": "CATLETTSBURG",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-10-02T10:40:00-04:00",
+          "mmsi": 368106340
         },
         {
-          "vesselName": "STACY LYNN",
+          "vesselName": "ELEANOR G MCDONALD",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-10-02T09:40:00-04:00",
+          "mmsi": 367532820
+        },
+        {
+          "vesselName": "EVA KELLEY",
           "direction": "D",
           "numBarges": 15,
-          "endOfLockage": "2026-10-01T23:46:00-04:00",
-          "mmsi": 368156330
+          "endOfLockage": "2026-10-02T08:45:00-04:00",
+          "mmsi": 367402950
+        },
+        {
+          "vesselName": "MARCI GALE",
+          "direction": "D",
+          "numBarges": 13,
+          "endOfLockage": "2026-10-02T07:50:00-04:00",
+          "mmsi": 368173140
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "MARY ARTIE BRANNON ",
+          "vesselName": "OHIO",
           "direction": "U",
-          "numBarges": 11,
-          "endOfLockage": "2026-10-02T05:29:00-04:00",
-          "mmsi": 367402520
+          "numBarges": 16,
+          "endOfLockage": "2026-10-02T10:40:00-04:00",
+          "mmsi": 368243490
         },
         {
-          "vesselName": "ELEANOR G MCDONALD",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-02T04:20:00-04:00",
-          "mmsi": 367532820
-        },
-        {
-          "vesselName": "JEAN MARIE",
-          "direction": "D",
-          "numBarges": 2,
-          "endOfLockage": "2026-10-02T03:05:00-04:00",
+          "vesselName": "RECREATIONAL VESSEL",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-10-02T09:30:00-04:00",
           "mmsi": null
         },
         {
-          "vesselName": "JENNIFER ANN",
-          "direction": "D",
+          "vesselName": "CHUCK ZEBULA",
+          "direction": "U",
           "numBarges": 15,
-          "endOfLockage": "2026-10-02T02:22:00-04:00",
-          "mmsi": 368033840
+          "endOfLockage": "2026-10-02T09:20:00-04:00",
+          "mmsi": 367362240
         },
         {
-          "vesselName": "CAPT RICK NEALE",
+          "vesselName": "FINDLAY",
           "direction": "D",
-          "numBarges": 1,
-          "endOfLockage": "2026-10-02T01:52:00-04:00",
-          "mmsi": 367519160
+          "numBarges": 4,
+          "endOfLockage": "2026-10-02T08:11:00-04:00",
+          "mmsi": null
+        },
+        {
+          "vesselName": "LISA MARIE",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-02T07:13:00-04:00",
+          "mmsi": 368279390
         }
       ]
     }
