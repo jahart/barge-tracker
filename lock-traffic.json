@@ -1,49 +1,70 @@
 {
-  "updated": "2026-10-01T23:44:22.422Z",
+  "updated": "2026-10-02T04:34:44.198Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "STACY LYNN",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-01T23:46:00-04:00",
+          "mmsi": 368156330
+        },
+        {
+          "vesselName": "MARY ARTIE BRANNON ",
+          "direction": "U",
+          "numBarges": 11,
+          "endOfLockage": "2026-10-01T22:17:00-04:00",
+          "mmsi": 367402520
+        },
+        {
+          "vesselName": "ALAN P HALL",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-01T20:50:00-04:00",
+          "mmsi": 367539160
+        },
+        {
+          "vesselName": "JOHN M RIVERS",
+          "direction": "D",
+          "numBarges": 11,
+          "endOfLockage": "2026-10-01T19:31:00-04:00",
+          "mmsi": 366967620
+        },
         {
           "vesselName": "OHIO",
           "direction": "U",
           "numBarges": 11,
           "endOfLockage": "2026-10-01T18:43:00-04:00",
           "mmsi": 368243490
-        },
-        {
-          "vesselName": "DAN ELDER",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-01T13:06:00-04:00",
-          "mmsi": 367503540
-        },
-        {
-          "vesselName": "RECREATIONAL VESSEL",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-01T11:16:00-04:00",
-          "mmsi": null
-        },
-        {
-          "vesselName": "WEST VIRGINIA 1279888",
-          "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-01T09:40:00-04:00",
-          "mmsi": 368006910
-        },
-        {
-          "vesselName": "FRANK STEGBAUER",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-01T08:12:00-04:00",
-          "mmsi": 366917110
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "EVA KELLEY",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-01T23:08:00-04:00",
+          "mmsi": 367402950
+        },
+        {
+          "vesselName": "CATLETTSBURG",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-10-01T22:10:00-04:00",
+          "mmsi": 368106340
+        },
+        {
+          "vesselName": "MARCI GALE",
+          "direction": "D",
+          "numBarges": 13,
+          "endOfLockage": "2026-10-01T21:23:00-04:00",
+          "mmsi": 368173140
+        },
         {
           "vesselName": "WEST VIRGINIA 1279888",
           "direction": "U",
@@ -57,27 +78,6 @@
           "numBarges": 1,
           "endOfLockage": "2026-10-01T18:25:00-04:00",
           "mmsi": 367519160
-        },
-        {
-          "vesselName": "COOPER T",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-01T18:05:00-04:00",
-          "mmsi": 368359850
-        },
-        {
-          "vesselName": "MACKENZIE ROSE",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-01T17:04:00-04:00",
-          "mmsi": 368288130
-        },
-        {
-          "vesselName": "CATLETTSBURG",
-          "direction": "U",
-          "numBarges": 2,
-          "endOfLockage": "2026-10-01T17:03:00-04:00",
-          "mmsi": 368106340
         }
       ]
     }
