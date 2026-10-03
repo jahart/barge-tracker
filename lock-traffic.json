@@ -1,9 +1,16 @@
 {
-  "updated": "2026-10-03T05:36:04.986Z",
+  "updated": "2026-10-03T11:15:21.390Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "WALLER",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-10-03T07:02:00-04:00",
+          "mmsi": 368163520
+        },
         {
           "vesselName": "WEST VIRGINIA",
           "direction": "U",
@@ -31,19 +38,33 @@
           "numBarges": 13,
           "endOfLockage": "2026-10-02T21:17:00-04:00",
           "mmsi": 367702110
-        },
-        {
-          "vesselName": "ALAN P HALL",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-02T19:17:00-04:00",
-          "mmsi": 367539160
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "SUSAN K",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-03T07:09:00-04:00",
+          "mmsi": 367420440
+        },
+        {
+          "vesselName": "WILLIAM R BARR",
+          "direction": "D",
+          "numBarges": 9,
+          "endOfLockage": "2026-10-03T05:48:00-04:00",
+          "mmsi": 367539140
+        },
+        {
+          "vesselName": "WALLER",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-10-03T00:50:00-04:00",
+          "mmsi": 368163520
+        },
         {
           "vesselName": "D A  GRIMM",
           "direction": "U",
@@ -56,27 +77,6 @@
           "direction": "D",
           "numBarges": 0,
           "endOfLockage": "2026-10-02T15:30:00-04:00",
-          "mmsi": 366937890
-        },
-        {
-          "vesselName": "PATRIOT",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-10-02T15:15:00-04:00",
-          "mmsi": 367502170
-        },
-        {
-          "vesselName": "DAVE FOREMAN",
-          "direction": "U",
-          "numBarges": 3,
-          "endOfLockage": "2026-10-02T14:10:00-04:00",
-          "mmsi": 338591000
-        },
-        {
-          "vesselName": "VALLEY GEM",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-02T13:15:00-04:00",
           "mmsi": 366937890
         }
       ]
