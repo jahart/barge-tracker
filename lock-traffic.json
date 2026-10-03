@@ -1,43 +1,43 @@
 {
-  "updated": "2026-10-03T00:12:50.482Z",
+  "updated": "2026-10-03T05:36:04.986Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "WEST VIRGINIA",
+          "direction": "U",
+          "numBarges": 12,
+          "endOfLockage": "2026-10-03T01:03:00-04:00",
+          "mmsi": 367320710
+        },
+        {
+          "vesselName": "PATRIOT",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-10-02T23:25:00-04:00",
+          "mmsi": 367502170
+        },
+        {
+          "vesselName": "SUSAN K",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-02T22:22:00-04:00",
+          "mmsi": 367420440
+        },
+        {
+          "vesselName": "CHIEF BILL BROWN",
+          "direction": "U",
+          "numBarges": 13,
+          "endOfLockage": "2026-10-02T21:17:00-04:00",
+          "mmsi": 367702110
+        },
         {
           "vesselName": "ALAN P HALL",
           "direction": "U",
           "numBarges": 15,
           "endOfLockage": "2026-10-02T19:17:00-04:00",
           "mmsi": 367539160
-        },
-        {
-          "vesselName": "FINDLAY",
-          "direction": "U",
-          "numBarges": 4,
-          "endOfLockage": "2026-10-02T18:12:00-04:00",
-          "mmsi": null
-        },
-        {
-          "vesselName": "LISA MARIE",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-02T17:01:00-04:00",
-          "mmsi": 368279390
-        },
-        {
-          "vesselName": "FINDLAY",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-10-02T14:36:00-04:00",
-          "mmsi": null
-        },
-        {
-          "vesselName": "LESTER PARKER",
-          "direction": "U",
-          "numBarges": 4,
-          "endOfLockage": "2026-10-02T13:37:00-04:00",
-          "mmsi": 368133920
         }
       ]
     },
