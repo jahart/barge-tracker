@@ -1,43 +1,43 @@
 {
-  "updated": "2026-10-03T18:47:00.087Z",
+  "updated": "2026-10-03T22:00:40.809Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "DIVINE MERCY",
+          "direction": "D",
+          "numBarges": 2,
+          "endOfLockage": "2026-10-03T17:55:00-04:00",
+          "mmsi": 367327630
+        },
+        {
+          "vesselName": "WILLIAM R BARR",
+          "direction": "D",
+          "numBarges": 9,
+          "endOfLockage": "2026-10-03T17:00:00-04:00",
+          "mmsi": 367539140
+        },
+        {
+          "vesselName": "DAN ELDER",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-03T15:37:00-04:00",
+          "mmsi": 367503540
+        },
+        {
+          "vesselName": "RECREATIONAL VESSEL",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-10-03T14:50:00-04:00",
+          "mmsi": null
+        },
         {
           "vesselName": "LINDA TAYLOR",
           "direction": "U",
           "numBarges": 2,
           "endOfLockage": "2026-10-03T13:55:00-04:00",
           "mmsi": 367755550
-        },
-        {
-          "vesselName": "GIANNA HULL",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-03T13:08:00-04:00",
-          "mmsi": null
-        },
-        {
-          "vesselName": "CHARLESTON",
-          "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-03T10:24:00-04:00",
-          "mmsi": 368218350
-        },
-        {
-          "vesselName": "FINDLAY",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-03T09:17:00-04:00",
-          "mmsi": null
-        },
-        {
-          "vesselName": "WALLER",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-10-03T07:02:00-04:00",
-          "mmsi": 368163520
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "CHIEF BILL BROWN",
+          "vesselName": "CHARLESTON",
           "direction": "U",
-          "numBarges": 13,
-          "endOfLockage": "2026-10-03T14:49:00-04:00",
-          "mmsi": 367702110
+          "numBarges": 3,
+          "endOfLockage": "2026-10-03T17:54:00-04:00",
+          "mmsi": 368218350
+        },
+        {
+          "vesselName": "RECREATIONAL VESSEL",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-10-03T17:37:00-04:00",
+          "mmsi": null
+        },
+        {
+          "vesselName": "WEST VIRGINIA 1279888",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-10-03T15:46:00-04:00",
+          "mmsi": 368006910
+        },
+        {
+          "vesselName": "RECREATIONAL VESSEL",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-10-03T15:07:00-04:00",
+          "mmsi": null
         },
         {
           "vesselName": "VALLEY GEM",
-          "direction": "U",
+          "direction": "D",
           "numBarges": 0,
-          "endOfLockage": "2026-10-03T14:26:00-04:00",
+          "endOfLockage": "2026-10-03T15:07:00-04:00",
           "mmsi": 366937890
-        },
-        {
-          "vesselName": "RECREATIONAL VESSEL",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-03T13:21:00-04:00",
-          "mmsi": null
-        },
-        {
-          "vesselName": "EUGENIE CENAC",
-          "direction": "D",
-          "numBarges": 3,
-          "endOfLockage": "2026-10-03T13:19:00-04:00",
-          "mmsi": 368488330
-        },
-        {
-          "vesselName": "RECREATIONAL VESSEL",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-03T12:30:00-04:00",
-          "mmsi": null
         }
       ]
     }
