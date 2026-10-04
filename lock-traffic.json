@@ -1,9 +1,16 @@
 {
-  "updated": "2026-10-04T17:20:14.893Z",
+  "updated": "2026-10-04T20:21:07.508Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CAPT REGGIE TUBBS",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-04T15:33:00-04:00",
+          "mmsi": 368256650
+        },
         {
           "vesselName": "ARTHUR E SNIDER",
           "direction": "D",
@@ -31,19 +38,33 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-04T05:13:00-04:00",
           "mmsi": 368279390
-        },
-        {
-          "vesselName": "TENNESSEE",
-          "direction": "U",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-04T04:19:00-04:00",
-          "mmsi": 367320740
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "LISA MARIE",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-04T15:08:00-04:00",
+          "mmsi": 368279390
+        },
+        {
+          "vesselName": "RECREATIONAL VESSEL",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-10-04T14:45:00-04:00",
+          "mmsi": null
+        },
+        {
+          "vesselName": "RECREATIONAL VESSEL",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-10-04T13:50:00-04:00",
+          "mmsi": null
+        },
         {
           "vesselName": "LINDA REED",
           "direction": "U",
@@ -57,27 +78,6 @@
           "numBarges": 6,
           "endOfLockage": "2026-10-04T12:45:00-04:00",
           "mmsi": 367320740
-        },
-        {
-          "vesselName": "RECREATIONAL VESSEL",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-04T11:40:00-04:00",
-          "mmsi": null
-        },
-        {
-          "vesselName": "MAJOR",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-04T11:14:00-04:00",
-          "mmsi": 368363180
-        },
-        {
-          "vesselName": "YVONNE CONWAY",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-04T10:53:00-04:00",
-          "mmsi": 367402550
         }
       ]
     }
