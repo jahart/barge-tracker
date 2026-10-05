@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05T02:16:04.412Z",
+  "updated": "2026-10-05T09:29:59.110Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
@@ -45,6 +45,13 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "CAPT REGGIE TUBBS",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-05T00:44:00-04:00",
+          "mmsi": 368256650
+        },
+        {
           "vesselName": "KEVIN MICHAEL",
           "direction": "U",
           "numBarges": 15,
@@ -70,13 +77,6 @@
           "direction": "D",
           "numBarges": 0,
           "endOfLockage": "2026-10-04T14:45:00-04:00",
-          "mmsi": null
-        },
-        {
-          "vesselName": "RECREATIONAL VESSEL",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-04T13:50:00-04:00",
           "mmsi": null
         }
       ]
