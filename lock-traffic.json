@@ -1,43 +1,43 @@
 {
-  "updated": "2026-10-05T18:44:31.761Z",
+  "updated": "2026-10-06T07:16:52.400Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "DAVE FOREMAN",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-10-05T14:20:00-04:00",
-          "mmsi": 338591000
-        },
-        {
-          "vesselName": "GALVESTON BAY",
-          "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-05T12:15:00-04:00",
-          "mmsi": 367441870
-        },
-        {
-          "vesselName": "GIANNA HULL",
+          "vesselName": "SUSAN K",
           "direction": "D",
           "numBarges": 12,
-          "endOfLockage": "2026-10-04T16:40:00-04:00",
-          "mmsi": null
+          "endOfLockage": "2026-10-05T21:10:00-04:00",
+          "mmsi": 367420440
         },
         {
-          "vesselName": "CAPT REGGIE TUBBS",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-04T15:33:00-04:00",
-          "mmsi": 368256650
-        },
-        {
-          "vesselName": "ARTHUR E SNIDER",
+          "vesselName": "L DALE MANNS",
           "direction": "D",
           "numBarges": 15,
-          "endOfLockage": "2026-10-04T12:17:00-04:00",
-          "mmsi": 367699340
+          "endOfLockage": "2026-10-05T20:26:00-04:00",
+          "mmsi": 367546910
+        },
+        {
+          "vesselName": "LILLIAN LOUISE",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-10-05T17:30:00-04:00",
+          "mmsi": 367724780
+        },
+        {
+          "vesselName": "MACKENZIE ROSE",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-05T16:35:00-04:00",
+          "mmsi": 368288130
+        },
+        {
+          "vesselName": "COVINGTON",
+          "direction": "U",
+          "numBarges": 16,
+          "endOfLockage": "2026-10-05T15:45:00-04:00",
+          "mmsi": 368119060
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "SUSAN K",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-05T13:40:00-04:00",
-          "mmsi": 367420440
-        },
-        {
-          "vesselName": "L DALE MANNS",
-          "direction": "D",
-          "numBarges": 14,
-          "endOfLockage": "2026-10-05T11:20:00-04:00",
-          "mmsi": 367546910
-        },
-        {
-          "vesselName": "DAVE FOREMAN",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-10-05T08:04:00-04:00",
-          "mmsi": 338591000
-        },
-        {
-          "vesselName": "CAPT REGGIE TUBBS",
+          "vesselName": "COVINGTON",
           "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-05T00:44:00-04:00",
-          "mmsi": 368256650
+          "numBarges": 16,
+          "endOfLockage": "2026-10-06T02:46:00-04:00",
+          "mmsi": 368119060
         },
         {
-          "vesselName": "KEVIN MICHAEL",
-          "direction": "U",
+          "vesselName": "BILL STILE",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-10-06T02:16:00-04:00",
+          "mmsi": 367441040
+        },
+        {
+          "vesselName": "DAN ELDER",
+          "direction": "D",
           "numBarges": 15,
-          "endOfLockage": "2026-10-04T18:43:00-04:00",
-          "mmsi": 368416120
+          "endOfLockage": "2026-10-06T01:17:00-04:00",
+          "mmsi": 367503540
+        },
+        {
+          "vesselName": "GOVT VESSEL NON FEDERAL",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-10-05T23:21:00-04:00",
+          "mmsi": null
+        },
+        {
+          "vesselName": "LILLIAN LOUISE",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-10-05T22:53:00-04:00",
+          "mmsi": 367724780
         }
       ]
     }
