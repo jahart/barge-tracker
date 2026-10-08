@@ -1,43 +1,43 @@
 {
-  "updated": "2026-10-08T02:50:12.035Z",
+  "updated": "2026-10-08T10:09:46.241Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "CHIEF BILL BROWN",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-07T21:46:00-04:00",
-          "mmsi": 367702110
-        },
-        {
-          "vesselName": "BILL STILE",
+          "vesselName": "JOHN VAUGHN",
           "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-07T19:47:00-04:00",
-          "mmsi": 367441040
+          "numBarges": 14,
+          "endOfLockage": "2026-10-08T05:45:00-04:00",
+          "mmsi": 368008740
         },
         {
-          "vesselName": "KEVIN MICHAEL",
+          "vesselName": "LINDA REED",
           "direction": "D",
           "numBarges": 15,
-          "endOfLockage": "2026-10-07T18:34:00-04:00",
-          "mmsi": 368416120
+          "endOfLockage": "2026-10-08T04:02:00-04:00",
+          "mmsi": 367402990
         },
         {
-          "vesselName": "STACY LYNN",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-07T17:00:00-04:00",
-          "mmsi": 368156330
+          "vesselName": "ARTHUR E SNIDER",
+          "direction": "U",
+          "numBarges": 12,
+          "endOfLockage": "2026-10-08T02:56:00-04:00",
+          "mmsi": 367699340
         },
         {
-          "vesselName": "JEAN AKIN",
+          "vesselName": "TENNESSEE",
           "direction": "D",
           "numBarges": 15,
-          "endOfLockage": "2026-10-07T15:55:00-04:00",
-          "mmsi": 367402930
+          "endOfLockage": "2026-10-08T00:36:00-04:00",
+          "mmsi": 367320740
+        },
+        {
+          "vesselName": "DAN ELDER",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-07T22:49:00-04:00",
+          "mmsi": 367503540
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "CHARLESTON",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-10-07T18:28:00-04:00",
-          "mmsi": 368218350
-        },
-        {
-          "vesselName": "LINDA REED",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-07T17:45:00-04:00",
-          "mmsi": 367402990
-        },
-        {
-          "vesselName": "SAMUEL J",
+          "vesselName": "DAN ELDER",
           "direction": "U",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-07T16:40:00-04:00",
-          "mmsi": 368269040
+          "numBarges": 15,
+          "endOfLockage": "2026-10-08T06:21:00-04:00",
+          "mmsi": 367503540
         },
         {
-          "vesselName": "YOUNGSUK CHI",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-07T15:44:00-04:00",
-          "mmsi": 367522230
+          "vesselName": "BILL STILE",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-10-08T05:28:00-04:00",
+          "mmsi": 367441040
         },
         {
-          "vesselName": "CHIEF BILL BROWN",
+          "vesselName": "YVONNE CONWAY",
           "direction": "D",
           "numBarges": 15,
-          "endOfLockage": "2026-10-07T14:48:00-04:00",
-          "mmsi": 367702110
+          "endOfLockage": "2026-10-08T04:20:00-04:00",
+          "mmsi": 367402550
+        },
+        {
+          "vesselName": "GLENN A HENDON",
+          "direction": "U",
+          "numBarges": 14,
+          "endOfLockage": "2026-10-08T02:55:00-04:00",
+          "mmsi": 367375080
+        },
+        {
+          "vesselName": "DAVE FOREMAN",
+          "direction": "U",
+          "numBarges": 4,
+          "endOfLockage": "2026-10-08T00:57:00-04:00",
+          "mmsi": 338591000
         }
       ]
     }
