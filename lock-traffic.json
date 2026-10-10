@@ -1,9 +1,23 @@
 {
-  "updated": "2026-10-10T13:57:01.297Z",
+  "updated": "2026-10-10T18:15:47.732Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "ARTHUR E SNIDER",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-10T13:35:00-04:00",
+          "mmsi": 367699340
+        },
+        {
+          "vesselName": "D A  GRIMM",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-10-10T12:27:00-04:00",
+          "mmsi": 367434610
+        },
         {
           "vesselName": "STACY LYNN",
           "direction": "U",
@@ -24,26 +38,33 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-10T06:00:00-04:00",
           "mmsi": 367362240
-        },
-        {
-          "vesselName": "DAN ELDER",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-10T04:50:00-04:00",
-          "mmsi": 367503540
-        },
-        {
-          "vesselName": "FINDLAY",
-          "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-10T03:38:00-04:00",
-          "mmsi": null
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "JINCY",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-10T13:45:00-04:00",
+          "mmsi": 367402580
+        },
+        {
+          "vesselName": "CHUCK ZEBULA",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-10T12:50:00-04:00",
+          "mmsi": 367362240
+        },
+        {
+          "vesselName": "FINDLAY",
+          "direction": "U",
+          "numBarges": 1,
+          "endOfLockage": "2026-10-10T11:30:00-04:00",
+          "mmsi": null
+        },
         {
           "vesselName": "CATLETTSBURG",
           "direction": "D",
@@ -57,27 +78,6 @@
           "numBarges": 5,
           "endOfLockage": "2026-10-10T08:40:00-04:00",
           "mmsi": 367456850
-        },
-        {
-          "vesselName": "LINDA REED",
-          "direction": "U",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-10T04:51:00-04:00",
-          "mmsi": 367402990
-        },
-        {
-          "vesselName": "D A  GRIMM",
-          "direction": "D",
-          "numBarges": 9,
-          "endOfLockage": "2026-10-10T04:01:00-04:00",
-          "mmsi": 367434610
-        },
-        {
-          "vesselName": "ARTHUR E SNIDER",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-10T02:15:00-04:00",
-          "mmsi": 367699340
         }
       ]
     }
