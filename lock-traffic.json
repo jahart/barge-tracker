@@ -1,9 +1,23 @@
 {
-  "updated": "2026-10-11T13:50:00.019Z",
+  "updated": "2026-10-11T18:40:20.284Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "DAVE FOREMAN",
+          "direction": "D",
+          "numBarges": 5,
+          "endOfLockage": "2026-10-11T12:04:00-04:00",
+          "mmsi": 338591000
+        },
+        {
+          "vesselName": "SUSAN K",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-11T11:06:00-04:00",
+          "mmsi": 367420440
+        },
         {
           "vesselName": "DAN ELDER",
           "direction": "U",
@@ -24,20 +38,6 @@
           "numBarges": 6,
           "endOfLockage": "2026-10-10T22:07:00-04:00",
           "mmsi": 367522230
-        },
-        {
-          "vesselName": "OHIO",
-          "direction": "U",
-          "numBarges": 14,
-          "endOfLockage": "2026-10-10T19:25:00-04:00",
-          "mmsi": 368243490
-        },
-        {
-          "vesselName": "CATLETTSBURG",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-10T17:24:00-04:00",
-          "mmsi": 368106340
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "KEVIN MICHAEL",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-10-11T11:50:00-04:00",
+          "mmsi": 368416120
+        },
+        {
+          "vesselName": "RECREATIONAL VESSEL",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-10-11T11:42:00-04:00",
+          "mmsi": null
+        },
+        {
+          "vesselName": "JAMES MURPHY",
+          "direction": "D",
+          "numBarges": 2,
+          "endOfLockage": "2026-10-11T10:40:00-04:00",
+          "mmsi": 367757680
+        },
+        {
+          "vesselName": "OHIO",
+          "direction": "U",
+          "numBarges": 10,
+          "endOfLockage": "2026-10-11T10:35:00-04:00",
+          "mmsi": 368243490
+        },
+        {
           "vesselName": "RECREATIONAL VESSEL",
           "direction": "D",
           "numBarges": 0,
           "endOfLockage": "2026-10-11T08:50:00-04:00",
           "mmsi": null
-        },
-        {
-          "vesselName": "JAMES MURPHY",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-11T07:10:00-04:00",
-          "mmsi": 367757680
-        },
-        {
-          "vesselName": "WILLIAM R BARR",
-          "direction": "U",
-          "numBarges": 5,
-          "endOfLockage": "2026-10-11T06:19:00-04:00",
-          "mmsi": 367539140
-        },
-        {
-          "vesselName": "ENID DIBERT",
-          "direction": "U",
-          "numBarges": 11,
-          "endOfLockage": "2026-10-11T01:11:00-04:00",
-          "mmsi": 367402450
-        },
-        {
-          "vesselName": "DAVE FOREMAN",
-          "direction": "D",
-          "numBarges": 5,
-          "endOfLockage": "2026-10-10T23:00:00-04:00",
-          "mmsi": 338591000
         }
       ]
     }
