@@ -1,9 +1,30 @@
 {
-  "updated": "2026-10-11T00:42:59.892Z",
+  "updated": "2026-10-11T13:50:00.019Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "DAN ELDER",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-11T08:44:00-04:00",
+          "mmsi": 367503540
+        },
+        {
+          "vesselName": "KEVIN MICHAEL",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-10-11T03:00:00-04:00",
+          "mmsi": 368416120
+        },
+        {
+          "vesselName": "YOUNGSUK CHI",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-10-10T22:07:00-04:00",
+          "mmsi": 367522230
+        },
         {
           "vesselName": "OHIO",
           "direction": "U",
@@ -17,27 +38,6 @@
           "numBarges": 6,
           "endOfLockage": "2026-10-10T17:24:00-04:00",
           "mmsi": 368106340
-        },
-        {
-          "vesselName": "WILLIAM R BARR",
-          "direction": "U",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-10T16:15:00-04:00",
-          "mmsi": 367539140
-        },
-        {
-          "vesselName": "ENID DIBERT",
-          "direction": "U",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-10T15:08:00-04:00",
-          "mmsi": 367402450
-        },
-        {
-          "vesselName": "ARTHUR E SNIDER",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-10T13:35:00-04:00",
-          "mmsi": 367699340
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "STACY LYNN",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-10T18:45:00-04:00",
-          "mmsi": 368156330
-        },
-        {
-          "vesselName": "CAPT STOGIE WHITE",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-10T17:45:00-04:00",
-          "mmsi": 367412630
-        },
-        {
-          "vesselName": "LESTER PARKER",
+          "vesselName": "RECREATIONAL VESSEL",
           "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-10-10T16:10:00-04:00",
-          "mmsi": 368133920
+          "numBarges": 0,
+          "endOfLockage": "2026-10-11T08:50:00-04:00",
+          "mmsi": null
         },
         {
-          "vesselName": "YOUNGSUK CHI",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-10T14:45:00-04:00",
-          "mmsi": 367522230
-        },
-        {
-          "vesselName": "JINCY",
+          "vesselName": "JAMES MURPHY",
           "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-10T13:45:00-04:00",
-          "mmsi": 367402580
+          "numBarges": 0,
+          "endOfLockage": "2026-10-11T07:10:00-04:00",
+          "mmsi": 367757680
+        },
+        {
+          "vesselName": "WILLIAM R BARR",
+          "direction": "U",
+          "numBarges": 5,
+          "endOfLockage": "2026-10-11T06:19:00-04:00",
+          "mmsi": 367539140
+        },
+        {
+          "vesselName": "ENID DIBERT",
+          "direction": "U",
+          "numBarges": 11,
+          "endOfLockage": "2026-10-11T01:11:00-04:00",
+          "mmsi": 367402450
+        },
+        {
+          "vesselName": "DAVE FOREMAN",
+          "direction": "D",
+          "numBarges": 5,
+          "endOfLockage": "2026-10-10T23:00:00-04:00",
+          "mmsi": 338591000
         }
       ]
     }
