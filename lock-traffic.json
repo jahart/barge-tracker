@@ -1,9 +1,16 @@
 {
-  "updated": "2026-10-13T16:53:50.529Z",
+  "updated": "2026-10-13T21:45:22.375Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CHUCK ZEBULA",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-13T16:08:00-04:00",
+          "mmsi": 367362240
+        },
         {
           "vesselName": "LOUISE S",
           "direction": "U",
@@ -31,13 +38,6 @@
           "numBarges": 10,
           "endOfLockage": "2026-10-12T22:02:00-04:00",
           "mmsi": 367441040
-        },
-        {
-          "vesselName": "ARTHUR E SNIDER",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-12T21:17:00-04:00",
-          "mmsi": 367699340
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "DAN ELDER",
+          "vesselName": "CAPT C R NEALE III",
+          "direction": "U",
+          "numBarges": 1,
+          "endOfLockage": "2026-10-13T16:54:00-04:00",
+          "mmsi": 367730680
+        },
+        {
+          "vesselName": "LOUISE S",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-13T16:44:00-04:00",
+          "mmsi": 367412620
+        },
+        {
+          "vesselName": "HUNTINGTON",
+          "direction": "D",
+          "numBarges": 3,
+          "endOfLockage": "2026-10-13T15:41:00-04:00",
+          "mmsi": 368113420
+        },
+        {
+          "vesselName": "CAPT RICK NEALE",
+          "direction": "D",
+          "numBarges": 2,
+          "endOfLockage": "2026-10-13T15:20:00-04:00",
+          "mmsi": 367519160
+        },
+        {
+          "vesselName": "KEVIN MICHAEL",
           "direction": "D",
           "numBarges": 15,
-          "endOfLockage": "2026-10-13T12:39:00-04:00",
-          "mmsi": 367503540
-        },
-        {
-          "vesselName": "CANTON",
-          "direction": "U",
-          "numBarges": 3,
-          "endOfLockage": "2026-10-13T11:42:00-04:00",
-          "mmsi": 367433690
-        },
-        {
-          "vesselName": "MARK SHELL",
-          "direction": "U",
-          "numBarges": 2,
-          "endOfLockage": "2026-10-13T11:06:00-04:00",
-          "mmsi": 367728680
-        },
-        {
-          "vesselName": "ARTHUR E SNIDER",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-13T08:27:00-04:00",
-          "mmsi": 367699340
-        },
-        {
-          "vesselName": "A B YORK",
-          "direction": "U",
-          "numBarges": 5,
-          "endOfLockage": "2026-10-12T23:25:00-04:00",
-          "mmsi": 367757130
+          "endOfLockage": "2026-10-13T14:47:00-04:00",
+          "mmsi": 368416120
         }
       ]
     }
