@@ -1,49 +1,63 @@
 {
-  "updated": "2026-10-14T00:55:44.879Z",
+  "updated": "2026-10-14T05:53:52.995Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "DAN ELDER",
+          "vesselName": "CHARLESTON",
+          "direction": "U",
+          "numBarges": 5,
+          "endOfLockage": "2026-10-14T01:31:00-04:00",
+          "mmsi": 368218350
+        },
+        {
+          "vesselName": "KEVIN MICHAEL",
           "direction": "D",
           "numBarges": 15,
-          "endOfLockage": "2026-10-13T19:10:00-04:00",
-          "mmsi": 367503540
+          "endOfLockage": "2026-10-14T00:35:00-04:00",
+          "mmsi": 368416120
         },
         {
-          "vesselName": "CHUCK ZEBULA",
+          "vesselName": "HUNTINGTON",
+          "direction": "D",
+          "numBarges": 3,
+          "endOfLockage": "2026-10-13T23:16:00-04:00",
+          "mmsi": 368113420
+        },
+        {
+          "vesselName": "CAPT STOGIE WHITE",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-13T22:28:00-04:00",
+          "mmsi": 367412630
+        },
+        {
+          "vesselName": "MACKENZIE ROSE",
           "direction": "U",
           "numBarges": 15,
-          "endOfLockage": "2026-10-13T16:08:00-04:00",
-          "mmsi": 367362240
-        },
-        {
-          "vesselName": "LOUISE S",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-13T06:00:00-04:00",
-          "mmsi": 367412620
-        },
-        {
-          "vesselName": "CANTON",
-          "direction": "U",
-          "numBarges": 4,
-          "endOfLockage": "2026-10-13T03:43:00-04:00",
-          "mmsi": 367433690
-        },
-        {
-          "vesselName": "MARK SHELL",
-          "direction": "U",
-          "numBarges": 2,
-          "endOfLockage": "2026-10-13T00:40:00-04:00",
-          "mmsi": 367728680
+          "endOfLockage": "2026-10-13T20:53:00-04:00",
+          "mmsi": 368288130
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "ENID DIBERT",
+          "direction": "D",
+          "numBarges": 9,
+          "endOfLockage": "2026-10-14T00:10:00-04:00",
+          "mmsi": 367402450
+        },
+        {
+          "vesselName": "CHUCK ZEBULA",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-13T21:59:00-04:00",
+          "mmsi": 367362240
+        },
         {
           "vesselName": "SUSAN K",
           "direction": "D",
@@ -64,20 +78,6 @@
           "numBarges": 1,
           "endOfLockage": "2026-10-13T16:54:00-04:00",
           "mmsi": 367730680
-        },
-        {
-          "vesselName": "LOUISE S",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-13T16:44:00-04:00",
-          "mmsi": 367412620
-        },
-        {
-          "vesselName": "HUNTINGTON",
-          "direction": "D",
-          "numBarges": 3,
-          "endOfLockage": "2026-10-13T15:41:00-04:00",
-          "mmsi": 368113420
         }
       ]
     }
