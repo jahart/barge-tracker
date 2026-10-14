@@ -1,9 +1,16 @@
 {
-  "updated": "2026-10-13T21:45:22.375Z",
+  "updated": "2026-10-14T00:55:44.879Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "DAN ELDER",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-13T19:10:00-04:00",
+          "mmsi": 367503540
+        },
         {
           "vesselName": "CHUCK ZEBULA",
           "direction": "U",
@@ -31,19 +38,26 @@
           "numBarges": 2,
           "endOfLockage": "2026-10-13T00:40:00-04:00",
           "mmsi": 367728680
-        },
-        {
-          "vesselName": "BILL STILE",
-          "direction": "D",
-          "numBarges": 10,
-          "endOfLockage": "2026-10-12T22:02:00-04:00",
-          "mmsi": 367441040
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "SUSAN K",
+          "direction": "D",
+          "numBarges": 8,
+          "endOfLockage": "2026-10-13T20:09:00-04:00",
+          "mmsi": 367420440
+        },
+        {
+          "vesselName": "WILLIAM R BARR",
+          "direction": "D",
+          "numBarges": 9,
+          "endOfLockage": "2026-10-13T17:58:00-04:00",
+          "mmsi": 367539140
+        },
         {
           "vesselName": "CAPT C R NEALE III",
           "direction": "U",
@@ -64,20 +78,6 @@
           "numBarges": 3,
           "endOfLockage": "2026-10-13T15:41:00-04:00",
           "mmsi": 368113420
-        },
-        {
-          "vesselName": "CAPT RICK NEALE",
-          "direction": "D",
-          "numBarges": 2,
-          "endOfLockage": "2026-10-13T15:20:00-04:00",
-          "mmsi": 367519160
-        },
-        {
-          "vesselName": "KEVIN MICHAEL",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-13T14:47:00-04:00",
-          "mmsi": 368416120
         }
       ]
     }
