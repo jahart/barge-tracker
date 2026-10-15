@@ -1,9 +1,23 @@
 {
-  "updated": "2026-10-15T19:58:46.679Z",
+  "updated": "2026-10-15T22:55:42.202Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "COVINGTON",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-10-15T18:33:00-04:00",
+          "mmsi": 368119060
+        },
+        {
+          "vesselName": "JAMES F NEAL",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-15T16:59:00-04:00",
+          "mmsi": 366963420
+        },
         {
           "vesselName": "LINDA REED",
           "direction": "U",
@@ -24,26 +38,33 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-15T13:43:00-04:00",
           "mmsi": 367503540
-        },
-        {
-          "vesselName": "SUSAN K",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-15T12:42:00-04:00",
-          "mmsi": 367420440
-        },
-        {
-          "vesselName": "MICHAEL T SOMALES",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-15T11:36:00-04:00",
-          "mmsi": 367333920
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "ROBINSON",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-10-15T18:55:00-04:00",
+          "mmsi": 366919640
+        },
+        {
+          "vesselName": "PATRIOT",
+          "direction": "D",
+          "numBarges": 3,
+          "endOfLockage": "2026-10-15T16:35:00-04:00",
+          "mmsi": 367502170
+        },
+        {
+          "vesselName": "ROBINSON",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-10-15T16:14:00-04:00",
+          "mmsi": 366919640
+        },
         {
           "vesselName": "EVA KELLEY",
           "direction": "U",
@@ -57,27 +78,6 @@
           "numBarges": 0,
           "endOfLockage": "2026-10-15T14:20:00-04:00",
           "mmsi": 367385950
-        },
-        {
-          "vesselName": "CATLETTSBURG",
-          "direction": "U",
-          "numBarges": 3,
-          "endOfLockage": "2026-10-15T11:39:00-04:00",
-          "mmsi": 368106340
-        },
-        {
-          "vesselName": "JAMES MURPHY",
-          "direction": "U",
-          "numBarges": 2,
-          "endOfLockage": "2026-10-15T09:30:00-04:00",
-          "mmsi": 367757680
-        },
-        {
-          "vesselName": "COVINGTON",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-15T08:00:00-04:00",
-          "mmsi": 368119060
         }
       ]
     }
