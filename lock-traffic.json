@@ -1,9 +1,16 @@
 {
-  "updated": "2026-10-16T01:01:49.566Z",
+  "updated": "2026-10-16T05:41:09.029Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "ROBINSON",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-10-16T01:29:00-04:00",
+          "mmsi": 366919640
+        },
         {
           "vesselName": "COVINGTON",
           "direction": "D",
@@ -31,19 +38,33 @@
           "numBarges": 2,
           "endOfLockage": "2026-10-15T14:28:00-04:00",
           "mmsi": 367724780
-        },
-        {
-          "vesselName": "DAN ELDER",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-15T13:43:00-04:00",
-          "mmsi": 367503540
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "LINDA REED",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-15T23:28:00-04:00",
+          "mmsi": 367402990
+        },
+        {
+          "vesselName": "CONNIE K",
+          "direction": "D",
+          "numBarges": 9,
+          "endOfLockage": "2026-10-15T22:17:00-04:00",
+          "mmsi": 367797460
+        },
+        {
+          "vesselName": "DAN ELDER",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-15T21:23:00-04:00",
+          "mmsi": 367503540
+        },
         {
           "vesselName": "LILLIAN LOUISE",
           "direction": "U",
@@ -57,27 +78,6 @@
           "numBarges": 10,
           "endOfLockage": "2026-10-15T19:48:00-04:00",
           "mmsi": 368243490
-        },
-        {
-          "vesselName": "ROBINSON",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-15T19:00:00-04:00",
-          "mmsi": 366919640
-        },
-        {
-          "vesselName": "PATRIOT",
-          "direction": "D",
-          "numBarges": 3,
-          "endOfLockage": "2026-10-15T16:35:00-04:00",
-          "mmsi": 367502170
-        },
-        {
-          "vesselName": "ROBINSON",
-          "direction": "U",
-          "numBarges": 2,
-          "endOfLockage": "2026-10-15T16:14:00-04:00",
-          "mmsi": 366919640
         }
       ]
     }
