@@ -1,9 +1,23 @@
 {
-  "updated": "2026-10-16T15:17:13.294Z",
+  "updated": "2026-10-16T18:55:07.153Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "SUSAN K",
+          "direction": "U",
+          "numBarges": 1,
+          "endOfLockage": "2026-10-16T14:24:00-04:00",
+          "mmsi": 367420440
+        },
+        {
+          "vesselName": "OHIO",
+          "direction": "D",
+          "numBarges": 11,
+          "endOfLockage": "2026-10-16T13:23:00-04:00",
+          "mmsi": 368243490
+        },
         {
           "vesselName": "RONALD L LOUGHMILLER",
           "direction": "U",
@@ -24,20 +38,6 @@
           "numBarges": 4,
           "endOfLockage": "2026-10-16T02:47:00-04:00",
           "mmsi": 367502170
-        },
-        {
-          "vesselName": "ROBINSON",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-16T01:29:00-04:00",
-          "mmsi": 366919640
-        },
-        {
-          "vesselName": "COVINGTON",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-15T18:33:00-04:00",
-          "mmsi": 368119060
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "JAMES F NEAL",
-          "direction": "U",
-          "numBarges": 9,
-          "endOfLockage": "2026-10-16T10:43:00-04:00",
-          "mmsi": 366963420
-        },
-        {
-          "vesselName": "LINDA REED",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-15T23:28:00-04:00",
-          "mmsi": 367402990
-        },
-        {
-          "vesselName": "CONNIE K",
+          "vesselName": "CHARLESTON (MPC)",
           "direction": "D",
-          "numBarges": 9,
-          "endOfLockage": "2026-10-15T22:17:00-04:00",
-          "mmsi": 367797460
+          "numBarges": 4,
+          "endOfLockage": "2026-10-16T14:45:00-04:00",
+          "mmsi": 368218350
         },
         {
-          "vesselName": "DAN ELDER",
+          "vesselName": "VALLEY GEM",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-10-16T14:38:00-04:00",
+          "mmsi": 366937890
+        },
+        {
+          "vesselName": "VALLEY GEM",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-10-16T13:57:00-04:00",
+          "mmsi": 366937890
+        },
+        {
+          "vesselName": "EVA KELLEY",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-16T13:24:00-04:00",
+          "mmsi": 367402950
+        },
+        {
+          "vesselName": "MICHAEL T SOMALES",
           "direction": "U",
           "numBarges": 15,
-          "endOfLockage": "2026-10-15T21:23:00-04:00",
-          "mmsi": 367503540
-        },
-        {
-          "vesselName": "LILLIAN LOUISE",
-          "direction": "U",
-          "numBarges": 2,
-          "endOfLockage": "2026-10-15T20:32:00-04:00",
-          "mmsi": 367724780
+          "endOfLockage": "2026-10-16T11:39:00-04:00",
+          "mmsi": 367333920
         }
       ]
     }
