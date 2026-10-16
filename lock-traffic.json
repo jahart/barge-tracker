@@ -1,9 +1,16 @@
 {
-  "updated": "2026-10-16T10:55:37.414Z",
+  "updated": "2026-10-16T15:17:13.294Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "RONALD L LOUGHMILLER",
+          "direction": "U",
+          "numBarges": 5,
+          "endOfLockage": "2026-10-16T07:41:00-04:00",
+          "mmsi": 367143650
+        },
         {
           "vesselName": "CONNIE K",
           "direction": "D",
@@ -31,19 +38,19 @@
           "numBarges": 12,
           "endOfLockage": "2026-10-15T18:33:00-04:00",
           "mmsi": 368119060
-        },
-        {
-          "vesselName": "JAMES F NEAL",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-15T16:59:00-04:00",
-          "mmsi": 366963420
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "JAMES F NEAL",
+          "direction": "U",
+          "numBarges": 9,
+          "endOfLockage": "2026-10-16T10:43:00-04:00",
+          "mmsi": 366963420
+        },
         {
           "vesselName": "LINDA REED",
           "direction": "U",
@@ -71,13 +78,6 @@
           "numBarges": 2,
           "endOfLockage": "2026-10-15T20:32:00-04:00",
           "mmsi": 367724780
-        },
-        {
-          "vesselName": "OHIO",
-          "direction": "D",
-          "numBarges": 10,
-          "endOfLockage": "2026-10-15T19:48:00-04:00",
-          "mmsi": 368243490
         }
       ]
     }
