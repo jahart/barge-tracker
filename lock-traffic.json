@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15T22:55:42.202Z",
+  "updated": "2026-10-16T01:01:49.566Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
@@ -45,10 +45,24 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "LILLIAN LOUISE",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-10-15T20:32:00-04:00",
+          "mmsi": 367724780
+        },
+        {
+          "vesselName": "OHIO",
+          "direction": "D",
+          "numBarges": 10,
+          "endOfLockage": "2026-10-15T19:48:00-04:00",
+          "mmsi": 368243490
+        },
+        {
           "vesselName": "ROBINSON",
           "direction": "D",
           "numBarges": 6,
-          "endOfLockage": "2026-10-15T18:55:00-04:00",
+          "endOfLockage": "2026-10-15T19:00:00-04:00",
           "mmsi": 366919640
         },
         {
@@ -64,20 +78,6 @@
           "numBarges": 2,
           "endOfLockage": "2026-10-15T16:14:00-04:00",
           "mmsi": 366919640
-        },
-        {
-          "vesselName": "EVA KELLEY",
-          "direction": "U",
-          "numBarges": 16,
-          "endOfLockage": "2026-10-15T15:26:00-04:00",
-          "mmsi": 367402950
-        },
-        {
-          "vesselName": "MISTER CHARLIE NEALE",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-15T14:20:00-04:00",
-          "mmsi": 367385950
         }
       ]
     }
