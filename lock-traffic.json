@@ -1,9 +1,30 @@
 {
-  "updated": "2026-10-17T00:11:35.230Z",
+  "updated": "2026-10-17T04:51:06.307Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CHARLESTON (MPC)",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-10-16T23:45:00-04:00",
+          "mmsi": 368218350
+        },
+        {
+          "vesselName": "EVA KELLEY",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-16T22:39:00-04:00",
+          "mmsi": 367402950
+        },
+        {
+          "vesselName": "CHUCK ZEBULA",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-16T21:33:00-04:00",
+          "mmsi": 367362240
+        },
         {
           "vesselName": "RECREATIONAL VESSEL",
           "direction": "U",
@@ -17,27 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-16T17:34:00-04:00",
           "mmsi": 368359850
-        },
-        {
-          "vesselName": "SUSAN K",
-          "direction": "U",
-          "numBarges": 1,
-          "endOfLockage": "2026-10-16T14:24:00-04:00",
-          "mmsi": 367420440
-        },
-        {
-          "vesselName": "OHIO",
-          "direction": "D",
-          "numBarges": 11,
-          "endOfLockage": "2026-10-16T13:23:00-04:00",
-          "mmsi": 368243490
-        },
-        {
-          "vesselName": "RONALD L LOUGHMILLER",
-          "direction": "U",
-          "numBarges": 5,
-          "endOfLockage": "2026-10-16T07:41:00-04:00",
-          "mmsi": 367143650
         }
       ]
     },
