@@ -1,9 +1,23 @@
 {
-  "updated": "2026-10-17T12:53:41.008Z",
+  "updated": "2026-10-17T16:10:10.371Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "SUSAN K",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-17T11:33:00-04:00",
+          "mmsi": 367420440
+        },
+        {
+          "vesselName": "CANTON",
+          "direction": "D",
+          "numBarges": 7,
+          "endOfLockage": "2026-10-17T10:29:00-04:00",
+          "mmsi": 367433690
+        },
         {
           "vesselName": "RECREATIONAL VESSEL",
           "direction": "U",
@@ -24,26 +38,33 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-17T00:43:00-04:00",
           "mmsi": 367402520
-        },
-        {
-          "vesselName": "CHARLESTON (MPC)",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-16T23:45:00-04:00",
-          "mmsi": 368218350
-        },
-        {
-          "vesselName": "EVA KELLEY",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-16T22:39:00-04:00",
-          "mmsi": 367402950
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CAPT STOGIE WHITE",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-17T11:49:00-04:00",
+          "mmsi": 367412630
+        },
+        {
+          "vesselName": "D A  GRIMM",
+          "direction": "D",
+          "numBarges": 7,
+          "endOfLockage": "2026-10-17T11:09:00-04:00",
+          "mmsi": 367434610
+        },
+        {
+          "vesselName": "MARY ARTIE BRANNON ",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-17T10:58:00-04:00",
+          "mmsi": 367402520
+        },
         {
           "vesselName": "DAVE FOREMAN",
           "direction": "D",
@@ -57,27 +78,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-17T06:00:00-04:00",
           "mmsi": 368359850
-        },
-        {
-          "vesselName": "ARTHUR E SNIDER",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-17T03:59:00-04:00",
-          "mmsi": 367699340
-        },
-        {
-          "vesselName": "CANTON",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-10-17T01:32:00-04:00",
-          "mmsi": 367433690
-        },
-        {
-          "vesselName": "PRIDE",
-          "direction": "U",
-          "numBarges": 1,
-          "endOfLockage": "2026-10-17T01:23:00-04:00",
-          "mmsi": 367513420
         }
       ]
     }
