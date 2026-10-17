@@ -1,9 +1,16 @@
 {
-  "updated": "2026-10-17T21:18:09.639Z",
+  "updated": "2026-10-17T23:19:01.722Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CAPT KIRBY DUPUIS",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-17T18:40:00-04:00",
+          "mmsi": 368235550
+        },
         {
           "vesselName": "DAVE FOREMAN",
           "direction": "D",
@@ -31,13 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-17T11:33:00-04:00",
           "mmsi": 367420440
-        },
-        {
-          "vesselName": "CANTON",
-          "direction": "D",
-          "numBarges": 7,
-          "endOfLockage": "2026-10-17T10:29:00-04:00",
-          "mmsi": 367433690
         }
       ]
     },
