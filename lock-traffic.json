@@ -1,9 +1,23 @@
 {
-  "updated": "2026-10-16T18:55:07.153Z",
+  "updated": "2026-10-17T00:11:35.230Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "RECREATIONAL VESSEL",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-10-16T18:16:00-04:00",
+          "mmsi": null
+        },
+        {
+          "vesselName": "COOPER T",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-16T17:34:00-04:00",
+          "mmsi": 368359850
+        },
         {
           "vesselName": "SUSAN K",
           "direction": "U",
@@ -24,26 +38,26 @@
           "numBarges": 5,
           "endOfLockage": "2026-10-16T07:41:00-04:00",
           "mmsi": 367143650
-        },
-        {
-          "vesselName": "CONNIE K",
-          "direction": "D",
-          "numBarges": 9,
-          "endOfLockage": "2026-10-16T05:57:00-04:00",
-          "mmsi": 367797460
-        },
-        {
-          "vesselName": "PATRIOT",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-10-16T02:47:00-04:00",
-          "mmsi": 367502170
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "RONALD L LOUGHMILLER",
+          "direction": "U",
+          "numBarges": 5,
+          "endOfLockage": "2026-10-16T17:53:00-04:00",
+          "mmsi": 367143650
+        },
+        {
+          "vesselName": "CHUCK ZEBULA",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-16T15:45:00-04:00",
+          "mmsi": 367362240
+        },
         {
           "vesselName": "CHARLESTON (MPC)",
           "direction": "D",
@@ -64,20 +78,6 @@
           "numBarges": 0,
           "endOfLockage": "2026-10-16T13:57:00-04:00",
           "mmsi": 366937890
-        },
-        {
-          "vesselName": "EVA KELLEY",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-16T13:24:00-04:00",
-          "mmsi": 367402950
-        },
-        {
-          "vesselName": "MICHAEL T SOMALES",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-16T11:39:00-04:00",
-          "mmsi": 367333920
         }
       ]
     }
