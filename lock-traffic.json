@@ -1,9 +1,16 @@
 {
-  "updated": "2026-10-17T23:19:01.722Z",
+  "updated": "2026-10-18T01:23:50.579Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "STACY LYNN",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-17T21:17:00-04:00",
+          "mmsi": 368156330
+        },
         {
           "vesselName": "CAPT KIRBY DUPUIS",
           "direction": "U",
@@ -31,19 +38,33 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-17T13:10:00-04:00",
           "mmsi": 368416120
-        },
-        {
-          "vesselName": "SUSAN K",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-17T11:33:00-04:00",
-          "mmsi": 367420440
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "COOPER T",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-17T21:12:00-04:00",
+          "mmsi": 368359850
+        },
+        {
+          "vesselName": "LINDA REED",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-17T20:21:00-04:00",
+          "mmsi": 367402990
+        },
+        {
+          "vesselName": "PRIDE",
+          "direction": "U",
+          "numBarges": 3,
+          "endOfLockage": "2026-10-17T19:15:00-04:00",
+          "mmsi": 367513420
+        },
         {
           "vesselName": "MACKENZIE ROSE",
           "direction": "D",
@@ -57,27 +78,6 @@
           "numBarges": 0,
           "endOfLockage": "2026-10-17T15:02:00-04:00",
           "mmsi": 366937890
-        },
-        {
-          "vesselName": "VALLEY GEM",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-17T14:21:00-04:00",
-          "mmsi": 366937890
-        },
-        {
-          "vesselName": "PRIDE",
-          "direction": "D",
-          "numBarges": 1,
-          "endOfLockage": "2026-10-17T13:30:00-04:00",
-          "mmsi": 367513420
-        },
-        {
-          "vesselName": "RECREATIONAL VESSEL",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-17T12:40:00-04:00",
-          "mmsi": null
         }
       ]
     }
