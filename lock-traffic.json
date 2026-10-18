@@ -1,9 +1,23 @@
 {
-  "updated": "2026-10-18T14:46:12.061Z",
+  "updated": "2026-10-18T20:14:29.221Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "DAN ELDER",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-18T14:00:00-04:00",
+          "mmsi": 367503540
+        },
+        {
+          "vesselName": "COOPER T",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-18T11:06:00-04:00",
+          "mmsi": 368359850
+        },
         {
           "vesselName": "STEPHEN L COLBY",
           "direction": "D",
@@ -24,20 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-18T04:10:00-04:00",
           "mmsi": 367402990
-        },
-        {
-          "vesselName": "CHUCK ZEBULA",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-18T01:54:00-04:00",
-          "mmsi": 367362240
-        },
-        {
-          "vesselName": "ROBERT C LOEDDING",
-          "direction": "U",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-18T00:48:00-04:00",
-          "mmsi": 366963170
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "CAPT KIRBY DUPUIS",
+          "vesselName": "STACY LYNN",
           "direction": "U",
           "numBarges": 15,
-          "endOfLockage": "2026-10-18T06:41:00-04:00",
-          "mmsi": 368235550
+          "endOfLockage": "2026-10-18T15:36:00-04:00",
+          "mmsi": 368156330
         },
         {
-          "vesselName": "DAN ELDER",
+          "vesselName": "BILOXI",
           "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-18T01:08:00-04:00",
-          "mmsi": 367503540
+          "numBarges": 6,
+          "endOfLockage": "2026-10-18T14:05:00-04:00",
+          "mmsi": 367725220
         },
         {
-          "vesselName": "MARY ARTIE BRANNON ",
+          "vesselName": "LOUISE S",
           "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-18T00:14:00-04:00",
-          "mmsi": 367402520
+          "numBarges": 11,
+          "endOfLockage": "2026-10-18T14:00:00-04:00",
+          "mmsi": 367412620
         },
         {
-          "vesselName": "KEVIN MICHAEL",
+          "vesselName": "WEST VIRGINIA 1279888",
           "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-17T23:10:00-04:00",
-          "mmsi": 368416120
+          "numBarges": 4,
+          "endOfLockage": "2026-10-18T12:55:00-04:00",
+          "mmsi": 368006910
         },
         {
-          "vesselName": "COOPER T",
+          "vesselName": "CATLETTSBURG",
           "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-17T21:12:00-04:00",
-          "mmsi": 368359850
+          "numBarges": 6,
+          "endOfLockage": "2026-10-18T11:40:00-04:00",
+          "mmsi": 368106340
         }
       ]
     }
