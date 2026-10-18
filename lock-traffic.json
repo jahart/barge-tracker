@@ -1,9 +1,23 @@
 {
-  "updated": "2026-10-18T11:34:21.880Z",
+  "updated": "2026-10-18T14:46:12.061Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "STEPHEN L COLBY",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-10-18T08:57:00-04:00",
+          "mmsi": 367645460
+        },
+        {
+          "vesselName": "MACKENZIE ROSE",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-18T07:35:00-04:00",
+          "mmsi": 368288130
+        },
         {
           "vesselName": "LINDA REED",
           "direction": "D",
@@ -24,26 +38,19 @@
           "numBarges": 12,
           "endOfLockage": "2026-10-18T00:48:00-04:00",
           "mmsi": 366963170
-        },
-        {
-          "vesselName": "STEPHEN L COLBY",
-          "direction": "U",
-          "numBarges": 8,
-          "endOfLockage": "2026-10-18T00:00:00-04:00",
-          "mmsi": 367645460
-        },
-        {
-          "vesselName": "WEST VIRGINIA 1279888",
-          "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-17T23:03:00-04:00",
-          "mmsi": 368006910
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CAPT KIRBY DUPUIS",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-18T06:41:00-04:00",
+          "mmsi": 368235550
+        },
         {
           "vesselName": "DAN ELDER",
           "direction": "D",
@@ -71,13 +78,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-17T21:12:00-04:00",
           "mmsi": 368359850
-        },
-        {
-          "vesselName": "LINDA REED",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-17T20:21:00-04:00",
-          "mmsi": 367402990
         }
       ]
     }
