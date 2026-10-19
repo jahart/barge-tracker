@@ -1,9 +1,30 @@
 {
-  "updated": "2026-10-19T11:04:51.567Z",
+  "updated": "2026-10-19T17:25:27.225Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "STACY MCCUNE",
+          "direction": "U",
+          "numBarges": 11,
+          "endOfLockage": "2026-10-19T12:39:00-04:00",
+          "mmsi": 367412560
+        },
+        {
+          "vesselName": "YVONNE CONWAY",
+          "direction": "U",
+          "numBarges": 13,
+          "endOfLockage": "2026-10-19T10:29:00-04:00",
+          "mmsi": 367402550
+        },
+        {
+          "vesselName": "DAVE FOREMAN",
+          "direction": "U",
+          "numBarges": 1,
+          "endOfLockage": "2026-10-19T09:30:00-04:00",
+          "mmsi": 338591000
+        },
         {
           "vesselName": "TOMMY H ",
           "direction": "U",
@@ -17,33 +38,19 @@
           "numBarges": 11,
           "endOfLockage": "2026-10-19T00:28:00-04:00",
           "mmsi": 367412620
-        },
-        {
-          "vesselName": "HARLEY HALL",
-          "direction": "U",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-18T22:08:00-04:00",
-          "mmsi": 367743370
-        },
-        {
-          "vesselName": "BILOXI",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-18T19:33:00-04:00",
-          "mmsi": 367725220
-        },
-        {
-          "vesselName": "ALAN P HALL",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-18T18:25:00-04:00",
-          "mmsi": 367539160
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "LILLIAN LOUISE",
+          "direction": "D",
+          "numBarges": 1,
+          "endOfLockage": "2026-10-19T10:32:00-04:00",
+          "mmsi": 367724780
+        },
         {
           "vesselName": "A B YORK",
           "direction": "D",
@@ -71,13 +78,6 @@
           "numBarges": 12,
           "endOfLockage": "2026-10-18T18:50:00-04:00",
           "mmsi": 368119060
-        },
-        {
-          "vesselName": "ROBERT C LOEDDING",
-          "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-18T18:06:00-04:00",
-          "mmsi": 366963170
         }
       ]
     }
