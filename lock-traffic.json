@@ -1,9 +1,23 @@
 {
-  "updated": "2026-10-20T05:43:26.283Z",
+  "updated": "2026-10-20T11:04:25.464Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "BILOXI",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-10-20T03:30:00-04:00",
+          "mmsi": 367725220
+        },
+        {
+          "vesselName": "CAPT KIRBY DUPUIS",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-20T02:12:00-04:00",
+          "mmsi": 368235550
+        },
         {
           "vesselName": "COVINGTON",
           "direction": "D",
@@ -24,26 +38,26 @@
           "numBarges": 11,
           "endOfLockage": "2026-10-19T21:45:00-04:00",
           "mmsi": 368279390
-        },
-        {
-          "vesselName": "DAN ELDER",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-19T19:39:00-04:00",
-          "mmsi": 367503540
-        },
-        {
-          "vesselName": "GALVESTON BAY",
-          "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-19T17:36:00-04:00",
-          "mmsi": 367441870
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "DAN ELDER",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-20T03:34:00-04:00",
+          "mmsi": 367503540
+        },
+        {
+          "vesselName": "GALVESTON BAY",
+          "direction": "U",
+          "numBarges": 4,
+          "endOfLockage": "2026-10-20T02:39:00-04:00",
+          "mmsi": 367441870
+        },
         {
           "vesselName": "CAPT STOGIE WHITE",
           "direction": "D",
@@ -64,20 +78,6 @@
           "numBarges": 9,
           "endOfLockage": "2026-10-19T23:31:00-04:00",
           "mmsi": 367797460
-        },
-        {
-          "vesselName": "YVONNE CONWAY",
-          "direction": "U",
-          "numBarges": 9,
-          "endOfLockage": "2026-10-19T22:05:00-04:00",
-          "mmsi": 367402550
-        },
-        {
-          "vesselName": "STACY MCCUNE",
-          "direction": "U",
-          "numBarges": 11,
-          "endOfLockage": "2026-10-19T21:11:00-04:00",
-          "mmsi": 367412560
         }
       ]
     }
