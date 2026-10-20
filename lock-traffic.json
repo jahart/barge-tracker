@@ -1,9 +1,30 @@
 {
-  "updated": "2026-10-20T00:56:09.992Z",
+  "updated": "2026-10-20T05:43:26.283Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "COVINGTON",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-20T01:15:00-04:00",
+          "mmsi": 368119060
+        },
+        {
+          "vesselName": "WILLIAM R BARR",
+          "direction": "U",
+          "numBarges": 8,
+          "endOfLockage": "2026-10-19T23:27:00-04:00",
+          "mmsi": 367539140
+        },
+        {
+          "vesselName": "LISA MARIE",
+          "direction": "U",
+          "numBarges": 11,
+          "endOfLockage": "2026-10-19T21:45:00-04:00",
+          "mmsi": 368279390
+        },
         {
           "vesselName": "DAN ELDER",
           "direction": "U",
@@ -17,27 +38,6 @@
           "numBarges": 6,
           "endOfLockage": "2026-10-19T17:36:00-04:00",
           "mmsi": 367441870
-        },
-        {
-          "vesselName": "LILLIAN LOUISE",
-          "direction": "D",
-          "numBarges": 1,
-          "endOfLockage": "2026-10-19T16:00:00-04:00",
-          "mmsi": 367724780
-        },
-        {
-          "vesselName": "JAMES F NEAL",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-19T14:55:00-04:00",
-          "mmsi": 366963420
-        },
-        {
-          "vesselName": "CONNIE K",
-          "direction": "U",
-          "numBarges": 9,
-          "endOfLockage": "2026-10-19T13:37:00-04:00",
-          "mmsi": 367797460
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "CAPT STOGIE WHITE",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-20T01:39:00-04:00",
+          "mmsi": 367412630
+        },
+        {
+          "vesselName": "RONALD L LOUGHMILLER",
+          "direction": "D",
+          "numBarges": 9,
+          "endOfLockage": "2026-10-20T00:34:00-04:00",
+          "mmsi": 367143650
+        },
+        {
+          "vesselName": "CONNIE K",
+          "direction": "U",
+          "numBarges": 9,
+          "endOfLockage": "2026-10-19T23:31:00-04:00",
+          "mmsi": 367797460
+        },
+        {
+          "vesselName": "YVONNE CONWAY",
+          "direction": "U",
+          "numBarges": 9,
+          "endOfLockage": "2026-10-19T22:05:00-04:00",
+          "mmsi": 367402550
+        },
+        {
           "vesselName": "STACY MCCUNE",
           "direction": "U",
           "numBarges": 11,
           "endOfLockage": "2026-10-19T21:11:00-04:00",
           "mmsi": 367412560
-        },
-        {
-          "vesselName": "CAPT KIRBY DUPUIS",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-19T20:05:00-04:00",
-          "mmsi": 368235550
-        },
-        {
-          "vesselName": "DAVE FOREMAN",
-          "direction": "U",
-          "numBarges": 1,
-          "endOfLockage": "2026-10-19T18:15:00-04:00",
-          "mmsi": 338591000
-        },
-        {
-          "vesselName": "TOMMY H ",
-          "direction": "U",
-          "numBarges": 13,
-          "endOfLockage": "2026-10-19T18:10:00-04:00",
-          "mmsi": 367782270
-        },
-        {
-          "vesselName": "COVINGTON",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-19T16:07:00-04:00",
-          "mmsi": 368119060
         }
       ]
     }
