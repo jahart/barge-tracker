@@ -1,9 +1,30 @@
 {
-  "updated": "2026-10-20T22:58:39.046Z",
+  "updated": "2026-10-21T12:12:17.240Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "MACKENZIE ROSE",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-20T23:06:00-04:00",
+          "mmsi": 368288130
+        },
+        {
+          "vesselName": "YVONNE CONWAY",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-20T21:00:00-04:00",
+          "mmsi": 367402550
+        },
+        {
+          "vesselName": "A B YORK",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-10-20T19:58:00-04:00",
+          "mmsi": 367757130
+        },
         {
           "vesselName": "CAPT STOGIE WHITE",
           "direction": "D",
@@ -17,33 +38,19 @@
           "numBarges": 9,
           "endOfLockage": "2026-10-20T16:03:00-04:00",
           "mmsi": 367143650
-        },
-        {
-          "vesselName": "BILOXI",
-          "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-20T03:30:00-04:00",
-          "mmsi": 367725220
-        },
-        {
-          "vesselName": "CAPT KIRBY DUPUIS",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-20T02:12:00-04:00",
-          "mmsi": 368235550
-        },
-        {
-          "vesselName": "COVINGTON",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-20T01:15:00-04:00",
-          "mmsi": 368119060
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "WILLIAM R BARR",
+          "direction": "U",
+          "numBarges": 5,
+          "endOfLockage": "2026-10-20T19:05:00-04:00",
+          "mmsi": 367539140
+        },
         {
           "vesselName": "BILOXI",
           "direction": "U",
@@ -71,13 +78,6 @@
           "numBarges": 11,
           "endOfLockage": "2026-10-20T15:05:00-04:00",
           "mmsi": 368279390
-        },
-        {
-          "vesselName": "YVONNE CONWAY",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-20T13:10:00-04:00",
-          "mmsi": 367402550
         }
       ]
     }
