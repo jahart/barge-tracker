@@ -1,9 +1,16 @@
 {
-  "updated": "2026-10-21T20:50:32.030Z",
+  "updated": "2026-10-21T23:55:15.125Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "ROBINSON",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-10-21T16:35:00-04:00",
+          "mmsi": 366919640
+        },
         {
           "vesselName": "L DALE MANNS",
           "direction": "U",
@@ -31,13 +38,6 @@
           "numBarges": 6,
           "endOfLockage": "2026-10-20T19:58:00-04:00",
           "mmsi": 367757130
-        },
-        {
-          "vesselName": "CAPT STOGIE WHITE",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-20T17:16:00-04:00",
-          "mmsi": 367412630
         }
       ]
     },
