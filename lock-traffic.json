@@ -1,43 +1,43 @@
 {
-  "updated": "2026-10-22T14:36:20.994Z",
+  "updated": "2026-10-22T19:04:17.135Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "ROBINSON",
-          "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-21T16:35:00-04:00",
-          "mmsi": 366919640
+          "vesselName": "DIRK TAYLOR",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-10-22T13:03:00-04:00",
+          "mmsi": 367757660
         },
         {
-          "vesselName": "L DALE MANNS",
+          "vesselName": "BIG EDDIE",
           "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-21T14:08:00-04:00",
-          "mmsi": 367546910
+          "numBarges": 1,
+          "endOfLockage": "2026-10-22T12:13:00-04:00",
+          "mmsi": 367519920
         },
         {
-          "vesselName": "MACKENZIE ROSE",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-20T23:06:00-04:00",
-          "mmsi": 368288130
-        },
-        {
-          "vesselName": "YVONNE CONWAY",
+          "vesselName": "ENID DIBERT",
           "direction": "D",
           "numBarges": 15,
-          "endOfLockage": "2026-10-20T21:00:00-04:00",
-          "mmsi": 367402550
+          "endOfLockage": "2026-10-22T11:15:00-04:00",
+          "mmsi": 367402450
         },
         {
-          "vesselName": "A B YORK",
+          "vesselName": "GIANNA HULL",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-22T01:55:00-04:00",
+          "mmsi": null
+        },
+        {
+          "vesselName": "WEST VIRGINIA 1279888",
           "direction": "D",
           "numBarges": 6,
-          "endOfLockage": "2026-10-20T19:58:00-04:00",
-          "mmsi": 367757130
+          "endOfLockage": "2026-10-22T00:25:00-04:00",
+          "mmsi": 368006910
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "VALLEY GEM",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-10-22T14:20:00-04:00",
+          "mmsi": 366937890
+        },
+        {
+          "vesselName": "MISTER CHARLIE NEALE",
+          "direction": "D",
+          "numBarges": 1,
+          "endOfLockage": "2026-10-22T14:07:00-04:00",
+          "mmsi": 367385950
+        },
+        {
+          "vesselName": "L DALE MANNS",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-22T12:20:00-04:00",
+          "mmsi": 367546910
+        },
+        {
+          "vesselName": "JENNIFER ANN",
+          "direction": "D",
+          "numBarges": 11,
+          "endOfLockage": "2026-10-22T10:30:00-04:00",
+          "mmsi": 368033840
+        },
+        {
           "vesselName": "ENID DIBERT",
           "direction": "D",
           "numBarges": 15,
           "endOfLockage": "2026-10-21T16:38:00-04:00",
           "mmsi": 367402450
-        },
-        {
-          "vesselName": "WEST VIRGINIA 1279888",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-21T15:43:00-04:00",
-          "mmsi": 368006910
-        },
-        {
-          "vesselName": "CHUCK ZEBULA",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-21T14:50:00-04:00",
-          "mmsi": 367362240
-        },
-        {
-          "vesselName": "MACKENZIE ROSE",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-21T13:45:00-04:00",
-          "mmsi": 368288130
-        },
-        {
-          "vesselName": "DREMA G WOODS",
-          "direction": "D",
-          "numBarges": 9,
-          "endOfLockage": "2026-10-21T11:50:00-04:00",
-          "mmsi": 367321070
         }
       ]
     }
