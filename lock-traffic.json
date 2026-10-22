@@ -1,9 +1,23 @@
 {
-  "updated": "2026-10-22T19:04:17.135Z",
+  "updated": "2026-10-22T22:14:31.112Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "TENNESSEE",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-22T17:02:00-04:00",
+          "mmsi": 367320740
+        },
+        {
+          "vesselName": "CANTON",
+          "direction": "U",
+          "numBarges": 7,
+          "endOfLockage": "2026-10-22T16:17:00-04:00",
+          "mmsi": 367433690
+        },
         {
           "vesselName": "DIRK TAYLOR",
           "direction": "D",
@@ -24,20 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-22T11:15:00-04:00",
           "mmsi": 367402450
-        },
-        {
-          "vesselName": "GIANNA HULL",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-22T01:55:00-04:00",
-          "mmsi": null
-        },
-        {
-          "vesselName": "WEST VIRGINIA 1279888",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-22T00:25:00-04:00",
-          "mmsi": 368006910
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "VALLEY GEM",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-22T14:20:00-04:00",
-          "mmsi": 366937890
+          "vesselName": "GALVESTON BAY",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-10-22T17:53:00-04:00",
+          "mmsi": 367441870
         },
         {
-          "vesselName": "MISTER CHARLIE NEALE",
-          "direction": "D",
+          "vesselName": "JOHN VAUGHN",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-22T16:58:00-04:00",
+          "mmsi": 368008740
+        },
+        {
+          "vesselName": "CAPT C R NEALE III",
+          "direction": "U",
           "numBarges": 1,
-          "endOfLockage": "2026-10-22T14:07:00-04:00",
-          "mmsi": 367385950
+          "endOfLockage": "2026-10-22T16:22:00-04:00",
+          "mmsi": 367730680
         },
         {
-          "vesselName": "L DALE MANNS",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-22T12:20:00-04:00",
-          "mmsi": 367546910
-        },
-        {
-          "vesselName": "JENNIFER ANN",
+          "vesselName": "PRIDE",
           "direction": "D",
-          "numBarges": 11,
-          "endOfLockage": "2026-10-22T10:30:00-04:00",
-          "mmsi": 368033840
+          "numBarges": 3,
+          "endOfLockage": "2026-10-22T15:24:00-04:00",
+          "mmsi": 367513420
         },
         {
-          "vesselName": "ENID DIBERT",
+          "vesselName": "VALLEY GEM",
           "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-21T16:38:00-04:00",
-          "mmsi": 367402450
+          "numBarges": 0,
+          "endOfLockage": "2026-10-22T15:10:00-04:00",
+          "mmsi": 366937890
         }
       ]
     }
