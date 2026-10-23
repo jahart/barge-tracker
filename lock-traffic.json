@@ -1,9 +1,23 @@
 {
-  "updated": "2026-10-23T00:49:46.164Z",
+  "updated": "2026-10-23T05:48:15.846Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "GALVESTON BAY",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-10-23T00:26:00-04:00",
+          "mmsi": 367441870
+        },
+        {
+          "vesselName": "LINDA TAYLOR",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-10-22T22:00:00-04:00",
+          "mmsi": 367755550
+        },
         {
           "vesselName": "TITLETOWN USA",
           "direction": "U",
@@ -24,26 +38,26 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-22T17:02:00-04:00",
           "mmsi": 367320740
-        },
-        {
-          "vesselName": "CANTON",
-          "direction": "U",
-          "numBarges": 7,
-          "endOfLockage": "2026-10-22T16:17:00-04:00",
-          "mmsi": 367433690
-        },
-        {
-          "vesselName": "DIRK TAYLOR",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-10-22T13:03:00-04:00",
-          "mmsi": 367757660
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "DAN ELDER",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-23T00:44:00-04:00",
+          "mmsi": 367503540
+        },
+        {
+          "vesselName": "ROBERT C LOEDDING",
+          "direction": "D",
+          "numBarges": 14,
+          "endOfLockage": "2026-10-22T21:46:00-04:00",
+          "mmsi": 366963170
+        },
         {
           "vesselName": "GIANNA HULL",
           "direction": "U",
@@ -64,20 +78,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-22T16:58:00-04:00",
           "mmsi": 368008740
-        },
-        {
-          "vesselName": "CAPT C R NEALE III",
-          "direction": "U",
-          "numBarges": 1,
-          "endOfLockage": "2026-10-22T16:22:00-04:00",
-          "mmsi": 367730680
-        },
-        {
-          "vesselName": "PRIDE",
-          "direction": "D",
-          "numBarges": 3,
-          "endOfLockage": "2026-10-22T15:24:00-04:00",
-          "mmsi": 367513420
         }
       ]
     }
