@@ -1,49 +1,70 @@
 {
-  "updated": "2026-10-23T05:48:15.846Z",
+  "updated": "2026-10-23T11:10:40.266Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "GALVESTON BAY",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-23T00:26:00-04:00",
-          "mmsi": 367441870
-        },
-        {
-          "vesselName": "LINDA TAYLOR",
-          "direction": "U",
-          "numBarges": 2,
-          "endOfLockage": "2026-10-22T22:00:00-04:00",
-          "mmsi": 367755550
-        },
-        {
-          "vesselName": "TITLETOWN USA",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-22T19:52:00-04:00",
-          "mmsi": 367638260
-        },
-        {
-          "vesselName": "EUGENIE",
-          "direction": "U",
-          "numBarges": 4,
-          "endOfLockage": "2026-10-22T19:46:00-04:00",
-          "mmsi": 367167020
-        },
-        {
-          "vesselName": "TENNESSEE",
+          "vesselName": "CHUCK ZEBULA",
           "direction": "U",
           "numBarges": 15,
-          "endOfLockage": "2026-10-22T17:02:00-04:00",
-          "mmsi": 367320740
+          "endOfLockage": "2026-10-23T06:16:00-04:00",
+          "mmsi": 367362240
+        },
+        {
+          "vesselName": "ARTHUR E SNIDER",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-23T05:16:00-04:00",
+          "mmsi": 367699340
+        },
+        {
+          "vesselName": "LILLIAN LOUISE",
+          "direction": "U",
+          "numBarges": 1,
+          "endOfLockage": "2026-10-23T05:00:00-04:00",
+          "mmsi": 367724780
+        },
+        {
+          "vesselName": "JENNIFER ANN",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-23T03:32:00-04:00",
+          "mmsi": 368033840
+        },
+        {
+          "vesselName": "CAPT STOGIE WHITE",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-23T01:36:00-04:00",
+          "mmsi": 367412630
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "STACY LYNN",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-10-23T03:18:00-04:00",
+          "mmsi": 368156330
+        },
+        {
+          "vesselName": "TITLETOWN USA",
+          "direction": "U",
+          "numBarges": 1,
+          "endOfLockage": "2026-10-23T02:12:00-04:00",
+          "mmsi": 367638260
+        },
+        {
+          "vesselName": "TENNESSEE",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-23T02:04:00-04:00",
+          "mmsi": 367320740
+        },
         {
           "vesselName": "DAN ELDER",
           "direction": "D",
@@ -57,27 +78,6 @@
           "numBarges": 14,
           "endOfLockage": "2026-10-22T21:46:00-04:00",
           "mmsi": 366963170
-        },
-        {
-          "vesselName": "GIANNA HULL",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-22T19:13:00-04:00",
-          "mmsi": null
-        },
-        {
-          "vesselName": "GALVESTON BAY",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-22T17:53:00-04:00",
-          "mmsi": 367441870
-        },
-        {
-          "vesselName": "JOHN VAUGHN",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-22T16:58:00-04:00",
-          "mmsi": 368008740
         }
       ]
     }
