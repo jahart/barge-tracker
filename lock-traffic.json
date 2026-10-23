@@ -1,9 +1,16 @@
 {
-  "updated": "2026-10-23T19:49:51.178Z",
+  "updated": "2026-10-23T22:56:16.376Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "MARCI GALE",
+          "direction": "U",
+          "numBarges": 12,
+          "endOfLockage": "2026-10-23T17:12:00-04:00",
+          "mmsi": 368173140
+        },
         {
           "vesselName": "DAN ELDER",
           "direction": "D",
@@ -31,13 +38,6 @@
           "numBarges": 14,
           "endOfLockage": "2026-10-23T12:17:00-04:00",
           "mmsi": 368142180
-        },
-        {
-          "vesselName": "ALAN P HALL",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-23T10:56:00-04:00",
-          "mmsi": 367539160
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "KEVIN MICHAEL",
+          "direction": "D",
+          "numBarges": 9,
+          "endOfLockage": "2026-10-23T18:30:00-04:00",
+          "mmsi": 368416120
+        },
+        {
+          "vesselName": "DEBI SHARP",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-23T17:18:00-04:00",
+          "mmsi": 367402530
+        },
+        {
+          "vesselName": "CAPT C R NEALE III",
+          "direction": "D",
+          "numBarges": 1,
+          "endOfLockage": "2026-10-23T17:00:00-04:00",
+          "mmsi": 367730680
+        },
+        {
+          "vesselName": "CHUCK ZEBULA",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-23T16:17:00-04:00",
+          "mmsi": 367362240
+        },
+        {
           "vesselName": "GIANNA HULL",
           "direction": "D",
           "numBarges": 15,
           "endOfLockage": "2026-10-23T15:30:00-04:00",
           "mmsi": null
-        },
-        {
-          "vesselName": "CAPT STOGIE WHITE",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-23T14:24:00-04:00",
-          "mmsi": 367412630
-        },
-        {
-          "vesselName": "LINDA TAYLOR",
-          "direction": "U",
-          "numBarges": 2,
-          "endOfLockage": "2026-10-23T13:36:00-04:00",
-          "mmsi": 367755550
-        },
-        {
-          "vesselName": "STACY MCCUNE",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-23T12:16:00-04:00",
-          "mmsi": 367412560
-        },
-        {
-          "vesselName": "LILLIAN LOUISE",
-          "direction": "U",
-          "numBarges": 1,
-          "endOfLockage": "2026-10-23T11:08:00-04:00",
-          "mmsi": 367724780
         }
       ]
     }
