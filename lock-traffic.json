@@ -1,9 +1,30 @@
 {
-  "updated": "2026-10-24T14:45:16.545Z",
+  "updated": "2026-10-24T17:55:18.769Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "KEVIN MICHAEL",
+          "direction": "D",
+          "numBarges": 9,
+          "endOfLockage": "2026-10-24T13:15:00-04:00",
+          "mmsi": 368416120
+        },
+        {
+          "vesselName": "MACKENZIE ROSE",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-24T11:58:00-04:00",
+          "mmsi": 368288130
+        },
+        {
+          "vesselName": "DEBI SHARP",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-10-24T10:55:00-04:00",
+          "mmsi": 367402530
+        },
         {
           "vesselName": "JOCK CENAC",
           "direction": "U",
@@ -17,33 +38,19 @@
           "numBarges": 4,
           "endOfLockage": "2026-10-23T23:40:00-04:00",
           "mmsi": 367433690
-        },
-        {
-          "vesselName": "BIG EDDIE",
-          "direction": "D",
-          "numBarges": 1,
-          "endOfLockage": "2026-10-23T22:36:00-04:00",
-          "mmsi": 367519920
-        },
-        {
-          "vesselName": "CHIP LACY",
-          "direction": "U",
-          "numBarges": 13,
-          "endOfLockage": "2026-10-23T21:58:00-04:00",
-          "mmsi": 366963310
-        },
-        {
-          "vesselName": "STACY LYNN",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-23T21:52:00-04:00",
-          "mmsi": 368156330
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CHIP LACY",
+          "direction": "U",
+          "numBarges": 8,
+          "endOfLockage": "2026-10-24T13:24:00-04:00",
+          "mmsi": 366963310
+        },
         {
           "vesselName": "MARCI GALE",
           "direction": "U",
@@ -71,13 +78,6 @@
           "numBarges": 14,
           "endOfLockage": "2026-10-23T22:56:00-04:00",
           "mmsi": 368142180
-        },
-        {
-          "vesselName": "ALAN P HALL",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-23T21:44:00-04:00",
-          "mmsi": 367539160
         }
       ]
     }
