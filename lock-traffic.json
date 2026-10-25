@@ -1,9 +1,16 @@
 {
-  "updated": "2026-10-24T22:39:56.564Z",
+  "updated": "2026-10-25T05:46:57.476Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "WILLIAM R BARR",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-25T00:52:00-04:00",
+          "mmsi": 367539140
+        },
         {
           "vesselName": "WEST VIRGINIA 1279888",
           "direction": "U",
@@ -31,13 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-24T11:58:00-04:00",
           "mmsi": 368288130
-        },
-        {
-          "vesselName": "DEBI SHARP",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-24T10:55:00-04:00",
-          "mmsi": 367402530
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "W M ROBINSON",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-10-25T01:18:00-04:00",
+          "mmsi": 368439510
+        },
+        {
+          "vesselName": "TENNESSEE",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-10-24T22:52:00-04:00",
+          "mmsi": 367320740
+        },
+        {
+          "vesselName": "WEST VIRGINIA 1279888",
+          "direction": "U",
+          "numBarges": 4,
+          "endOfLockage": "2026-10-24T21:31:00-04:00",
+          "mmsi": 368006910
+        },
+        {
+          "vesselName": "BILL STILE",
+          "direction": "D",
+          "numBarges": 7,
+          "endOfLockage": "2026-10-24T20:31:00-04:00",
+          "mmsi": 367441040
+        },
+        {
           "vesselName": "JOCK CENAC",
           "direction": "U",
           "numBarges": 3,
           "endOfLockage": "2026-10-24T15:45:00-04:00",
           "mmsi": 368413610
-        },
-        {
-          "vesselName": "WILLIAM R BARR",
-          "direction": "D",
-          "numBarges": 9,
-          "endOfLockage": "2026-10-24T14:25:00-04:00",
-          "mmsi": 367539140
-        },
-        {
-          "vesselName": "CHIP LACY",
-          "direction": "U",
-          "numBarges": 8,
-          "endOfLockage": "2026-10-24T13:24:00-04:00",
-          "mmsi": 366963310
-        },
-        {
-          "vesselName": "MARCI GALE",
-          "direction": "U",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-24T03:08:00-04:00",
-          "mmsi": 368173140
-        },
-        {
-          "vesselName": "DEBI SHARP",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-24T01:46:00-04:00",
-          "mmsi": 367402530
         }
       ]
     }
