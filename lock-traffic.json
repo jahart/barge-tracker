@@ -1,9 +1,16 @@
 {
-  "updated": "2026-10-25T21:05:56.795Z",
+  "updated": "2026-10-25T23:27:36.995Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "TENNESSEE",
+          "direction": "D",
+          "numBarges": 14,
+          "endOfLockage": "2026-10-25T18:10:00-04:00",
+          "mmsi": 367320740
+        },
         {
           "vesselName": "JINCY",
           "direction": "U",
@@ -31,13 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-25T11:46:00-04:00",
           "mmsi": 368269040
-        },
-        {
-          "vesselName": "BILL STILE",
-          "direction": "D",
-          "numBarges": 7,
-          "endOfLockage": "2026-10-25T10:14:00-04:00",
-          "mmsi": 367441040
         }
       ]
     },
