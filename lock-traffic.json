@@ -1,9 +1,30 @@
 {
-  "updated": "2026-10-25T10:55:52.811Z",
+  "updated": "2026-10-25T18:13:21.327Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "ENERGY",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-25T13:58:00-04:00",
+          "mmsi": 367748320
+        },
+        {
+          "vesselName": "SAMUEL J",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-25T11:46:00-04:00",
+          "mmsi": 368269040
+        },
+        {
+          "vesselName": "BILL STILE",
+          "direction": "D",
+          "numBarges": 7,
+          "endOfLockage": "2026-10-25T10:14:00-04:00",
+          "mmsi": 367441040
+        },
         {
           "vesselName": "WILLIAM R BARR",
           "direction": "D",
@@ -17,27 +38,6 @@
           "numBarges": 4,
           "endOfLockage": "2026-10-24T16:09:00-04:00",
           "mmsi": 368006910
-        },
-        {
-          "vesselName": "GIANNA HULL",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-24T15:00:00-04:00",
-          "mmsi": null
-        },
-        {
-          "vesselName": "KEVIN MICHAEL",
-          "direction": "D",
-          "numBarges": 7,
-          "endOfLockage": "2026-10-24T13:15:00-04:00",
-          "mmsi": 368416120
-        },
-        {
-          "vesselName": "MACKENZIE ROSE",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-24T11:58:00-04:00",
-          "mmsi": 368288130
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "VALLEY GEM",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-10-25T14:40:00-04:00",
+          "mmsi": 366937890
+        },
+        {
+          "vesselName": "VALLEY GEM",
+          "direction": "U",
+          "numBarges": 0,
+          "endOfLockage": "2026-10-25T14:00:00-04:00",
+          "mmsi": 366937890
+        },
+        {
+          "vesselName": "RECREATIONAL VESSEL",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-10-25T13:36:00-04:00",
+          "mmsi": null
+        },
+        {
+          "vesselName": "JOHN VAUGHN",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-10-25T11:26:00-04:00",
+          "mmsi": 368008740
+        },
+        {
           "vesselName": "W M ROBINSON",
           "direction": "D",
           "numBarges": 6,
           "endOfLockage": "2026-10-25T01:18:00-04:00",
           "mmsi": 368439510
-        },
-        {
-          "vesselName": "TENNESSEE",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-24T22:52:00-04:00",
-          "mmsi": 367320740
-        },
-        {
-          "vesselName": "WEST VIRGINIA 1279888",
-          "direction": "U",
-          "numBarges": 4,
-          "endOfLockage": "2026-10-24T21:31:00-04:00",
-          "mmsi": 368006910
-        },
-        {
-          "vesselName": "BILL STILE",
-          "direction": "D",
-          "numBarges": 7,
-          "endOfLockage": "2026-10-24T20:31:00-04:00",
-          "mmsi": 367441040
-        },
-        {
-          "vesselName": "JOCK CENAC",
-          "direction": "U",
-          "numBarges": 3,
-          "endOfLockage": "2026-10-24T15:45:00-04:00",
-          "mmsi": 368413610
         }
       ]
     }
