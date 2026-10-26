@@ -1,9 +1,16 @@
 {
-  "updated": "2026-10-26T01:29:53.519Z",
+  "updated": "2026-10-26T06:45:20.083Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "JOHN VAUGHN",
+          "direction": "D",
+          "numBarges": 14,
+          "endOfLockage": "2026-10-25T23:30:00-04:00",
+          "mmsi": 368008740
+        },
         {
           "vesselName": "LINDA REED",
           "direction": "U",
@@ -31,13 +38,6 @@
           "numBarges": 6,
           "endOfLockage": "2026-10-25T19:10:00-04:00",
           "mmsi": null
-        },
-        {
-          "vesselName": "TENNESSEE",
-          "direction": "D",
-          "numBarges": 14,
-          "endOfLockage": "2026-10-25T18:10:00-04:00",
-          "mmsi": 367320740
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "VALLEY GEM",
+          "vesselName": "CHUCK ZEBULA",
           "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-25T14:40:00-04:00",
-          "mmsi": 366937890
+          "numBarges": 15,
+          "endOfLockage": "2026-10-26T02:27:00-04:00",
+          "mmsi": 367362240
         },
         {
-          "vesselName": "VALLEY GEM",
+          "vesselName": "FINDLAY",
           "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-25T14:00:00-04:00",
-          "mmsi": 366937890
-        },
-        {
-          "vesselName": "RECREATIONAL VESSEL",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-25T13:36:00-04:00",
+          "numBarges": 2,
+          "endOfLockage": "2026-10-26T02:13:00-04:00",
           "mmsi": null
         },
         {
-          "vesselName": "JOHN VAUGHN",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-25T11:26:00-04:00",
-          "mmsi": 368008740
+          "vesselName": "ENERGY",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-26T01:28:00-04:00",
+          "mmsi": 367748320
         },
         {
-          "vesselName": "W M ROBINSON",
+          "vesselName": "CAPT STOGIE WHITE",
           "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-25T01:18:00-04:00",
-          "mmsi": 368439510
+          "numBarges": 15,
+          "endOfLockage": "2026-10-25T23:34:00-04:00",
+          "mmsi": 367412630
+        },
+        {
+          "vesselName": "SAMUEL J",
+          "direction": "U",
+          "numBarges": 11,
+          "endOfLockage": "2026-10-25T21:41:00-04:00",
+          "mmsi": 368269040
         }
       ]
     }
