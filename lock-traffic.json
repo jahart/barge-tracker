@@ -1,9 +1,16 @@
 {
-  "updated": "2026-10-26T06:45:20.083Z",
+  "updated": "2026-10-26T13:58:17.389Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CATLETTSBURG",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-10-26T02:46:00-04:00",
+          "mmsi": 368106340
+        },
         {
           "vesselName": "JOHN VAUGHN",
           "direction": "D",
@@ -31,19 +38,26 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-25T20:02:00-04:00",
           "mmsi": 367503540
-        },
-        {
-          "vesselName": "FINDLAY",
-          "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-25T19:10:00-04:00",
-          "mmsi": null
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "TITLETOWN USA",
+          "direction": "D",
+          "numBarges": 8,
+          "endOfLockage": "2026-10-26T04:31:00-04:00",
+          "mmsi": 367638260
+        },
+        {
+          "vesselName": "TOMMY H ",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-26T03:44:00-04:00",
+          "mmsi": 367782270
+        },
         {
           "vesselName": "CHUCK ZEBULA",
           "direction": "D",
@@ -64,20 +78,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-26T01:28:00-04:00",
           "mmsi": 367748320
-        },
-        {
-          "vesselName": "CAPT STOGIE WHITE",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-25T23:34:00-04:00",
-          "mmsi": 367412630
-        },
-        {
-          "vesselName": "SAMUEL J",
-          "direction": "U",
-          "numBarges": 11,
-          "endOfLockage": "2026-10-25T21:41:00-04:00",
-          "mmsi": 368269040
         }
       ]
     }
