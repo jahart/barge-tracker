@@ -1,8 +1,8 @@
 {
-  "stageFt": 21.51,
-  "trend": "steady",
+  "stageFt": 21.39,
+  "trend": "falling",
   "floodCategory": "no_flooding",
-  "airTempF": 41,
-  "waterTempF": 60,
-  "updated": "2026-10-26T13:24:35.748Z"
+  "airTempF": 70,
+  "waterTempF": 62,
+  "updated": "2026-10-26T19:25:33.286Z"
 }
