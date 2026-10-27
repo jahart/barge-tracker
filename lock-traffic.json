@@ -1,9 +1,30 @@
 {
-  "updated": "2026-10-27T20:28:37.360Z",
+  "updated": "2026-10-27T23:55:13.509Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "BILL STILE",
+          "direction": "U",
+          "numBarges": 8,
+          "endOfLockage": "2026-10-27T19:27:00-04:00",
+          "mmsi": 367441040
+        },
+        {
+          "vesselName": "SAMUEL J",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-27T18:06:00-04:00",
+          "mmsi": 368269040
+        },
+        {
+          "vesselName": "DAVE FOREMAN",
+          "direction": "U",
+          "numBarges": 10,
+          "endOfLockage": "2026-10-27T16:58:00-04:00",
+          "mmsi": 338591000
+        },
         {
           "vesselName": "SALLY WHALEN",
           "direction": "U",
@@ -17,33 +38,19 @@
           "numBarges": 4,
           "endOfLockage": "2026-10-27T11:46:00-04:00",
           "mmsi": 367320710
-        },
-        {
-          "vesselName": "CHARLESTON (MPC)",
-          "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-27T03:00:00-04:00",
-          "mmsi": 368218350
-        },
-        {
-          "vesselName": "RONALD L LOUGHMILLER",
-          "direction": "U",
-          "numBarges": 9,
-          "endOfLockage": "2026-10-27T00:17:00-04:00",
-          "mmsi": 367143650
-        },
-        {
-          "vesselName": "DAVE FOREMAN",
-          "direction": "D",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-26T21:03:00-04:00",
-          "mmsi": 338591000
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CAPT RICK NEALE",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-10-27T18:20:00-04:00",
+          "mmsi": 367519160
+        },
         {
           "vesselName": "LINDA REED",
           "direction": "D",
@@ -71,13 +78,6 @@
           "numBarges": 6,
           "endOfLockage": "2026-10-27T13:04:00-04:00",
           "mmsi": 367143650
-        },
-        {
-          "vesselName": "CHIP LACY",
-          "direction": "D",
-          "numBarges": 3,
-          "endOfLockage": "2026-10-27T11:44:00-04:00",
-          "mmsi": 366963310
         }
       ]
     }
