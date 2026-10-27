@@ -1,9 +1,23 @@
 {
-  "updated": "2026-10-27T09:57:56.381Z",
+  "updated": "2026-10-27T20:28:37.360Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "SALLY WHALEN",
+          "direction": "U",
+          "numBarges": 14,
+          "endOfLockage": "2026-10-27T13:11:00-04:00",
+          "mmsi": 367402570
+        },
+        {
+          "vesselName": "WEST VIRGINIA",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-10-27T11:46:00-04:00",
+          "mmsi": 367320710
+        },
         {
           "vesselName": "CHARLESTON (MPC)",
           "direction": "U",
@@ -24,20 +38,6 @@
           "numBarges": 6,
           "endOfLockage": "2026-10-26T21:03:00-04:00",
           "mmsi": 338591000
-        },
-        {
-          "vesselName": "TOMMY H ",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-26T19:05:00-04:00",
-          "mmsi": 367782270
-        },
-        {
-          "vesselName": "MISS JACKIE BROWN",
-          "direction": "U",
-          "numBarges": 11,
-          "endOfLockage": "2026-10-26T17:37:00-04:00",
-          "mmsi": 367141370
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "WEST VIRGINIA",
+          "vesselName": "LINDA REED",
           "direction": "D",
-          "numBarges": 3,
-          "endOfLockage": "2026-10-27T05:55:00-04:00",
-          "mmsi": 367320710
+          "numBarges": 15,
+          "endOfLockage": "2026-10-27T15:13:00-04:00",
+          "mmsi": 367402990
         },
         {
-          "vesselName": "MISS JACKIE BROWN",
-          "direction": "U",
-          "numBarges": 11,
-          "endOfLockage": "2026-10-27T02:55:00-04:00",
-          "mmsi": 367141370
-        },
-        {
-          "vesselName": "CATLETTSBURG",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-26T20:05:00-04:00",
-          "mmsi": 368106340
-        },
-        {
-          "vesselName": "MISTER CHARLIE NEALE",
+          "vesselName": "CHARLESTON (MPC)",
           "direction": "U",
           "numBarges": 4,
-          "endOfLockage": "2026-10-26T15:40:00-04:00",
-          "mmsi": 367385950
+          "endOfLockage": "2026-10-27T13:52:00-04:00",
+          "mmsi": 368218350
         },
         {
-          "vesselName": "LINDA REED",
+          "vesselName": "SURVEY BOAT",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-10-27T13:40:00-04:00",
+          "mmsi": null
+        },
+        {
+          "vesselName": "RONALD L LOUGHMILLER",
           "direction": "U",
-          "numBarges": 13,
-          "endOfLockage": "2026-10-26T15:08:00-04:00",
-          "mmsi": 367402990
+          "numBarges": 6,
+          "endOfLockage": "2026-10-27T13:04:00-04:00",
+          "mmsi": 367143650
+        },
+        {
+          "vesselName": "CHIP LACY",
+          "direction": "D",
+          "numBarges": 3,
+          "endOfLockage": "2026-10-27T11:44:00-04:00",
+          "mmsi": 366963310
         }
       ]
     }
