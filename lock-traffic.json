@@ -1,9 +1,30 @@
 {
-  "updated": "2026-10-27T23:55:13.509Z",
+  "updated": "2026-10-28T04:34:33.316Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CHUCK ZEBULA",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-27T22:15:00-04:00",
+          "mmsi": 367362240
+        },
+        {
+          "vesselName": "CHIP LACY",
+          "direction": "D",
+          "numBarges": 7,
+          "endOfLockage": "2026-10-27T21:25:00-04:00",
+          "mmsi": 366963310
+        },
+        {
+          "vesselName": "GALVESTON BAY",
+          "direction": "U",
+          "numBarges": 4,
+          "endOfLockage": "2026-10-27T20:23:00-04:00",
+          "mmsi": 367441870
+        },
         {
           "vesselName": "BILL STILE",
           "direction": "U",
@@ -17,27 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-27T18:06:00-04:00",
           "mmsi": 368269040
-        },
-        {
-          "vesselName": "DAVE FOREMAN",
-          "direction": "U",
-          "numBarges": 10,
-          "endOfLockage": "2026-10-27T16:58:00-04:00",
-          "mmsi": 338591000
-        },
-        {
-          "vesselName": "SALLY WHALEN",
-          "direction": "U",
-          "numBarges": 14,
-          "endOfLockage": "2026-10-27T13:11:00-04:00",
-          "mmsi": 367402570
-        },
-        {
-          "vesselName": "WEST VIRGINIA",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-10-27T11:46:00-04:00",
-          "mmsi": 367320710
         }
       ]
     },
