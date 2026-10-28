@@ -1,43 +1,43 @@
 {
-  "updated": "2026-10-28T04:34:33.316Z",
+  "updated": "2026-10-28T10:45:59.058Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "KEVIN MICHAEL",
+          "direction": "U",
+          "numBarges": 13,
+          "endOfLockage": "2026-10-28T05:29:00-04:00",
+          "mmsi": 368416120
+        },
+        {
+          "vesselName": "ROBERT C LOEDDING",
+          "direction": "U",
+          "numBarges": 12,
+          "endOfLockage": "2026-10-28T03:03:00-04:00",
+          "mmsi": 366963170
+        },
+        {
+          "vesselName": "LARRY DRUMMOND",
+          "direction": "U",
+          "numBarges": 5,
+          "endOfLockage": "2026-10-28T02:15:00-04:00",
+          "mmsi": 367522210
+        },
+        {
+          "vesselName": "LINDA REED",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-28T00:57:00-04:00",
+          "mmsi": 367402990
+        },
         {
           "vesselName": "CHUCK ZEBULA",
           "direction": "U",
           "numBarges": 15,
           "endOfLockage": "2026-10-27T22:15:00-04:00",
           "mmsi": 367362240
-        },
-        {
-          "vesselName": "CHIP LACY",
-          "direction": "D",
-          "numBarges": 7,
-          "endOfLockage": "2026-10-27T21:25:00-04:00",
-          "mmsi": 366963310
-        },
-        {
-          "vesselName": "GALVESTON BAY",
-          "direction": "U",
-          "numBarges": 4,
-          "endOfLockage": "2026-10-27T20:23:00-04:00",
-          "mmsi": 367441870
-        },
-        {
-          "vesselName": "BILL STILE",
-          "direction": "U",
-          "numBarges": 8,
-          "endOfLockage": "2026-10-27T19:27:00-04:00",
-          "mmsi": 367441040
-        },
-        {
-          "vesselName": "SAMUEL J",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-27T18:06:00-04:00",
-          "mmsi": 368269040
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "CAPT RICK NEALE",
+          "vesselName": "BILL STILE",
           "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-27T18:20:00-04:00",
-          "mmsi": 367519160
+          "numBarges": 8,
+          "endOfLockage": "2026-10-28T05:42:00-04:00",
+          "mmsi": 367441040
         },
         {
-          "vesselName": "LINDA REED",
-          "direction": "D",
+          "vesselName": "CHUCK ZEBULA",
+          "direction": "U",
           "numBarges": 15,
-          "endOfLockage": "2026-10-27T15:13:00-04:00",
-          "mmsi": 367402990
+          "endOfLockage": "2026-10-28T04:47:00-04:00",
+          "mmsi": 367362240
         },
         {
-          "vesselName": "CHARLESTON (MPC)",
+          "vesselName": "GALVESTON BAY",
           "direction": "U",
           "numBarges": 4,
-          "endOfLockage": "2026-10-27T13:52:00-04:00",
-          "mmsi": 368218350
+          "endOfLockage": "2026-10-28T04:05:00-04:00",
+          "mmsi": 367441870
         },
         {
-          "vesselName": "SURVEY BOAT",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-10-27T13:40:00-04:00",
-          "mmsi": null
-        },
-        {
-          "vesselName": "RONALD L LOUGHMILLER",
+          "vesselName": "DAVE FOREMAN",
           "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-10-27T13:04:00-04:00",
-          "mmsi": 367143650
+          "numBarges": 10,
+          "endOfLockage": "2026-10-28T03:16:00-04:00",
+          "mmsi": 338591000
+        },
+        {
+          "vesselName": "ALAN P HALL",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-10-28T01:36:00-04:00",
+          "mmsi": 367539160
         }
       ]
     }
