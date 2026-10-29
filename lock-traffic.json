@@ -1,9 +1,23 @@
 {
-  "updated": "2026-10-28T21:33:52.614Z",
+  "updated": "2026-10-29T01:11:11.754Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "ALAN P HALL",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-10-28T18:50:00-04:00",
+          "mmsi": 367539160
+        },
+        {
+          "vesselName": "CAPT STOGIE WHITE",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-28T17:50:00-04:00",
+          "mmsi": 367412630
+        },
         {
           "vesselName": "SUE CHAPPELL",
           "direction": "U",
@@ -24,26 +38,19 @@
           "numBarges": 0,
           "endOfLockage": "2026-10-28T09:33:00-04:00",
           "mmsi": null
-        },
-        {
-          "vesselName": "KEVIN MICHAEL",
-          "direction": "U",
-          "numBarges": 13,
-          "endOfLockage": "2026-10-28T05:29:00-04:00",
-          "mmsi": 368416120
-        },
-        {
-          "vesselName": "ROBERT C LOEDDING",
-          "direction": "U",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-28T03:03:00-04:00",
-          "mmsi": 366963170
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "HARLEY HALL",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-28T18:00:00-04:00",
+          "mmsi": 367743370
+        },
         {
           "vesselName": "KEVIN MICHAEL",
           "direction": "U",
@@ -71,13 +78,6 @@
           "numBarges": 6,
           "endOfLockage": "2026-10-28T10:20:00-04:00",
           "mmsi": null
-        },
-        {
-          "vesselName": "LARRY DRUMMOND",
-          "direction": "U",
-          "numBarges": 5,
-          "endOfLockage": "2026-10-28T09:10:00-04:00",
-          "mmsi": 367522210
         }
       ]
     }
