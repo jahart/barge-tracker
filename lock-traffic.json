@@ -1,9 +1,16 @@
 {
-  "updated": "2026-11-01T08:51:18.935Z",
+  "updated": "2026-11-01T15:51:35.287Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "COVINGTON",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-11-01T09:13:00-05:00",
+          "mmsi": 368119060
+        },
         {
           "vesselName": "LARRY DRUMMOND",
           "direction": "D",
@@ -31,13 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-10-31T19:33:00-04:00",
           "mmsi": 367743370
-        },
-        {
-          "vesselName": "L DALE MANNS",
-          "direction": "U",
-          "numBarges": 8,
-          "endOfLockage": "2026-10-31T15:54:00-04:00",
-          "mmsi": 367546910
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "MISS JACKIE BROWN",
+          "vesselName": "ROBERT C LOEDDING",
           "direction": "D",
-          "numBarges": 14,
-          "endOfLockage": "2026-11-01T02:48:00-05:00",
-          "mmsi": 367141370
+          "numBarges": 15,
+          "endOfLockage": "2026-11-01T10:31:00-05:00",
+          "mmsi": 366963170
         },
         {
-          "vesselName": "L DALE MANNS",
+          "vesselName": "TENNESSEE",
           "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-11-01T02:07:00-05:00",
-          "mmsi": 367546910
+          "numBarges": 11,
+          "endOfLockage": "2026-11-01T08:35:00-05:00",
+          "mmsi": 367320740
         },
         {
-          "vesselName": "CAPT KIRBY DUPUIS",
+          "vesselName": "DAVE FOREMAN",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-11-01T06:33:00-05:00",
+          "mmsi": 338591000
+        },
+        {
+          "vesselName": "HARLEY HALL",
           "direction": "U",
           "numBarges": 15,
-          "endOfLockage": "2026-11-01T01:08:00-04:00",
-          "mmsi": 368235550
+          "endOfLockage": "2026-11-01T05:52:00-05:00",
+          "mmsi": 367743370
         },
         {
-          "vesselName": "DAN ELDER",
+          "vesselName": "CANTON",
           "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-31T21:25:00-04:00",
-          "mmsi": 367503540
-        },
-        {
-          "vesselName": "FINDLAY",
-          "direction": "U",
-          "numBarges": 1,
-          "endOfLockage": "2026-10-31T20:41:00-04:00",
-          "mmsi": null
+          "numBarges": 2,
+          "endOfLockage": "2026-11-01T04:55:00-05:00",
+          "mmsi": 367433690
         }
       ]
     }
