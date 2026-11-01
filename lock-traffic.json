@@ -1,43 +1,43 @@
 {
-  "updated": "2026-11-01T15:51:35.287Z",
+  "updated": "2026-11-01T20:18:24.870Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "MARCI GALE",
+          "direction": "U",
+          "numBarges": 16,
+          "endOfLockage": "2026-11-01T14:37:00-05:00",
+          "mmsi": 368173140
+        },
+        {
+          "vesselName": "GLENN A HENDON",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-11-01T13:38:00-05:00",
+          "mmsi": 367375080
+        },
+        {
+          "vesselName": "MISS JACKIE BROWN",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-11-01T12:18:00-05:00",
+          "mmsi": 367141370
+        },
+        {
+          "vesselName": "DAVE FOREMAN",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-11-01T11:33:00-05:00",
+          "mmsi": 338591000
+        },
         {
           "vesselName": "COVINGTON",
           "direction": "U",
           "numBarges": 15,
           "endOfLockage": "2026-11-01T09:13:00-05:00",
           "mmsi": 368119060
-        },
-        {
-          "vesselName": "LARRY DRUMMOND",
-          "direction": "D",
-          "numBarges": 9,
-          "endOfLockage": "2026-11-01T02:15:00-05:00",
-          "mmsi": 367522210
-        },
-        {
-          "vesselName": "TENNESSEE",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-31T23:09:00-04:00",
-          "mmsi": 367320740
-        },
-        {
-          "vesselName": "CHUCK ZEBULA",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-31T21:47:00-04:00",
-          "mmsi": 367362240
-        },
-        {
-          "vesselName": "HARLEY HALL",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-31T19:33:00-04:00",
-          "mmsi": 367743370
         }
       ]
     },
