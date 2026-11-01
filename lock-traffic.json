@@ -1,9 +1,23 @@
 {
-  "updated": "2026-11-01T01:56:32.868Z",
+  "updated": "2026-11-01T08:51:18.935Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "LARRY DRUMMOND",
+          "direction": "D",
+          "numBarges": 9,
+          "endOfLockage": "2026-11-01T02:15:00-05:00",
+          "mmsi": 367522210
+        },
+        {
+          "vesselName": "TENNESSEE",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-10-31T23:09:00-04:00",
+          "mmsi": 367320740
+        },
         {
           "vesselName": "CHUCK ZEBULA",
           "direction": "D",
@@ -24,26 +38,33 @@
           "numBarges": 8,
           "endOfLockage": "2026-10-31T15:54:00-04:00",
           "mmsi": 367546910
-        },
-        {
-          "vesselName": "DAN ELDER",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-31T15:06:00-04:00",
-          "mmsi": 367503540
-        },
-        {
-          "vesselName": "CARRIE CRISP",
-          "direction": "U",
-          "numBarges": 12,
-          "endOfLockage": "2026-10-31T14:18:00-04:00",
-          "mmsi": 367402650
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "MISS JACKIE BROWN",
+          "direction": "D",
+          "numBarges": 14,
+          "endOfLockage": "2026-11-01T02:48:00-05:00",
+          "mmsi": 367141370
+        },
+        {
+          "vesselName": "L DALE MANNS",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-11-01T02:07:00-05:00",
+          "mmsi": 367546910
+        },
+        {
+          "vesselName": "CAPT KIRBY DUPUIS",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-11-01T01:08:00-04:00",
+          "mmsi": 368235550
+        },
         {
           "vesselName": "DAN ELDER",
           "direction": "U",
@@ -57,27 +78,6 @@
           "numBarges": 1,
           "endOfLockage": "2026-10-31T20:41:00-04:00",
           "mmsi": null
-        },
-        {
-          "vesselName": "LARRY DRUMMOND",
-          "direction": "D",
-          "numBarges": 9,
-          "endOfLockage": "2026-10-31T20:00:00-04:00",
-          "mmsi": 367522210
-        },
-        {
-          "vesselName": "CHUCK ZEBULA",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-10-31T15:35:00-04:00",
-          "mmsi": 367362240
-        },
-        {
-          "vesselName": "TOMMY H ",
-          "direction": "U",
-          "numBarges": 14,
-          "endOfLockage": "2026-10-31T14:29:00-04:00",
-          "mmsi": 367782270
         }
       ]
     }
