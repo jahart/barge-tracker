@@ -1,9 +1,23 @@
 {
-  "updated": "2026-11-01T23:47:28.814Z",
+  "updated": "2026-11-02T04:55:18.190Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CHUCK ZEBULA",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-11-01T21:50:00-05:00",
+          "mmsi": 367362240
+        },
+        {
+          "vesselName": "BREES",
+          "direction": "U",
+          "numBarges": 1,
+          "endOfLockage": "2026-11-01T20:24:00-05:00",
+          "mmsi": 367489730
+        },
         {
           "vesselName": "ROBERT C LOEDDING",
           "direction": "D",
@@ -24,20 +38,6 @@
           "numBarges": 16,
           "endOfLockage": "2026-11-01T14:37:00-05:00",
           "mmsi": 368173140
-        },
-        {
-          "vesselName": "GLENN A HENDON",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-11-01T13:38:00-05:00",
-          "mmsi": 367375080
-        },
-        {
-          "vesselName": "MISS JACKIE BROWN",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-11-01T12:18:00-05:00",
-          "mmsi": 367141370
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "MARCI GALE",
+          "direction": "U",
+          "numBarges": 16,
+          "endOfLockage": "2026-11-01T23:50:00-05:00",
+          "mmsi": 368173140
+        },
+        {
+          "vesselName": "GLENN A HENDON",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-11-01T23:00:00-05:00",
+          "mmsi": 367375080
+        },
+        {
+          "vesselName": "GALVESTON BAY",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-11-01T21:20:00-05:00",
+          "mmsi": 367441870
+        },
+        {
+          "vesselName": "COVINGTON",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-11-01T20:12:00-05:00",
+          "mmsi": 368119060
+        },
+        {
           "vesselName": "ROBERT C LOEDDING",
           "direction": "D",
           "numBarges": 15,
           "endOfLockage": "2026-11-01T10:31:00-05:00",
           "mmsi": 366963170
-        },
-        {
-          "vesselName": "TENNESSEE",
-          "direction": "U",
-          "numBarges": 11,
-          "endOfLockage": "2026-11-01T08:35:00-05:00",
-          "mmsi": 367320740
-        },
-        {
-          "vesselName": "DAVE FOREMAN",
-          "direction": "D",
-          "numBarges": 4,
-          "endOfLockage": "2026-11-01T06:33:00-05:00",
-          "mmsi": 338591000
-        },
-        {
-          "vesselName": "HARLEY HALL",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-11-01T05:52:00-05:00",
-          "mmsi": 367743370
-        },
-        {
-          "vesselName": "CANTON",
-          "direction": "U",
-          "numBarges": 2,
-          "endOfLockage": "2026-11-01T04:55:00-05:00",
-          "mmsi": 367433690
         }
       ]
     }
