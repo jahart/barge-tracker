@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04T15:12:08.478Z",
+  "updated": "2026-11-04T21:25:59.651Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
@@ -45,6 +45,27 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "JAMES MURPHY",
+          "direction": "D",
+          "numBarges": 2,
+          "endOfLockage": "2026-11-04T15:20:00-05:00",
+          "mmsi": 367757680
+        },
+        {
+          "vesselName": "PAULA RUBLE",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-11-04T14:28:00-05:00",
+          "mmsi": 367426860
+        },
+        {
+          "vesselName": "RECREATIONAL VESSEL",
+          "direction": "D",
+          "numBarges": 0,
+          "endOfLockage": "2026-11-04T11:35:00-05:00",
+          "mmsi": null
+        },
+        {
           "vesselName": "CHARLESTON (MPC)",
           "direction": "U",
           "numBarges": 4,
@@ -57,27 +78,6 @@
           "numBarges": 11,
           "endOfLockage": "2026-11-04T03:34:00-05:00",
           "mmsi": 368008740
-        },
-        {
-          "vesselName": "COVINGTON",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-11-03T20:19:00-05:00",
-          "mmsi": 368119060
-        },
-        {
-          "vesselName": "WILLIAM R BARR",
-          "direction": "D",
-          "numBarges": 8,
-          "endOfLockage": "2026-11-03T18:57:00-05:00",
-          "mmsi": 367539140
-        },
-        {
-          "vesselName": "CAPT C R NEALE III",
-          "direction": "U",
-          "numBarges": 2,
-          "endOfLockage": "2026-11-03T16:14:00-05:00",
-          "mmsi": 367730680
         }
       ]
     }
