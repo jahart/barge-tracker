@@ -1,9 +1,23 @@
 {
-  "updated": "2026-11-03T19:12:54.989Z",
+  "updated": "2026-11-04T00:06:56.952Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "DIRK TAYLOR",
+          "direction": "D",
+          "numBarges": 3,
+          "endOfLockage": "2026-11-03T14:21:00-05:00",
+          "mmsi": 367757660
+        },
+        {
+          "vesselName": "JOCK CENAC",
+          "direction": "D",
+          "numBarges": 4,
+          "endOfLockage": "2026-11-03T14:18:00-05:00",
+          "mmsi": 368413610
+        },
         {
           "vesselName": "SALLY WHALEN",
           "direction": "D",
@@ -24,26 +38,26 @@
           "numBarges": 15,
           "endOfLockage": "2026-11-03T10:48:00-05:00",
           "mmsi": 368235550
-        },
-        {
-          "vesselName": "JOHN VAUGHN",
-          "direction": "U",
-          "numBarges": 10,
-          "endOfLockage": "2026-11-03T09:34:00-05:00",
-          "mmsi": 368008740
-        },
-        {
-          "vesselName": "DIANE B SIEGEL",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-11-03T08:07:00-05:00",
-          "mmsi": 367402560
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "WILLIAM R BARR",
+          "direction": "D",
+          "numBarges": 8,
+          "endOfLockage": "2026-11-03T18:57:00-05:00",
+          "mmsi": 367539140
+        },
+        {
+          "vesselName": "CAPT C R NEALE III",
+          "direction": "U",
+          "numBarges": 2,
+          "endOfLockage": "2026-11-03T16:14:00-05:00",
+          "mmsi": 367730680
+        },
         {
           "vesselName": "ROBINSON",
           "direction": "D",
@@ -64,20 +78,6 @@
           "numBarges": 3,
           "endOfLockage": "2026-11-03T10:18:00-05:00",
           "mmsi": 368488330
-        },
-        {
-          "vesselName": "RECREATIONAL VESSEL",
-          "direction": "U",
-          "numBarges": 0,
-          "endOfLockage": "2026-11-03T10:15:00-05:00",
-          "mmsi": null
-        },
-        {
-          "vesselName": "JOCK CENAC",
-          "direction": "D",
-          "numBarges": 1,
-          "endOfLockage": "2026-11-03T05:26:00-05:00",
-          "mmsi": 368413610
         }
       ]
     }
