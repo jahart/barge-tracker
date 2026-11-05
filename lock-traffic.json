@@ -1,9 +1,30 @@
 {
-  "updated": "2026-11-04T21:25:59.651Z",
+  "updated": "2026-11-05T01:41:43.648Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "GALVESTON BAY",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-11-04T18:46:00-05:00",
+          "mmsi": 367441870
+        },
+        {
+          "vesselName": "ZEPHYR ",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-11-04T17:53:00-05:00",
+          "mmsi": 367169000
+        },
+        {
+          "vesselName": "ARTHUR E SNIDER",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-11-04T16:58:00-05:00",
+          "mmsi": 367699340
+        },
         {
           "vesselName": "GIANNA HULL",
           "direction": "U",
@@ -17,33 +38,26 @@
           "numBarges": 15,
           "endOfLockage": "2026-11-04T06:00:00-05:00",
           "mmsi": 368119060
-        },
-        {
-          "vesselName": "PAULA RUBLE",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-11-04T03:22:00-05:00",
-          "mmsi": 367426860
-        },
-        {
-          "vesselName": "WILLIAM R BARR",
-          "direction": "D",
-          "numBarges": 8,
-          "endOfLockage": "2026-11-04T02:06:00-05:00",
-          "mmsi": 367539140
-        },
-        {
-          "vesselName": "PAULA RUBLE",
-          "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-11-04T00:44:00-05:00",
-          "mmsi": 367426860
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "YVONNE CONWAY",
+          "direction": "D",
+          "numBarges": 12,
+          "endOfLockage": "2026-11-04T20:45:00-05:00",
+          "mmsi": 367402550
+        },
+        {
+          "vesselName": "GIANNA HULL",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-11-04T17:56:00-05:00",
+          "mmsi": null
+        },
         {
           "vesselName": "JAMES MURPHY",
           "direction": "D",
@@ -64,20 +78,6 @@
           "numBarges": 0,
           "endOfLockage": "2026-11-04T11:35:00-05:00",
           "mmsi": null
-        },
-        {
-          "vesselName": "CHARLESTON (MPC)",
-          "direction": "U",
-          "numBarges": 4,
-          "endOfLockage": "2026-11-04T05:59:00-05:00",
-          "mmsi": 368218350
-        },
-        {
-          "vesselName": "JOHN VAUGHN",
-          "direction": "U",
-          "numBarges": 11,
-          "endOfLockage": "2026-11-04T03:34:00-05:00",
-          "mmsi": 368008740
         }
       ]
     }
