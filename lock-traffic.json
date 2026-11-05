@@ -1,43 +1,43 @@
 {
-  "updated": "2026-11-05T09:06:22.588Z",
+  "updated": "2026-11-05T17:33:53.492Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "STEPHEN L COLBY",
-          "direction": "U",
-          "numBarges": 8,
-          "endOfLockage": "2026-11-04T20:02:00-05:00",
-          "mmsi": 367645460
-        },
-        {
-          "vesselName": "GALVESTON BAY",
-          "direction": "U",
-          "numBarges": 6,
-          "endOfLockage": "2026-11-04T18:46:00-05:00",
-          "mmsi": 367441870
-        },
-        {
-          "vesselName": "ZEPHYR ",
-          "direction": "U",
+          "vesselName": "YVONNE CONWAY",
+          "direction": "D",
           "numBarges": 15,
-          "endOfLockage": "2026-11-04T17:53:00-05:00",
-          "mmsi": 367169000
+          "endOfLockage": "2026-11-05T10:28:00-05:00",
+          "mmsi": 367402550
         },
         {
-          "vesselName": "ARTHUR E SNIDER",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-11-04T16:58:00-05:00",
-          "mmsi": 367699340
+          "vesselName": "LINDA TAYLOR",
+          "direction": "D",
+          "numBarges": 1,
+          "endOfLockage": "2026-11-05T09:22:00-05:00",
+          "mmsi": 367755550
         },
         {
-          "vesselName": "GIANNA HULL",
+          "vesselName": "ROBERT C LOEDDING",
           "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-11-04T07:59:00-05:00",
-          "mmsi": null
+          "numBarges": 14,
+          "endOfLockage": "2026-11-05T08:39:00-05:00",
+          "mmsi": 366963170
+        },
+        {
+          "vesselName": "JAMES MURPHY",
+          "direction": "D",
+          "numBarges": 2,
+          "endOfLockage": "2026-11-05T08:39:00-05:00",
+          "mmsi": 367757680
+        },
+        {
+          "vesselName": "CIBOLO",
+          "direction": "D",
+          "numBarges": 2,
+          "endOfLockage": "2026-11-05T07:58:00-05:00",
+          "mmsi": 367728710
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "LINDA TAYLOR",
-          "direction": "D",
-          "numBarges": 1,
-          "endOfLockage": "2026-11-05T03:48:00-05:00",
-          "mmsi": 367755550
-        },
-        {
-          "vesselName": "DAN ELDER",
+          "vesselName": "OHIO",
           "direction": "D",
           "numBarges": 15,
-          "endOfLockage": "2026-11-04T21:48:00-05:00",
-          "mmsi": 367503540
+          "endOfLockage": "2026-11-05T11:45:00-05:00",
+          "mmsi": 368243490
         },
         {
-          "vesselName": "YVONNE CONWAY",
+          "vesselName": "HARLEY HALL",
           "direction": "D",
-          "numBarges": 12,
-          "endOfLockage": "2026-11-04T20:45:00-05:00",
-          "mmsi": 367402550
+          "numBarges": 15,
+          "endOfLockage": "2026-11-05T08:55:00-05:00",
+          "mmsi": 367743370
         },
         {
-          "vesselName": "GIANNA HULL",
+          "vesselName": "GALVESTON BAY",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-11-05T07:40:00-05:00",
+          "mmsi": 367441870
+        },
+        {
+          "vesselName": "STEPHEN L COLBY",
+          "direction": "U",
+          "numBarges": 8,
+          "endOfLockage": "2026-11-05T06:42:00-05:00",
+          "mmsi": 367645460
+        },
+        {
+          "vesselName": "ZEPHYR ",
           "direction": "U",
           "numBarges": 15,
-          "endOfLockage": "2026-11-04T17:56:00-05:00",
-          "mmsi": null
-        },
-        {
-          "vesselName": "JAMES MURPHY",
-          "direction": "D",
-          "numBarges": 2,
-          "endOfLockage": "2026-11-04T15:20:00-05:00",
-          "mmsi": 367757680
+          "endOfLockage": "2026-11-05T05:26:00-05:00",
+          "mmsi": 367169000
         }
       ]
     }
