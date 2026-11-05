@@ -1,9 +1,16 @@
 {
-  "updated": "2026-11-05T01:41:43.648Z",
+  "updated": "2026-11-05T09:06:22.588Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "STEPHEN L COLBY",
+          "direction": "U",
+          "numBarges": 8,
+          "endOfLockage": "2026-11-04T20:02:00-05:00",
+          "mmsi": 367645460
+        },
         {
           "vesselName": "GALVESTON BAY",
           "direction": "U",
@@ -31,19 +38,26 @@
           "numBarges": 15,
           "endOfLockage": "2026-11-04T07:59:00-05:00",
           "mmsi": null
-        },
-        {
-          "vesselName": "COVINGTON",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-11-04T06:00:00-05:00",
-          "mmsi": 368119060
         }
       ]
     },
     "willowIsland": {
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "LINDA TAYLOR",
+          "direction": "D",
+          "numBarges": 1,
+          "endOfLockage": "2026-11-05T03:48:00-05:00",
+          "mmsi": 367755550
+        },
+        {
+          "vesselName": "DAN ELDER",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-11-04T21:48:00-05:00",
+          "mmsi": 367503540
+        },
         {
           "vesselName": "YVONNE CONWAY",
           "direction": "D",
@@ -64,20 +78,6 @@
           "numBarges": 2,
           "endOfLockage": "2026-11-04T15:20:00-05:00",
           "mmsi": 367757680
-        },
-        {
-          "vesselName": "PAULA RUBLE",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-11-04T14:28:00-05:00",
-          "mmsi": 367426860
-        },
-        {
-          "vesselName": "RECREATIONAL VESSEL",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-11-04T11:35:00-05:00",
-          "mmsi": null
         }
       ]
     }
