@@ -1,9 +1,23 @@
 {
-  "updated": "2026-11-05T17:33:53.492Z",
+  "updated": "2026-11-05T22:47:45.974Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "CHARLES T JONES",
+          "direction": "U",
+          "numBarges": 10,
+          "endOfLockage": "2026-11-05T15:43:00-05:00",
+          "mmsi": 368142180
+        },
+        {
+          "vesselName": "CAPT STOGIE WHITE",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-11-05T14:10:00-05:00",
+          "mmsi": 367412630
+        },
         {
           "vesselName": "YVONNE CONWAY",
           "direction": "D",
@@ -24,20 +38,6 @@
           "numBarges": 14,
           "endOfLockage": "2026-11-05T08:39:00-05:00",
           "mmsi": 366963170
-        },
-        {
-          "vesselName": "JAMES MURPHY",
-          "direction": "D",
-          "numBarges": 2,
-          "endOfLockage": "2026-11-05T08:39:00-05:00",
-          "mmsi": 367757680
-        },
-        {
-          "vesselName": "CIBOLO",
-          "direction": "D",
-          "numBarges": 2,
-          "endOfLockage": "2026-11-05T07:58:00-05:00",
-          "mmsi": 367728710
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
-          "vesselName": "OHIO",
+          "vesselName": "USCG OSAGE",
           "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-11-05T11:45:00-05:00",
-          "mmsi": 368243490
+          "numBarges": 0,
+          "endOfLockage": "2026-11-05T17:22:00-05:00",
+          "mmsi": 366999505
         },
         {
-          "vesselName": "HARLEY HALL",
+          "vesselName": "FINDLAY",
           "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-11-05T08:55:00-05:00",
-          "mmsi": 367743370
-        },
-        {
-          "vesselName": "GALVESTON BAY",
-          "direction": "U",
           "numBarges": 6,
-          "endOfLockage": "2026-11-05T07:40:00-05:00",
-          "mmsi": 367441870
+          "endOfLockage": "2026-11-05T16:29:00-05:00",
+          "mmsi": null
         },
         {
-          "vesselName": "STEPHEN L COLBY",
-          "direction": "U",
-          "numBarges": 8,
-          "endOfLockage": "2026-11-05T06:42:00-05:00",
-          "mmsi": 367645460
-        },
-        {
-          "vesselName": "ZEPHYR ",
+          "vesselName": "SAMUEL J",
           "direction": "U",
           "numBarges": 15,
-          "endOfLockage": "2026-11-05T05:26:00-05:00",
-          "mmsi": 367169000
+          "endOfLockage": "2026-11-05T15:27:00-05:00",
+          "mmsi": 368269040
+        },
+        {
+          "vesselName": "MISTER CHARLIE NEALE",
+          "direction": "D",
+          "numBarges": 1,
+          "endOfLockage": "2026-11-05T14:20:00-05:00",
+          "mmsi": 367385950
+        },
+        {
+          "vesselName": "GIANNA HULL",
+          "direction": "D",
+          "numBarges": 11,
+          "endOfLockage": "2026-11-05T14:15:00-05:00",
+          "mmsi": null
         }
       ]
     }
