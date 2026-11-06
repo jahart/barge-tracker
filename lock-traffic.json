@@ -1,43 +1,43 @@
 {
-  "updated": "2026-11-06T03:15:48.675Z",
+  "updated": "2026-11-06T11:21:19.971Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "GLENN A HENDON",
+          "direction": "D",
+          "numBarges": 11,
+          "endOfLockage": "2026-11-06T06:03:00-05:00",
+          "mmsi": 367375080
+        },
+        {
+          "vesselName": "CARRIE CRISP",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-11-06T05:08:00-05:00",
+          "mmsi": 367402650
+        },
+        {
+          "vesselName": "ROBINSON",
+          "direction": "U",
+          "numBarges": 6,
+          "endOfLockage": "2026-11-06T03:37:00-05:00",
+          "mmsi": 366919640
+        },
+        {
+          "vesselName": "FINDLAY",
+          "direction": "D",
+          "numBarges": 6,
+          "endOfLockage": "2026-11-05T23:52:00-05:00",
+          "mmsi": null
+        },
         {
           "vesselName": "OHIO",
           "direction": "D",
           "numBarges": 15,
           "endOfLockage": "2026-11-05T21:47:00-05:00",
           "mmsi": 368243490
-        },
-        {
-          "vesselName": "HARLEY HALL",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-11-05T19:35:00-05:00",
-          "mmsi": 367743370
-        },
-        {
-          "vesselName": "C J QUEENAN",
-          "direction": "U",
-          "numBarges": 12,
-          "endOfLockage": "2026-11-05T18:04:00-05:00",
-          "mmsi": 367421310
-        },
-        {
-          "vesselName": "CHARLES T JONES",
-          "direction": "U",
-          "numBarges": 10,
-          "endOfLockage": "2026-11-05T15:43:00-05:00",
-          "mmsi": 368142180
-        },
-        {
-          "vesselName": "CAPT STOGIE WHITE",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-11-05T14:10:00-05:00",
-          "mmsi": 367412630
         }
       ]
     },
@@ -45,39 +45,39 @@
       "name": "Willow Island Locks and Dam",
       "recentLockages": [
         {
+          "vesselName": "C J QUEENAN",
+          "direction": "U",
+          "numBarges": 12,
+          "endOfLockage": "2026-11-06T06:01:00-05:00",
+          "mmsi": 367421310
+        },
+        {
+          "vesselName": "RONALD E WAGENBLAST",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-11-06T04:30:00-05:00",
+          "mmsi": 367371390
+        },
+        {
+          "vesselName": "CAPT STOGIE WHITE",
+          "direction": "U",
+          "numBarges": 15,
+          "endOfLockage": "2026-11-06T00:51:00-05:00",
+          "mmsi": 367412630
+        },
+        {
+          "vesselName": "BILL STILE",
+          "direction": "D",
+          "numBarges": 11,
+          "endOfLockage": "2026-11-05T23:15:00-05:00",
+          "mmsi": 367441040
+        },
+        {
           "vesselName": "GLENN A HENDON",
           "direction": "D",
           "numBarges": 12,
           "endOfLockage": "2026-11-05T21:15:00-05:00",
           "mmsi": 367375080
-        },
-        {
-          "vesselName": "SALLY WHALEN",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-11-05T19:59:00-05:00",
-          "mmsi": 367402570
-        },
-        {
-          "vesselName": "ROBERT C LOEDDING",
-          "direction": "U",
-          "numBarges": 8,
-          "endOfLockage": "2026-11-05T19:10:00-05:00",
-          "mmsi": 366963170
-        },
-        {
-          "vesselName": "CARRIE CRISP",
-          "direction": "D",
-          "numBarges": 15,
-          "endOfLockage": "2026-11-05T17:40:00-05:00",
-          "mmsi": 367402650
-        },
-        {
-          "vesselName": "USCG OSAGE",
-          "direction": "D",
-          "numBarges": 0,
-          "endOfLockage": "2026-11-05T17:22:00-05:00",
-          "mmsi": 366999505
         }
       ]
     }
