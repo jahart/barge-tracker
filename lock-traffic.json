@@ -1,9 +1,23 @@
 {
-  "updated": "2026-11-06T23:24:27.622Z",
+  "updated": "2026-11-07T03:03:00.300Z",
   "locks": {
     "belleville": {
       "name": "Belleville Locks and Dam",
       "recentLockages": [
+        {
+          "vesselName": "TOMMY H ",
+          "direction": "D",
+          "numBarges": 13,
+          "endOfLockage": "2026-11-06T21:32:00-05:00",
+          "mmsi": 367782270
+        },
+        {
+          "vesselName": "LINDA REED",
+          "direction": "D",
+          "numBarges": 15,
+          "endOfLockage": "2026-11-06T18:29:00-05:00",
+          "mmsi": 367402990
+        },
         {
           "vesselName": "CANTON",
           "direction": "D",
@@ -24,20 +38,6 @@
           "numBarges": 15,
           "endOfLockage": "2026-11-06T14:06:00-05:00",
           "mmsi": 367371390
-        },
-        {
-          "vesselName": "GIANNA HULL",
-          "direction": "D",
-          "numBarges": 11,
-          "endOfLockage": "2026-11-06T12:30:00-05:00",
-          "mmsi": null
-        },
-        {
-          "vesselName": "DAN ELDER",
-          "direction": "U",
-          "numBarges": 15,
-          "endOfLockage": "2026-11-06T11:12:00-05:00",
-          "mmsi": 367503540
         }
       ]
     },
